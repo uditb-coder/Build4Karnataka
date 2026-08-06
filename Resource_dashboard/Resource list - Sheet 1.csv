@@ -1,0 +1,35 @@
+Name,Role,Base Location,Primary Allocation,Start Date,End Date,Total Students,Days of the Week,Secondary Allocation,Days of the Week,Secondary Start Date,Secondary End Date,Number of students
+Nivedha D,Manager,Yelahanka,VTU Muddenahalli,14/3/26,9/15/2026,380,Sat,Oxford School Workshop,,6/4/26,10/4/26,
+Thilak Chandar R,Mentor,Yelahanka,VTU Muddenahalli,14/3/26,9/15/2026,380,Sat,Oxford School Workshop,,6/4/26,10/4/26,
+Keerthi Gowda H N,Mentor,Yelahanka,Robotics Internship,2/2/26,5/25/2026,14,"Mon, Tues, Wed, Thu, Fri",VTU Muddenahlli,,14/3/26,15/9/26,380
+Ajay B V,Mentor,Yelahanka,DS and AI Internship,2/2/26,5/25/2026,27,"Mon, Tues, Wed, Thu, Fri",VTU Muddenahlli,,14/3/26,15/9/26,380
+Astle John,Manager,JP Nagar,T John,14/3/26,9/15/2026,420,"Mon, Thu, Fri",Robotics Internship,"Tue, Wed",2/2/26,25/5/26,20
+Sujan H G,Mentor,JP Nagar,DS and AI Internship,2/2/26,5/25/2026,65,"Mon, Tues, Wed, Thu, Fri",,,,,
+Mohammed Kaif,Mentor,JP Nagar,Robotics Internship,2/2/26,5/25/2026,20,"Mon, Tues, Wed, Thu, Fri",,,,,
+Nayan G,Mentor,JP Nagar,T John,14/3/26,9/15/2026,420,"Mon, Thu, Fri",,,,,
+Abhinandan Kabbur,Mentor,MYS Road,VTU Chintamani,14/3/26,9/15/2026,150,Sat,DS and AI Internship,"Mon, Tue, Wed, Thu, Fri",2/2/26,25/5/26,22
+hafsa f,Mentor,MYS Road,VTU Chintamani,14/3/26,9/15/2026,150,Sat,Robotics Internship,"Mon, Tue, Wed, Thu, Fri",2/2/26,25/5/26,11
+Harsha,TBD,MYS Road,DS and AI Internship,2/2/26,5/25/2026,22,"Mon, Tues, Wed, Thu, Fri",VTU Chintamanni,Sat,14/3/26,15/9/26,150
+Chandana P,Manager,Mysuru,MITK,14/3/26,9/15/2026,120,"Mon, Wed, Fri",VTU Mysuru,"Tue, Thu, Fri, Mon",14/3/26,15/9/26,300
+Vidya C,Mentor,Mysuru,MITK,14/3/26,9/15/2026,120,"Wed, Mon, Fri",VTU Mysuru,"Mon, Tue, Thu, Fri",14/3/26,15/9/26,300
+Nouman Khan,Mentor,Mysuru,Robotics Internship,2/2/26,5/25/2026,27,"Mon, Tues, Wed, Thu, Fri",MITK,"Mon, Wed, Fri",14/3/26,15/9/26,120
+Rakshith H K,Mentor,Mysuru,DS and AI Internship,2/2/26,5/25/2026,4,"Mon, Tues, Wed, Thu, Fri",VTU Mysuru,"Mon, Tue, Thu, Fri",14/3/26,15/9/26,300
+Yashas s,Mentor,Mysuru,Robotics Internship,2/2/26,5/25/2026,4,"Mon, Wed, Fri",VTU Mysuru,"Mon, Tue, Thu, Fri",14/3/26,15/9/26,300
+Akshatha K V,Mentor,Mysuru,VTU Mysuru,14/3/26,9/15/2026,300,"Mon, Tues, Thu, Fri",,,,,
+Navyashree S,TBD,Mysuru,VTU Mysuru,14/3/26,9/15/2026,300,"Mon, Tues, Thu, Fri",,,,,
+Kavya Rao,Manager,Mangaluru,DS and AI Internship,2/2/26,5/25/2026,53,"Mon, Tues, Wed, Thu, Fri",,,,,
+Sachin S,Manager,Mangaluru,Hub,,,,,,,,,
+Mohammed Ausaf,Mentor,Mangaluru,Robotics Internship,2/2/26,5/25/2026,25,"Mon, Tues, Wed, Thu, Fri",,,,,
+Sandeep Samson,Manager,Kalaburagi,Robotics Internship,2/2/26,5/25/2026,21,"Mon, Tues, Wed, Thu, Fri",VTU Kalaburagi,Sat,14/3/26,15/9/26,300
+Sandesh Mathpati,Mentor,Kalaburagi,DS and AI Internship,2/2/26,5/25/2026,38,"Mon, Tues, Wed, Thu, Fri",VTU Kalaburagi,Sat,14/3/26,15/9/26,300
+Bharti Sharma,Mentor,Kalaburagi,"DS and AI Internship, Robotics Internship",2/2/26,5/25/2026,38,"Mon, Tues, Wed, Thu, Fri",VTU Kalaburagi,Sat,14/3/26,15/9/26,300
+Sachin Patil,Manager,Belagavi,VTU Belagavi,14/3/26,9/15/2026,580,,,,,,
+Vidhyashri Hosamani,Mentor,Belagavi,VTU Belagavi,14/3/26,9/15/2026,580,,,,,,
+Pratham Jadhav,Mentor,Belagavi,"DS and AI Internship, Robotics Internship",2/2/26,5/25/2026,13,"Mon, Tues, Wed, Thu, Fri",VTU Gokak,,14/3/26,15/9/26,85
+Sushan K,Manager,Tumkuru,SIET Innovation Program,14/3/26,9/15/2026,30,Wed,Robotics Internship,"Mon, Tue, Wed, Thu, Fri",2/2/26,25/5/26,
+Lohith T D,Mentor,Tumkuru,VTU UBDTCE,14/3/26,9/15/2026,550,"Mon, Tues, Wed, Thu, Fri, Sat",,,,,
+Ruchitha S N,Mentor,Tumkuru,DS and AI Internship,2/2/26,5/25/2026,7,"Mon, Tues, Wed, Thu, Fri",,,,,
+Akkamahadevi S,Manager,Hubballi,KLS-IDT,2/3/26,4/8/2026,180,"Mon, Tues, Wed, Thu, Fri, Sat",VTU UBDTCE,"Mon, Tue, Thu, Fri, Sat",10/4/26,15/9/26,550
+Vishwanath Hiremath,Mentor,Hubballi,KLS-IDT,2/3/26,4/8/2026,180,"Mon, Tues, Wed, Thu, Fri, Sat",VTU Gokak,,14/3/26,15/9/26,85
+Deepak M,Mentor,Hubballi,Robotics Internship,2/2/26,5/25/2026,9,"Mon, Tues, Wed, Thu, Fri",KLS-IDT,Sat,2/3/26,8/4/26,180
+Shagufta Maniyar,Mentor,Hubballi,DS and AI Internship,2/2/26,5/25/2026,24,"Mon, Tues, Wed, Thu, Fri",KLS-IDT,Sat,2/3/26,8/4/26,180

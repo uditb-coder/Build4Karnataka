@@ -1,0 +1,43 @@
+Location,Program,Batch/Section,Day,Time_Slot,Type
+Belagavi,1BPRJ258,Batch-1 (CSBS-A ECE),Monday,2:15 PM – 4:15 PM,Regular
+Belagavi,1BPRJ258,Batch-2 (CSE-A CSE-B),Tuesday,3:15 PM – 5:15 PM,Regular
+Belagavi,1BPRJ258,Batch-3 (AIDS-A AIDS-B),Wednesday,3:15 PM – 5:15 PM,Regular
+Belagavi,1BPRJ258,Batch-4 (R&A),Thursday,2:15 PM – 4:15 PM,Regular
+Belagavi,1BPRJ258,Batch-5 (CSBS-B VLSI),Friday,2:15 PM – 4:15 PM,Regular
+Belagavi,1BPRJ258,All Batches,Saturday,9:00 AM – 5:00 PM,Full Day
+UBDTCE,1BPRJ258,Sec I (E&I),Monday,2:00 PM – 5:00 PM,Regular
+UBDTCE,1BPRJ258,Sec A (Civil) Sec H (E&E),Tuesday,2:00 PM – 5:00 PM,Regular
+UBDTCE,1BPRJ258,Sec D (CS1) Sec E (CS2),Wednesday,2:00 PM – 5:00 PM,Regular
+UBDTCE,1BPRJ258,Sec B (Mech) Sec G (EC2),Thursday,2:00 PM – 5:00 PM,Regular
+UBDTCE,1BPRJ258,Sec C (R&AI) Sec F (EC1),Friday,2:00 PM – 5:00 PM,Regular
+UBDTCE,1BPRJ258,All Sections,Saturday,8:00 AM – 12:15 PM,Split Morning
+UBDTCE,1BPRJ258,All Sections,Saturday,2:00 PM – 5:00 PM,Split Afternoon
+Kalaburagi,1BPRJ258,Robotics & Automation,Monday,2:15 PM – 5:15 PM,Regular
+Kalaburagi,1BPRJ258,CSE Section A,Tuesday,2:15 PM – 5:15 PM,Regular
+Kalaburagi,1BPRJ258,CSE Section B,Wednesday,2:15 PM – 5:15 PM,Regular
+Kalaburagi,1BPRJ258,AI & DS Section A,Thursday,2:15 PM – 5:15 PM,Regular
+Kalaburagi,1BPRJ258,AI & ML Section B,Friday,2:15 PM – 5:15 PM,Regular
+Kalaburagi,1BPRJ258,All Sections,Saturday,10:00 AM – 1:15 PM,Split Morning
+Kalaburagi,1BPRJ258,All Sections,Saturday,2:15 PM – 5:15 PM,Split Afternoon
+Mysuru,1BPRJ258,ECE Sec A,Monday,9:00 AM – 10:00 AM,Morning
+Mysuru,1BPRJ258,CSE Sec B,Monday,11:15 AM – 12:15 PM,Morning
+Mysuru,1BPRJ258,ECE Sec A / AI&DS Sec C,Tuesday,11:15 AM – 12:15 PM,Morning
+Mysuru,1BPRJ258,ECE Sec D,Wednesday,2:00 PM – 3:00 PM,Afternoon
+Mysuru,1BPRJ258,E&E Sec E,Thursday,11:15 AM – 12:15 PM,Morning
+Mysuru,1BPRJ258,Mech Sec F,Friday,11:15 AM – 12:15 PM,Morning
+MITK,M25BIDTK258,Sec L (CI),Monday,9:00 AM – 11:00 AM,Morning
+MITK,M25BIDTK258,Sec K (CV),Monday,11:25 AM – 1:15 PM,Morning
+MITK,M25BIDTK258,Sec J (CS),Monday,2:00 PM – 4:00 PM,Afternoon
+MITK,M25BIDTK258,Sec H (CS),Tuesday,2:00 PM – 4:00 PM,Afternoon
+MITK,M25BIDTK258,Sec N (EC),Wednesday,2:00 PM – 4:00 PM,Afternoon
+MITK,M25BIDTK258,Sec I (CS),Thursday,2:00 PM – 4:00 PM,Afternoon
+MITK,M25BIDTK258,Sec M (EC),Friday,11:25 AM – 1:15 PM,Morning
+Internship,Internship,All,Monday-Friday,10:00 AM - 04:00 PM,Full Day
+Location,Program,Batch/Section,Day,Time_Slot,Type
+T John,1BPRJ258,Sec F,Monday,8:45 AM – 10:45 AM,Morning
+T John,1BPRJ258,Sec D,Monday,11:00 AM – 1:00 PM,Afternoon
+T John,1BPRJ258,Sec A,Monday,1:45 PM – 3:45 PM,Afternoon
+T John,1BPRJ258,Sec E,Thursday,8:45 AM – 10:45 AM,Morning
+T John,1BPRJ258,Sec C,Thursday,11:00 AM – 1:00 PM,Afternoon
+T John,1BPRJ258,Sec H & G,Friday,8:45 AM – 10:45 AM,Morning
+T John,1BPRJ258,Sec B,Friday,11:00 AM – 1:00 PM,Afternoon
