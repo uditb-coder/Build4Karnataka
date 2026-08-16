@@ -128,6 +128,9 @@ h1.headline .accent{color:var(--accent);position:relative;display:inline-block;}
 h1.headline .accent::after{content:"";position:absolute;bottom:-4px;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--accent-bright),var(--violet));border-radius:2px;transform:scaleX(0);transform-origin:left;transition:transform .6s ease .3s;}
 h1.headline .accent.revealed::after{transform:scaleX(1);}
 .sub{margin-top:20px;font-size:17.5px;color:var(--ink-soft);max-width:54ch;line-height:1.7;word-wrap:break-word;overflow-wrap:break-word;}
+.branch-cluster{display:flex;flex-wrap:wrap;gap:8px;margin:24px 0 32px;max-width:600px;}
+.branch-chip{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:0.5px;padding:6px 12px;border-radius:100px;background:var(--surface);color:var(--ink-soft);border:1px solid var(--line-strong);font-weight:500;cursor:default;transition:all 0.2s ease;}
+.branch-chip:hover{background:var(--accent-pale);color:var(--accent);border-color:var(--accent);}
 .hero-cta{margin-top:36px;display:flex;flex-wrap:wrap;gap:14px;}
 .hero-cta-note{margin-top:16px;font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);display:flex;align-items:center;gap:8px;}
 .hero-cta-note::before{content:"-->";}
@@ -508,11 +511,11 @@ img { max-width: 100%; height: auto; }
 <header id="siteHeader">
   <div class="nav">
     <div class="logo-row">
-      <div class="logo-chip"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></div>
+      <div class="logo-chip"><a href="https://comedkares.org/" target="_blank"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></a></div>
       <div class="logo-sep"></div>
-      <div class="logo-chip"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></div>
+      <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></a></div>
       <div class="logo-sep"></div>
-      <div class="logo-chip"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></div>
+      <div class="logo-chip"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
       <div class="logo-sep"></div>
       <div class="logo-chip"><a href="https://krishikan.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="agritech_sponsor.png" alt="AgriTech Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"><span style="font-size:10px; font-weight:600; color:var(--ink-soft); line-height:1; text-transform:uppercase;">Krishikan</span></a></div>
     </div>
@@ -563,7 +566,15 @@ img { max-width: 100%; height: auto; }
         </a>
       </div>
       <h1 class="headline">Unleash AI:<br><span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 6px;">Build More.</span></h1>
-      <p class="sub">Bengaluru&rsquo;s first Gen AI student buildathon. 1 day. 30 shortlisted teams. 6 hours to build a working product and pitch it to an industry jury. &#x20B9;40,000+ in prizes.</p>
+      <p class="sub">Bengaluru&rsquo;s first Gen AI student buildathon. <strong style="color:var(--accent);">No coding background required &mdash; open to all engineering branches!</strong> Bring your logic and prompting skills. 1 day. 30 shortlisted teams. 6 hours to build a working product and pitch it to an industry jury. &#x20B9;40,000+ in prizes.</p>
+      <div class="branch-cluster">
+        <span class="branch-chip">Mechanical</span>
+        <span class="branch-chip">Civil</span>
+        <span class="branch-chip">ECE / EEE</span>
+        <span class="branch-chip">Biotech</span>
+        <span class="branch-chip">CS / IS</span>
+        <span class="branch-chip">Aeronautical</span>
+      </div>
       <div class="hero-cta">
         <a href="#register" class="btn btn-gold btn-lg">Register your team &rarr;</a>
         <a href="#domains" class="btn btn-ghost btn-lg">Explore domains</a>
@@ -1006,8 +1017,8 @@ img { max-width: 100%; height: auto; }
     <div class="sponsor-tier reveal">
       <div class="tier-label">Organized by</div>
       <div class="sponsor-row">
-        <div class="s-logo"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></div>
-        <div class="s-logo"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></div>
+        <div class="s-logo"><a href="https://comedkares.org/" target="_blank"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></a></div>
+        <div class="s-logo"><a href="https://www.erafoundationindia.org/" target="_blank"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></a></div>
       </div>
     </div>
     <div class="sponsor-tier reveal">
@@ -1062,6 +1073,7 @@ img { max-width: 100%; height: auto; }
     <div id="faqList">
       <details><summary><span><span class="faq-tag">Eligibility</span> Who can register?</span></summary><p>Engineering students (1st&ndash;4th year BE/B.Tech), MCA students, and recent passouts (within 6 months) from any college in Bengaluru. Inter-college and inter-branch teams allowed and encouraged.</p></details>
       <details><summary><span><span class="faq-tag">Registration</span> Does registering guarantee a spot on event day?</span></summary><p>No. Every application is screened Aug 26&ndash;30. Only 30 teams are shortlisted and invited on-site. The &#x20B9;399 fee is non-refundable if not shortlisted.</p></details>
+      <details><summary><span><span class="faq-tag">Eligibility</span> Do I need to be from CS/IS or know how to code?</span></summary><p><strong>Absolutely not!</strong> This buildathon focuses on utilizing Gen AI and no-code/low-code tools (like Voiceflow, Glide, Gemini, etc.). If you know how to write good prompts, structure logic, and solve problems creatively, you can compete and win. We highly encourage students from <strong>all engineering branches</strong> (Mechanical, Civil, Agri, etc.) to participate!</p></details>
       <details><summary><span><span class="faq-tag">Screening</span> How are applications screened?</span></summary><p>To get shortlisted, teams must submit a lightweight "Domain Proficiency Mini-Challenge" during registration (e.g., building a simple conversational interface or wireframe using AI tools). This proves your fundamental technical skills before the actual complex problem statement drops 48 hours prior to the event.</p></details>
       <details><summary><span><span class="faq-tag">Event</span> What are we judged on, if shortlisted?</span></summary><p>Live prototype + pitch evaluated by jury after 4:30 PM submission. Jury criteria: Innovation (25), Technical Feasibility (25), Business Viability (20), Presentation (20), GenAI/No-Code Usage (10) = 100 pts.</p></details>
       <details><summary><span><span class="faq-tag">Tools</span> What tools can we use?</span></summary><p>Gen AI/Low-Code tools: Voiceflow, Glide, Bubble, Airtable, Make.com, Zapier, OpenAI API, Gemini API, Bhashini API, Teachable Machine, Figma, etc. Full coding is not prohibited but is not the spirit of the event.</p></details>
@@ -1109,11 +1121,11 @@ img { max-width: 100%; height: auto; }
     <div class="foot-grid">
       <div>
         <div class="logo-row" style="margin-bottom: 16px;">
-          <div class="logo-chip"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></div>
+          <div class="logo-chip"><a href="https://comedkares.org/" target="_blank"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></a></div>
           <div class="logo-sep"></div>
-          <div class="logo-chip"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></div>
+          <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></a></div>
           <div class="logo-sep"></div>
-          <div class="logo-chip"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></div>
+          <div class="logo-chip"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
           <div class="logo-sep"></div>
           <div class="logo-chip"><a href="https://krishikan.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="agritech_sponsor.png" alt="AgriTech Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"><span style="font-size:10px; font-weight:600; color:var(--ink-soft); line-height:1; text-transform:uppercase;">Krishikan</span></a></div>
         </div>
