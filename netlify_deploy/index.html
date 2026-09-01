@@ -503,9 +503,8 @@ img { max-width: 100%; height: auto; }
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
 
 <!-- Announcement bar -->
-<div class="announce-bar">
-  <span class="gold">&#x1F680; Registration Extended!</span>&nbsp;&nbsp;Closes Aug 31, 2026 &nbsp;&middot;&nbsp; 50 team slots &nbsp;&middot;&nbsp; &#x20B9;40,000 prize pool &nbsp;&middot;&nbsp;
-  <a href="#register">Apply Now! &rarr;</a>
+<div class="announcement">
+  <span class="pulse-dot" style="background: var(--ink-faint); animation: none; opacity: 1;"></span> Registrations are officially closed. Shortlisted teams announced Sept 3rd.
 </div>
 
 <header id="siteHeader">
@@ -532,7 +531,7 @@ img { max-width: 100%; height: auto; }
     </nav>
     <div class="nav-right">
           
-      <a href="#register" class="btn btn-gold nav-cta">Register a team &rarr;</a>
+      <!-- Registration Closed -->
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -548,7 +547,7 @@ img { max-width: 100%; height: auto; }
   <a href="#jury" class="mobile-link">Jury</a>
   <a href="#timeline" class="mobile-link">Timeline</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <a href="#register" class="btn btn-gold">Register your team &rarr;</a>
+  <!-- Registration Closed -->
 </div>
 
 <main>
@@ -557,11 +556,11 @@ img { max-width: 100%; height: auto; }
 <section class="hero" id="about">
   <div class="wrap hero-grid">
     <div>
-      <div style="background: linear-gradient(135deg, rgba(217, 119, 6, 0.1), rgba(245, 158, 11, 0.05)); border: 2px solid #f59e0b; padding: 14px 20px; border-radius: 12px; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 16px;">
-        <span style="font-size: 28px; line-height: 1;">🚨</span>
+      <div style="background: var(--surface-2); border: 1px solid var(--line-strong); padding: 14px 20px; border-radius: 12px; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 16px;">
+        <span style="font-size: 28px; line-height: 1;">🛑</span>
         <div style="text-align: left;">
-          <strong style="color: #d97706; display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">Important Update</strong>
-          <span style="font-weight: 700; color: var(--ink); font-size: 16px;">Registrations extended to August 31st!</span>
+          <strong style="color: var(--ink-soft); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">Update</strong>
+          <span style="font-weight: 700; color: var(--ink); font-size: 16px;">Registrations are now closed.</span>
         </div>
       </div>
       <span class="eyebrow">ComedKares &times; ERA Foundation present</span>
@@ -592,7 +591,6 @@ img { max-width: 100%; height: auto; }
         <span class="branch-chip">Aeronautical</span>
       </div>
       <div class="hero-cta">
-        <a href="#register" class="btn btn-gold btn-lg">Register your team &rarr;</a>
         <a href="#domains" class="btn btn-ghost btn-lg">Explore domains</a>
       </div>
       <!-- HERO COUNTDOWN -->
@@ -1026,29 +1024,6 @@ img { max-width: 100%; height: auto; }
   </div>
 </section>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â REGISTER Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
-<section id="register" style="background:var(--surface-2);">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Register</span>
-      <h2>Get your team in the running.</h2>
-    </div>
-    <div class="register-cta reveal" style="text-align: center; max-width: 600px; margin: 0 auto; background: var(--surface); padding: 48px; border-radius: var(--radius-lg); border: 1px solid var(--accent-bright); box-shadow: var(--shadow-lg);">
-      <h3 style="font-size: 24px; margin-bottom: 16px;">Registration Fee: &#x20B9;399 per team</h3>
-      <p style="color: var(--ink-soft); margin-bottom: 32px; line-height: 1.6;">
-        Complete this 4-step form to apply. Shortlisted teams contacted on Sept 3 at 12:00 PM via email &amp; WhatsApp with Team ID and Entry Pass.<br><br>
-        Please be ready to make the payment before filling out the form. The fee is non-refundable if your team is not shortlisted.
-      </p>
-      <a href="https://forms.gle/CtWupSjVhmGwQSQE6" target="_blank" class="btn btn-gold btn-lg" style="width: 100%; justify-content: center; font-size: 15px; padding: 16px 16px; box-sizing: border-box; white-space: nowrap;">Proceed to Google Form &rarr;</a>
-      <div style="margin-top: 24px; display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; font-size: 12px; color: var(--ink-faint); font-family: var(--mono);">
-        <span>&#x2713; 3-4 members</span>
-        <span>&#x2713; Inter-college allowed</span>
-        <span>&#x2713; Closes Aug 31</span>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- Ã¢â€¢Â Ã¢â€¢Â Ã¢â€¢Â  FAQ Ã¢â€¢Â Ã¢â€¢Â Ã¢â€¢Â  -->
 <section id="faq">
   <div class="wrap">
@@ -1122,8 +1097,8 @@ img { max-width: 100%; height: auto; }
         <a href="#about">About</a><a href="#selection">Selection</a><a href="#domains">Domains</a><a href="#prizes">Prizes</a><a href="#timeline">Timeline</a>
       </div>
       <div class="foot-col">
-        <h5>Register</h5>
-        <a href="#register">Apply now</a><a href="#kit">What you get</a><a href="#jury">Jury panel</a><a href="#sponsors">Sponsors</a><a href="#faq">FAQ</a>
+        <h5>Details</h5>
+        <a href="#kit">What you get</a><a href="#jury">Jury panel</a><a href="#sponsors">Sponsors</a><a href="#faq">FAQ</a>
       </div>
       <div class="foot-col">
         <h5>Socials &amp; Contact</h5>
