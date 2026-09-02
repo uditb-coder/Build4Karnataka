@@ -629,13 +629,7 @@ img { max-width: 100%; height: auto; }
         <div class="stat"><div class="k">Team fee</div><div class="v">&#x20B9;399 / team</div></div>
         <div class="stat"><div class="k">Prize pool</div><div class="v">&#x20B9;40,000+</div></div>
       </div>
-      <p style="margin-top:10px;font-size:12px;color:var(--ink-faint);"></p>
-      <div class="team-widget">
-        <div class="avatars">
-          <div class="av">AK</div><div class="av">SR</div><div class="av">PM</div><div class="av">+</div>
-        </div>
-        <div class="tw-text"><strong id="regCount">10</strong> slots filled &middot; <strong>40 spots left</strong></div>
-      </div>
+
     </div>
     
     <div class="hero-right">
@@ -1285,10 +1279,6 @@ function filterFAQ(q){
   document.getElementById('noResults').style.display=any?'none':'block';
 }
 
-// Live reg count sim
-const rc=document.getElementById('regCount'),sl=document.getElementById('spotsLeft');
-let cnt=42;
-setInterval(()=>{if(cnt<50&&Math.random()>0.6){cnt++;if(rc)rc.textContent=cnt;if(sl)sl.textContent=Math.max(0,50-cnt);}},20000);
 
 // Active nav highlight
 const navLinks=document.querySelectorAll('nav.links a');
