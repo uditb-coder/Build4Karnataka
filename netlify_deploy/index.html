@@ -246,6 +246,45 @@ h1.headline .accent.revealed::after{transform:scaleX(1);}
 .jury-org{font-size:13.5px;color:var(--ink-soft);margin-top:6px;}
 .jury-domain{margin-top:12px;font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:6px;background:var(--accent-pale);color:var(--accent);display:inline-block;border:1px solid var(--accent-soft);}
 
+/* WINNERS */
+.winners-podium{display:grid;gap:24px;grid-template-columns:1fr;}
+@media(min-width:768px){.winners-podium{grid-template-columns:repeat(3,1fr);}}
+.winner-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);transition:border-color .3s,transform .3s;}
+.winner-card:hover{border-color:var(--accent-bright);transform:translateY(-6px);}
+.winner-card.gold{border-color:#f59e0b;box-shadow:0 8px 32px rgba(245,158,11,0.15);}
+.winner-card.silver{border-color:#94a3b8;box-shadow:0 8px 32px rgba(148,163,184,0.15);}
+.winner-card.bronze{border-color:#d97706;box-shadow:0 8px 32px rgba(217,119,6,0.12);}
+.winner-img{width:100%;aspect-ratio:4/3;object-fit:cover;}
+.winner-body{padding:20px;}
+.winner-rank{font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:0.1em;font-weight:600;margin-bottom:8px;}
+.winner-rank.gold{color:#f59e0b;}.winner-rank.silver{color:#64748b;}.winner-rank.bronze{color:#d97706;}
+.winner-team{font-family:var(--display);font-size:20px;font-weight:700;color:var(--ink);margin-bottom:4px;}
+.winner-domain-tag{font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:6px;background:var(--accent-pale);color:var(--accent);display:inline-block;border:1px solid var(--accent-soft);margin-bottom:12px;}
+.winner-prize{font-family:var(--display);font-size:18px;font-weight:700;color:var(--accent-bright);margin-bottom:8px;}
+.winner-desc{font-size:13.5px;color:var(--ink-soft);line-height:1.5;}
+
+.domain-winners-grid{display:grid;gap:20px;grid-template-columns:1fr;margin-top:48px;}
+@media(min-width:560px){.domain-winners-grid{grid-template-columns:repeat(2,1fr);}}
+@media(min-width:940px){.domain-winners-grid{grid-template-columns:repeat(3,1fr);}}
+.domain-winner-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:border-color .2s,transform .2s;}
+.domain-winner-card:hover{border-color:var(--accent-bright);transform:translateY(-4px);}
+.domain-winner-img{width:100%;aspect-ratio:16/10;object-fit:cover;}
+.domain-winner-body{padding:18px;}
+.domain-winner-badge{font-family:var(--mono);font-size:10.5px;text-transform:uppercase;letter-spacing:0.08em;color:var(--accent);font-weight:600;margin-bottom:6px;}
+.domain-winner-team{font-family:var(--display);font-size:17px;font-weight:600;color:var(--ink);margin-bottom:6px;}
+.domain-winner-desc{font-size:13px;color:var(--ink-soft);line-height:1.5;}
+
+/* COMING NEXT BANNER */
+.coming-next{background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(45,212,191,0.08));border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:64px 0;text-align:center;}
+.coming-next h2{font-size:clamp(28px,4vw,42px);margin-bottom:12px;}
+.coming-next p{color:var(--ink-soft);max-width:600px;margin:0 auto;}
+.coming-next .city-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border-radius:100px;background:var(--accent-soft);border:1px solid rgba(139,92,246,0.25);font-family:var(--mono);font-size:13px;color:var(--accent);margin-top:20px;font-weight:600;}
+
+/* GALLERY */
+.gallery-grid{display:grid;gap:12px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
+.gallery-grid img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);transition:transform .2s;}
+.gallery-grid img:hover{transform:scale(1.02);}
+
 /* TIMELINE */
 .timeline-visual{position:relative;padding-left:40px;}
 .timeline-visual::before{content:"";position:absolute;left:14px;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--accent-bright),var(--line) 80%);border-radius:1px;}
@@ -505,7 +544,7 @@ img { max-width: 100%; height: auto; }
 
 <!-- Announcement bar -->
 <div class="announce-bar">
-  <span class="gold">&#x1F6A8; Registrations Closed</span>&nbsp;&nbsp;Shortlisted teams will be announced on Sept 3rd.
+  <span class="gold">&#x1F3C6; Build 4 Karnataka Bengaluru was a massive success!</span>&nbsp;&nbsp;Coming next: <strong>Build 4 Mysore</strong>. Stay tuned!
 </div>
 
 <header id="siteHeader">
@@ -528,17 +567,17 @@ img { max-width: 100%; height: auto; }
       <div class="logo-chip"><a href="https://ic.iiitb.ac.in/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="iiitb_logo.png" alt="IIITB Incubation Partner" style="height: 32px; width: auto; object-fit: contain;"></a></div>
     </div>
     <nav class="links">
+      <a href="#winners" style="color:var(--accent); font-weight:600;">Winners</a>
+      <a href="#next-city">Mysore</a>
       <a href="#about">About</a>
       <a href="#domains">Domains</a>
-      <a href="#selection">Selection</a>
-      <a href="#prizes">Prizes</a>
       <a href="#jury">Jury</a>
       <a href="#timeline">Timeline</a>
       <a href="#faq">FAQ</a>
     </nav>
     <div class="nav-right">
           
-      <!-- Registration Closed -->
+      <a href="#winners" class="btn btn-primary" style="background:var(--accent); color:var(--surface); pointer-events:auto; opacity:1;">See Winners</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -563,18 +602,12 @@ img { max-width: 100%; height: auto; }
 <section class="hero" id="about">
   <div class="wrap hero-grid">
     <div>
-      <div style="background: var(--surface-2); border: 1px solid var(--line-strong); padding: 14px 20px; border-radius: 12px; margin-bottom: 24px; display: inline-flex; align-items: center; gap: 16px;">
-        <span style="font-size: 28px; line-height: 1;">🛑</span>
-        <div style="text-align: left;">
-          <strong style="color: var(--ink-soft); display: block; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 2px;">Update</strong>
-          <span style="font-weight: 700; color: var(--ink); font-size: 16px;">Registrations are now closed.</span>
-        </div>
-      </div>
+
       <span class="eyebrow">ComedKares &times; ERA Foundation present</span>
       <img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
 
       <h1 class="headline">Unleash AI:<br><span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 6px;">Build More.</span></h1>
-      <p class="sub">Bengaluru&rsquo;s first Gen AI student buildathon. <strong style="color:var(--accent);">No coding background required &mdash; open to all engineering branches!</strong> Bring your logic and prompting skills. 1 day. 30 shortlisted teams. 6 hours to build a working product and pitch it to an industry jury. &#x20B9;40,000+ in prizes.</p>
+      <p class="sub">Bengaluru&rsquo;s first Gen AI student buildathon. <strong style="color:var(--accent);">30 teams competed across 5 domains</strong> using AI and no-code tools. 6 hours to build a working product and pitch it to an industry jury. &#x20B9;40,000+ in prizes awarded.</p>
       <div class="branch-cluster">
         <span class="branch-chip">Mechanical</span>
         <span class="branch-chip">Civil</span>
@@ -584,34 +617,14 @@ img { max-width: 100%; height: auto; }
         <span class="branch-chip">Aeronautical</span>
       </div>
       <div class="hero-cta">
+        <a href="#winners" class="btn btn-primary btn-lg">&#x1F3C6; See the winners</a>
         <a href="#domains" class="btn btn-ghost btn-lg">Explore domains</a>
       </div>
-      <!-- HERO COUNTDOWN -->
-      <div id="heroCountdown" style="margin-top:28px; display:flex; flex-wrap:wrap; align-items:center; gap:12px; background: rgba(139,92,246,0.06); border:1px solid rgba(139,92,246,0.2); border-radius:12px; padding:14px 16px; max-width:100%; box-sizing:border-box;">
-        <div style="text-align:center;"><div id="hcDays" style="font-family:var(--mono);font-size:32px;font-weight:700;color:var(--accent-bright);line-height:1;">--</div><div style="font-size:10px;font-family:var(--mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">days</div></div>
-        <div style="font-family:var(--mono);font-size:24px;color:var(--line-strong);">:</div>
-        <div style="text-align:center;"><div id="hcHrs" style="font-family:var(--mono);font-size:32px;font-weight:700;color:var(--accent-bright);line-height:1;">--</div><div style="font-size:10px;font-family:var(--mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">hrs</div></div>
-        <div style="font-family:var(--mono);font-size:24px;color:var(--line-strong);">:</div>
-        <div style="text-align:center;"><div id="hcMins" style="font-family:var(--mono);font-size:32px;font-weight:700;color:var(--accent-bright);line-height:1;">--</div><div style="font-size:10px;font-family:var(--mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">mins</div></div>
-        <div style="font-family:var(--mono);font-size:24px;color:var(--line-strong);">:</div>
-        <div style="text-align:center;"><div id="hcSecs" style="font-family:var(--mono);font-size:32px;font-weight:700;color:var(--accent-bright);line-height:1;">--</div><div style="font-size:10px;font-family:var(--mono);color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.1em;margin-top:4px;">secs</div></div>
-        <div style="border-left:1px solid var(--line-strong);padding-left:20px;">
-          <div style="font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;">until</div>
-          <div style="font-family:var(--display);font-size:14px;font-weight:600;color:var(--ink);margin-top:2px;">Build Day &mdash; Sep 7</div>
-        </div>
-      </div>
-      <p class="hero-cta-note">&#x20B9;399 per team, GST inclusive &middot; Non-refundable if not shortlisted</p>
-      <div class="hero-bonus" style="margin-top:20px; background: var(--accent-soft); border: 1px solid var(--accent-bright); padding: 14px 18px; border-radius: 8px; font-family: var(--body); font-size: 14px; color: var(--ink); display:block; line-height:1.4;">
-        <strong>&#x1F381; Exclusive Bonus:</strong> All participants will get exclusive access to a 1-Hour Masterclass on Applied AI &amp; Agentic Systems (worth &#x20B9;1,000) and an exclusive Master Playbook (worth &#x20B9;5,000)!
-      </div>
-      <div class="hero-bonus" style="margin-top:12px; background: #f0fdf4; border: 1px solid #22c55e; padding: 14px 18px; border-radius: 8px; font-family: var(--body); font-size: 14px; color: var(--ink); display:block; line-height:1.4;">
-        <strong>&#x1F381; Referral Bonus:</strong> Refer 5 teams and win exclusive Amazon vouchers! Enter the phone number of the team lead who referred you in the registration form.
-      </div>
       <div class="stat-strip">
-        <div class="stat"><div class="k">Event day</div><div class="v">Mon, 7 Sep &apos;26</div></div>
+        <div class="stat"><div class="k">Event date</div><div class="v">Mon, 7 Sep &apos;26</div></div>
         <div class="stat"><div class="k">Venue</div><div class="v" style="font-size: 13.5px; line-height: 1.4;">ComedKares Innovation Hub,<br>Sirsi Circle, Bengaluru</div></div>
-        <div class="stat"><div class="k">Team fee</div><div class="v">&#x20B9;399 / team</div></div>
-        <div class="stat"><div class="k">Prize pool</div><div class="v">&#x20B9;40,000+</div></div>
+        <div class="stat"><div class="k">Teams competed</div><div class="v">30 teams</div></div>
+        <div class="stat"><div class="k">Prizes awarded</div><div class="v">&#x20B9;40,000+</div></div>
       </div>
 
     </div>
@@ -626,15 +639,121 @@ img { max-width: 100%; height: auto; }
       <div class="console-body">
         <div><span class="prompt">$</span> <span class="cmd">event --info</span></div>
         <div class="out ok">&rarr; <a href="https://www.google.com/search?q=comedkares+gopalan+mall" style="color: inherit; text-decoration: underline;" target="_blank">ComedKares Innovation Hub, Sirsi Circle</a></div>
-        <div class="out ok">&rarr; Monday, September 7, 2026 &middot; 08:30 AM onward</div>
-        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">registrations --status</span></div>
-        <div class="out warn" style="color: #ef4444;">&rarr; CLOSED</div>
+        <div class="out ok">&rarr; Monday, September 7, 2026</div>
+        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">event --status</span></div>
+        <div class="out ok" style="color: #7fd8a4; font-weight:600;">&rarr; COMPLETED &check;</div>
+        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">winners --list</span></div>
+        <div class="out ok">&rarr; &#x1F947; Neuro bots (Manufacturing)</div>
+        <div class="out ok">&rarr; &#x1F948; Namma Mavericks (Healthcare)</div>
+        <div class="out ok">&rarr; &#x1F949; Vortex (Agritech)</div>
+        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">next --city</span></div>
+        <div class="out warn" style="color: #facc15;">&rarr; Build 4 Mysore coming soon!<span class="cursor"></span></div>
+      </div>
+    </div>
+    </div>
+  </div>
+</section>
 
-        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">event --countdown</span>
-          <div class="out warn" id="countdownOut" style="color: #7fd8a4;">calculating&hellip;<span class="cursor"></span></div>
+<!-- ═════ WINNERS ═════ -->
+<section id="winners" style="background: var(--surface-2); padding-top: 80px; padding-bottom: 80px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Results</span>
+      <h2>Meet the champions of Bengaluru.</h2>
+      <p>30 teams. 6 hours. These teams built the most innovative, viable, and technically impressive AI prototypes.</p>
+    </div>
+
+    <h3 style="margin-bottom: 24px; font-size: 24px;">🏆 Top 3 Overall</h3>
+    <div class="winners-podium">
+      <!-- 1st Place -->
+      <div class="winner-card gold reveal">
+        <img src="award_1st_neurobots.jpg" alt="Neuro bots - 1st Place" class="winner-img">
+        <div class="winner-body">
+          <div class="winner-rank gold">🥇 1st Place</div>
+          <div class="winner-team">Neuro bots</div>
+          <div class="winner-domain-tag">Manufacturing</div>
+          <div class="winner-prize">&#x20B9;20,000 Prize</div>
+          <p class="winner-desc">Built a real-time edge AI voice translation and transcription system for industrial sites, enabling multilingual workforces to communicate safely without internet access.</p>
+        </div>
+      </div>
+      <!-- 2nd Place -->
+      <div class="winner-card silver reveal reveal-delay-1">
+        <img src="award_2nd_namma_mavericks.png" alt="Namma Mavericks - 2nd Place" class="winner-img">
+        <div class="winner-body">
+          <div class="winner-rank silver">🥈 2nd Place</div>
+          <div class="winner-team">Namma Mavericks</div>
+          <div class="winner-domain-tag">Healthcare</div>
+          <div class="winner-prize">&#x20B9;10,000 Prize</div>
+          <p class="winner-desc">Developed a computer vision SDK using pose estimation to assess exercise form in real time, automatically counting reps and providing corrective feedback.</p>
+        </div>
+      </div>
+      <!-- 3rd Place -->
+      <div class="winner-card bronze reveal reveal-delay-2">
+        <img src="award_3rd_vortex.jpg" alt="Vortex - 3rd Place" class="winner-img">
+        <div class="winner-body">
+          <div class="winner-rank bronze">🥉 3rd Place</div>
+          <div class="winner-team">Vortex</div>
+          <div class="winner-domain-tag">Agritech</div>
+          <div class="winner-prize">&#x20B9;5,000 Prize</div>
+          <p class="winner-desc">Created a multimodal AI decision support system that ingests photos, voice, and weather data to provide farmers with crop-stage-specific, sustainable recommendations.</p>
         </div>
       </div>
     </div>
+
+    <h3 style="margin-top: 64px; margin-bottom: 24px; font-size: 24px;">🏅 Domain Best Builds</h3>
+    <div class="domain-winners-grid">
+      <div class="domain-winner-card reveal">
+        <img src="award_healthcare.jpg" alt="Anvaya - Healthcare" class="domain-winner-img">
+        <div class="domain-winner-body">
+          <div class="domain-winner-badge">Healthcare Winner</div>
+          <div class="domain-winner-team">Anvaya</div>
+          <p class="domain-winner-desc">Computer Vision-Based Exercise Assessment SDK for live form correction.</p>
+        </div>
+      </div>
+      <div class="domain-winner-card reveal">
+        <img src="award_retail.jpg" alt="TAS Innovaters - Retail" class="domain-winner-img">
+        <div class="domain-winner-body">
+          <div class="domain-winner-badge">Retail Winner</div>
+          <div class="domain-winner-team">TAS Innovaters</div>
+          <p class="domain-winner-desc">RAG-Powered Voice & In-Store Assistant for zero-staff returns and inventory queries.</p>
+        </div>
+      </div>
+      <div class="domain-winner-card reveal">
+        <img src="award_manufacturing.jpg" alt="Code Whisperers - Manufacturing" class="domain-winner-img">
+        <div class="domain-winner-body">
+          <div class="domain-winner-badge">Manufacturing Winner</div>
+          <div class="domain-winner-team">Code Whisperers</div>
+          <p class="domain-winner-desc">Real-Time Voice Translation & Transcription for industrial sites using local AI.</p>
+        </div>
+      </div>
+      <div class="domain-winner-card reveal">
+        <img src="award_agritech.jpg" alt="EdgeMinds - Agritech" class="domain-winner-img">
+        <div class="domain-winner-body">
+          <div class="domain-winner-badge">Agritech Winner</div>
+          <div class="domain-winner-team">EdgeMinds</div>
+          <p class="domain-winner-desc">Cross-Crop Germination Detection CV pipeline for automated seed quality grading.</p>
+        </div>
+      </div>
+      <div class="domain-winner-card reveal">
+        <img src="award_fintech.jpg" alt="Nivi - FinTech & Skilling" class="domain-winner-img">
+        <div class="domain-winner-body">
+          <div class="domain-winner-badge">FinTech & Skilling Winner</div>
+          <div class="domain-winner-team">Nivi</div>
+          <p class="domain-winner-desc">AI-powered Informal Worker Skilling Advisor with vernacular and government scheme matching.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ COMING NEXT ═════ -->
+<section class="coming-next" id="next-city">
+  <div class="wrap reveal">
+    <h2>Build 4 Karnataka is hitting the road.</h2>
+    <p>Bengaluru was just the beginning. We're bringing the premier student AI buildathon to more cities across the state.</p>
+    <div class="city-badge">📍 Next Stop: Mysore</div>
+    <div style="margin-top: 32px;">
+      <a href="https://instagram.com/comedkares" target="_blank" class="btn btn-primary">Follow us for updates</a>
     </div>
   </div>
 </section>
@@ -967,12 +1086,12 @@ img { max-width: 100%; height: auto; }
           <div class="tl-desc">Last chance to submit your team application. No extensions &mdash; plan ahead.</div>
           <span class="tl-pill">Closed</span>
         </div>
-        <div class="tl-item active">
+        <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-date">Sep 1&ndash;4, 2026</div>
           <div class="tl-label">Exclusive AI Masterclass</div>
           <div class="tl-desc">All registered participants get exclusive access to a 1-Hour Applied AI &amp; Agentic Systems Masterclass + Master Playbook (worth &#x20B9;6,000). Dates TBC.</div>
-          <span class="tl-pill live">&rarr; Ongoing</span>
+          <span class="tl-pill">Completed</span>
         </div>
 
         <div class="tl-item">
@@ -980,14 +1099,14 @@ img { max-width: 100%; height: auto; }
           <div class="tl-date">Sep 5, 2026</div>
           <div class="tl-label">Problem Statement Revealed</div>
           <div class="tl-desc">Actual problem statements are revealed 48 hours prior to the event for architecture prep.</div>
-          <span class="tl-pill">Upcoming</span>
+          <span class="tl-pill">Completed</span>
         </div>
         <div class="tl-item">
           <div class="tl-dot"></div>
           <div class="tl-date">Sep 7, 2026</div>
           <div class="tl-label">Build Day &mdash; Sirsi Circle Innovation Hub</div>
           <div class="tl-desc">Check-in at 8:30 AM. Sprint begins at 10 AM. 6-hour build. Jury pitches. Prize distribution 6:30&ndash;7:00 PM.</div>
-          <span class="tl-pill live">Main event</span>
+          <span class="tl-pill">Completed</span>
         </div>
 
       </div>
@@ -1184,30 +1303,7 @@ img { max-width: 100%; height: auto; }
 
 <script>
 
-// Countdown
-const target=new Date("2026-09-07T09:30:00+05:30").getTime();
-const out=document.getElementById('countdownOut');
-const hcDays=document.getElementById('hcDays');
-const hcHrs=document.getElementById('hcHrs');
-const hcMins=document.getElementById('hcMins');
-const hcSecs=document.getElementById('hcSecs');
-function tick(){
-  const diff=target-Date.now();
-  if(diff<=0){
-    out.textContent="build day is here.";
-    if(hcDays){hcDays.textContent='00';hcHrs.textContent='00';hcMins.textContent='00';hcSecs.textContent='00';}
-    return;
-  }
-  const d=Math.floor(diff/86400000),h=Math.floor((diff%86400000)/3600000),m=Math.floor((diff%3600000)/60000),s=Math.floor((diff%60000)/1000);
-  out.innerHTML=`${d}d ${h}h ${m}m ${s}s to build day<span class="cursor"></span>`;
-  if(hcDays){
-    hcDays.textContent=String(d).padStart(2,'0');
-    hcHrs.textContent=String(h).padStart(2,'0');
-    hcMins.textContent=String(m).padStart(2,'0');
-    hcSecs.textContent=String(s).padStart(2,'0');
-  }
-}
-tick();setInterval(tick,1000);
+
 
 // Hero accent
 setTimeout(()=>{const a=document.getElementById('heroAccent');if(a)a.classList.add('revealed');},400);
