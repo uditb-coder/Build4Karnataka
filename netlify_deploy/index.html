@@ -281,12 +281,9 @@ h1.headline .accent.revealed::after{transform:scaleX(1);}
 .coming-next .city-badge{display:inline-flex;align-items:center;gap:10px;padding:10px 20px;border-radius:100px;background:var(--accent-soft);border:1px solid rgba(139,92,246,0.25);font-family:var(--mono);font-size:13px;color:var(--accent);margin-top:20px;font-weight:600;}
 
 /* GALLERY */
-.gallery-grid{display:grid;gap:12px;grid-template-columns:repeat(12,1fr);}
-.gallery-item{border-radius:12px;overflow:hidden;background:var(--surface-3);position:relative;aspect-ratio:4/3;}
-.gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform .4s;}
-.gallery-item:hover img{transform:scale(1.05);}
-.gallery-item.wide{grid-column:span 8;}
-.gallery-item.tall{grid-column:span 4;grid-row:span 2;aspect-ratio:auto;}
+.gallery-grid{display:grid;gap:24px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));}
+.gallery-grid img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line);transition:transform .2s;cursor:pointer;}
+.gallery-grid img:hover{transform:scale(1.03);}
 .gallery-item.regular{grid-column:span 4;}
 .gallery-item.half{grid-column:span 6;}
 .g-placeholder{width:100%;height:100%;background:linear-gradient(135deg,var(--surface-3),var(--accent-pale));display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--ink-faint);font-family:var(--mono);font-size:12px;text-align:center;padding:16px;min-height:160px;}
@@ -491,6 +488,13 @@ img { max-width: 100%; height: auto; }
   .foot-bottom { flex-direction: column; text-align: center; }
   .foot-links { justify-content: center; flex-wrap: wrap; }
 }
+/* LIGHTBOX */
+.lightbox{position:fixed;top:0;left:0;width:100%;height:100%;background:rgba(0,0,0,0.85);z-index:9999;display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity 0.3s ease;backdrop-filter:blur(5px);}
+.lightbox.active{opacity:1;pointer-events:auto;}
+.lightbox img{max-width:90%;max-height:90%;border-radius:8px;box-shadow:0 10px 40px rgba(0,0,0,0.5);transform:scale(0.95);transition:transform 0.3s ease;}
+.lightbox.active img{transform:scale(1);}
+.lightbox-close{position:absolute;top:24px;right:32px;color:#fff;font-size:36px;cursor:pointer;font-family:sans-serif;line-height:1;opacity:0.7;transition:opacity 0.2s;}
+.lightbox-close:hover{opacity:1;}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -1259,6 +1263,39 @@ document.querySelectorAll('section[id]').forEach(s=>{new IntersectionObserver((e
   window.addEventListener('mouseleave',()=>{mouse.active=false;});
   resize();rm?step():requestAnimationFrame(step);
 })();
+</script>
+<!-- Lightbox HTML -->
+<div class="lightbox" id="lightbox">
+  <div class="lightbox-close" id="lightboxClose">&times;</div>
+  <img src="" alt="Fullscreen Image" id="lightboxImg">
+</div>
+
+<script>
+  const lb = document.getElementById('lightbox');
+  const lbImg = document.getElementById('lightboxImg');
+  const lbClose = document.getElementById('lightboxClose');
+  
+  document.querySelectorAll('.gallery-grid img').forEach(img => {
+    img.addEventListener('click', () => {
+      lbImg.src = img.src;
+      lb.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    });
+  });
+
+  const closeLb = () => {
+    lb.classList.remove('active');
+    setTimeout(() => lbImg.src = '', 300);
+    document.body.style.overflow = '';
+  };
+
+  lbClose.addEventListener('click', closeLb);
+  lb.addEventListener('click', (e) => {
+    if(e.target === lb) closeLb();
+  });
+  document.addEventListener('keydown', (e) => {
+    if(e.key === 'Escape' && lb.classList.contains('active')) closeLb();
+  });
 </script>
 </body>
 </html>
