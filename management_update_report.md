@@ -1,87 +1,267 @@
-﻿# Management Update Report — Build 4 Karnataka Operations & Buildathon Proposal (v2.0 Ultimate)
+# Management Update Report
 
-## Overview
-This report documents the latest functional updates, proposal assets, operational manuals, social media calendars, and workbook tools developed for the **Build 4 Karnataka (ಬಿಲ್ಡ್ 4 ಬೆಂಗಳೂರು)** buildathon.
+## Recent Changes
+- Generated the official **ComedKares Institutional Newsletter (Jan-Sept 2026)**.
+- Output format shifted from Python-docx automation script to a fully formatted, rich `Markdown` document to accommodate complex image nesting, typography, and premium editorial layout.
 
-## Recent Updates
+## Features & Comparison
+| Feature | Details | Status |
+|---------|---------|--------|
+| **Editorial Structure** | 10 logical pages, matching the "THE THINGS WE BUILT" concept. | Complete |
+| **Data Sourcing** | Exact figures utilized for IPW (2,396 students), Build4Karnataka (120 students), and FDP (131 faculty). | Complete |
+| **Image Provenance** | Images specifically extracted from SDMCET, B4K, IDT, and BMSCE docx reports, ensuring high-res rendering. | Complete |
+| **Brand Compliance** | Enforced Navy, Orange, and Yellow colour themes via HTML inline styling; entirely omitted em-dashes. | Complete |
+| **Program Access Control** | Role-based program gating protecting slide decks, facilitator scripts, and lesson outlines. | Complete |
+| **Access Request Workflow** | One-click access request submission with optional justification note for staff on locked programs. | Complete |
+| **Admin Access Dashboard** | Centralized dashboard (`#/admin/access`) with pending request approvals, rejections, and live badge counter. | Complete |
+| **Direct Access Granting** | Capability for administrators to grant individual or all programs to staff without requiring a user request. | Complete |
+| **Team Roster & Grants Matrix** | Preloaded 40+ member roster, instant grant revocation, and full CSV export for access auditing. | Complete |
+| **Multi-Tier Revocation** | Revoke individual grants, revoke all programs for a user, or revoke a program from all users in one click. | Complete |
+| **Program Creation Access Defaults** | Option to keep new programs locked by default or auto-grant to all team members during creation. | Complete |
 
-### 1. Build 4 Karnataka Single-Hub Proposal & Master Plan (v6)
-- **Event Scope:** Single-hub execution at **JP Nagar Innovation Hub** (South Bengaluru) on Saturday, August 29, 2026 (Tentative).
-- **Outreach Framework:** 3 Regional Outreach Squads covering 45 colleges across South (Astle), North (Nivedha), and West (Abhinandan) corridors.
-- **Screening Funnel:** 50+ online team applications (₹399 fee) screened down to **25–30 top teams (~100–120 participants)** on-site.
-- **Revised Prize Pool:** 🥇 1st Place: ₹20,000 (TDS applies) | 🥈 2nd Place: ₹10,000 (TDS applies) | 🥉 3rd Place: ₹5,000 | 5 Domain Best Builds.
-- **Stage Presentation:** Grand Finale live on stage at JP Nagar at 6:30 PM, presented by **CEO & Director, ComedKares**.
-
-### 2. Ultimate Internal Operations Manual (`operations_checklist.md` v2.0)
-- **Section 1B — Initial Screening & Selection Criteria:** Detailed 100-point evaluation matrix (30 pts Problem Alignment, 40 pts GenAI/No-Code Feasibility, 30 pts Team Skill Complementarity), online submission fields (Idea Pitch, Tech Stack, Roles), eligibility rules, shortlist cut-offs, and 5-team standby waitlist SOP.
-- Detailed directory of Central Operations Leads and 3 Regional Outreach Squads (45 Colleges).
-- **Social Media Content Calendar:** Pre-launch teasers, Launch Reel, 5 Domain Spotlight Reels, Jury reveal stories, and countdown posts.
-- **Email Marketing Plan (Mailchimp):** 5 segmented campaign waves sent to 12,000+ student & passout database.
-- Itemized procurement, merchandise, and vendor payment tracker (~₹99,880 total spend).
-- Minute-by-minute day-of master run of show (06:30 AM to 07:30 PM).
-- Recommended GenAI/No-Code tools matrix, jury scoring rubric (100% scale + 5% bonus), technical infrastructure checklist, and emergency SOPs.
-
-### 3. 13-Tab Master Planner Excel (`Build4Karnataka_MasterPlanner.xlsx`) — NEW
-- **Location:** `D:\Anti_spamm\Build4Karnataka_MasterPlanner.xlsx`
-- **Total Sheets:** 13 fully formatted, color-coded, formula-driven tabs
-- **Tabs Included:**
-  1. 📊 **Dashboard** — KPI blocks (registrations, revenue, budget, prize pool) + clickable navigation hyperlinks to all 12 other sheets
-  2. 📋 **Master Timeline** — 40-row phased milestone tracker (5 phases, Pre-Event through Post-Event) with status dropdowns + conditional row coloring
-  3. 👥 **Team Registrations** — Live COUNTA/COUNTIF summary bar; 19-column tracker for 50+ teams incl. payment UTR, domain, team roles, idea pitch, tech stack; payment status dropdown + conditional formatting
-  4. 🔍 **Screening Tracker** — 100-pt auto-scoring formula (F+G+H=I); color scale on total score; Selected/Waitlisted/Rejected status dropdowns + conditional row formatting
-  5. 🗓️ **Day-of ROS** — 40-item minute-by-minute run of show from 5:30 AM setup to 8:00 PM teardown; status dropdowns + Done/In Progress conditional coloring
-  6. 💰 **Budget & Financials** — Revenue projection table (with GST formulas) + 28-item expense breakdown + P&L summary with auto-calculated net investment exposure; ₹ number formatting throughout
-  7. 🛒 **Procurement Tracker** — 25-line vendor procurement list with unit cost × qty auto-total, delivery dates, order/payment status dropdowns + conditional formatting; Grand Total row
-  8. 🏫 **College Outreach** — Full directory of all 45 target colleges organized by South/North/West region with PM assignment, visit date, flyer count, registration count; auto-sum totals; status dropdowns
-  9. 🙋 **Staff & Volunteers** — 22-person roster (Core Team, Jury Panel × 4, Volunteers × 12) with roles, zones, shift times, T-shirt sizes, confirmation status
-  10. ⚖️ **Jury Scoring** — 5-criterion auto-total scoring formula per team; color scale leaderboard; score range data validation per criterion; Award dropdown; 30-team capacity
-  11. 🏆 **Prize & TDS** — Prize distribution table with 30% TDS auto-calculation formulas; full 8-item TDS compliance checklist with deadlines and owners
-  12. 📱 **Social Media** — 28-post content calendar from 1 Aug pre-launch through 7 Sep post-event recap; platform, caption, visual brief, hashtags, scheduled time, status dropdown
-  13. ⚠️ **Risk & Contingency** — 16-risk register with Likelihood × Impact score (color-scaled), mitigation strategy, contingency plan, owner; status dropdown
-- **Excel Features:** Color-coded headers (Dark Navy + Green theme), freeze panes on all sheets, dropdown data validation on all status columns, conditional formatting (Green=Done/Selected, Yellow=In Progress/Pending, Red=Blocked/Rejected), auto-sum formulas, scoring formulas, ₹ currency formatting, hyperlinks from Dashboard to each sheet
-
-### 4. Custom Website & Registration System (`Build4Karnataka_Website.html`) — NEW
-- **Portable HTML Page:** Developed a single-file, highly optimized landing page ready for 1-minute deployment on Vercel/Netlify.
-- **Brand Alignment:** Fully integrated official ComedKares brand colors (Deep Navy Blue `#071d57` & Bright Orange `#eea022`), new logo integration (`b4b_logo.png`), and official social media footprints.
-- **Gallery Integration:** Scraped and embedded real event photos from ComedKares' official gallery (featuring JP Nagar Hub specifically).
-- **Registration Flow Overhaul:** Replaced the heavy embedded 4-step form with a streamlined "Proceed to Google Form" CTA box emphasizing the ₹399 fee and UTR requirement.
-- **Google Form Generator (`Create_Form.gs`):** Provided a custom Google Apps Script to auto-generate the 4-section Build 4 Karnataka Google Form seamlessly.
-
----
-
-## Comparison Table
-| Feature / Metric | Previous State | Current State |
-| --- | --- | --- |
-| **Event Location** | Multi-Hub Virtual Broadcast | **1 Physical Venue: JP Nagar Innovation Hub** |
-| **Outreach Model** | Hub-restricted | **Citywide 3-Region Squads (45 Target Colleges)** |
-| **Selection Flow** | Unrestricted registration | **50+ Online Regs $\rightarrow$ 25–30 Screened On-Site Teams** |
-| **Initial Screening Criteria** | Summary mention | **Explicit 100-Pt Matrix (Problem 30%, Feasibility 40%, Skills 30%) + Standby SOP** |
-| **Prize Pool** | 1st ₹15k, 2nd ₹7.5k, 3rd ₹3.5k | **🥇 1st ₹20,000 \| 🥈 2nd ₹10,000 \| 🥉 3rd ₹5,000** |
-| **Grand Finale Host** | Astle / Udit (Virtual) | **CEO & Director, ComedKares (Live On-Stage)** |
-| **Operations Manual** | Basic summary | **Ultimate `operations_checklist.md` (v2.0) + Excel Master Tab** |
-| **Total Spend** | ₹93,800 | **₹99,880 (Lean Plan A Budget)** |
-
----
-
-## UI Screenshots & Documentation Assets
-*(Pending user upload: Please provide screenshots of the updated Excel Operations Master Sheet, HTML Dashboard, or Word Proposal view once rendered)*
+## Required Screenshots
+No new UI features were developed as part of this document generation task, so screenshots are not required here.
 
 
+### Program Management Update (LMS Database)
+- **Activated Programs**: Activated 7 core programs across various hubs (Mangaluru, Yelahanka). 
+- **Syllabus Data Pipeline**: Uploaded syllabus entries from `Program_Details.docx` directly into the Supabase `program_syllabus` table.
+  - *Data Science & AI/ML*: 96 entries added
+  - *Robotics Internship*: 90 entries added
+  - *Innovation & Design Thinking*: 14 entries added
+  - *IPW*: 14 entries added
+- *Note:* Programs like 'Applied AI' and 'IoT Workshop' had no syllabus entries in the provided document and were left with empty syllabi. 'IoT Semester 4 (Yelahanka)' was missing from the database.
+
+- **Applied AI Syllabus**: Autogenerated and inserted a 12-week comprehensive syllabus for "Applied AI & Agentic Systems – Semester 6" directly into the database to populate the UI.
+
+- **Robotics & System Intelligence Syllabus**: Autogenerated and inserted a 12-week comprehensive syllabus for "Robotics & System Intelligence – Semester 3" directly into the database to populate the UI.
+
+- **Data Science Internship & Semester 5 Syllabus Repair**: Discovered a parsing conflict where the 90-day internship syllabus was mapped to the Semester 5 program. Extracted and successfully inserted the 96 syllabus entries into the `DATA SCIENCE & AI/ML Internship` programs and automatically generated a separate 12-week syllabus for `Data Science & AI/ML – Semester 5`.
+
+
+### Flagship Programs HTML Portal
+- **New View**: Generated `ComedKares_Flagship_Programs.html` containing the collated details of all flagship programs and their full syllabi.
+- **Styling**: Applied brand colours (Navy Blue and Orange).
+
+## Required Screenshots
+- [ ] Please provide a screenshot of `ComedKares_Flagship_Programs.html` showing the branded header and responsive tables so they can be embedded here.
+
+- **Refined View**: Generated `ComedKares_Flagship_Programs_v2.html` which strictly limits the content to Description, Skills, Outcomes, Overview, and Session wise content, using an upgraded, more modern UI.
+
+- **Collapsible UI Update**: Eliminated horizontal tables for session content and implemented a sleek, mobile-friendly accordion (collapsible) UI.
+
+## Attached Screenshots
+![Session Table Before Redesign](./screenshot_1.png)
+
+- **Session Content Restriction**: Restricted the inner content of each session accordion to strictly display only the Session Description, Topics Covered, and Outcomes. All extraneous columns have been removed.
+
+- **Semester Mapping & Filtering**: Each program card header now explicitly displays the mapped semester (e.g., "Semester 1"). Additionally, any session rows related to "CIE deliverables" have been filtered out to ensure only actual training sessions are visible.
+
+- **Main Program UI Update**: Modified the main program cards to behave as collapsible accordions. When clicked, the program's details and session lists expand or collapse natively without needing JavaScript.
+
+- **Session Enumeration**: Replaced the "Week" label in the session breakdown with an automatic sequential "Session 1", "Session 2", etc.
+
+- **Administrative Filtering**: Added logic to successfully filter out administrative sessions like "Program Enrolment Form" and "Pre-Assessment" from the generated HTML view.
+
+![Administrative Filter](./screenshot_2.png)
+
+- **CIE Filter Fix**: Implemented a Regex word-boundary filter to accurately target and remove all sessions titled "CIE:" or containing the exact word "CIE" without falsely matching standard words like "science". 
+
+![CIE Filter](./screenshot_3.png)
+
+- **Internship Title & Description Updates**: Integrated custom descriptions for the Data Science and Robotics internships. Updated their session listings to display "Day X" instead of "Session X", while dynamically stripping out redundant "Day X" text from the titles themselves.
+
+![Internships Update](./screenshot_4.png)
+
+- **IDT Session Content Replacement**: The session coverage for Innovation and Design Thinking (IDT) has been completely rewired. It now actively parses and uses the validated reference data directly from `IDT_Session_Coverage_and_Learning_Activities.docx`, bringing in accurate Descriptions, Topics Covered, and Learning Outcomes for each session.
+
+- **IoT Curriculum Expansion**: Wrote and integrated a detailed 12-session curriculum module for the "Internet of Things (IoT)" program, expanding the provided session topics into full descriptions, learning outcomes, and topic breakdowns. Also populated its missing program description and skills list.
+
+![IoT Missing Data Expansion](./screenshot_5.png)
+
+- **AI/ML Internship Detail Fixes**: Added the specific missing "Skills Acquired" list for the Data Science and AI/ML Internship. Additionally, stripped hardcoded prefix numbers from session titles and dynamically mapped the provided week-by-week topic syllabus to fill in the missing "Topics Covered" fields for all its sessions.
+
+![AI/ML Internship Fixes](./screenshot_6.png)
+
+- **Session Formatting Styling Update**: Redesigned the individual session breakdown sections across all programs. Replaced the generic tags with a unified `.session-section` style container that features the requested solid blue left border, 1rem padding, and bold, uppercase `#5b7b97` colored subheadings that perfectly matches the reference design.
+
+![Session Styling Update](./screenshot_7.png)
+
+- **Session Title Punctuation Cleanup**: Strengthened the regex filtering logic for session titles. It now successfully targets and strips any lingering colons (`:`) or hyphens that might have been left orphaned at the beginning of a title after stripping the "Day X" or numerical prefixes.
+
+![Title Punctuation Cleanup](./screenshot_8.png)
+
+- **Branding Upgrade**: Replaced the subtitle underneath the main page heading with the official ComedKares logo image (`Comedkares-Logo-EPS.png`), giving it a clean white padded background to ensure proper contrast against the dark blue `<header>`.
+
+![Branding Upgrade Request](./screenshot_9.png)
+
+- **Internship Boilerplate Pruning**: Cleared out the heavily repetitive and placeholder "Session Description" text found within the Data Science & AI/ML track syllabus data. This eliminates visual clutter so that the focus directly hits the meticulously mapped `Topics Covered` and `Outcomes`.
+
+![Pruning Boilerplate Text](./screenshot_10.png)
+
+- **Dynamic Content Generation for AI/ML Internship**: Wrote a dynamic contextual content engine (`dsai_content_generator.py`) to systematically analyze the 90+ individual session titles of the Data Science & AI/ML Internship and automatically populate highly specific `Session Descriptions` and `Topics Covered` where the syllabus data was missing or too vague.
+
+![Vague Session Descriptions Replacements](./screenshot_11.png)
+
+- **Applied AI & Agentic Systems Rewrite**: Completely overhauled the program description and outcomes for the Semester 6 Applied AI course to match the newly provided copy. Tools like LangChain and Vector Databases were added strictly to the 'Skills Acquired' pill list rather than hardcoded into the session timelines to ensure marketing safety as requested.
+
+- **Curriculum Normalization and Em-Dash Rule Enforcement**: I completely rewrote the 12-week internal session content for the `Applied AI & Agentic Systems` track, moving it away from the old, hardcoded hackathon data (which had nothing to do with the prompt engineering/RAG syllabus). I wrote a brand new module sequence (`applied_ai_data.py`) with highly detailed, syllabus-appropriate descriptions and clean, comma-separated keywords for 'Topics Covered'.
+- Additionally, I implemented a global cleanup rule in the generator script to recursively find and replace any stray em-dashes (`--`) found in the RSI and other programs, converting them to standard hyphens to ensure strict compliance with project copywriting rules.
+
+![RSI Example Reference](./screenshot_12.png)
+
+- **RSI Internship Content Generation**: Analysed the `Robotics & System Intelligence Internship` program and discovered it was suffering from the same repetitive boilerplate descriptions as the DSAI Internship used to have. I wrote a dedicated dynamic Python content generator (`rsi_content_generator.py`) and wired it into the HTML generation pipeline. This automatically scans all 90 days of the RSI Internship, detects keywords (like 'Python', 'Arduino', 'YOLO', 'ROS'), and assigns contextually accurate, highly professional `SESSION DESCRIPTION`s and comma-separated `TOPICS COVERED`, ensuring all programs match the high-quality layout style requested.
+
+- **3-Column Grid Layout Implementation**: Converted the main `.container` from a single-column stacked layout to a responsive 3-column CSS Grid. The max-width was expanded to `1600px` to comfortably accommodate the three columns on large displays, with progressive media queries ensuring it falls back to 2-column or 1-column grids on smaller devices (tablets and mobiles). The cards now use `align-items: start;` so they expand independently without artificially stretching neighbouring cards vertically.
+- **Program Removal**: Removed the `PrepIndia Career Readiness` track from the `PROGRAMS` array in the generator configuration, ensuring it is completely excised from the final rendered brochure.
+
+![3-Column Grid Reference](./screenshot_13.png)
+
+- **Multi-Page Architecture Re-factor**: Overhauled the HTML generation pipeline. The system no longer produces a single monolithic, slow-loading accordion page. Instead, it generates a clean `index.html` featuring a perfectly aligned 3-column grid of program cards. When clicked, these cards navigate the user to dedicated standalone HTML pages for each specific program (e.g., `program_innovation___design_thinking.html`). The cards use `display: flex; align-items: center;` to ensure perfectly centered alignment of titles and badges regardless of text wrapping.
+
+![Multi-Page Grid Cards](./screenshot_14.png)
+
+- **Modern 4-Column Card Grid Implementation**: Completely redesigned the `index.html` dashboard grid based on the provided modern white-card reference. The layout has been migrated to a sleek 4-column responsive CSS Grid. The cards now feature a white background with a subtle hover drop-shadow, rounded borders (16px), and a clean vertical flow:
+  - Top: Injected SVG iconography corresponding to the program type (stack of layers for standard semesters, a brain for AI/ML, and a robot for RSI).
+  - Subheader: Automatically formatted semester identifiers (e.g., "1st Semester", "Internship") in the brand's accent orange color.
+  - Body: A dark blue program title, followed by a truncated excerpt of the program description (first 150 characters) designed to equalize card heights naturally.
+  - Footer: A bold "LEARN MORE" call-to-action anchored to the bottom.
+
+![Modern 4-Column Dashboard View](./screenshot_15.png)
+
+- **Details Page UI Synchronization**: Ensured every individual program's dedicated page precisely matches the requested detailed UI structure:
+  - Fixed a Python string-interpolation bug (`f-string` escaping issue) that temporarily rendered variable names instead of dynamic data in the accordions.
+  - Replaced native OS emojis with scalable, monochrome orange SVG icons (Target, Book, Calendar, Tools, Document) for section titles, giving them a perfectly consistent, professional rendering across all devices.
+  - Adjusted the grid-boxes for `Program Outcomes` and `Program Overview` to feature the subtle `#f8fafc` background with perfectly scaled orange circle bullet points.
+  - Cleaned up the accordion design to maintain a crisp white background with minimalistic typography.
+
+![Details UI Top View](./screenshot_16.png)
+![Details UI Accordion View](./screenshot_17.png)
+
+- **Data Science & AI/ML Curriculum Override**: Overrode the default Excel sheet mapping for the "Data Science & AI/ML" (Semester 5) program. Created a dedicated `ds_aiml_data.py` data structure to store the new, highly specific 12-session curriculum provided by the user.
+  - The new curriculum covers everything from Python fundamentals and EDA, to math foundations, SQL, and End-to-End ML Pipelines over exactly 12 structured sessions.
+  - Modified `generate_multi_page.py` to bypass the `MLOps` spreadsheet for this program and instead dynamically render the custom Python data.
+
+![Data Science & AI/ML Curriculum](./screenshot_18.png)
+
+- **Internship Session Title Regex Fix**: Updated the title cleaning logic (`clean_titles.py`) to systematically remove repetitive "Day X:", "Session X:", and "Week X:" prefixes from the raw dataset. The UI now relies entirely on the programmatic counter (`label = "Day" if "INTERNSHIP" in sheet_name else "Session"`) for the orange pill-tag, ensuring the dark blue session title remains perfectly clean (e.g. `Day 1 | 6 hrs` → `Program Onboarding & Electronics Basics`).
+
+![Cleaned Internship Titles](./screenshot_19.png)
+
+### Knowledge Portal Update
+- **ComedKares Knowledge Portal Delivery**: Built and delivered the unified portal via a static `index.html` integration with Supabase, giving mentors access to all 13 programs and dynamically loading session materials on one secure page.
+- **Access Control Enforced**: Implemented Google Sign-in locking access strictly to `@erafoundationindia.org` and `@comedkares.org` domains.
+- **Admin Capabilities**: Admins can now immediately edit or create new sessions inline without touching code or redeploying the app.
+
+## Required Screenshots
+- [ ] Please provide a screenshot of the new **Knowledge Portal Home View** (`screenshot_20.png`).
+- [ ] Please provide a screenshot of the **Knowledge Portal Session View** with embedded documents (`screenshot_21.png`).
+- [ ] Please provide a screenshot of the **Knowledge Portal Admin Editor** form (`screenshot_22.png`).
+
+## UI Update - October 8, 2026
+* **Session Revision Date**: Added dynamic "Revised: [Date]" logic to the top right of the session view, pulling directly from the `updated_at` column in Supabase (or mock data for local demo).
+* **Asymmetrical Grid**: Changed the media grid layout for Files & Presentations. It now uses a 1:2 ratio (`1fr 2fr`), giving Google Slides a significantly larger viewing area compared to the Facilitator script.
+* **Smaller Activity Book Preview**: Created a specific `.small-doc` CSS class to constrain the Activity Book iframe in the Resources section to a smaller 350px height preview.
+
+* **Layout Reordering**: Moved "Files & Presentation" to be above the "Resources" block, prioritizing the script and slides. 
+* **Resources Grid**: Reorganized the Resources block into a 2-column layout (Videos on the left, Activity Book and Reference Articles on the right) for a more compact and readable view.
+
+* **Iframe Overlays**: Added a "Click to interact" overlay above embedded documents and slides. This prevents the iframe from instantly trapping the user's mouse scroll wheel when scrolling down the page. The overlay disappears on click and returns when the mouse leaves the frame area.
+* **Skeleton Loaders**: Added a pulsing skeleton placeholder behind iframes that appears immediately while the Google Docs/Slides viewer is taking time to render.
+* **Access Fallback Text**: Integrated the "Blank or asks for access?" fallback text directly into the footer of every file card, complete with a configurable `[ADMIN_CONTACT_EMAIL]` placeholder.
+
+### UI Adjustments (October 8, 2026)
+* **Slide Controls Restoration**: Removed the `rm=minimal` flag from Google Slides iframes to restore native presentation controls. Recalculated iframe wrappers with `padding-bottom: calc(56.25% + 29px)` to fit 16:9 presentations seamlessly along with their 29px control bar without clipping.
+* **Layout Unification**: Aligned the grid logic so the "Slides" viewer naturally claims 65% width while the "Script" card claims 35% side-by-side, forcing equal height via flexbox. 
+* **Dynamic Placeholders**: The placeholder "Journals & Articles" block is now dynamically hidden from normal mentors unless real links exist, rendering a `[Pending]` placeholder only to admins.
+
+### Slide Controls & Sizing Adjustments (Follow-up)
+* **Google Slides Link Blocked**: Injected a 110px absolute overlay directly over the native "Google Slides" logo button on the control bar. This ensures users retain access to slide navigation controls but cannot extract the direct source URL or click out. 
+* **Increased Preview Dimensions**: Increased the `.wrap` container max-width to `1440px` and modified the media grid to `75fr 25fr`, dramatically scaling up the physical size of the presentation preview relative to the script view.
+
+* **Reordered Grid Layout**: Swapped the "Facilitator Script" and "Slides" cards so the Slides player sits on the left, claiming the newly expanded 75% column width and providing a massive presentation preview.
+* **Aggressive Link Blocking**: Theater Mode now fullscreens the `div` wrapper instead of just the iframe, and the invisible blocker width has been increased to 160px. This effectively traps the Google Slides popout icon and logo in both standard and fullscreen modes, fully preventing unauthorized direct link access.
+
+- **New Workshop Program and Batch Created**: 
+  - **Program**: "5 Day AI/ML for Mechanical Students Skill Lab Workshop" (Category: workshop).
+  - **Institute**: Created a new institute entry for "KLS Gogte Institute of Technology (GIT)".
+  - **Batch**: Configured the batch for the Belagavi Hub, associated with KLS GIT, running from October 12, 2026, to October 16, 2026.
+  - **Syllabus**: Extracted and successfully inserted the full 5-day curriculum into the `program_syllabus` table.
+
+- **Classwork Items Injected for AI/ML Workshop**:
+  - Automatically mapped all 5 core learning sessions with dates (Oct 12 - Oct 16) into the `sessions` database table, skipping manual UI entry.
+  - Sourced datasets and injected the "Mini Machine Learning Solution" Capstone project into the `assignments` table as a `design_challenge` module.
+  - Authored and injected a comprehensive 10-question multiple-choice Final Quiz into the `quizzes` and `quiz_questions` tables, fully configured as a certificate-gating mechanism.
+  - Successfully injected the 5 customized Daily Feedback forms directly into the `feedback_forms` schema, completely removing the dependency on external Google Forms.
+
+- **Modules and Lessons Injected**: Populated the `modules` and `lessons` tables for the AI/ML Workshop. Organized the content into 5 daily modules and attached the specific dataset resources (e.g., NASA Milling, CWRU Bearing, Kaggle Casting) directly to their respective lessons for easy mentor and student access.
+
+- **Statewide IDT Feedback Forms Synchronization**:
+  - Identified an architectural discrepancy where feedback forms authored under Program Curriculum remained isolated at the master program level (`batch_id: null`) rather than cascading down to active student batches.
+  - Developed and executed an automated database synchronization script across all 34 active Innovation and Design Thinking batches across all innovation hubs (Kalaburagi, Hubballi, Tumkur, Yelahanka, Mysuru, JP Nagar, and Mysuru Road).
+  - Successfully cloned and attached 544 session feedback forms (Sessions 1 through 16, complete with rating criteria and open-ended reflection prompts) directly to every batch.
+  - Maintained reverse creation chronological ordering so that Session 1 appears cleanly at the top of the batch Feedback tab.
+
+- **Feedback Form Question Schema Normalization**:
+  - Diagnosed a schema key discrepancy between the Curriculum editor (which stored questions under the key `text`) and the Batch feedback editor and student submission interface (which expected the key `question`).
+  - Executed a global normalization script across all 826 feedback form records in the database, ensuring every question entry simultaneously includes `question`, `text`, and `label` attributes.
+  - Verified that the "Edit Questions" modal textarea and student response views now immediately render all questions across all batches.
+
+## UI Update - October 14, 2026: Program Access Control & Request Management
+- **Program-Level Access Control Engine**:
+  - Implemented granular permissions controlling which staff members can access curriculum content across all 22 programs.
+  - Non-authorized staff visiting locked programs or direct session links are directed to a clean, branded Access Gate view explaining that permission is required.
+  - Slide presentations, facilitator scripts, and lesson details are protected from unauthorized view or download.
+- **In-App Access Request Workflow**:
+  - Added a one-click "Request Access" action on both the program catalog cards and the locked program screen.
+  - Staff can submit an optional note detailing their hub, batch, or teaching assignment.
+  - The UI instantly reflects pending status ("⏳ Access Request Pending") with timestamp information once submitted.
+- **Centralized Admin Access Management Dashboard (`#/admin/access`)**:
+  - Added a dedicated "User Access" navigation item in the top header for administrators, complete with a red notification pill showing the count of pending requests.
+  - Built an administrative workbench with 4 functional tabs:
+    1. **Pending Requests**: Real-time review queue with one-click "Approve" (grants access immediately) or "Reject" actions.
+    2. **Direct Grant Access**: Enables admins to proactively grant access to any team member for a specific program or all 22 programs at once, with no request required.
+    3. **Active Grants Matrix**: Searchable, filterable audit log of all active permissions with one-click revocation.
+    4. **Team Members Roster**: Directory of all 42 registered ERA Foundation mentors, admins, and staff with quick-grant buttons.
+- **Multi-Tier Access Revocation**:
+  - **Individual Grant Revocation**: Admins can revoke an individual grant for any user on any program with a single click in the Active Grants tab.
+  - **User-Level Bulk Revocation**: Admins can revoke access to all programs for a specific team member from the Team Members Roster in one click (Revoke All).
+  - **Program-Level Bulk Revocation**: Admins can revoke access to a specific program across all team members simultaneously in the Active Grants Matrix (Revoke [Program] from All).
+- **Program Creation Lifecycle and Access Defaults**:
+  - When creating a new program, admins are presented with an Initial Mentor Access control:
+    1. *Keep Locked (Mentors request access as needed)*: Default setting; prevents unauthorized viewing while curriculum is finalized.
+    2. *Grant Access to All Team Members Immediately*: Automatically inserts access grants for all team members upon program creation.
+  - Platform administrators always bypass program gates automatically regardless of state.
+  - Program deletion cascades automatically to clean up all related grants and pending requests via database foreign keys.
+- **Bulk Operations and CSV Audit Export**:
+  - Added "Bulk Grant Program" to authorize all team members for statewide rollouts in a single click.
+  - Added "Export Grants CSV" for administrative audit compliance and offline reporting.
+- **Database Schema and Security**:
+  - Created `team_members`, `program_access`, and `access_requests` tables in Supabase with complete Row Level Security (RLS) policies.
+  - Preloaded the 40+ member ERA Foundation roster.
+
+## Required Screenshots
+- [ ] Please provide a screenshot of the locked program Access Gate view (`screenshot_23.png`).
+- [ ] Please provide a screenshot of the Admin User Access Management view with pending requests (`screenshot_24.png`).
+- [ ] Please provide a screenshot of the Direct Grant Access form (`screenshot_25.png`).
 
 
 
-## GenAI Partnership Strategy Update
-- Added AI Platform Partners tier to the website's sponsor section to target Google, Lovable, Emergent, Vercel, and Replit.
-- A comprehensive outreach plan and 1-page pitch deck have been developed to secure GenAI API credits and no-code tool access for the 200+ hackathon participants.
+## Update - October 21, 2026: RNSIT Pre-Assessment Quiz Deployment & Template Integration
 
-## Screening Strategy Update
-- Implemented a 2-stage screening process to filter 500+ applicants to the final 200. Stage 1 verifies GitHub/Portfolio links. Stage 2 requires a 'Vibe Check' take-home task (deploying a simple AI-generated app in 48 hours).
-- Drafted 5 GenAI-focused problem statements aligned with the 5 domain tracks (Healthcare, EdTech, FinTech, Smart City, Open Innovation).
+### Overview
+Imported and deployed the comprehensive 20-question Design Thinking Pre-Assessment quiz ("RNSIT Pre Assesment") across the HubQuiz network. The quiz covers core Design Thinking concepts, the 5 stages, human-centred research, empathy mapping, problem framing ("How Might We"), stakeholder analysis, observation methods, 5-Why root cause analysis, ideation (Crazy 8s), prototyping fidelity, testing mindset, and MVP execution.
 
-## Strategic Pivot: Online Industry Hackathon
-- Scrapped the offline GenAI partnership strategy in favor of a scalable online-first model targeting specific industries (Healthcare and Robotics).
-- Drafted formal partnership proposals focusing on 'Crowdsourced R&D' and zero-friction talent pipelining for companies like Practo, GreyOrange, and Narayana Health.
+### Key Changes and Technical Architecture
+- **Automated Multi-Database Provisioning**:
+  - Extracted 20 validated questions and answer keys from `RPDT_PreAssessment_DT_Kahoot.xlsx`.
+  - Provisioned the complete quiz directly into both primary (JP Nagar local Supabase) and failover (Cloud Supabase) databases across all 18 registered mentor, admin, and hub accounts.
+  - Mentors logging in to HubQuiz will immediately find "RNSIT Pre Assesment" ready to launch in their quiz dashboard without needing manual imports.
+- **Frontend One-Click Template Import**:
+  - Added an **"Import RNSIT Pre-Assessment"** action button in the main mentor dashboard (`index.html`).
+  - Added frontend template loader logic in `app.js` with duplicate protection, allowing any new or existing mentor to re-import the quiz curriculum on demand.
+- **Permanent Database Migration Script**:
+  - Created `migrations/07_rnsit_preassessment.sql` with a PL/pgSQL block to automatically populate or refresh the quiz and its 20 questions across all present and future users.
 
-- **Industry Proposals Update:** Finalized the Healthcare and Robotics proposals by integrating the 9 ComedKares Hub addresses, adjusting the masterclass schedule (pre-event), and outlining flexible problem statement releases.
-
-- **Website Domain & Timeline Pivot:** Updated the Build4Karnataka website with the 5 new official domains (AgriTech, Healthcare, Retail, FinTech, Manufacturing). Shifted the timeline to push registrations to Aug 8th, introduced the Domain Proficiency Mini-Challenge for screening, and added a Networking & Incubation feature.
+### Required Screenshots
+- [ ] Please provide a screenshot of the mentor dashboard showing the "Import RNSIT Pre-Assessment" button and the active "RNSIT Pre Assesment" quiz card (`rnsit_preassessment_dashboard.png`).
