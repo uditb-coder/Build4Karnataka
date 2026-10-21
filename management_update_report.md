@@ -250,18 +250,23 @@ No new UI features were developed as part of this document generation task, so s
 ## Update - October 21, 2026: RNSIT Pre-Assessment Quiz Deployment & Template Integration
 
 ### Overview
-Imported and deployed the comprehensive 20-question Design Thinking Pre-Assessment quiz ("RNSIT Pre Assesment") across the HubQuiz network. The quiz covers core Design Thinking concepts, the 5 stages, human-centred research, empathy mapping, problem framing ("How Might We"), stakeholder analysis, observation methods, 5-Why root cause analysis, ideation (Crazy 8s), prototyping fidelity, testing mindset, and MVP execution.
+Imported, streamlined, and deployed the 14-question Design Thinking Pre-Assessment quiz ("RNSIT Pre Assesment") across the HubQuiz network. Per curriculum review, 6 situational questions (Q5, Q6, Q12, Q16, Q17, Q18) were removed across all accounts, and the MVP question was updated to test core definition clarity. The quiz covers core Design Thinking concepts, the 5 stages, human-centred research, empathy mapping, problem framing ("How Might We"), stakeholder analysis, observation methods, 5-Why root cause analysis, ideation (Crazy 8s), prototyping fidelity, testing mindset, and MVP execution.
 
 ### Key Changes and Technical Architecture
 - **Automated Multi-Database Provisioning**:
-  - Extracted 20 validated questions and answer keys from `RPDT_PreAssessment_DT_Kahoot.xlsx`.
+  - Extracted 14 curated questions and answer keys from `RPDT_PreAssessment_DT_Kahoot.xlsx`.
   - Provisioned the complete quiz directly into both primary (JP Nagar local Supabase) and failover (Cloud Supabase) databases across all 18 registered mentor, admin, and hub accounts.
   - Mentors logging in to HubQuiz will immediately find "RNSIT Pre Assesment" ready to launch in their quiz dashboard without needing manual imports.
 - **Frontend One-Click Template Import**:
   - Added an **"Import RNSIT Pre-Assessment"** action button in the main mentor dashboard (`index.html`).
   - Added frontend template loader logic in `app.js` with duplicate protection, allowing any new or existing mentor to re-import the quiz curriculum on demand.
 - **Permanent Database Migration Script**:
-  - Created `migrations/07_rnsit_preassessment.sql` with a PL/pgSQL block to automatically populate or refresh the quiz and its 20 questions across all present and future users.
+  - Created `migrations/07_rnsit_preassessment.sql` with a PL/pgSQL block to automatically populate or refresh the quiz and its 14 questions across all present and future users.
 
 ### Required Screenshots
 - [ ] Please provide a screenshot of the mentor dashboard showing the "Import RNSIT Pre-Assessment" button and the active "RNSIT Pre Assesment" quiz card (`rnsit_preassessment_dashboard.png`).
+
+- **Rapid Prototyping and Design Thinking (RPDT) Curriculum & Syllabus Ingestion**:
+  - Populated the full 7-session dossier into the `program_syllabus` table for "Rapid Prototyping & Design Thinking | RNSIT | Mysore Road".
+  - Configured 8 comprehensive assessment quizzes (7 weekly quizzes plus 1 final gating quiz, totaling 45 questions) with certificate requirements and a 70% passing threshold under the Curriculum section.
+  - Authored and attached 8 native feedback forms (Sessions 1 through 7 and End of Course Feedback) with normalized rating schemas, synchronizing them to both the master program curriculum and the active student batch (`RNSIT | RPDT | AIML-D | ME 306`).

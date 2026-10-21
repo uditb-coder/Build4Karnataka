@@ -200,11 +200,16 @@
 
 ### What is New
 - **RNSIT Pre-Assessment Quiz Now Live**:
-  - The 20-question Design Thinking Pre-Assessment quiz titled **"RNSIT Pre Assesment"** has been automatically loaded into every mentor and hub account.
+  - The refined 14-question Design Thinking Pre-Assessment quiz titled **"RNSIT Pre Assesment"** has been updated across every mentor and hub account. Questions 5, 6, 12, 16, 17, and 18 were removed to keep the quiz focused, and the MVP question was updated to directly test 'What is a Minimum Viable Product (MVP)?'.
   - Topics covered: Design Thinking stages (Empathize, Define, Ideate, Prototype, Test), Empathy Mapping, Problem Framing ("How Might We"), Stakeholder Analysis, Observations vs Assumptions, 5-Why analysis, Brainstorming & Crazy 8s, Low-Fidelity Prototyping, Testing Mindsets, and Minimum Viable Product (MVP).
 - **How to Host the Quiz**:
   1. Log in to HubQuiz (`hubquiz.vercel.app` or via your LMS Hub shortcut).
-  2. Locate **"RNSIT Pre Assesment" (20 Questions)** on your dashboard.
+  2. Locate **"RNSIT Pre Assesment" (14 Questions)** on your dashboard.
   3. Click **Start** to open the waiting lobby, project the PIN/QR code for students, and begin the session.
 - **One-Click Re-Import**:
   - If you ever delete or modify your quiz and want a clean fresh copy, simply click the **"Import RNSIT Pre-Assessment"** button at the top of your dashboard.
+
+- **RPDT Program Content Live (RNSIT | Mysore Road)**:
+  - The complete 7-week syllabus is now available for "Rapid Prototyping & Design Thinking | RNSIT | Mysore Road".
+  - Mentors can access the weekly quizzes (Weeks 1 to 7 plus the Final Assessment Quiz) and all 8 session feedback forms directly within the LMS portal without manual configuration.
+  - All feedback forms have been pre-synchronized to the active batch (`RNSIT | RPDT | AIML-D | ME 306`) so students and mentors can start collecting responses immediately.
