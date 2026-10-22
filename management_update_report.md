@@ -18,6 +18,9 @@
 | **Team Roster & Grants Matrix** | Preloaded 40+ member roster, instant grant revocation, and full CSV export for access auditing. | Complete |
 | **Multi-Tier Revocation** | Revoke individual grants, revoke all programs for a user, or revoke a program from all users in one click. | Complete |
 | **Program Creation Access Defaults** | Option to keep new programs locked by default or auto-grant to all team members during creation. | Complete |
+| **RPDT Program Integration** | Added 8-week Rapid Prototyping and Design Thinking program with 7 complete sessions, decks, scripts, and labs. | Complete |
+| **External Collaborator Whitelist** | Whitelist non-org emails (visiting faculty, partners) so they can authenticate via Google and access assigned programs. | Complete |
+| **Admin Visitor Activity Tracker** | Real-time audit trail and analytics dashboard (#/admin/tracker) logging session views and delivery runs with KPI cards and CSV export. Strictly admin-only. | Complete |
 
 ## Required Screenshots
 No new UI features were developed as part of this document generation task, so screenshots are not required here.
@@ -270,3 +273,147 @@ Imported, streamlined, and deployed the 14-question Design Thinking Pre-Assessme
   - Populated the full 7-session dossier into the `program_syllabus` table for "Rapid Prototyping & Design Thinking | RNSIT | Mysore Road".
   - Configured 8 comprehensive assessment quizzes (7 weekly quizzes plus 1 final gating quiz, totaling 45 questions) with certificate requirements and a 70% passing threshold under the Curriculum section.
   - Authored and attached 8 native feedback forms (Sessions 1 through 7 and End of Course Feedback) with normalized rating schemas, synchronizing them to both the master program curriculum and the active student batch (`RNSIT | RPDT | AIML-D | ME 306`).
+
+- **RPDT Batch Classwork and Capstone Configuration**:
+  - Populated the full 7-session schedule into the `sessions` table for the active RNSIT batch (`RNSIT | RPDT | AIML-D | ME 306`).
+  - Mapped weekly Thursday delivery blocks (03:00 PM to 06:00 PM) spanning October 22 to December 3, 2026, complete with session numbers, titles, module associations, and detailed topic breakdowns.
+  - Injected the "Integrated Working Prototype (RPDT Capstone)" into the `assignments` table under the `design_challenge` category, enabling team-based submissions and evaluations.
+
+
+## Update - October 22, 2026: Robotics Workshop Curriculum, Syllabus, Quizzes & Feedback Ingestion (Kalaburagi Hub)
+
+### Overview
+Configured the newly created 1-day (6-hour) hands-on "Robotics Workshop" program for the Kalaburagi hub. The workshop empowers participants to build, wire, program, and test a beginner-level remote-controlled (RC) mobile bot utilizing dual geared BO motors, an L298N dual H-bridge motor driver, an HC-05 Bluetooth transceiver module, rubber wheels, an acrylic chassis, and an Arduino Uno microcontroller.
+
+### Key Changes and Technical Architecture
+- **Program Syllabus Ingestion (`program_syllabus`)**:
+  - Injected 7 structured learning sessions totaling exactly 6.0 hours into the `program_syllabus` table.
+  - Sessions map systematically from introduction to mechanical assembly, circuit wiring, microcontroller fundamentals, Bluetooth firmware parsing, and arena challenge testing.
+  - Session 1: Introduction to Robotics & Hardware Components Overview (0.5h, 5 topics)
+  - Session 2: Understanding Robot Components & Working Principles (0.5h, 5 topics)
+  - Session 3: Chassis Mechanical Assembly & Drive Wheel Mounting (1.0h, 5 topics)
+  - Session 4: Power System & Circuit Wiring (1.0h, 5 topics)
+  - Session 5: Arduino IDE Setup & Microcontroller Fundamentals (1.0h, 5 topics)
+  - Session 6: Firmware Programming & HC-05 Bluetooth RC Control Logic (1.0h, 5 topics)
+  - Session 7: Testing, Calibration, Troubleshooting & RC Bot Arena Challenge (1.0h, 5 topics)
+- **Curriculum Assessment Quizzes & Question Banks (`quizzes`, `quiz_questions`)**:
+  - Created 7 master assessment quizzes in the master program curriculum (`batch_id = NULL`), making them directly accessible in the Curriculum section of the LMS.
+  - Authored 70 technically rigorous multiple-choice questions (10 questions per quiz) covering sense-think-act loops, gear reduction torque, L298N H-bridge logic, HC-05 UART protocol, 3.3V RX level shifting, Arduino sketch structure, serial character parsing ('F', 'B', 'L', 'R', 'S'), and brownout troubleshooting.
+  - All quiz questions enforce uppercase correct options ('A', 'B', 'C', 'D') complying with PostgreSQL database constraints.
+- **Master Feedback Forms & Multi-View Normalization (`feedback_forms`)**:
+  - Provisioned 8 native feedback forms (Sessions 1 through 7 feedback plus 1 comprehensive End of Workshop Feedback form).
+  - Implemented fully normalized question schemas containing `id`, `type`, `question`, `text`, and `label` properties, ensuring seamless rendering across both Curriculum administration modals and batch classwork student portals.
+  - Synchronized and cloned all 8 feedback forms to the active batch view (`3388398e-8175-4d8a-a3a2-27220032cf7b`) to prevent empty states in the batch view.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the Robotics Workshop Program Overview showing the 7-session syllabus accordion (`robotics_workshop_syllabus.png`).
+- [ ] Please provide a screenshot of the Curriculum Quizzes tab showing the 7 newly added quizzes (`robotics_workshop_quizzes.png`).
+- [ ] Please provide a screenshot of the Curriculum Feedback Forms tab showing the 8 active feedback forms (`robotics_workshop_feedback.png`).
+
+
+## Update - October 22, 2026: RPDT (Rapid Prototyping & Design Thinking) Program Integration
+
+### Overview
+Integrated the comprehensive 8-week, 40-hour "Rapid Prototyping and Design Thinking" (RPDT) flagship program aligned with RNSIT. This curriculum supersedes earlier draft outlines with complete, deck-aligned instructional designs, hands-on lab challenges, rubrics, Google Slides presentations, curated research literature, and YouTube video playlists across all 7 core sessions.
+
+### Program Structure
+* **Program Code**: `RPDT`
+* **Program Name**: `Rapid Prototyping and Design Thinking`
+* **Category**: `Semester Aligned Core Programs`
+* **Level & Duration**: Semester Aligned (8 weeks / 40 hours engagement)
+* **Delivery Breakdown**: 2 hours facilitated instruction + 1 hour portal work per session (Sessions 1 and 7: 3 hours facilitated)
+* **Audience**: RNSIT / All Engineering Disciplines
+
+### Integrated Session Modules
+1. **Session 1: Rapid Prototyping Fundamentals**
+   * *Focus*: LMS onboarding, Pre-Assessment quiz, Design Thinking 3 I's (Inspiration, Ideation, Implementation), prototype fidelity levels (low, mid, high), invention vs. innovation, and the ice-cream-stick catapult battle challenge.
+   * *Deck*: Google Slides ([Deck 1](https://docs.google.com/presentation/d/1u7GA44tfPTTgvelcLcGK5UBpxuW_5p3fCZy5i9VW4Tk/edit))
+   * *Deliverables*: Profile setup, catapult distance log (Trial 1 vs 2), Build Log v1.
+2. **Session 2: UI/UX Design & Interactive Prototypes in Figma**
+   * *Focus*: UI vs. UX differentiation, user empathy role-play (Smart Gloves / Shoes), low-fidelity wireframing, clickable high-fidelity Figma prototypes, and 5 Why root-cause analysis (Titanic case study).
+   * *Deck*: Google Slides ([Deck 2](https://docs.google.com/presentation/d/1tv2DVhxq6euuTkv8THX39QHSH283aXrimB5ZIhXVtvk/edit))
+   * *Deliverables*: 5 user pain points, Figma prototype link, 5 Why analysis sheet.
+3. **Session 3: Digital Fabrication with Onshape**
+   * *Focus*: Fit, form, and function criteria; 2D dimensioned sketches for laser cutting; 3D Part Studio modeling (extrude, fillet, revolve, loft); and Ultimaker Cura slicing.
+   * *Deck*: Google Slides ([Deck 3](https://docs.google.com/presentation/d/1qubvWbOD7Un63j6luW1Utl_gHDfrzEOhRAY5Wy5kvck/edit))
+   * *Deliverables*: Dimensioned Onshape sketch, DXF export, STL 3D model, Cura print time estimate.
+4. **Session 4: Electronics & Arduino Basics**
+   * *Focus*: Adventuretronics narrative, Ohm's law resistor calculation, breadboard prototyping, Arduino IDE setup/loop, digital and analog I/O (PWM), LDR automatic street light, and circuit soldering.
+   * *Deck*: Google Slides ([Deck 4](https://docs.google.com/presentation/d/1j76zkUf05lZR5QjqAtWHg2b6h4Y9diMl_LxECh1rsNg/edit))
+   * *Deliverables*: Torch circuit, RGB code lock, sensor circuit video, soldered board.
+5. **Session 5: IoT Prototyping with ESP and ThingSpeak**
+   * *Focus*: Four IoT architecture layers (things, gateway, network, cloud), NodeMCU ESP8266 Wi-Fi configuration, ThingSpeak channel API publishing, live telemetry charts, and threshold alert design.
+   * *Deck*: Google Slides ([Deck 5](https://docs.google.com/presentation/d/1B7hLiy0getKsCcyrmLBjeOuBlOkCoEjbPn7mcGdFJGI/edit))
+   * *Deliverables*: Live ThingSpeak channel chart, IoT architecture mapping table, alert rule.
+6. **Session 6: Design Thinking & Problem Definition**
+   * *Focus*: Field research techniques, customer journey mapping, 5W1H and POEMS interview question framing, stakeholder mapping (core, involved, informed), empathy mapping, and solution-free How Might We (HMW) statements.
+   * *Deck*: Google Slides ([Deck 6](https://docs.google.com/presentation/d/1ZGC5gTurvZRHd0kvkaD7lC_zMo2CYzXMDp2HBDJyMIE/edit))
+   * *Deliverables*: Journey map, observation notes, empathy map, stakeholder matrix, HMW statement.
+7. **Session 7: Prototyping: Feasibility Analysis & Concept Selection**
+   * *Focus*: Technical, economic, and social feasibility screening (Juicero case); weighted decision matrix (criteria, weights, scores); Rs 3,000-5,000 budget scoping; system block diagrams; and Demo Day pitch rehearsal.
+   * *Deck*: Google Slides ([Deck 7](https://docs.google.com/presentation/d/1Eak4DlAmb1ekQTnBsU18PtTbCaJfiGt4KAn4QqCN4lU/edit))
+   * *Deliverables*: Feasibility matrix, weighted decision matrix, system block diagram, costed BOM.
+
+### Database Migration & Synchronization
+* **Database Migration**: Created `add_rpdt_program.sql` containing idempotent `upsert` queries for the program and complete schema-compliant records for Sessions 1 through 7, including JSONB video arrays and journal references.
+* **Master Seed Alignment**: Appended the RPDT program and 7 sessions into both `seed.sql` and `knowledge-portal-app/seed.sql`.
+* **Offline Mock Portal Alignment**: Updated `local-demo.html` with the RPDT program card and mock sessions 201 through 207 for zero-latency local review.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the RPDT Program Overview page in the portal showing all 7 sessions (`screenshot_26.png`).
+- [ ] Please provide a screenshot of the Session 1 detail view showing the embedded Google Slides and Facilitator Script (`screenshot_27.png`).
+
+
+## Update - October 22, 2026: External User Whitelisting & Admin Visitor Activity Tracker
+
+### Overview
+Introduced two critical governance and observability capabilities to the ComedKares Knowledge Portal:
+1. **External Collaborator Whitelisting**: Allows administrators to grant portal access to non-organization emails (such as visiting faculty, external evaluators, or partner institute mentors) so they can authenticate using Google OAuth while restricting access strictly to their designated programs.
+2. **Admin-Only Visitor & Content Activity Tracker (`#/admin/tracker`)**: A real-time audit trail and analytics dashboard that tracks every session view and delivery mode launch across the entire portal, giving leadership visibility into curriculum utilization.
+
+### 1. External Collaborator Whitelisting Architecture
+* **Database & RLS Upgrades (`is_staff()` and `is_admin()`)**:
+  * Updated the PostgreSQL `is_staff()` helper function to use a `security definer` check that allows access if the email belongs to the primary domains (`@erafoundationindia.org` or `@comedkares.org`), OR if the email has been registered in the `team_members` or `admins` tables.
+  * This ensures that external collaborators can query allowed programs and sessions without exposing unauthorized content to the public.
+* **Frontend Authentication Gate**:
+  * Modified `handleSession` in `index.html` to perform a non-blocking database lookup for external email addresses before taking action.
+  * If the email is present in `team_members` or `admins`, the user is logged in. If not, the portal signs them out and displays a clear message directing them to request whitelisting from an administrator.
+* **Roster Management UI**:
+  * Added a prominent **[+ Whitelist External Member]** button in the Team Members tab (`#/admin/access`).
+  * Administrators can input the external collaborator's Full Name, Google Account Email, Role/Institution (e.g. "RNSIT Visiting Faculty"), and initial program access in a single modal.
+  * In the Direct Grant tab, entering an external email automatically upserts the user into `team_members` with the role "External Member".
+
+### 2. Admin Visitor Activity Tracker (`#/admin/tracker`)
+* **Strict Database-Level Confidentiality**:
+  * Created the `content_visits` table with indexed queries for `user_email`, `session_id`, `program_code`, and `visited_at`.
+  * Configured Row Level Security (RLS) so that any authenticated mentor can insert their own visit logs (`cv_insert`), but **ONLY administrators** are granted select permissions (`cv_select on content_visits for select using (is_admin())`). Non-admin users cannot read analytics data.
+* **Real-Time Client Telemetry**:
+  * Automatically logs view events whenever a session page is opened (`view_session`) or when a mentor begins teaching in Delivery Mode (`delivery_mode`).
+* **Interactive Admin Dashboard**:
+  * **Summary KPI Cards**: Displays Total Content Views, Unique Visitors, Sessions Explored, and the Most Viewed Program.
+  * **Visitor Leaderboard Tab**: Aggregates all visits by user, displaying their organization status (Internal Staff vs. External Collaborator), total interactions, distinct sessions explored, programs accessed, and last active timestamp.
+  * **Content Popularity Tab**: Breaks down views by Program and Session, showing unique viewers, total view count, and delivery mode launches.
+  * **Live Audit Feed Tab**: Chronological live stream of recent portal interactions with relative timestamps ("5 mins ago") and action type badges.
+  * **Search, Program Filter & CSV Export**: Real-time filtering by program code, mentor name, or session title, with a one-click **[Export Activity CSV]** button for executive reporting.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the Whitelist External Member modal in the User Access view (`screenshot_28.png`).
+- [ ] Please provide a screenshot of the Admin Visitor Activity Tracker dashboard showing engagement metrics (`screenshot_29.png`).
+
+
+## Update - October 22, 2026: Vercel Web Analytics & Telemetry Integration
+
+### Overview
+Integrated Vercel Web Analytics and Speed Insights into the HubQuiz production frontend. Because HubQuiz is built with lightweight vanilla HTML and JavaScript rather than a framework like Next.js, the official lightweight script tag was implemented directly into the HTML document head.
+
+### Key Changes & Capabilities
+- **Native Static Analytics Integration**:
+  - Embedded the Vercel Insights and Speed Insights edge scripts into `index.html`.
+  - Configured global tracking queues (`window.va` and `window.si`) to collect visitor counts, unique visits, page views, and real-world Core Web Vitals without impacting page load speed.
+- **Client-Side Event Telemetry**:
+  - Wired custom telemetry events into `app.js` to track key platform interactions, including `student_joined`, `quiz_started`, and `quiz_finished`.
+- **Automatic Single-Page Application (SPA) Tracking**:
+  - The script automatically captures route transitions made via the HTML5 History API (`/host`, `/play`, `/#/admin`), providing accurate visit breakdowns across all hubs and devices.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the Vercel Web Analytics dashboard showing live visitors and page views (`vercel_analytics_dashboard.png`).

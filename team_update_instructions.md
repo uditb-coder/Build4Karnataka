@@ -213,3 +213,92 @@
   - The complete 7-week syllabus is now available for "Rapid Prototyping & Design Thinking | RNSIT | Mysore Road".
   - Mentors can access the weekly quizzes (Weeks 1 to 7 plus the Final Assessment Quiz) and all 8 session feedback forms directly within the LMS portal without manual configuration.
   - All feedback forms have been pre-synchronized to the active batch (`RNSIT | RPDT | AIML-D | ME 306`) so students and mentors can start collecting responses immediately.
+
+- **Batch Classwork Sessions Live (RNSIT | RPDT | AIML-D | ME 306)**:
+  - Mentors can now view the entire 7-session delivery schedule directly under the **Classwork > Sessions** tab for the RNSIT batch.
+  - All sessions are scheduled for Thursday afternoons (03:00 PM to 06:00 PM) running through December 2026.
+  - The final capstone project is active under the **Design Challenges** tab, configured for team submissions with a 100-point rubric.
+
+
+## Update - October 22, 2026: Robotics Workshop Content Live (Kalaburagi Hub)
+
+### What is New
+- **1-Day Robotics Workshop Content Available**:
+  - Content for the 6-hour "Robotics Workshop" in the Kalaburagi hub is now live inside the LMS portal.
+  - Students will assemble and control their own 2WD RC mobile bot using dual BO motors, an L298N motor driver, an HC-05 Bluetooth module, and an Arduino Uno.
+- **Syllabus Sessions Live**:
+  - Mentors can view the complete 7-session breakdown in the program syllabus accordion:
+    1. Session 1: Introduction to Robotics & Hardware Components Overview (0.5h)
+    2. Session 2: Understanding Robot Components & Working Principles (0.5h)
+    3. Session 3: Chassis Mechanical Assembly & Drive Wheel Mounting (1.0h)
+    4. Session 4: Power System & Circuit Wiring (1.0h)
+    5. Session 5: Arduino IDE Setup & Microcontroller Fundamentals (1.0h)
+    6. Session 6: Firmware Programming & HC-05 Bluetooth RC Control Logic (1.0h)
+    7. Session 7: Testing, Calibration, Troubleshooting & RC Bot Arena Challenge (1.0h)
+- **7 Curriculum Quizzes Configured**:
+  - 7 interactive quizzes (10 questions each, totaling 70 questions) are active under the Curriculum section.
+  - Covers hardware unboxing, mechanical balance, wiring safety, common grounding, level shifting, serial character decoding ('F', 'B', 'L', 'R', 'S'), and motor brownout troubleshooting.
+- **Native Feedback Forms Ready**:
+  - All 7 session feedback forms and the End of Workshop Feedback form are active.
+  - Forms are synchronized across both the master program curriculum and batch views, eliminating the need to set up external Google Forms.
+
+
+## Update - October 22, 2026: RPDT (Rapid Prototyping & Design Thinking) Portal Content Live
+
+### What is New for Mentors & Facilitators
+- **Complete 8-Week RPDT Curriculum Now Live**:
+  - The flagship "Rapid Prototyping and Design Thinking" program (`RPDT`) has been fully compiled and added to the Knowledge Portal catalog (`#/p/RPDT`).
+  - Aligned with RNSIT and designed for an 8-week (40-hour) engagement, alternating between 2 hours of active lab facilitation and 1 hour of student portal deliverables (Sessions 1 and 7 feature full 3-hour facilitation).
+- **Embedded Slides & Delivery Mode for Every Session**:
+  - Each of the 7 sessions includes a verified Google Slides presentation embedded directly into the portal view, complete with presentation controls and Theater Mode.
+  - Phased Facilitator Scripts are organized across 5 standardized phases:
+    1. *Phase 1 - Hook & Provocation*: Engaging kick-offs, user stories, and provocations.
+    2. *Phase 2 - Direct Instruction & Concept Modeling*: Teacher talk-tracks and live demonstrations.
+    3. *Phase 3 - Guided Lab Challenge*: Time-boxed, hands-on student builds with mentor checkpoints.
+    4. *Phase 4 - Debrief & Assessment*: Formative reflection questions, peer critique, and deliverable logging.
+    5. *Phase 5 - Closure & Preview*: Key takeaways and teaser for the upcoming session.
+- **Hands-On Lab Activities & Deliverables**:
+  - **Session 1**: Catapult Design Challenge (distance battle, build-test-iterate logging).
+  - **Session 2**: UI/UX Figma Challenge (clickable high-fi prototypes, 5 Why Titanic case analysis).
+  - **Session 3**: Onshape CAD Lab (2D dimensioned sketches for laser cutting, 3D Part Studio modeling, Cura slicing).
+  - **Session 4**: Adventuretronics Electronics (LED torch, RGB code lock, LDR automatic street light, circuit soldering).
+  - **Session 5**: IoT NodeMCU Lab (ESP8266 Wi-Fi configuration, ThingSpeak live sensor charts, threshold alert rules).
+  - **Session 6**: Campus Waste Design Thinking Lab (customer journey mapping, 5W1H/POEMS interviews, empathy & stakeholder mapping, solution-free HMW statements).
+  - **Session 7**: Feasibility & Concept Selection Lab (technical/economic/social screening, weighted decision matrices, Rs 3,000-5,000 BOM budget scoping, pitch rehearsal).
+- **Research Literature & Video Playlists**:
+  - Every session features 4-5 curated academic papers, books, and reference guides (Harvard Business Review, Stanford d.school, Nielsen Norman Group, Maker Media).
+  - 4 curated YouTube video links per session are indexed for quick classroom projection or student post-session review.
+
+
+## Update - October 22, 2026: External User Whitelisting & Admin Visitor Tracker
+
+### What is New for Administrators & Mentors
+- **Adding External Users Outside the Organization**:
+  - Administrators can now grant access to external collaborators, guest speakers, partner college faculty (e.g. RNSIT, GIT), and external evaluators who use personal Gmail or institutional email addresses.
+  - To whitelist an external collaborator:
+    1. Navigate to **User Access** in the top navigation bar (`#/admin/access`).
+    2. Switch to the **Team Members** tab.
+    3. Click the **[+ Whitelist External Member]** button at the top right of the table.
+    4. Fill in their Full Name, Google Account Email, Role/Institution, and select their initial program access (e.g. `RPDT`, `★ All Programs`, or leave locked).
+    5. Click **Whitelist & Grant Access**.
+  - The collaborator can now open the [Knowledge Portal](https://comedkares-knowledge-portal.vercel.app), click **Sign in with Google**, and immediately access their assigned programs.
+- **Auto-Whitelisting via Direct Grant**:
+  - Administrators using the **Direct Grant Access** tab can also type any external email directly under *-- Other / Enter Email Address --*. Granting access will automatically whitelist the user into the team roster as an "External Member".
+- **Confidential Visitor & Content Activity Tracker (Admin Only)**:
+  - Administrators now have access to a dedicated **Visitor Tracker** link in the top navigation bar (`#/admin/tracker`).
+  - This dashboard is protected by database security policies and is visible only to authorized administrators.
+  - **Key Features**:
+    - **Visitor Leaderboard**: Identify top active mentors, see which programs each user has explored, and view their last active timestamp.
+    - **Content Popularity**: Track which sessions are being viewed the most and how often mentors launch Delivery Mode.
+    - **Live Audit Feed**: Monitor recent page visits in real-time.
+    - **CSV Export**: Click **[Export Activity CSV]** to download a detailed log for reporting and attendance verification.
+
+
+## Update - October 22, 2026: Vercel Web Analytics Enabled on HubQuiz
+
+### What is New
+- **Live Visitor & Participation Tracking**:
+  - Vercel Web Analytics has been integrated directly into the HubQuiz platform (`hubquiz.vercel.app`).
+  - The system now records page views, unique visitors, devices, geographical distribution, and participation activity in real time.
+- **Viewing Analytics**:
+  - Project administrators can log into the [Vercel Dashboard](https://vercel.com), open the **HubQuiz** project, and click the **Analytics** tab to view real-time traffic graphs and student engagement metrics.
