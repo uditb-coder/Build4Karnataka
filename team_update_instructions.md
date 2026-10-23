@@ -339,3 +339,14 @@
 - **Direct Admin Dashboard Access**:
   - Administrators are now routed immediately to the Admin Dashboard upon sign-in.
   - One-click admin login is also supported via the SSO shortcut (`?hub=admin`).
+
+
+## Update - October 23, 2026: One-Click Server Switcher & Login Fix
+
+### What is New
+- **Login Loop Resolved**:
+  - Fixed an issue where signing in could loop back to the login screen.
+  - The login system now recognizes your active session immediately.
+- **Manual Server Switcher (JP Nagar vs Cloud)**:
+  - You can now see exactly which server you are connecting to right on the login card.
+  - If you ever want to force connection to JP Nagar or Cloud, simply click the **(Switch)** link on the login screen or click the server badge in your dashboard header.

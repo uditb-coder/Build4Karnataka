@@ -481,3 +481,24 @@ Addressed an issue where administrative logins were encountering redirect loops 
 
 ### Required Screenshots
 - [ ] Please provide a screenshot of the updated login screen showing the password visibility toggle (`login_password_toggle.png`).
+
+
+## Update - October 23, 2026: Comprehensive Login Loop Resolution & Interactive Server Switcher
+
+### Overview
+Resolved a race condition where administrative sign-in attempts were looping back to the login card, and eliminated false-positive cloud failovers caused by restrictive CORS preflight checks.
+
+### Key Changes
+- **Root Cause & State Hydration Fix**:
+  - `signInWithPassword` was modified to directly extract the user object from the authentication response payload rather than relying on a secondary asynchronous `getSession()` read.
+  - Added session hydration checks inside `showLogin()`, `showDashboard()`, and `showAdminDashboard()`, preventing authenticated users from being kicked back to the login view if local state variables had not finished populating.
+- **Improved JP Nagar Health Telemetry**:
+  - Migrated the primary health probe from `/rest/v1/` to `/auth/v1/health`. This endpoint provides permissive Cross-Origin Resource Sharing (CORS) and responds without requiring API keys, eliminating false-positive failovers caused by browser preflight blocks.
+  - Increased timeout tolerance to 6 seconds to accommodate mobile data latency.
+- **Interactive Server Switcher**:
+  - Added an explicit server indicator and switch button directly onto the login card (`Server: 🟢 JP Nagar (Switch to Cloud)`).
+  - Made the dashboard header badge interactive (`[🟢 JP Nagar ⇄]`), allowing mentors and administrators to switch backends with a single click.
+  - Persisted user server preferences across reloads via `localStorage` (`hq_forced_server`) and query parameters (`?server=jpnagar`).
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the login form with the interactive server switch indicator (`login_server_switcher.png`).
