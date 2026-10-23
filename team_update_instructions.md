@@ -350,3 +350,17 @@
 - **Manual Server Switcher (JP Nagar vs Cloud)**:
   - You can now see exactly which server you are connecting to right on the login card.
   - If you ever want to force connection to JP Nagar or Cloud, simply click the **(Switch)** link on the login screen or click the server badge in your dashboard header.
+
+
+
+## Update - October 23, 2026: Server Switcher Exclusively Reserved for Administrators
+
+### What is New
+- **Distraction-Free Login and Dashboard for Mentors**:
+  - The server indicator and manual switch buttons are now reserved exclusively for the system administrator (`admin@comedkares.org`).
+  - Mentors logging into HubQuiz do not need to choose or switch servers. The system automatically connects you to the primary JP Nagar server, and will automatically switch to Cloud backup if JP Nagar ever goes offline.
+- **Administrative Server Switch Controls**:
+  - When the administrator enters `admin@comedkares.org` into the login email field, the server switch control becomes active.
+  - The administrator can also toggle servers directly inside the Admin Dashboard using the new **Switch Server** button.
+- **Stability Improvement**:
+  - Fixed an initialization issue where connection checks could temporarily cause an undefined client error on slower networks.

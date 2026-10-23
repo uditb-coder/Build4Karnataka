@@ -502,3 +502,28 @@ Resolved a race condition where administrative sign-in attempts were looping bac
 
 ### Required Screenshots
 - [ ] Please provide a screenshot of the login form with the interactive server switch indicator (`login_server_switcher.png`).
+
+
+
+## Update - October 23, 2026: Restricting Server Management to Administrator & Client Resilience
+
+### Overview
+Restricted the server switching controls exclusively to administrator access (`admin@comedkares.org`), preventing confusion among mentors, and initialized Supabase client state synchronously to avoid runtime reference errors.
+
+### Key Changes
+- **Admin-Only Server Switcher on Login Screen**:
+  - The server indicator and switch link (`Server: 🟢 JP Nagar (Switch to Cloud)`) are hidden by default on the login page.
+  - The indicator dynamically becomes visible only when `admin@comedkares.org` is entered in the email field. For all other mentor accounts, the interface remains clean and simple without technical server details.
+- **Mentor Header Cleanliness**:
+  - Suppressed the server badge from the dashboard header for all standard mentor accounts.
+  - Only `admin@comedkares.org` sees the server connection badge and switch shortcut in the navigation bar.
+- **Dedicated Admin Dashboard Server Toggle**:
+  - Integrated a dedicated "Switch Server" button directly into the Admin Dashboard (`/#/admin`) server status card, allowing instant switching between JP Nagar and Cloud failover.
+- **Synchronous Client Initialization (`HQ_SUPABASE`)**:
+  - Initialized `HQ_SUPABASE` and `window.HQ_SUPABASE` synchronously at script load time, eliminating the race condition where `ReferenceError: HQ_SUPABASE is not defined` could be triggered before background health checks concluded.
+- **Automatic Health-First Selection for Mentors**:
+  - Regular mentor sessions always check primary JP Nagar health automatically, using JP Nagar whenever it is online and seamlessly falling over to Cloud only if the primary goes down.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the login screen with an admin email entered showing the server switch indicator (`admin_login_server_switcher.png`).
+- [ ] Please provide a screenshot of the Admin Dashboard showing the new Switch Server button (`admin_dashboard_switch_button.png`).
