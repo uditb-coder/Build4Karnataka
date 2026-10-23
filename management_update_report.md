@@ -245,7 +245,7 @@ No new UI features were developed as part of this document generation task, so s
 
 ## Required Screenshots
 - [ ] Please provide a screenshot of the locked program Access Gate view (`screenshot_23.png`).
-- [ ] Please provide a screenshot of the Admin User Access Management view with pending requests (`screenshot_24.png`).
+![Admin User Access Management View](screenshot_24.png)
 - [ ] Please provide a screenshot of the Direct Grant Access form (`screenshot_25.png`).
 
 
@@ -417,3 +417,67 @@ Integrated Vercel Web Analytics and Speed Insights into the HubQuiz production f
 
 ### Required Screenshots
 - [ ] Please provide a screenshot of the Vercel Web Analytics dashboard showing live visitors and page views (`vercel_analytics_dashboard.png`).
+
+
+## Update - October 22, 2026: Vercel Web Analytics & Speed Insights Live Deployment
+
+### Overview
+Integrated Vercel Web Analytics and Speed Insights tracking scripts into the Knowledge Portal frontend (`index.html`). Once deployed, Vercel automatically proxies the `/ _vercel/insights/script.js` and `/ _vercel/speed-insights/script.js` routes to capture real-time visitor counts, page views, regional distribution, device analytics, and core web vitals.
+
+![Vercel Web Analytics Setup](vercel_analytics_setup.png)
+
+### Key Configuration
+* **Tracking Scripts**: Embedded lightweight, privacy-focused tracking snippets in the `<head>` of the application.
+* **Dual-Layer Analytics Architecture**:
+  1. **Vercel Infrastructure Analytics**: High-level platform telemetry (visitors, geography, device type, load performance).
+  2. **In-App Visitor Activity Tracker (`#/admin/tracker`)**: Granular mentor-level audit log (user email, sessions opened, delivery mode duration, RPDT/IDT curriculum progress) with database RLS confidentiality.
+
+
+## Update - October 23, 2026: Kalaburagi Robotics Workshop Batch Classwork & Feedback Population
+
+### Overview
+Configured the active student batch for the Kalaburagi hub ("Robotics Workshop · Kalaburagi · Oct 2026", Batch ID: `63d254a3-ec63-4616-b8e6-f1f90febb31a`). Populated the complete delivery schedule, hands-on design challenge, workshop experience survey, batch quizzes, and native feedback forms inside the LMS Classwork and Feedback tabs.
+
+### Key Changes and Technical Architecture
+- **Batch Classwork Sessions (`sessions`)**:
+  - Injected 7 structured delivery sessions for October 24, 2026, totaling 6.0 instructional hours (09:30 AM to 04:30 PM with a scheduled lunch break).
+  - Linked each session directly to its corresponding curriculum module ID (`modules` table) to provide seamless access to lesson videos, guides, and component resources.
+  - Session 1 (09:30 - 10:00): Introduction to Robotics & Hardware Components Overview (Module 1)
+  - Session 2 (10:00 - 10:30): Understanding Robot Components & Working Principles (Module 2)
+  - Session 3 (10:30 - 11:30): Chassis Mechanical Assembly & Drive Wheel Mounting (Module 3)
+  - Session 4 (11:30 - 12:30): Power System & Circuit Wiring (Module 4)
+  - Session 5 (13:30 - 14:30): Arduino IDE Setup & Microcontroller Fundamentals (Module 5)
+  - Session 6 (14:30 - 15:30): Firmware Programming & HC-05 Bluetooth RC Control Logic (Module 6)
+  - Session 7 (15:30 - 16:30): Testing, Calibration, Troubleshooting & RC Bot Arena Challenge (Module 7)
+- **Design Challenge & Survey Ingestion (`assignments`)**:
+  - Injected the "RC Bot Bluetooth Arena Challenge & Obstacle Navigation" under the `design_challenge` category (100 max score, team submission enabled for up to 4 members). Configured a comprehensive 4-part evaluation rubric covering mechanical assembly, circuit wiring, firmware responsiveness, and obstacle agility.
+  - Configured the "Robotics Workshop Experience Survey" under the `feedback` category to collect participant evaluation data on completion.
+- **Batch Quizzes Provisioning (`quizzes`, `quiz_questions`)**:
+  - Cloned all 7 assessment quizzes directly to the batch in `classwork_only` mode, comprising 70 multiple-choice questions with validated uppercase answer options ('A', 'B', 'C', 'D').
+- **Single Consolidated Feedback Form (`feedback_forms`)**:
+  - Per program requirements, all individual session feedback forms were removed across curriculum and batch views to streamline student submissions.
+  - A single comprehensive "Robotics Workshop Feedback" form is active (`trigger_type = 'end'`) with 5 core questions covering overall satisfaction, RC bot assembly, wiring and power systems, trainer effectiveness, and qualitative feedback.
+  - Questions are fully normalized with `id`, `type`, `question`, `text`, and `label` properties for smooth rendering across mentor and student views.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the Kalaburagi Robotics Batch Classwork tab showing the 7 scheduled sessions (`kalaburagi_batch_classwork_sessions.png`).
+- [ ] Please provide a screenshot of the Design Challenge card with rubric criteria in the Classwork tab (`kalaburagi_batch_design_challenge.png`).
+- [ ] Please provide a screenshot of the Feedback tab inside the Kalaburagi batch showing the single active feedback form (`kalaburagi_batch_feedback.png`).
+
+
+## Update - October 23, 2026: Admin Routing Optimization & Password Visibility Toggle
+
+### Overview
+Addressed an issue where administrative logins were encountering redirect loops or credential entry errors due to complex password strings and intermediate route bouncing.
+
+### Key Changes
+- **Direct Admin Navigation**:
+  - Eliminated intermediate routing bounces. When `admin@comedkares.org` logs in or visits the portal, the application routes directly to `/#/admin` without bouncing through the `/host` mentor dashboard first.
+  - Implemented automatic email case normalization and whitespace trimming.
+- **Password Visibility Toggle**:
+  - Added an interactive show/hide password toggle button directly inside the login form to prevent typos when entering complex credentials.
+- **SSO Worker Provisioning for Administrator**:
+  - Added an `admin` mapping into the Cloudflare SSO Worker (`HUB_MAP`), enabling direct one-click authentication to the admin dashboard via `?hub=admin`.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the updated login screen showing the password visibility toggle (`login_password_toggle.png`).

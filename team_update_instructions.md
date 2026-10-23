@@ -302,3 +302,40 @@
   - The system now records page views, unique visitors, devices, geographical distribution, and participation activity in real time.
 - **Viewing Analytics**:
   - Project administrators can log into the [Vercel Dashboard](https://vercel.com), open the **HubQuiz** project, and click the **Analytics** tab to view real-time traffic graphs and student engagement metrics.
+
+
+## Update - October 22, 2026: Vercel Platform Analytics Live
+
+### Infrastructure Telemetry
+- **Vercel Web Analytics Active**: In addition to the internal in-app Visitor Tracker, platform-level analytics from Vercel are now enabled across the portal.
+- **Real-Time Traffic Dashboard**: Leadership can monitor global visitor traffic, device breakdowns, and pageview volumes directly from the Vercel project dashboard.
+
+
+## Update - October 23, 2026: Kalaburagi Robotics Batch Classwork & Feedback Live
+
+### What is New for Mentors in Kalaburagi
+- **Kalaburagi Robotics Batch Ready (`Robotics Workshop · Kalaburagi · Oct 2026`)**:
+  - All content is live inside the batch portal for Saturday, October 24, 2026.
+  - Mentors can navigate directly to the batch to review the delivery schedule, run student feedback checkpoints, and evaluate the final arena challenge.
+- **Classwork Schedule (7 Sessions)**:
+  - The complete 1-day agenda (09:30 AM to 04:30 PM) is populated under the **Classwork > Sessions** tab.
+  - Each session is linked to its matching module (unboxing, component theory, chassis assembly, power wiring, Arduino IDE, Bluetooth firmware, and arena testing).
+- **RC Bot Arena Design Challenge Active**:
+  - The final hands-on challenge ("RC Bot Bluetooth Arena Challenge & Obstacle Navigation") is live under **Classwork > Design Challenges**.
+  - Teams of up to 4 students can submit their bot demo. Mentors can evaluate teams using the built-in 100-point rubric (Chassis Assembly 25 pts, Wiring & Power 25 pts, Bluetooth Firmware 25 pts, Arena Navigation 25 pts).
+- **Online Tests / Quizzes Available**:
+  - All 7 quizzes (10 questions each) are active under the batch **Online Tests** and **Classwork** views.
+- **Single Streamlined Feedback Form Active**:
+  - All separate per-session feedback forms have been removed to avoid survey fatigue during the 1-day workshop.
+  - A single comprehensive **"Robotics Workshop Feedback"** form is active under the **Feedback** tab.
+  - Students will complete this single form at the conclusion of the workshop. Responses are recorded natively within the LMS database, so external Google Forms are not needed.
+
+
+## Update - October 23, 2026: Login Usability & Admin Access Improvements
+
+### What is New
+- **Show/Hide Password Button**:
+  - A password visibility toggle button is now available on the login screen. You can tap the eye icon to verify your password before signing in.
+- **Direct Admin Dashboard Access**:
+  - Administrators are now routed immediately to the Admin Dashboard upon sign-in.
+  - One-click admin login is also supported via the SSO shortcut (`?hub=admin`).
