@@ -364,3 +364,142 @@
   - The administrator can also toggle servers directly inside the Admin Dashboard using the new **Switch Server** button.
 - **Stability Improvement**:
   - Fixed an initialization issue where connection checks could temporarily cause an undefined client error on slower networks.
+
+
+## Update - October 23, 2026: Recently Opened History Cap & Onboarding Guide
+
+### 1. Homepage Recently Opened History Capped at 5
+- The **Recently opened** table on the homepage now shows strictly your last 5 accessed sessions, making it easy to resume without cluttering the screen.
+
+### 2. How to Add a New ERA Foundation User
+- **Step 1: User Sign-In**:
+  - The new mentor can go directly to [https://comedkares-knowledge-portal.vercel.app](https://comedkares-knowledge-portal.vercel.app) and click **Sign in with Google** using their `@erafoundationindia.org` account. They are admitted into the portal automatically.
+- **Step 2: Assigning Program Permissions (Admin)**:
+  - By default, newly added programs are locked until access is assigned.
+  - To grant access ahead of time, go to **User Access** (`#/admin/access`) > **Team Members Roster** tab.
+  - Click **[+ Add Member / Collaborator]**, enter their name and email, and pick their assigned program or select **All Programs**.
+  - Alternatively, the mentor can click **Request Access** on any program card, and you can approve it with one click under **Pending Requests**.
+- **Step 3: Giving Admin Rights (Optional)**:
+  - If the user is an administrator or coordinator, add their email to the `admins` table in Supabase.
+
+
+## Update - October 23, 2026: Team Members Roster Live Search & Instant Entry Confirmation
+
+### 1. New Roster Live Search
+- You can now search across all 40+ staff and collaborators directly on the **Team Members Roster** tab (`#/admin/access`).
+- Type any partial name, email address, or role into the new search box to instantly filter the table in real time.
+
+### 2. Instant Confirmation for Added Members
+- When you add a new team member or external collaborator using **[+ Add Member / Collaborator]**, the system now:
+  - Immediately places them at the top of the roster list.
+  - Automatically keeps you on the **Team Members Roster** tab.
+  - Highlights their entry with a green accent border and a **Just Added / Updated** tag.
+  - Smoothly scrolls directly to their row for instant verification.
+
+### 3. Automatic Google Sign-In Registration
+- Any staff member signing in with their official `@erafoundationindia.org` or `@comedkares.org` Google account is now automatically registered in the team directory upon their first login.
+
+
+## Update - October 24, 2026: Statewide Batch Quality Audit & Attendance Remediation Guidelines
+
+### What is New for Mentors & Administrators
+- **Statewide Batch Audit Complete**:
+  - An end-to-end quality audit across all 10 hubs and 64 batches has been completed.
+  - A comprehensive report workbook is now available: `ComedKares_Statewide_LMS_Audit_Report.xlsx`.
+- **Immediate Action Items for Hub Mentors**:
+  - **Attendance Verification**: Mentors assigned to active IDT batches in JP Nagar (T John college), Kalaburagi, and Yelahanka must review past session dates and ensure attendance rosters are fully synced and marked.
+  - **RPDT Mysore Road Classwork Ingestion**: Facilitators handling RNSIT batches must ensure classwork sessions are populated from the master 7-session RPDT dossier prior to lab delivery.
+  - **Date Corrections**: Corrected batch start dates with typographical errors (e.g. year 2926 and year 0026) to maintain accurate calendar displays on the student dashboard.
+- **Audit Workbook Breakdown**:
+  - Mentors and leads can open `ComedKares_Statewide_LMS_Audit_Report.xlsx` in Excel to filter by their specific hub and view batch student counts, session schedules, and attendance marking completion rates.
+
+
+## Update - October 24, 2026: Facilitator Script Dual Recognition
+
+### What is New
+- **Full Recognition for Manual Script Text**:
+  - The Knowledge Portal now recognizes facilitator scripts whether they are attached as an external Google Doc link or typed directly into the portal as formatted text.
+  - Previously, programs whose scripts were typed in manually showed `0 of 12` or `0 of 14` under the **Script linked** column. This has been resolved, and programs like IDT, IIP, and RSI now correctly display their full script counts (e.g. `12 of 12`).
+- **Informative Hover Breakdown**:
+  - Hovering over any script count on the homepage now shows an informative breakdown indicating how many sessions use linked Google Docs versus formatted text scripts.
+- **Sidebar & Search Badges Updated**:
+  - The **D** badge in the left sidebar and search results now lights up appropriately for both Google Docs and typed script text.
+
+
+---
+
+## Team Announcement: Statewide IDT Batch & Classwork Audit Results (Pre-Oct 24)
+**Date**: October 24, 2026  
+**Target Audience**: Hub Coordinators, Program Managers, and IDT Mentors
+
+### Key Operational Takeaways
+1. **Classwork Dates Verified**: All 490 sessions across all 37 Innovation & Design Thinking Lab batches are mapped to concrete dates.
+2. **Pre-Oct 24 Attendance Escalation**: Across 265 delivered past sessions, only 107 (40.4%) have attendance marked in the LMS, leaving 158 past sessions without attendance.
+3. **Hub Level Action Required**:
+   - **JP Nagar Hub**: Mentors for T John Institute Sections A, E, and F must log backdated attendance for Sessions 1 through 8 immediately.
+   - **Tumkur Hub**: Mentors for SIET Batches 1 to 9 must complete attendance logging for Sessions 4 (Oct 12) and 5 (Oct 19).
+   - **Mysuru Hub**: Mentors for MITM and MITT must finalize attendance for Sessions 5 to 7.
+   - **Kalaburagi Hub**: Mentor must log attendance for Sessions 5, 6, and 7 delivered during Oct 19 to 21.
+
+
+### Program Manager Operational Directives (Master Feedback & Attendance Reconciliation)
+1. **Attendance vs Feedback Cross-Check (JP Nagar)**: PM Astle John must coordinate with T. John Institute mentors to convert the 90 weekly student feedback submissions into official LMS session attendance logs for Sections A, E, and F.
+2. **Weekly Survey Form Deployment (Tumkur & Hubballi)**:
+   - PM Nithil Dass to deploy Session 4 and 5 feedback forms across SIET Tumkur.
+   - PM Kalmesh to roll out Sessions 3, 4, and 5 feedback forms at PDIT Hospet.
+3. **MIT Kesare Survey Launch (Mysuru)**: PM Chandana P to activate weekly session feedback collection for MIT Kesare students.
+4. **Master Document Access**: The unified executive report is available at `d:\Anti_spamm\ComedKares_IDT_Statewide_Audit_and_Feedback_Report.docx`.
+
+
+
+---
+
+## Team Announcement: ComedKares HubQuiz Platform Live in LMS
+**Date**: October 26, 2026  
+**Target Audience**: All ComedKares Mentors, Hub In-Charges, Lead Facilitators, and Academic Coordinators
+
+### What is HubQuiz?
+HubQuiz is ComedKares' official, in-house live quiz platform designed to replace external paid tools like Kahoot and Mentimeter across all our innovation hubs. It is engineered specifically for our workshop environment to deliver fast, engaging, and dependable classroom assessments.
+
+### Key Highlights for Mentors
+- **Zero Student Setup**: Students never need to download apps or create accounts. They simply scan a QR code with their mobile cameras or enter a 6-digit PIN on any phone browser.
+- **Direct LMS Access (Single Sign-On)**: Click the orange **((•)) Start Live Quiz** button under the **Online Tests** tab of your batch. You are automatically signed into your hub account.
+- **Pre-loaded Curriculum**: 13 IDT quizzes, 6 VTU curriculum quizzes, and RNSIT pre-assessments are ready to launch in 1 click.
+- **Phone Display Toggle**: In large halls where the projector is hard to read from back rows, enable "Show questions on participant phones" so students see the questions directly on their devices.
+- **Dual-Tier Reliability**: Operates seamlessly on local hub servers with automatic Cloud failover if classroom connectivity drops.
+
+### Visual Workflow Guide
+
+#### 1. Finding the Button in Your LMS Batch
+Open your batch in the ComedKares LMS, select the **Online Tests** tab, and click the orange **((•)) Start Live Quiz** button.
+
+![LMS Placement](assets/hubquiz/lms_placement.png)
+
+#### 2. Your HubQuiz Mentor Dashboard
+Access all pre-loaded assessments, import standard curriculum packages, or create new quizzes with the `+ New Quiz` button.
+
+![Mentor Dashboard](assets/hubquiz/hubquiz_home_page.png)
+
+#### 3. Customizing Questions
+Click the pencil icon on any quiz card to edit question descriptions, options, or correct answers.
+
+![Edit Quiz Option](assets/hubquiz/edit_quiz_option.png)
+
+![Quiz Editor](assets/hubquiz/edit_page.png)
+
+#### 4. Launching the Quiz in Class
+Click `▶ Start` on your quiz. Connect your laptop to the classroom projector. Students scan the QR code to join. Be sure to check **Show questions on participant phones** if you want questions displayed on student devices.
+
+![Session Lobby](assets/hubquiz/quiz_session_start.png)
+
+#### 5. Hosting the Live Game
+Control the flow of the assessment with the 30-second timer, live response counter, and `Skip Timer` button.
+
+![Live Question Screen](assets/hubquiz/quiz_question.png)
+
+### Mentor Operational FAQs
+- **Q: Where is the button located?** In the LMS, open your batch and click the **Online Tests** tab.
+- **Q: Do students need an app?** No. Any mobile phone with a browser works instantly.
+- **Q: Can students see questions on their phones?** Yes, simply check the "Show questions on participant phones" box in the lobby before clicking Start Quiz.
+- **Q: What if classroom internet is slow?** HubQuiz uses an ultralight realtime protocol consuming under 50 KB per session, running smoothly even on mobile hotspots.
+- **Q: Where is the complete guide?** Download the comprehensive manual from `C:\Users\DELL\Desktop\ComedKares_HubQuiz_Mentor_Guide.docx`.

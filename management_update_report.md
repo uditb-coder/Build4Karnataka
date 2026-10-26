@@ -21,6 +21,9 @@
 | **RPDT Program Integration** | Added 8-week Rapid Prototyping and Design Thinking program with 7 complete sessions, decks, scripts, and labs. | Complete |
 | **External Collaborator Whitelist** | Whitelist non-org emails (visiting faculty, partners) so they can authenticate via Google and access assigned programs. | Complete |
 | **Admin Visitor Activity Tracker** | Real-time audit trail and analytics dashboard (#/admin/tracker) logging session views and delivery runs with KPI cards and CSV export. Strictly admin-only. | Complete |
+| **Roster Live Search & Instant Highlight** | Real-time name, email, and role search filtering across all team members with instant unshift insertion, green highlight badge, and smooth scroll focus. | Complete |
+| **Staff Sign-In Auto-Registration** | Automated directory registration and metadata sync for ERA Foundation and ComedKares staff on Google OAuth login. | Complete |
+| **Facilitator Script Dual Recognition** | Dual recognition of facilitator scripts whether linked via Google Doc URL or typed directly as formatted text, preventing 0 of N false positives. | Complete |
 
 ## Required Screenshots
 No new UI features were developed as part of this document generation task, so screenshots are not required here.
@@ -527,3 +530,224 @@ Restricted the server switching controls exclusively to administrator access (`a
 ### Required Screenshots
 - [ ] Please provide a screenshot of the login screen with an admin email entered showing the server switch indicator (`admin_login_server_switcher.png`).
 - [ ] Please provide a screenshot of the Admin Dashboard showing the new Switch Server button (`admin_dashboard_switch_button.png`).
+
+
+## Update - October 23, 2026: Recently Opened Display Cap & ERA Team Member Onboarding
+
+### Overview
+Capped the homepage "Recently opened" view to display strictly the 5 most recent sessions and programs, maintaining clean visual density. Updated the team member provisioning workflow to support adding both internal ERA Foundation staff and external collaborators.
+
+![Recently Opened Section](screenshot_30.png)
+
+### 1. Recently Opened Display Cap (5 Items)
+* Updated `drawHomeRecent()` to slice `recentSessions` to 5 items, preventing vertical table bloating.
+* Updated `loadBaseData()` to fetch a maximum of 5 recent session records from Supabase (`user_recent` table).
+* Updated `renderSession()` to maintain a rolling queue of 5 in-memory entries during active browsing.
+
+### 2. Adding a New ERA Foundation User (@erafoundationindia.org)
+* **Automatic Google OAuth Sign-in**: Any user with an `@erafoundationindia.org` (or `@comedkares.org`) Google account can open the portal and sign in immediately with zero manual backend registration.
+* **Proactive Permission Provisioning**:
+  * Navigate to **User Access** (`#/admin/access`) > **Team Members Roster** tab.
+  * Click **[+ Add Member / Collaborator]**.
+  * Enter the user's Full Name, their `@erafoundationindia.org` email, and Role (`Member`, `Mentor`, `Hub Lead`).
+  * Choose their initial program access (e.g. `RPDT`, `IDT`, or `★ All Programs`) to give them instant curriculum access before they log in.
+* **Elevating to Administrator**:
+  * To grant administrative privileges (ability to edit sessions, approve access requests, view the Visitor Tracker), insert their email into the Supabase `admins` table:
+    `insert into admins (email) values ('newmentor@erafoundationindia.org');`
+
+
+## Update - October 23, 2026: Team Members Roster Live Search, Instant Visual Highlight & Auto-Registration
+
+### Overview
+Diagnosed and resolved the issue where newly added `@erafoundationindia.org` members were difficult to locate in the directory due to missing search capabilities and alphabetical sort displacement. Introduced a real-time directory search box, instant in-memory rendering with green visual highlighting, explicit tab persistence, and Google OAuth self-registration.
+
+### 1. Root Cause Analysis
+* **Alphabetical Displacement**: The directory contains 40+ pre-seeded team members sorted by Full Name. When a new member was added (for example, names starting with P, R, S, or T), they were positioned lower down in the 40+ row list without any search tool or visual tag to signal their placement.
+* **Tab Reset on Page Refresh**: When reloading or re-navigating to `#/admin/access`, the portal defaulted to the **Pending Requests** tab rather than preserving the active **Team Members Roster** tab, causing admins to see "All Access Requests Reviewed" instead of the member list.
+* **Query Latency & Cache Lag**: In-memory member arrays previously relied strictly on background `loadBaseData()` roundtrips to Supabase, which could experience slight network replication lag before reflecting the new row.
+
+### 2. Engineering Solutions Deployed
+* **Instant Roster Search Box**: Added a live search input (`searchRoster`) directly above the Team Members Roster table filtering dynamically across names, emails, and roles in real time.
+* **Instant In-Memory Insertion (`unshift`)**: Newly added or updated members are immediately injected to the top of the in-memory `teamMembers` array, guaranteeing they are immediately visible without waiting for network re-queries.
+* **Visual Highlight & Auto-Scroll**: Applied a green status badge (`Just Added / Updated`), a bold green left accent border, and smooth scrolling focus directly to the target member's row.
+* **Explicit Tab Retention**: Ensured `submitAddExternalMember()` explicitly sets `accessFilter = 'Roster'` and re-renders the roster tab immediately upon form submission.
+* **Staff Sign-In Auto-Registration**: Updated `handleSession()` so any `@erafoundationindia.org` or `@comedkares.org` staff member who logs in via Google OAuth is automatically registered in `team_members` with their Google display name. Provided companion migration `add_team_member_self_registration.sql` for PostgreSQL RLS self-registration.
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the Team Members Roster tab showing the new search bar and a newly added user highlighted with the green "Just Added / Updated" badge (`roster_search_and_highlight.png`).
+
+
+## Update - October 24, 2026: Statewide LMS Quality Audit & Data Integrity Verification
+
+### Overview
+Executed an exhaustive statewide audit across the ComedKares Student LMS database covering all 10 Innovation Hubs, 64 Batches, 2,308 Enrolled Students, 757 Classwork Sessions, 720 Assignments, 320 Quizzes, 846 Feedback Forms, and 9,410 Attendance Records. Generated a master multi-tab Excel workbook (`ComedKares_Statewide_LMS_Audit_Report.xlsx`) logging full metrics, platform ecosystem linkages, date validation, and prioritized discrepancy remediation plans.
+
+### Statewide Audit Summary & Hub Breakdown
+- **Platform Scope**:
+  - 10 Innovation Hubs (Bengaluru - JP Nagar, Bengaluru - Mysore Road, Bengaluru - Yelahanka, Mysuru, Tumkur, Hubballi, Kalaburagi, Mangaluru, Belagavi, AKTU Innovation Hub).
+  - 64 Total Batches: 38 Active, 14 Completed, 12 Planned.
+  - 2,308 Active Students mapped in `batch_students`.
+  - 9,410 Total Attendance Records marked (8,157 Present, 1,253 Absent, 86.7% Statewide Attendance Rate).
+- **Hub-by-Hub Performance Metrics**:
+  - **Mysuru**: 17 Batches (15 Active, 2 Completed), 596 Students, 225 Sessions, 2,545 Attendance Records (90.2% Attendance Rate).
+  - **Bengaluru - Mysore Road**: 15 Batches (5 Completed, 10 Planned), 524 Students, 105 Sessions, 677 Attendance Records (73.6% Attendance Rate).
+  - **Tumkur**: 11 Batches (9 Active, 2 Completed), 328 Students, 150 Sessions, 1,570 Attendance Records (87.7% Attendance Rate).
+  - **Bengaluru - JP Nagar**: 6 Batches (6 Active), 266 Students, 78 Sessions, 443 Attendance Records (87.1% Attendance Rate).
+  - **Bengaluru - Yelahanka**: 5 Batches (3 Active, 2 Completed), 199 Students, 99 Sessions, 1,373 Attendance Records (91.3% Attendance Rate).
+  - **Hubballi**: 3 Batches (2 Active, 1 Completed), 170 Students, 59 Sessions, 771 Attendance Records (81.8% Attendance Rate). Clean audit status.
+  - **Mangaluru**: 3 Batches (2 Completed, 1 Planned), 27 Students, 11 Sessions, 155 Attendance Records (99.4% Attendance Rate).
+  - **Kalaburagi**: 2 Batches (1 Active, 1 Planned), 97 Students, 20 Sessions, 299 Attendance Records (47.2% Attendance Rate).
+  - **Belagavi**: 2 Batches (2 Completed), 101 Students, 10 Sessions, 505 Attendance Records (92.1% Attendance Rate). Clean audit status.
+  - **AKTU Innovation Hub**: 0 Batches active currently.
+
+### Key Audit Findings & Discrepancies Logged
+1. **Critical Date Typos in Planned Batches**:
+   - `RNSIT | RPDT | AIML-E | ME307` (Batch ID: `e52a83d5-723b-47c0-9a67-96528862f37a`): Batch `start_date` was incorrectly entered as `2926-10-23` (year 2926 instead of 2026).
+   - `RNSIT | RPDT | DS-A | ME 313` (Batch ID: `d4fde91d-4365-48ae-a9ef-fde28e59454e`): Session 1 date was entered as `0026-10-23` (year 0026 instead of 2026).
+   - `RNSIT | RPDT | CSE-K | ARC 201` (Batch ID: `9a0ef94c-7348-4466-a597-f1bca5d2e495`): Batch `start_date` was entered as `2026-02-23` instead of October 2026.
+2. **Missing Classwork Sessions in Planned Batches**:
+   - 8 newly created RNSIT RPDT batches in Bengaluru - Mysore Road currently have 0 sessions created in Classwork despite having students enrolled.
+3. **Attendance Gaps in Active Batches**:
+   - Across active Innovation & Design Thinking (IDT) batches in JP Nagar (T John college), Kalaburagi, and Yelahanka (VVIT), several past sessions delivered in September and October 2026 have 0 attendance records marked in the database.
+4. **App Ecosystem Mapping**:
+   - Each batch has been mapped to its corresponding operational applications: Student LMS (`students.comedkares.com`), Knowledge Portal (`comedkares-knowledge-portal.vercel.app`), HubQuiz (`hubquiz.vercel.app`), and Physical Hub Laboratory / Meeting platforms.
+
+### Generated Deliverable
+- Generated the comprehensive multi-tab Excel workbook: `d:\Anti_spamm\ComedKares_Statewide_LMS_Audit_Report.xlsx` featuring:
+  - Tab 1: Executive Summary & Hub KPI Dashboard
+  - Tab 2: Master Batch Audit (All 64 Batches with complete metrics)
+  - Tab 3: Classwork Sessions Audit (Detailed inspection of all 757 sessions)
+  - Tab 4: Discrepancies & Action Items Log (203 prioritized action items)
+
+### Required Screenshots
+- [ ] Please provide a screenshot of the ComedKares Statewide LMS Audit Report opened in Excel showing the Executive Summary tab (`lms_audit_report_executive_summary.png`).
+- [ ] Please provide a screenshot of the Master Batch Audit tab showing the 64 batches with status and student counts (`lms_audit_report_batches.png`).
+- [ ] Please provide a screenshot of the Discrepancies & Action Log tab showing prioritized remediation items (`lms_audit_report_discrepancies.png`).
+
+
+## Update - October 24, 2026: Facilitator Script Recognition (Google Doc Link & Manual Text)
+
+### Overview
+Addressed an issue where programs with complete facilitator scripts were incorrectly reported as having `0 of 12` or `0 of 14` scripts linked on the homepage and dashboard views. The portal was previously checking strictly for an external Google Doc URL (`design_url`), completely ignoring facilitator scripts typed directly into the system as formatted text (`design_text`).
+
+![Script Linked Status Before Fix](./screenshot_31.png)
+
+### 1. Root Cause Analysis
+* **URL-Only Existence Filter**: On the homepage program catalog table, script counts were calculated using `pSessions.filter(s => !!s.design_url).length`. For programs like IDT (27 sessions), IIP (14 sessions), RSI (14 sessions), MLOps (14 sessions), and RPDT (7 sessions), mentors and curriculum designers had typed detailed phased delivery scripts directly into `design_text` rather than attaching Google Docs. Because `design_url` was null, the portal displayed `0 of 12` or `0 of 14` in red.
+* **Badge Dimming in Sidebar & Search**: The session navigation sidebar and global search modal similarly checked `!!item.design_url` only, dimming the `D` document badge and marking the script as missing even while the full script text was rendered inside the session page.
+* **Content Health False Positives**: In the Admin Content Health dashboard (`#/admin/files`), filtering by `Missing script` flagged every session lacking a Google Doc link, even when full instructional text was present.
+
+### 2. Engineering Solution Deployed
+* **Universal Recognition Helper (`hasScript`)**: Created a centralized helper function `hasScript(s)` that verifies whether a session has an external Google Doc URL (`design_url`) OR non-empty formatted instructional text (`design_text`).
+* **Catalog Script Counting**: Updated `scCount` calculation on the homepage table to use `pSessions.filter(s => hasScript(s)).length`. Programs with manual script text (e.g. IDT, IIP, RSI, MLOps, RPDT) now accurately reflect their full script coverage in green (`12 of 12`, `14 of 14`, etc.).
+* **Detailed Hover Tooltips**: Added rich tooltips breaking down script provenance (e.g. `12 of 12 sessions have facilitator scripts (0 linked Docs, 12 manual text)`).
+* **Sidebar & Search Badge Alignment**: Updated sidebar badges and search modal results so the `D` badge lights up for both Google Docs (`Script linked (Google Doc)`) and manual text scripts (`Script text (Manual)`).
+* **Admin Content Health Filter Realignment**: Realigned the `Missing script` filter to check `!hasScript(s)`, eliminating false positives from administrative audits.
+
+### 3. Verification & Test Scenarios
+* **Scenario A (Google Doc Link Only)**: Sessions with `design_url` and no text evaluate to `hasScript(s) = true`.
+* **Scenario B (Manual Script Text Only)**: Sessions with `design_text` and no Google Doc link evaluate to `hasScript(s) = true` and increment the script count.
+* **Scenario C (Both Present)**: Sessions with both URL and text evaluate to `hasScript(s) = true`.
+* **Scenario D (Neither Present)**: Sessions with empty strings, whitespace, or `[Pending]` evaluate to `hasScript(s) = false` and show as pending.
+
+### Required Screenshots
+- [x] Screenshot provided by user showing previous `0 of 12` false positive embedded as `screenshot_31.png`.
+- [ ] Please provide an updated screenshot of the homepage programs table showing IDT with its updated script count in green (`script_recognition_fixed.png`).
+
+
+---
+
+## 42. Innovation & Design Thinking (IDT) Batch Audit & Pre-Oct 24 Attendance Verification
+**Date**: October 24, 2026  
+**Auditor**: Antigravity  
+**Scope**: All 37 Batches statewide under the Innovation & Design Thinking Lab program
+
+### Executive Findings
+- **Total IDT Batches**: 37 batches across 7 Innovation Hubs (36 Active, 1 Completed Test Batch).
+- **Total Students Enrolled**: 1,668 students across 27 partner engineering colleges.
+- **Classwork Session Mapping**: 490 total sessions populated. **100% of sessions (490/490) are successfully mapped to calendar dates**. No NULL dates exist.
+- **Pre-October 24 Attendance Status**:
+  - Total Past Sessions (< 2026-10-24): **265 sessions**.
+  - Sessions Marked with Attendance: **107 sessions (40.4%)**.
+  - Sessions Missing Attendance: **158 sessions (59.6%)**.
+  - Total Past Attendance Logs: **4,809 records** (4,131 Present, 678 Absent).
+
+### Hub Compliance Performance
+1. **Hubballi (100% Updated)**: 2 batches, 155 students. All 4 past sessions marked.
+2. **Tumkur (66.7% Updated)**: 9 batches, 289 students. 30 of 45 past sessions marked. Sessions 4 and 5 pending across SIET batches.
+3. **Kalaburagi (57.1% Updated)**: 1 batch, 81 students. 4 of 7 past sessions marked. Sessions 5, 6, 7 pending.
+4. **Bengaluru - Yelahanka (50.0% Updated)**: 3 batches, 166 students. 7 of 14 past sessions marked. VVIT sessions 3-5 pending.
+5. **Mysuru (40.5% Updated)**: 15 batches, 590 students. 51 of 126 past sessions marked. CIT batches have mock dated sessions without attendance; MITM and MITT batches have recent sessions pending.
+6. **Bengaluru - JP Nagar (22.9% Updated)**: 6 batches, 266 students. Only 11 of 48 past sessions marked. T John sections A, E, F have 0 attendance marked for all past sessions.
+7. **Bengaluru - Mysore Road (0% Updated)**: 1 batch (`IDT Test Batch`), 121 students. Completed test batch with 21 past sessions unmarked.
+
+### Required Screenshots
+- [ ] Screenshot of LMS Mentor Attendance tab for T. John Institute batches (`idt_jp_nagar_attendance.png`).
+- [ ] Screenshot of Hubballi IDT session attendance view (`idt_hubballi_attendance.png`).
+
+
+### Master Feedback Response Dataset Integration (Reporting Cutoff: October 24, 2026)
+- **Initial Diagnostic Assessments**: 1,311 baseline submissions logged statewide.
+- **Weekly Student Feedback (Sessions 1 to 5)**: 1,510 feedback submissions logged.
+- **Grand Total Survey Submissions**: 2,821 student evaluation entries.
+- **Program Manager Distribution**:
+  * **Tumkur (Nithil Dass)**: 1,044 responses (203 Initial, 841 Weekly across S1-S3). Sessions 4 & 5 feedback pending collection.
+  * **Hubballi (Kalmesh)**: 351 responses (112 Initial, 239 Weekly across S1-S2). Sessions 3, 4, 5 pending collection.
+  * **Mysuru (Chandana P)**: 408 responses (300 Initial, 108 Weekly at MIT Thandavpura). MIT Kesare has 0 weekly feedback responses.
+  * **Yelahanka (Nivedha)**: 382 responses (270 Initial, 112 Weekly at VVIT). Sessions 4 & 5 pending.
+  * **JP Nagar (Astle John)**: 231 responses (141 Initial, 90 Weekly up to S5).
+  * **Kalaburagi (Sandeep Samson)**: 187 responses (67 Initial, 120 Weekly across S1-S4).
+  * **Mysore Road (Abhinanandan)**: 218 baseline onboarding submissions at RNSIT.
+- **Official Master Branded Word Deliverable**: Generated at `d:\Anti_spamm\ComedKares_IDT_Statewide_Audit_and_Feedback_Report.docx`.
+
+
+
+## Update - October 26, 2026: ComedKares HubQuiz Platform Integration & Mentor Rollout
+
+### Overview
+Successfully deployed the official operational rollout of **HubQuiz**, ComedKares' proprietary real-time classroom assessment and gamified quiz platform. HubQuiz is now fully integrated into the ComedKares LMS under the **Online Tests** tab, enabling mentors to launch live interactive knowledge checks with zero login friction and zero student app downloads.
+
+### Key Implementation Deliverables & Architecture
+1. **LMS Navigation & Direct Single Sign-On (SSO)**:
+   - Mentors access HubQuiz directly inside any active batch view under the **Online Tests** tab by clicking the orange **((•)) Start Live Quiz** button.
+   - The LMS integration generates a secure, single-use authentication token that automatically signs mentors into their assigned hub workspace (e.g., `blryelahanka.hub@comedkares.org`), bypassing manual credential entry completely.
+
+![LMS Placement](assets/hubquiz/lms_placement.png)
+*Figure: Location of the orange ((•)) Start Live Quiz button in the LMS batch view under Online Tests.*
+
+2. **Pre-Loaded Curriculum Libraries & Workspace Management**:
+   - The Mentor Dashboard provides 1-click import shortcuts for standardized 10-question curriculum assessments, including Innovation & Design Thinking (13 IDT Quizzes), VTU Modules (6 Quizzes), and RNSIT Pre-Assessments.
+   - Mentors can build custom quizzes from scratch using the `+ New Quiz` button.
+
+![Mentor Dashboard](assets/hubquiz/hubquiz_home_page.png)
+*Figure: HubQuiz Mentor Dashboard showing pre-loaded quizzes, curriculum import shortcuts, and recent games history.*
+
+3. **In-App Quiz Customization & Question Editor**:
+   - Mentors can modify any pre-loaded quiz or custom quiz by clicking the pencil icon on its dashboard card.
+   - The modal editor allows adjusting question descriptions, setting multiple choice options, designating correct answer keys via radio buttons, and reordering or removing questions.
+
+![Edit Quiz Option](assets/hubquiz/edit_quiz_option.png)
+*Figure: Opening the Quiz Editor by clicking the pencil icon on any quiz card.*
+
+![Quiz Editor](assets/hubquiz/edit_page.png)
+*Figure: Quiz Editor interface for modifying questions, answers, and scoring keys.*
+
+4. **Classroom Session Lobby & Phone Question Display Control**:
+   - When a mentor clicks `▶ Start`, HubQuiz generates a unique 6-digit Game PIN and high-resolution QR code for projector display.
+   - **Crucial Setting**: Mentors can toggle the **"Show questions on participant phones"** checkbox. When enabled, both question text and answer choices are transmitted directly to students' phone screens, resolving visibility limitations in large seminar halls.
+
+![Session Lobby](assets/hubquiz/quiz_session_start.png)
+*Figure: Live Quiz Lobby with QR code, 6-digit PIN, live player roster, and the phone question display toggle.*
+
+5. **Live Broadcast Controls & Gamified Engagement**:
+   - Real-time countdown timer (30 seconds default) with animated progress indicators and background audio synthesis.
+   - Live answer submission counter displaying real-time participation.
+   - Host control buttons including `⏭ Skip Timer` and `End Quiz`.
+   - Immediate post-question answer distribution graphs, live top-5 leaderboards, and a 3-place podium celebration.
+
+![Live Question Screen](assets/hubquiz/quiz_question.png)
+*Figure: Active question broadcast screen with countdown timer, live response counter, and color-coded answer blocks.*
+
+6. **Documentation & Deliverables**:
+   - Master Word Guide generated and saved at `C:\Users\DELL\Desktop\ComedKares_HubQuiz_Mentor_Guide.docx` and `d:\Anti_spamm\ComedKares_HubQuiz_Mentor_Guide.docx`.
+   - Complete mentor announcement email drafted with embedded FAQs and step-by-step instructions.
