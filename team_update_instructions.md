@@ -527,3 +527,10 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 
 ### Required Screenshots
 - [ ] Please capture and upload a screenshot of the Mangaluru Edition Hero section for team reference (screenshot_mangaluru_hero.png).
+
+### Update - Mangaluru Edition Refinements (Capacity, Build Day Flow & Contact Number)
+1. **Total Available Capacity**: Exactly 50 slots available on a first-come, first-served basis without screening or shortlisting.
+2. **Build Day Schedule (Nov 28)**:
+   - 9:00 AM - 2:00 PM: Dedicated build time for product development.
+   - 2:00 PM - 4:00 PM: Presentation to the jury panel at tables.
+3. **Official Contact Number**: Updated to +91 89519 55096. Please update your outreach copy and student communication channels accordingly.
