@@ -503,3 +503,27 @@ Control the flow of the assessment with the 30-second timer, live response count
 - **Q: Can students see questions on their phones?** Yes, simply check the "Show questions on participant phones" box in the lobby before clicking Start Quiz.
 - **Q: What if classroom internet is slow?** HubQuiz uses an ultralight realtime protocol consuming under 50 KB per session, running smoothly even on mobile hotspots.
 - **Q: Where is the complete guide?** Download the comprehensive manual from `C:\Users\DELL\Desktop\ComedKares_HubQuiz_Mentor_Guide.docx`.
+
+
+## Team Update - October 27, 2026: Build 4 Karnataka Mangaluru Edition & Statewide Regional Hubs
+
+### Overview for Team Members
+The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition** as its main homepage! The Bengaluru event archive has been shifted to /bengaluru/ and dedicated upcoming city edition pages have been deployed for five additional hubs across Karnataka.
+
+### Key URLs for Outreach & Student Queries
+- **Main Portal (Mangaluru Edition)**: https://build4karnataka.comedkares.com/
+- **Student Registration Link**: https://forms.gle/M2Q93UHtBamjD3GM8
+- **Bengaluru Event Archive & Results**: https://build4karnataka.comedkares.com/bengaluru/
+- **Mysuru Coming-Soon Page**: https://build4karnataka.comedkares.com/mysuru/
+- **Belagavi Coming-Soon Page**: https://build4karnataka.comedkares.com/belagavi/
+- **Hubballi Coming-Soon Page**: https://build4karnataka.comedkares.com/hubballi/
+- **Kalaburagi Coming-Soon Page**: https://build4karnataka.comedkares.com/kalaburagi/
+- **Tumakuru Coming-Soon Page**: https://build4karnataka.comedkares.com/tumakuru/
+
+### Team Action Items
+1. **Promote Mangaluru Registrations**: Direct interested student teams from coastal and statewide engineering colleges to https://build4karnataka.comedkares.com/. Registrations are now active via Google Forms.
+2. **Support Regional Queries**: Students inquiring about other cities (Mysuru, Hubballi, Belagavi, Kalaburagi, Tumakuru) can be pointed to their respective city links where they can join the WhatsApp notification list.
+3. **Showcase Past Success**: If applicants ask about previous editions, share https://build4karnataka.comedkares.com/bengaluru/ to view winning projects, jury details, and photo highlights.
+
+### Required Screenshots
+- [ ] Please capture and upload a screenshot of the Mangaluru Edition Hero section for team reference (screenshot_mangaluru_hero.png).

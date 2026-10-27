@@ -3,17 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Build 4 Karnataka | Unleash AI: Build More</title>
-<link rel="icon" type="image/png" href="favicon.png">
-<meta name="description" content="Karnataka's premier student AI buildathon. 1 day. Rs.40,000+ in prizes. Unleash AI, build functional prototypes, and compete. Event at ComedKares Innovation Hub, Sirsi Circle. September 7, 2026.">
-  <meta name="keywords" content="Build 4 Karnataka, Build for Karnataka, Build4Karnataka, ComedKares Buildathon, Student Hackathon Karnataka, AI Buildathon">
-<meta property="og:title" content="Build 4 Karnataka | Unleash AI: Build More">
-<meta property="og:description" content="Karnataka's premier student AI buildathon. 1 day. 30 teams. Rs.40,000 prize pool. Event at ComedKares Innovation Hub, Sirsi Circle. September 7, 2026.">
+<title>Build 4 Karnataka Mangaluru | Unleash AI: Build More</title>
+<link rel="icon" type="image/png" href="https://build4karnataka.comedkares.com/favicon.png">
+<meta name="description" content="Build 4 Karnataka comes to Mangaluru. Coastal Karnataka's student Gen AI buildathon by ComedKares × ERA Foundation. 1 day, X0 teams, ₹40,000+ in prizes. Saturday, 28 November 2026 at the ComedKares Centre, Mangaluru.">
+<meta name="keywords" content="Build 4 Karnataka, Build4Karnataka Mangaluru, Mangalore Hackathon, Mangaluru AI Buildathon, ComedKares Buildathon, Student Hackathon Karnataka, AI Buildathon">
+<meta property="og:title" content="Build 4 Karnataka Mangaluru | Unleash AI: Build More">
+<meta property="og:description" content="Coastal Karnataka's student Gen AI buildathon. 1 day. X0 teams. ₹40,000+ prize pool. Saturday, 28 November 2026, ComedKares Centre, Mangaluru.">
 <meta property="og:type" content="website">
-  <meta property="og:image" content="https://build4karnataka.comedkares.com/Share-preview.png">
+<meta property="og:url" content="https://build4karnataka.comedkares.com/">
+<meta property="og:image" content="https://build4karnataka.comedkares.com/Share-preview.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@300;400;600&amp;family=Space+Grotesk:wght@500;600;700&amp;display=swap" rel="stylesheet">
 <style>
 :root{
   --bg:#fafafa;--surface:#ffffff;--surface-2:#f4f4f5;--surface-3:#e4e4e7;
@@ -495,6 +496,101 @@ img { max-width: 100%; height: auto; }
 .lightbox.active img{transform:scale(1);}
 .lightbox-close{position:absolute;top:24px;right:32px;color:#fff;font-size:36px;cursor:pointer;font-family:sans-serif;line-height:1;opacity:0.7;transition:opacity 0.2s;}
 .lightbox-close:hover{opacity:1;}
+/* ===== Mangaluru edition additions (same tokens, same components) ===== */
+.btn-primary{background:var(--accent);color:var(--surface);border-color:var(--accent);}
+.btn-primary:hover{background:var(--accent-bright);border-color:var(--accent-bright);color:var(--ink);transform:translateY(-2px);box-shadow:0 8px 24px rgba(13,148,136,0.3);}
+.announce-bar a.arrow::after{content:" →";}
+#heroCountdown{display:inline-flex;gap:14px;margin-top:28px;padding:14px 18px;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);}
+#heroCountdown > div{text-align:center;min-width:56px;}
+#heroCountdown > div > div:first-child{font-family:var(--display);font-size:28px;font-weight:700;color:var(--ink);line-height:1;font-variant-numeric:tabular-nums;}
+#heroCountdown > div > div:last-child{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.1em;margin-top:6px;}
+.cd-label{font-family:var(--mono);font-size:11.5px;color:var(--ink-faint);margin-top:28px;display:block;}
+.cd-label + #heroCountdown{margin-top:10px;}
+.edition-grid{display:grid;gap:24px;}
+@media(min-width:860px){.edition-grid{grid-template-columns:1fr 1fr;}}
+.edition-card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius-lg);padding:28px;box-shadow:var(--shadow);display:flex;flex-direction:column;gap:14px;transition:border-color .2s,transform .2s;}
+.edition-card:hover{border-color:var(--accent-bright);transform:translateY(-4px);}
+.edition-card.live{border-color:var(--accent-bright);background:linear-gradient(160deg,var(--accent-soft),var(--surface) 60%);}
+.edition-top{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;}
+.edition-num{font-family:var(--mono);font-size:11.5px;color:var(--accent);letter-spacing:0.1em;text-transform:uppercase;}
+.status-pill{font-family:var(--mono);font-size:11px;padding:4px 10px;border-radius:100px;display:inline-flex;align-items:center;gap:6px;}
+.status-pill.done{background:rgba(16,185,129,0.12);color:var(--green);border:1px solid rgba(16,185,129,0.3);}
+.status-pill.upcoming{background:var(--accent-soft);color:var(--accent);border:1px solid var(--accent-soft);}
+.edition-card h3{font-size:24px;}
+.edition-card p{font-size:14.5px;color:var(--ink-soft);line-height:1.6;}
+.edition-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;}
+.edition-stats div{background:var(--surface);padding:12px 14px;}
+.edition-stats b{display:block;font-family:var(--display);font-size:20px;color:var(--ink);}
+.edition-stats span{font-family:var(--mono);font-size:10.5px;color:var(--ink-faint);text-transform:uppercase;letter-spacing:0.08em;}
+.edition-podium{display:flex;flex-direction:column;gap:6px;font-size:13.5px;color:var(--ink-soft);}
+.edition-podium strong{color:var(--ink);}
+.edition-card .btn{align-self:flex-start;margin-top:auto;}
+.domain .local{margin-top:12px;font-size:13px;color:var(--ink);border-left:2px solid var(--accent-bright);padding-left:12px;line-height:1.55;}
+.domain .partner-open{margin-top:12px;font-family:var(--mono);font-size:11px;color:var(--ink-faint);text-transform:uppercase;}
+.domain .partner-open b{color:var(--accent);font-weight:600;}
+.tentative{display:inline-block;margin-left:10px;vertical-align:middle;font-family:var(--mono);font-size:11px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:#b45309;background:rgba(250,204,21,0.15);border:1px solid rgba(250,204,21,0.45);padding:3px 10px;border-radius:100px;}
+.jury-avatar.tba{font-family:var(--mono);color:var(--accent);font-size:24px;border-style:dashed;}
+.kit-grid{display:grid;gap:20px;}
+@media(min-width:760px){.kit-grid{grid-template-columns:repeat(3,minmax(0,1fr));}}
+.xnum{font-style:normal;font:inherit;color:var(--accent);display:inline-block;animation:xFlicker 2.4s ease-in-out infinite;}
+@keyframes xFlicker{0%,100%{opacity:1;}50%{opacity:.35;}}
+@media(prefers-reduced-motion:reduce){.xnum{animation:none;}}
+@media(min-width:1000px){.mentor-grid{grid-template-columns:repeat(4,minmax(0,1fr));}}
+@media(min-width:760px){.prize-grid.prize-grid-2{grid-template-columns:repeat(2,minmax(0,1fr));max-width:860px;}}
+.reg-link{background:var(--accent);border-color:var(--accent);}
+@media(min-width:820px){.funnel.funnel-4{grid-template-columns:1fr auto 1fr auto 1fr auto 1fr;}}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0;}
+.s-cta{word-break:normal;overflow-wrap:anywhere;}
+.social-section .eyebrow{color:var(--accent-bright);}
+.kit-item{display:flex;gap:16px;align-items:flex-start;background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:24px;box-shadow:var(--shadow);}
+.kit-icon{width:48px;height:48px;flex:none;border-radius:12px;background:linear-gradient(135deg,var(--accent-pale),var(--accent-soft));border:1px solid var(--accent-soft);display:flex;align-items:center;justify-content:center;font-size:22px;}
+.kit-item strong{color:var(--ink);font-family:var(--display);font-size:16.5px;}
+.kit-item p{font-size:14px;color:var(--ink-soft);margin-top:6px;}
+#faqList details:first-child{padding-top:0;}
+/* hero map: image + clickable layer on top */
+.hg-wrap{pointer-events:none;}
+.hg-wrap > img{display:block;width:100%;height:auto;}
+.hg-layer{position:absolute;inset:0;width:100%;height:100%;overflow:visible;}
+.hg-city{pointer-events:auto;cursor:pointer;}
+.hg-city text{font-family:var(--mono);paint-order:stroke;stroke:#fff;stroke-width:4px;stroke-linejoin:round;}
+.hg-name{font-size:11px;font-weight:600;letter-spacing:0.08em;fill:#27272a;}
+.hg-sub{font-size:9.5px;letter-spacing:0.04em;fill:#71717a;}
+.hg-city.soon .hg-district{fill:#fff;stroke:#a1a1aa;stroke-width:1.1;transition:fill .2s,stroke .2s;}
+.hg-city.soon:hover .hg-district,.hg-city.soon:focus-visible .hg-district{fill:var(--accent-soft);stroke:var(--accent);}
+.hg-city.soon:hover .hg-name{fill:var(--accent);}
+.hg-city.live .hg-district{stroke-width:1.4;animation:hgPulse 3.4s ease-in-out infinite;}
+.hg-city.blr .hg-district{fill:#f97316;stroke:#f97316;animation-delay:-1.7s;}
+.hg-city.mng .hg-district{fill:#16a34a;stroke:#16a34a;}
+.hg-city.blr .hg-sub{fill:#c2410c;}
+.hg-city.mng .hg-sub{fill:#15803d;}
+.hg-city:focus{outline:none;}
+.hg-city:focus-visible .hg-district{stroke-width:2.5;}
+@keyframes hgPulse{0%,100%{fill-opacity:.2;}50%{fill-opacity:.9;}}
+@media(prefers-reduced-motion:reduce){.hg-city.live .hg-district{animation:none;fill-opacity:.8;}}
+@media(max-width:939px){.hero-graphic{margin-bottom:8px !important;}}
+/* map meets the top bar: hero column starts at the top of the grid, graphic sits 72px (hero padding) above it */
+@media(min-width:940px){
+  .hero-right{align-self:start;height:900px;}
+  .hero-graphic{top:-72px;}
+  .console{top:0;}
+}
+
+/* narrower laptops: shrink the map a little so Bengaluru stays on screen */
+@media(min-width:940px) and (max-width:1219px){
+  .hero-graphic{width:540px;left:-150px;}
+}
+
+@media(min-width:1000px){
+  .domain-grid{grid-template-columns:repeat(5,minmax(0,1fr));gap:16px;}
+  .domain{padding:22px 18px;}
+  .prize-grid{grid-template-columns:repeat(4,minmax(0,1fr));}
+}
+@media(max-width:768px){
+  .hero-grid > div{min-width:0;}
+  .hero-cta .btn{white-space:normal;width:100%;justify-content:center;text-align:center;}
+  #heroCountdown{display:flex;}
+  .edition-card .btn{white-space:normal;}
+}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -506,46 +602,34 @@ img { max-width: 100%; height: auto; }
 <canvas id="netCanvas"></canvas>
 
 <!-- WhatsApp FAB -->
-<a href="https://wa.me/+916366879353?text=Hi%20Build4Karnataka%20team!%20I%20want%20to%20register." class="whatsapp-fab" target="_blank" rel="noopener" title="WhatsApp us"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.791.994.996-3.699-.237-.377a9.99 9.99 0 0 1-1.528-5.234c0-5.522 4.494-10.016 10.021-10.016 5.525 0 10.018 4.494 10.018 10.016 0 5.525-4.493 10.018-10.02 10.018l-.004-.088zm5.495-7.514c-.302-.151-1.782-.879-2.059-.979-.277-.101-.479-.151-.681.151-.202.302-.78 1.002-.958 1.204-.177.202-.353.227-.655.076-.302-.151-1.274-.471-2.427-1.5-.898-.802-1.503-1.792-1.68-2.095-.177-.302-.019-.465.132-.616.136-.136.302-.353.454-.53.151-.177.202-.302.302-.504.101-.202.051-.378-.025-.53-.076-.151-.681-1.642-.932-2.247-.245-.591-.494-.51-.681-.519-.177-.008-.378-.008-.58-.008s-.53.076-.807.378c-.277.302-1.059 1.034-1.059 2.52 0 1.487 1.084 2.924 1.235 3.125.151.202 2.128 3.248 5.158 4.551.72.309 1.282.494 1.723.633.722.228 1.38.196 1.897.119.58-.087 1.782-.728 2.034-1.431.252-.704.252-1.309.177-1.431-.077-.126-.278-.202-.58-.353z"/></svg></a>
+<a href="https://wa.me/+916366879353?text=Hi%20Build4Karnataka%20team!%20I%20want%20to%20register%20for%20the%20Mangaluru%20edition." class="whatsapp-fab" target="_blank" rel="noopener" title="WhatsApp us"><svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.791.994.996-3.699-.237-.377a9.99 9.99 0 0 1-1.528-5.234c0-5.522 4.494-10.016 10.021-10.016 5.525 0 10.018 4.494 10.018 10.016 0 5.525-4.493 10.018-10.02 10.018l-.004-.088zm5.495-7.514c-.302-.151-1.782-.879-2.059-.979-.277-.101-.479-.151-.681.151-.202.302-.78 1.002-.958 1.204-.177.202-.353.227-.655.076-.302-.151-1.274-.471-2.427-1.5-.898-.802-1.503-1.792-1.68-2.095-.177-.302-.019-.465.132-.616.136-.136.302-.353.454-.53.151-.177.202-.302.302-.504.101-.202.051-.378-.025-.53-.076-.151-.681-1.642-.932-2.247-.245-.591-.494-.51-.681-.519-.177-.008-.378-.008-.58-.008s-.53.076-.807.378c-.277.302-1.059 1.034-1.059 2.52 0 1.487 1.084 2.924 1.235 3.125.151.202 2.128 3.248 5.158 4.551.72.309 1.282.494 1.723.633.722.228 1.38.196 1.897.119.58-.087 1.782-.728 2.034-1.431.252-.704.252-1.309.177-1.431-.077-.126-.278-.202-.58-.353z"></path></svg></a>
 
 <!-- Back to top -->
-<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#8593;</button>
-
+<button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
 <!-- Announcement bar -->
 <div class="announce-bar">
-  <span class="gold">&#x1F3C6; Build 4 Karnataka Bengaluru was a massive success!</span>&nbsp;&nbsp;Next stop: <strong>Mysore</strong>. Stay tuned!
+  <span class="gold">🌊 Build 4 Karnataka Mangaluru · Sat, 28 Nov 2026 · Registrations open 28 Oct – 16 Nov.</span>&nbsp;&nbsp;Missed Bengaluru? <a href="bengaluru/" class="arrow">See what happened</a>
 </div>
 
 <header id="siteHeader">
   <div class="nav">
     <div class="logo-row">
-      <div class="logo-chip"><a href="https://comedkares.org/" target="_blank"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></a></div>
+      <div class="logo-chip"><a href="https://comedkares.org/" target="_blank" rel="noopener"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer"></a></div>
       <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></a></div>
+      <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank" rel="noopener"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner"></a></div>
       <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
-      <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="https://krishikan.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="agritech_sponsor.png" alt="AgriTech Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"><span style="font-size:10px; font-weight:600; color:var(--ink-soft); line-height:1; text-transform:uppercase;">Krishikan</span></a></div>
-      <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="#" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="rootsgoods_logo.png" alt="AgriTech Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"></a></div>
-      <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="https://niramai.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="niramai_logo.png" alt="Healthcare Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"></a></div>
-      <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="https://www.coreetronix.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="core_logo.png" alt="Retail Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"></a></div>
-      <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="https://ic.iiitb.ac.in/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="iiitb_logo.png" alt="IIITB Incubation Partner" style="height: 32px; width: auto; object-fit: contain;"></a></div>
+      <div class="logo-chip"><a href="#"><img src="/b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
     </div>
     <nav class="links">
-      <a href="#winners" style="color:var(--accent); font-weight:600;">Winners</a>
-      <a href="#next-city">Mysore</a>
       <a href="#about">About</a>
       <a href="#domains">Domains</a>
+      <a href="#prizes">Prizes</a>
       <a href="#jury">Jury</a>
+      <a href="bengaluru/" style="font-weight:600;">Bengaluru '26</a>
     </nav>
     <div class="nav-right">
-          
-      <a href="#winners" class="btn btn-primary" style="background:var(--accent); color:var(--surface); pointer-events:auto; opacity:1;">See Winners</a>
+      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Register</a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -556,26 +640,25 @@ img { max-width: 100%; height: auto; }
 <div class="mobile-nav" id="mobileNav">
   <a href="#about" class="mobile-link">About</a>
   <a href="#domains" class="mobile-link">Domains</a>
-  <a href="#selection" class="mobile-link">Selection</a>
+  <a href="#selection" class="mobile-link">How it works</a>
   <a href="#prizes" class="mobile-link">Prizes</a>
   <a href="#jury" class="mobile-link">Jury</a>
-  <a href="#timeline" class="mobile-link">Timeline</a>
   <a href="#faq" class="mobile-link">FAQ</a>
-  <!-- Registration Closed -->
+  <a href="bengaluru/" class="mobile-link">Bengaluru 2026 results</a>
+  <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Register your team</a>
 </div>
 
 <main>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â HERO Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ═════ HERO ═════ -->
 <section class="hero" id="about">
   <div class="wrap hero-grid">
     <div>
-
-      <span class="eyebrow">ComedKares &times; ERA Foundation present</span>
-      <img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
-
+      <span class="eyebrow">ComedKares × ERA Foundation present</span>
+      <img src="/b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
+      <div class="hero-badge"><span class="dot-live"></span>Edition 02 · Mangaluru</div>
       <h1 class="headline">Unleash AI:<br><span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 6px;">Build More.</span></h1>
-      <p class="sub">Bengaluru&rsquo;s first Gen AI student buildathon. <strong style="color:var(--accent);">30 teams competed across 5 domains</strong> using AI and no-code tools. 6 hours to build a working product and pitch it to an industry jury. &#x20B9;40,000+ in prizes awarded.</p>
+      <p class="sub">Coastal Karnataka's first Gen AI student buildathon. <strong style="color:var(--accent);"><i class="xnum">X</i>0 teams across 5 domains</strong> get 6 hours to build a working product for a real coastal problem with Gen AI and vibe-code tools, then demo it to judges at their table. ₹40,000+ in prizes.</p>
       <div class="branch-cluster">
         <span class="branch-chip">Mechanical</span>
         <span class="branch-chip">Civil</span>
@@ -585,578 +668,415 @@ img { max-width: 100%; height: auto; }
         <span class="branch-chip">Aeronautical</span>
       </div>
       <div class="hero-cta">
-        <a href="#winners" class="btn btn-primary btn-lg">&#x1F3C6; See the winners</a>
-        <a href="#domains" class="btn btn-ghost btn-lg">Explore domains</a>
+        <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Register your team</a>
+        <a href="bengaluru/" class="btn btn-ghost btn-lg">🏆 See what happened in Bengaluru →</a>
+      </div>
+      <span class="cd-label">// countdown to build day</span>
+      <div id="heroCountdown" aria-live="polite">
+        <div><div id="cdD">--</div><div>Days</div></div>
+        <div><div id="cdH">--</div><div>Hrs</div></div>
+        <div><div id="cdM">--</div><div>Min</div></div>
+        <div><div id="cdS">--</div><div>Sec</div></div>
       </div>
       <div class="stat-strip">
-        <div class="stat"><div class="k">Event date</div><div class="v">Mon, 7 Sep &apos;26</div></div>
-        <div class="stat"><div class="k">Venue</div><div class="v" style="font-size: 13.5px; line-height: 1.4;">ComedKares Innovation Hub,<br>Sirsi Circle, Bengaluru</div></div>
-        <div class="stat"><div class="k">Teams competed</div><div class="v">30 teams</div></div>
-        <div class="stat"><div class="k">Prizes awarded</div><div class="v">&#x20B9;40,000+</div></div>
+        <div class="stat"><div class="k">Event date</div><div class="v">Sat, 28 Nov '26</div></div>
+        <div class="stat"><div class="k">Venue</div><div class="v" style="font-size: 13.5px; line-height: 1.4;">ComedKares Centre,<br>Mangaluru</div></div>
+        <div class="stat"><div class="k">On-site teams</div><div class="v"><i class="xnum">X</i>0 teams</div></div>
+        <div class="stat"><div class="k">Prize pool</div><div class="v">₹40,000+</div></div>
       </div>
+    </div>
 
-    </div>
-    
     <div class="hero-right">
-      <img src="hero_graphic.png" class="hero-graphic" alt="Build 4 Karnataka Student AI Buildathon Hero Graphic">
+      <div class="hero-graphic hg-wrap">
+        <img src="/hero_graphic_mangaluru.svg" alt="Build 4 Karnataka editions across Karnataka: Bengaluru completed, Mangaluru next">
+        <svg class="hg-layer" viewBox="0 0 700 640" aria-label="Build 4 Karnataka editions map" role="img"><a href="kalaburagi/" class="hg-city soon" aria-label="Kalaburagi  -  Coming soon"><title>Kalaburagi  -  Coming soon</title><path class="hg-district" d="M488.2,69.5 L488.9,71.2 L488.9,71.3 L489.0,71.3 L490.3,71.3 L490.1,71.6 L489.4,72.8 L489.3,73.0 L490.6,73.3 L492.2,71.0 L495.6,70.9 L495.3,72.7 L496.0,73.6 L497.3,72.1 L506.2,72.8 L507.0,73.7 L508.8,73.4 L507.8,74.6 L508.1,75.8 L509.7,75.9 L513.7,71.6 L512.8,69.7 L514.0,68.3 L516.3,69.9 L517.7,69.7 L517.8,70.6 L519.7,70.3 L522.0,71.5 L525.3,69.2 L525.4,69.1 L527.5,73.9 L530.8,75.4 L531.5,73.9 L537.9,74.3 L538.0,74.4 L540.0,76.2 L541.1,77.1 L543.6,77.8 L545.2,76.7 L546.9,77.2 L546.9,78.1 L552.3,78.1 L552.3,78.1 L553.1,78.4 L553.9,78.4 L554.3,78.7 L555.3,79.6 L556.6,79.5 L556.7,79.6 L557.7,81.8 L559.5,78.9 L560.3,78.9 L561.4,80.9 L565.1,79.8 L565.3,82.5 L571.9,84.2 L572.8,84.4 L573.1,84.5 L573.1,87.6 L570.0,87.0 L570.5,84.9 L569.4,87.4 L566.9,87.8 L566.8,90.2 L563.6,89.3 L563.6,91.5 L560.3,90.4 L558.2,91.5 L558.3,93.0 L560.3,93.7 L559.2,95.3 L559.6,96.6 L559.7,96.8 L559.4,96.8 L555.8,98.2 L555.0,97.6 L555.3,96.8 L553.2,96.5 L553.4,100.2 L551.9,103.7 L553.6,104.8 L550.9,106.8 L550.4,108.4 L549.4,108.1 L547.0,109.7 L549.0,110.8 L548.1,112.2 L546.3,112.1 L545.6,115.3 L549.2,118.3 L554.1,119.6 L554.0,121.0 L555.5,122.3 L556.9,125.5 L557.3,128.4 L555.4,129.5 L555.5,131.7 L555.5,131.8 L555.3,132.0 L554.3,133.2 L554.5,136.3 L553.2,136.7 L553.6,139.3 L550.8,139.2 L549.6,140.2 L548.8,139.4 L549.2,137.8 L546.7,138.4 L544.6,137.3 L543.7,135.0 L541.8,134.8 L541.2,135.5 L539.3,134.7 L537.0,135.5 L535.3,134.2 L532.7,134.0 L531.4,135.6 L530.4,134.2 L528.8,134.6 L528.4,136.6 L525.4,136.4 L522.8,137.4 L522.1,134.7 L520.9,134.5 L520.3,133.2 L518.3,135.9 L516.5,135.5 L516.3,138.1 L517.7,138.5 L518.3,140.6 L515.4,141.6 L513.1,141.3 L513.4,143.2 L514.4,143.4 L513.5,145.4 L513.3,145.9 L510.1,144.0 L507.2,145.3 L506.5,141.9 L508.1,140.6 L506.5,139.8 L506.5,138.6 L503.8,138.3 L501.4,140.9 L499.3,140.2 L499.0,141.6 L497.1,142.3 L496.9,143.4 L494.5,142.8 L494.0,144.9 L493.2,145.3 L493.2,150.9 L493.1,150.9 L491.8,150.7 L492.3,148.6 L490.2,148.4 L489.6,147.3 L487.6,148.0 L487.3,149.8 L486.1,149.6 L485.4,151.0 L485.9,153.3 L483.9,152.4 L483.9,151.4 L482.9,151.7 L482.9,149.7 L480.6,149.7 L476.4,151.3 L473.8,151.0 L472.7,151.8 L472.7,153.4 L470.9,154.4 L470.0,154.4 L469.2,154.5 L469.1,154.5 L468.4,153.5 L468.1,153.6 L467.4,154.2 L465.9,154.0 L466.4,152.1 L467.4,151.8 L467.0,149.8 L461.5,149.4 L462.1,146.5 L464.8,146.8 L465.1,145.5 L459.9,145.0 L461.8,141.6 L466.4,142.3 L466.5,143.4 L470.0,143.3 L468.9,140.8 L467.2,140.8 L466.8,139.5 L466.8,138.1 L469.5,137.7 L468.9,135.5 L466.9,134.2 L466.4,135.5 L463.9,134.9 L464.0,131.2 L467.1,130.8 L467.4,129.5 L466.3,124.5 L466.5,120.5 L463.8,123.1 L463.0,122.9 L463.2,120.7 L460.8,119.0 L463.2,117.8 L463.5,116.7 L460.6,116.9 L461.3,114.6 L460.3,112.7 L458.3,114.3 L453.5,114.5 L452.5,116.0 L451.8,116.0 L450.9,116.0 L450.7,116.0 L450.6,115.9 L448.8,113.0 L446.0,112.9 L445.5,112.4 L440.9,107.8 L437.6,106.7 L437.6,106.7 L438.1,105.0 L438.5,103.8 L438.5,103.7 L435.7,102.0 L435.6,101.9 L436.2,100.0 L436.3,99.8 L436.5,99.8 L436.8,100.2 L437.0,99.8 L438.6,97.3 L440.2,96.8 L443.9,99.0 L444.1,102.7 L445.0,102.9 L445.6,101.3 L444.5,98.4 L449.5,97.2 L449.5,96.3 L450.6,96.1 L451.3,97.7 L453.2,97.7 L453.5,99.9 L457.0,100.1 L456.7,98.7 L459.3,98.2 L460.1,101.7 L462.5,101.7 L463.7,98.8 L465.0,98.5 L464.8,96.7 L460.9,96.2 L461.6,91.0 L458.3,91.2 L458.1,88.1 L461.9,86.3 L459.4,86.1 L459.5,84.4 L461.2,83.7 L460.8,82.2 L459.0,81.7 L458.2,77.0 L465.7,76.4 L466.4,72.9 L466.5,72.8 L467.8,73.1 L467.5,72.4 L468.5,71.8 L471.6,71.4 L471.4,66.7 L474.5,66.7 L474.4,62.8 L478.6,62.7 L477.9,63.5 L478.4,67.5 L479.4,67.5 L481.0,65.7 L482.1,61.8 L482.1,61.8 L483.6,63.2 L483.7,65.5 L485.6,66.4 L486.4,69.1 L488.1,69.2 L488.2,69.5 Z"/><text class="hg-name" x="500.4" y="98.3" text-anchor="middle">KALABURAGI</text><text class="hg-sub" x="500.4" y="110.3" text-anchor="middle">Coming soon</text></a><a href="belagavi/" class="hg-city soon" aria-label="Belagavi  -  Coming soon"><title>Belagavi  -  Coming soon</title><path class="hg-district" d="M270.8,247.1 L269.1,245.9 L268.2,245.5 L268.4,245.5 L271.4,244.6 L271.9,242.7 L271.1,241.1 L274.4,238.4 L277.8,237.8 L278.4,235.8 L278.4,235.8 L279.5,235.4 L280.1,235.3 L280.5,235.3 L280.0,237.0 L280.0,237.6 L281.0,239.0 L283.5,238.1 L285.1,239.2 L286.8,238.7 L288.1,236.5 L290.0,237.3 L291.4,235.8 L292.0,234.7 L292.1,234.0 L291.4,232.8 L291.3,232.6 L291.3,232.6 L293.2,229.9 L289.4,229.3 L291.5,227.6 L291.5,227.6 L291.8,226.3 L292.0,225.9 L293.6,229.4 L295.1,229.3 L293.5,225.0 L297.2,220.5 L300.0,213.2 L299.9,212.3 L297.1,211.5 L292.4,213.5 L292.7,211.8 L291.3,212.0 L292.3,209.8 L293.9,209.6 L293.8,208.8 L297.0,206.9 L301.7,208.6 L301.8,208.4 L302.2,207.0 L301.4,203.8 L302.6,200.3 L303.2,200.1 L303.5,199.5 L302.8,198.0 L302.8,197.9 L302.7,197.8 L303.3,196.9 L302.6,196.1 L301.4,194.8 L300.4,195.7 L299.3,194.5 L296.1,194.1 L295.8,192.0 L293.2,192.4 L292.3,193.8 L291.2,191.2 L290.0,191.0 L290.4,192.6 L288.3,192.9 L287.9,191.8 L289.8,190.6 L288.3,189.2 L288.6,188.3 L287.6,188.1 L288.1,187.4 L287.4,186.9 L288.5,186.7 L287.6,183.3 L288.3,183.6 L289.2,182.2 L290.7,184.6 L291.5,181.2 L289.1,181.6 L288.9,176.9 L285.3,176.2 L285.4,172.5 L284.4,172.5 L284.0,174.2 L282.8,174.7 L281.7,173.2 L284.3,172.5 L283.1,169.4 L283.7,168.7 L283.7,168.8 L284.7,170.8 L285.5,170.0 L286.3,170.4 L286.3,170.4 L286.7,172.6 L287.4,172.5 L287.5,168.2 L289.5,168.8 L290.9,167.7 L291.1,169.6 L292.9,170.4 L294.3,165.7 L296.5,165.5 L297.6,164.1 L300.3,163.6 L299.3,160.1 L300.4,158.6 L300.5,158.7 L302.2,161.6 L306.9,161.1 L306.8,164.6 L308.8,165.5 L307.8,167.4 L308.1,167.6 L309.0,168.2 L311.8,167.1 L313.1,165.6 L314.1,165.6 L314.8,163.6 L314.9,163.3 L314.9,163.3 L315.6,163.3 L318.9,163.4 L319.0,162.6 L316.1,160.8 L317.1,158.4 L319.1,157.5 L318.4,156.7 L319.1,156.6 L319.0,154.3 L319.6,154.2 L319.6,154.1 L322.7,153.8 L326.1,151.0 L328.1,151.3 L332.3,150.0 L332.7,149.1 L334.0,149.9 L334.4,149.0 L338.6,149.1 L337.1,141.2 L342.1,139.6 L342.3,137.1 L341.7,137.5 L339.7,136.3 L339.6,135.9 L339.1,134.9 L338.9,134.5 L339.5,134.3 L339.9,134.2 L340.1,134.1 L342.4,135.6 L342.4,133.8 L344.6,133.4 L344.7,133.4 L347.7,134.1 L347.6,135.5 L353.0,133.4 L353.6,136.7 L355.4,136.8 L356.8,138.4 L357.0,140.2 L360.4,140.8 L361.4,140.1 L360.8,142.9 L363.6,143.0 L364.7,142.9 L365.6,140.8 L367.8,141.2 L369.3,139.7 L370.0,137.6 L369.1,135.9 L369.1,133.0 L374.4,133.0 L373.9,140.6 L378.9,141.2 L377.5,144.6 L378.0,149.9 L376.4,150.2 L376.1,154.2 L369.9,154.1 L368.8,155.2 L367.9,156.1 L368.1,160.6 L367.3,163.5 L367.3,163.6 L364.2,162.7 L359.8,164.3 L358.8,165.6 L358.7,165.6 L359.1,169.4 L359.1,169.9 L358.7,170.2 L357.4,171.0 L355.2,172.4 L355.1,172.2 L351.5,167.0 L351.1,169.5 L346.1,169.6 L344.5,172.9 L344.3,175.9 L344.4,177.0 L346.8,176.6 L346.9,178.2 L347.8,178.7 L352.0,178.4 L351.6,181.3 L348.8,181.9 L348.4,182.8 L349.1,188.8 L351.9,187.7 L356.4,187.7 L358.0,189.1 L358.9,188.6 L358.0,192.0 L365.3,194.0 L365.1,198.3 L369.6,199.1 L369.5,201.2 L370.2,201.5 L368.8,206.2 L373.2,206.6 L375.4,205.4 L375.5,206.6 L379.7,206.7 L380.3,205.2 L380.6,206.6 L382.6,206.6 L381.6,208.5 L381.9,210.6 L383.1,210.6 L383.1,212.0 L380.9,212.1 L380.7,212.6 L381.5,215.9 L382.5,216.4 L382.0,218.8 L382.7,219.6 L381.4,223.5 L382.8,223.8 L382.5,226.0 L383.7,226.6 L383.7,226.9 L383.9,227.1 L384.2,232.5 L382.4,236.0 L380.5,235.5 L381.4,230.5 L377.2,230.2 L376.3,233.7 L374.3,233.7 L374.2,231.7 L372.9,233.2 L371.1,233.0 L371.3,237.1 L372.4,237.3 L372.4,239.0 L372.0,240.3 L370.8,240.5 L370.7,240.4 L370.3,239.3 L368.7,239.4 L368.6,241.4 L369.0,243.9 L369.9,243.7 L369.0,244.0 L368.6,247.4 L366.5,247.5 L365.4,244.7 L362.6,244.5 L362.6,247.4 L354.6,245.4 L353.2,251.0 L350.2,248.8 L350.5,244.5 L349.5,244.9 L349.4,245.5 L347.8,245.5 L347.1,247.8 L342.6,246.9 L342.5,249.3 L337.2,248.9 L335.2,250.1 L331.1,250.7 L332.0,253.8 L328.3,256.2 L329.7,260.0 L327.4,261.6 L326.6,264.0 L324.1,260.7 L322.3,261.4 L323.8,263.6 L322.5,266.4 L323.3,267.9 L323.5,268.2 L320.0,268.3 L319.1,269.3 L315.7,270.0 L312.7,272.8 L306.9,267.7 L301.6,269.5 L300.1,267.8 L299.4,268.9 L296.9,269.3 L296.5,263.6 L295.7,262.7 L292.5,262.1 L289.7,258.8 L284.3,258.4 L284.3,256.4 L282.9,254.7 L281.5,254.6 L283.1,250.3 L281.4,249.4 L282.1,246.9 L280.8,245.7 L278.1,247.2 L278.0,246.1 L276.6,245.7 L276.9,244.7 L276.1,244.5 L274.9,245.4 L274.7,247.0 L272.2,247.4 L271.4,247.0 L270.8,247.1 L270.8,247.1 Z"/><text class="hg-name" x="320.0" y="201.5" text-anchor="middle">BELAGAVI</text><text class="hg-sub" x="320.0" y="213.5" text-anchor="middle">Coming soon</text></a><a href="hubballi/" class="hg-city soon" aria-label="Hubballi  -  Coming soon"><title>Hubballi  -  Coming soon</title><path class="hg-district" d="M323.3,267.9 L322.5,266.4 L323.8,263.6 L322.3,261.4 L324.1,260.7 L326.6,264.0 L327.4,261.6 L329.7,260.0 L328.3,256.2 L332.0,253.8 L331.1,250.7 L335.2,250.1 L337.2,248.9 L342.5,249.3 L342.6,246.9 L347.1,247.8 L347.8,245.5 L349.4,245.5 L349.5,244.9 L350.5,244.5 L350.2,248.8 L353.2,251.0 L354.6,245.4 L362.6,247.4 L362.6,244.5 L365.4,244.7 L366.5,247.5 L368.6,247.4 L369.0,244.0 L369.9,243.7 L370.3,243.6 L374.0,245.2 L373.9,247.4 L375.9,247.7 L376.1,245.7 L380.4,246.8 L383.3,244.5 L385.2,244.3 L385.1,242.8 L386.7,242.7 L388.0,247.5 L392.4,247.5 L390.7,252.4 L390.2,257.1 L386.2,257.6 L385.7,258.9 L385.4,261.0 L386.7,261.3 L387.4,263.0 L387.1,271.9 L385.7,269.5 L385.1,270.4 L383.1,270.4 L384.2,274.2 L383.5,277.7 L380.4,277.9 L379.8,279.9 L380.7,280.1 L379.5,280.2 L379.5,281.4 L380.7,281.2 L380.6,283.6 L382.7,284.3 L383.5,285.9 L382.1,285.8 L382.1,286.7 L379.2,286.5 L378.9,289.6 L379.6,289.1 L382.1,294.6 L380.7,296.7 L380.7,298.9 L376.7,299.8 L374.6,298.3 L373.6,296.6 L375.1,295.4 L375.1,295.3 L374.6,294.9 L374.0,294.2 L373.9,290.0 L371.4,290.6 L371.6,292.0 L369.7,292.2 L367.5,293.8 L366.9,295.6 L365.6,294.6 L361.4,295.6 L358.8,295.3 L358.9,294.5 L357.2,295.0 L356.7,293.7 L358.4,291.4 L357.4,290.1 L357.2,290.3 L356.6,291.5 L354.2,291.8 L354.3,291.8 L355.0,293.9 L352.0,294.5 L352.4,297.6 L350.3,297.8 L350.0,296.9 L346.5,298.2 L340.4,298.3 L340.4,299.6 L339.5,300.1 L338.4,300.7 L337.7,299.7 L336.0,299.7 L335.1,297.7 L336.3,295.7 L336.1,295.6 L333.5,295.1 L331.8,292.9 L331.3,292.3 L332.0,290.7 L335.0,287.2 L334.7,285.2 L337.8,282.2 L337.4,279.8 L337.3,279.5 L336.0,277.3 L334.7,278.0 L334.9,276.4 L333.0,274.3 L330.9,274.3 L330.1,271.7 L331.1,271.5 L330.3,270.4 L328.1,271.0 L325.5,269.2 L325.7,267.8 L325.7,267.7 L323.4,267.9 L323.3,267.9 Z"/><text class="hg-name" x="355.6" y="270.6" text-anchor="middle">HUBBALLI</text><text class="hg-sub" x="355.6" y="282.6" text-anchor="middle">Coming soon</text></a><a href="tumakuru/" class="hg-city soon" aria-label="Tumakuru  -  Coming soon"><title>Tumakuru  -  Coming soon</title><path class="hg-district" d="M460.0,428.4 L461.7,427.2 L462.5,428.6 L463.9,427.0 L465.1,428.5 L466.5,427.2 L468.7,427.4 L469.1,424.9 L472.5,424.7 L475.3,422.1 L475.0,420.8 L475.8,421.1 L478.9,418.7 L478.3,416.6 L482.7,414.9 L483.4,416.7 L487.1,416.2 L488.1,418.7 L488.1,415.2 L489.2,411.6 L491.4,409.1 L492.0,410.5 L493.5,410.8 L494.9,410.7 L495.2,409.5 L495.0,406.0 L491.3,400.5 L493.8,399.8 L493.6,398.9 L494.9,398.2 L499.2,399.0 L498.8,397.2 L502.1,394.8 L502.0,393.3 L499.8,392.1 L501.0,390.0 L504.0,390.8 L505.4,387.4 L507.2,386.0 L508.3,386.6 L508.7,384.8 L510.4,383.3 L510.4,383.6 L512.5,384.3 L512.5,386.3 L509.1,386.9 L508.9,389.0 L514.7,392.4 L514.3,394.9 L518.3,397.4 L518.8,399.8 L516.7,400.1 L516.0,403.8 L514.1,404.8 L512.9,406.8 L512.8,407.6 L513.9,408.0 L513.5,409.9 L514.7,413.9 L516.2,414.5 L516.8,410.9 L518.5,411.1 L520.3,414.0 L522.0,414.1 L522.5,412.0 L529.4,412.4 L529.9,410.6 L528.1,408.6 L529.1,406.5 L525.6,404.2 L527.3,403.1 L529.1,403.5 L528.5,399.8 L530.4,398.2 L530.9,399.3 L530.2,403.0 L531.8,403.6 L532.8,401.5 L533.4,403.2 L534.8,400.0 L535.8,400.2 L535.6,403.2 L536.7,403.6 L536.5,405.0 L539.2,404.9 L541.2,403.3 L542.3,406.2 L545.5,404.4 L547.1,405.6 L551.4,405.3 L550.1,408.3 L550.1,408.3 L550.0,408.5 L550.8,408.9 L550.6,409.2 L551.6,409.3 L551.7,409.4 L551.8,409.4 L552.5,408.1 L554.0,408.5 L553.4,410.1 L554.6,412.8 L554.2,416.9 L552.9,416.9 L553.3,419.0 L553.4,419.4 L551.7,419.6 L548.4,420.2 L545.7,424.1 L545.5,424.7 L545.5,427.4 L546.5,427.5 L547.2,428.8 L547.2,431.7 L547.8,432.3 L547.9,432.5 L547.9,432.5 L547.5,434.1 L546.4,437.9 L544.3,439.1 L545.5,442.3 L544.1,442.6 L543.5,450.3 L541.2,450.9 L540.9,451.9 L538.6,451.9 L538.6,453.1 L537.6,451.9 L535.9,452.7 L534.2,451.7 L533.4,456.1 L530.7,454.9 L530.3,456.5 L531.1,457.8 L530.3,459.1 L532.4,461.9 L532.0,462.9 L532.0,463.1 L531.4,463.0 L529.0,462.4 L528.5,462.3 L527.3,463.8 L526.5,463.5 L524.9,464.9 L524.6,467.7 L522.9,466.3 L522.6,467.2 L521.8,467.4 L521.0,468.2 L521.6,471.2 L520.6,473.1 L521.3,474.0 L520.7,475.6 L524.8,477.8 L523.1,479.1 L523.7,479.7 L525.8,479.5 L525.3,478.5 L526.2,478.6 L527.0,480.1 L525.8,481.0 L528.1,482.7 L528.8,485.3 L528.2,486.6 L526.6,486.2 L526.0,488.0 L523.9,488.3 L524.8,489.2 L525.9,488.9 L525.9,491.4 L527.4,492.3 L527.4,493.9 L528.2,494.2 L527.0,495.3 L527.6,497.3 L527.4,497.5 L527.5,497.7 L527.3,497.8 L525.5,498.7 L525.3,498.8 L525.3,498.8 L525.1,498.8 L523.0,498.6 L522.6,500.7 L521.6,500.2 L521.4,501.0 L521.3,501.3 L520.5,500.2 L518.9,501.1 L518.5,498.5 L516.9,499.8 L515.6,499.7 L515.6,498.1 L514.6,498.7 L512.7,497.3 L512.5,496.3 L508.4,496.2 L505.7,492.4 L505.4,488.0 L503.4,487.4 L503.5,486.2 L506.0,486.0 L505.6,485.0 L503.1,485.4 L501.2,483.8 L501.2,481.4 L502.3,480.9 L499.1,477.9 L496.6,477.7 L495.5,476.2 L495.2,476.0 L488.8,475.8 L487.1,474.2 L485.5,478.0 L485.4,478.4 L484.3,478.5 L483.6,478.7 L482.0,478.6 L481.3,476.3 L481.1,475.6 L481.4,474.5 L481.4,474.4 L481.4,474.3 L482.6,474.3 L481.7,473.1 L481.3,472.8 L474.8,472.2 L474.2,472.6 L473.8,473.1 L473.7,472.9 L472.0,470.8 L470.1,470.9 L470.2,466.0 L468.7,465.9 L467.8,464.2 L465.0,462.3 L461.5,461.5 L462.3,458.8 L461.0,458.6 L460.3,457.3 L459.9,453.3 L459.5,452.7 L459.5,448.2 L459.5,447.7 L459.5,447.6 L462.4,447.2 L463.2,444.9 L463.6,443.6 L464.0,442.1 L465.7,439.8 L464.6,438.9 L465.3,437.2 L463.6,435.9 L463.7,435.0 L465.3,434.6 L466.3,433.1 L464.0,433.0 L460.9,431.2 L460.0,428.4 Z"/><text class="hg-name" x="510.6" y="429.0" text-anchor="middle">TUMAKURU</text><text class="hg-sub" x="510.6" y="441.0" text-anchor="middle">Coming soon</text></a><a href="mysuru/" class="hg-city soon" aria-label="Mysuru  -  Coming soon"><title>Mysuru  -  Coming soon</title><path class="hg-district" d="M431.7,516.6 L431.7,516.6 L434.0,516.1 L434.5,518.1 L437.8,518.8 L437.4,519.4 L439.9,521.7 L439.8,520.4 L441.4,520.3 L442.9,518.7 L443.0,515.8 L446.7,516.0 L446.4,514.6 L448.3,512.2 L447.5,511.5 L448.7,510.2 L450.9,510.8 L451.7,512.3 L453.8,511.1 L453.8,512.6 L455.5,511.5 L456.3,512.1 L456.0,513.2 L457.8,513.1 L457.9,513.1 L457.5,511.0 L459.1,509.2 L459.1,509.2 L460.8,511.6 L462.0,516.1 L463.7,516.4 L463.2,518.2 L464.9,517.7 L466.3,519.1 L465.9,520.0 L468.4,522.3 L468.4,524.2 L478.2,529.3 L478.0,531.6 L477.1,532.3 L478.1,533.1 L478.0,535.8 L482.8,534.4 L484.6,532.0 L484.9,532.0 L485.4,532.1 L487.9,532.3 L487.8,534.4 L489.4,535.9 L491.0,535.4 L492.0,536.6 L492.0,538.9 L493.1,538.7 L494.0,540.1 L494.8,539.3 L494.9,535.9 L498.1,535.5 L499.1,532.7 L500.7,532.9 L500.6,531.3 L502.4,530.8 L504.4,531.6 L506.3,530.8 L506.7,528.4 L508.2,527.9 L509.5,531.5 L509.6,535.7 L508.4,535.6 L509.0,536.9 L508.2,538.4 L511.2,537.9 L511.1,535.7 L512.8,535.7 L512.8,537.9 L513.7,537.4 L514.6,539.2 L514.2,540.2 L512.8,539.7 L512.4,541.1 L514.0,541.4 L514.4,545.3 L517.9,546.2 L521.4,545.9 L521.4,547.2 L523.8,547.2 L524.0,545.5 L525.3,545.3 L526.0,546.5 L526.1,546.7 L526.1,546.8 L525.1,549.3 L521.9,549.8 L518.6,551.7 L518.2,555.3 L517.9,554.4 L516.1,554.8 L516.1,554.8 L516.0,552.3 L515.1,552.5 L514.2,551.2 L514.2,551.2 L513.9,554.3 L510.5,558.0 L505.6,556.0 L503.9,554.2 L503.9,551.3 L502.2,550.9 L501.7,551.9 L502.4,552.6 L501.3,552.9 L500.5,555.0 L501.7,556.6 L504.3,556.5 L505.0,559.3 L503.8,561.0 L502.4,561.3 L505.5,561.5 L507.6,564.3 L509.6,564.2 L509.4,565.4 L506.7,566.6 L505.1,566.4 L504.9,565.2 L502.6,566.6 L500.9,566.5 L499.6,565.6 L499.6,564.2 L498.8,564.2 L497.2,565.6 L497.3,567.7 L492.8,565.7 L490.8,567.9 L489.8,567.8 L488.9,566.5 L485.2,565.8 L484.5,568.0 L479.1,567.6 L477.3,571.0 L478.9,573.2 L477.3,575.7 L477.0,578.9 L475.4,577.6 L471.7,578.7 L471.8,582.1 L469.8,582.4 L469.2,584.7 L464.8,583.0 L466.4,584.4 L465.1,585.1 L465.9,586.1 L465.9,586.1 L465.2,587.6 L465.1,587.6 L459.9,589.4 L459.4,589.2 L457.1,588.3 L456.2,585.4 L453.8,582.9 L450.9,583.8 L449.0,583.3 L447.9,581.6 L447.7,578.6 L446.2,577.8 L443.3,577.9 L440.3,579.6 L439.7,578.9 L439.6,568.4 L439.7,568.3 L442.8,565.0 L442.9,564.9 L443.0,564.8 L445.6,563.7 L446.1,562.2 L444.6,556.2 L442.3,553.0 L441.4,549.8 L438.7,549.3 L435.4,544.7 L432.2,544.8 L431.3,541.0 L429.6,538.8 L430.2,537.6 L426.8,536.5 L423.5,532.9 L422.5,531.9 L422.4,531.7 L422.4,531.5 L424.0,528.3 L424.1,528.1 L427.0,527.4 L427.7,527.2 L427.7,527.1 L426.6,523.6 L428.0,521.1 L429.6,520.9 L428.7,519.3 L430.0,518.6 L429.5,517.5 L429.4,517.4 L431.2,518.1 L431.7,516.6 Z"/><text class="hg-name" x="464.0" y="551.4" text-anchor="middle">MYSURU</text><text class="hg-sub" x="464.0" y="563.4" text-anchor="middle">Coming soon</text></a><a href="bengaluru/" class="hg-city live blr" aria-label="Bengaluru  -  Ed. 01 · Done ✓"><title>Bengaluru  -  Ed. 01 · Done ✓</title><path class="hg-district" d="M542.8,481.3 L543.8,481.2 L544.2,481.3 L544.4,481.2 L546.3,479.7 L546.1,477.9 L546.6,476.6 L547.7,476.8 L548.1,474.4 L547.3,473.3 L547.3,473.2 L550.7,472.9 L551.1,471.6 L551.1,471.5 L550.0,470.9 L550.2,469.9 L548.1,468.7 L549.4,468.3 L551.3,464.6 L554.4,464.9 L555.4,459.5 L558.1,459.1 L559.0,460.8 L561.0,458.7 L562.1,458.8 L561.9,459.9 L563.0,460.2 L562.8,461.4 L563.4,461.7 L563.6,461.7 L565.6,461.9 L567.1,460.7 L570.7,461.5 L570.2,462.6 L570.9,463.0 L572.9,462.2 L572.7,461.3 L573.9,462.5 L576.2,462.2 L576.8,465.1 L576.1,468.0 L576.8,469.0 L579.6,469.6 L579.2,472.6 L580.9,476.1 L580.1,477.8 L580.8,481.7 L579.6,484.1 L582.3,486.2 L583.5,484.9 L585.3,485.5 L583.9,486.5 L585.2,490.8 L583.9,491.8 L583.0,492.3 L582.4,492.0 L581.9,492.8 L581.9,492.8 L581.9,492.9 L583.4,493.8 L582.5,496.1 L583.3,496.9 L580.7,499.4 L582.0,500.9 L581.9,501.0 L579.4,502.1 L579.2,502.9 L580.4,503.2 L579.3,505.5 L577.2,505.5 L577.4,507.7 L577.3,507.7 L575.0,506.8 L574.3,508.7 L572.2,508.8 L572.1,507.1 L570.7,506.7 L565.7,508.1 L566.9,504.5 L565.1,503.4 L562.8,505.2 L561.9,502.6 L563.0,502.7 L563.6,500.8 L565.2,500.7 L565.4,499.6 L564.9,498.9 L563.9,497.7 L562.7,500.2 L562.2,497.9 L562.4,497.7 L562.1,497.3 L561.4,496.7 L561.2,496.5 L561.2,496.7 L560.9,498.7 L561.6,499.0 L560.6,500.9 L560.0,500.4 L558.9,502.5 L558.3,500.9 L557.5,502.5 L554.9,500.3 L555.2,498.2 L554.5,497.0 L555.8,496.5 L555.4,495.8 L553.0,495.0 L551.7,495.7 L551.5,494.5 L550.3,494.3 L551.9,492.2 L550.9,492.2 L550.2,490.5 L551.2,490.0 L549.5,489.9 L546.9,491.8 L545.7,490.3 L543.2,489.7 L543.0,488.9 L543.9,488.9 L543.5,484.0 L542.8,481.3 Z"/><text class="hg-name" x="564.7" y="509.7" text-anchor="middle">BENGALURU</text><text class="hg-sub" x="564.7" y="521.7" text-anchor="middle">Ed. 01 · Done ✓</text></a><a href="#register" class="hg-city live mng" aria-label="Mangaluru  -  Ed. 02 · 28 Nov"><title>Mangaluru  -  Ed. 02 · 28 Nov</title><path class="hg-district" d="M326.5,472.8 L326.6,470.1 L327.8,470.6 L328.4,470.0 L327.8,468.8 L329.3,469.2 L330.7,467.7 L333.6,467.9 L335.1,470.7 L338.0,469.6 L337.9,467.5 L339.3,466.1 L339.5,466.2 L340.0,466.4 L340.6,466.5 L340.5,467.0 L341.3,468.3 L341.5,468.4 L343.3,467.7 L344.9,465.3 L346.7,467.6 L348.5,466.7 L350.4,467.6 L352.5,466.3 L352.3,464.9 L353.7,464.6 L355.6,467.1 L355.2,467.6 L358.1,468.1 L362.8,463.6 L363.0,465.7 L363.8,465.4 L366.8,467.8 L368.9,468.0 L369.5,467.3 L370.4,468.2 L372.2,467.1 L373.2,464.1 L374.8,463.2 L377.6,463.4 L378.4,464.1 L379.7,465.5 L379.9,469.3 L381.4,469.8 L382.2,468.4 L383.1,469.9 L384.0,469.4 L385.3,470.6 L385.3,472.3 L386.0,472.3 L386.6,471.0 L389.0,473.3 L390.5,478.7 L389.0,480.9 L392.5,484.1 L392.6,486.7 L392.7,486.4 L392.8,486.5 L392.4,487.2 L393.1,490.6 L393.2,490.7 L393.2,490.8 L396.5,490.0 L396.4,490.9 L398.0,491.7 L397.5,496.8 L399.1,498.9 L399.6,499.6 L400.2,500.3 L401.0,501.3 L400.6,503.3 L400.5,503.7 L398.4,504.8 L399.1,506.2 L400.3,505.9 L401.9,505.5 L399.8,511.2 L400.8,512.4 L401.1,513.8 L401.7,515.9 L402.2,518.3 L402.0,518.5 L401.7,518.7 L397.5,521.9 L395.5,519.3 L392.5,522.7 L393.3,524.0 L390.2,522.9 L389.8,523.7 L387.2,524.2 L386.9,526.3 L384.8,525.3 L384.5,523.9 L385.4,522.9 L382.2,520.2 L381.7,521.5 L380.7,521.5 L380.7,522.8 L377.8,522.6 L376.6,523.5 L376.9,524.8 L375.9,525.9 L373.9,525.9 L373.5,522.8 L371.2,522.5 L371.1,520.8 L369.2,520.7 L368.3,518.5 L368.4,516.7 L369.5,516.6 L370.0,515.5 L372.1,516.3 L373.0,514.8 L371.8,514.8 L369.0,512.5 L368.6,512.6 L365.5,516.8 L364.1,516.8 L363.1,514.7 L362.4,515.0 L363.1,513.9 L362.2,512.9 L362.5,511.5 L359.1,512.2 L357.1,510.1 L359.0,507.8 L358.1,507.6 L358.3,506.9 L356.7,507.6 L354.9,507.0 L354.4,505.5 L352.6,504.8 L352.6,507.6 L351.3,508.5 L349.4,508.2 L348.8,506.5 L350.1,505.8 L349.7,503.6 L345.5,504.0 L346.4,502.9 L343.9,501.9 L346.2,499.4 L345.7,497.4 L345.6,497.3 L345.3,497.8 L344.5,497.0 L344.5,497.1 L344.4,498.0 L344.0,498.2 L343.6,498.3 L342.8,498.6 L342.4,498.3 L339.8,498.3 L335.5,500.6 L334.3,500.2 L334.0,500.0 L330.5,492.5 L326.5,472.8 Z"/><text class="hg-name" x="307.6" y="488.9" text-anchor="end">MANGALURU</text><text class="hg-sub" x="307.6" y="500.9" text-anchor="end">Ed. 02 · 28 Nov</text></a></svg>
+      </div>
       <div class="console reveal">
-      <div class="console-bar">
-        <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
-        <span class="ctitle">Build4Karnataka &mdash; live status</span>
+        <div class="console-bar">
+          <span class="dot dot-r"></span><span class="dot dot-y"></span><span class="dot dot-g"></span>
+          <span class="ctitle">Build4Karnataka  -  live status</span>
+        </div>
+        <div class="console-body">
+          <div><span class="prompt">$</span> <span class="cmd">event --info</span></div>
+          <div class="out ok">→ ComedKares Centre, Mangaluru</div>
+          <div class="out ok">→ Saturday, November 28, 2026</div>
+          <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">event --status</span></div>
+          <div class="out warn" style="color:#facc15;font-weight:600;">→ REGISTRATIONS 28 OCT – 16 NOV</div>
+          <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">editions --list</span></div>
+          <div class="out ok">→ 01 Bengaluru · 7 Sep · COMPLETED ✓ <a href="bengaluru/" style="color:inherit;text-decoration:underline;">view</a></div>
+          <div class="out ok">→ 02 Mangaluru · 28 Nov · UPCOMING</div>
+          <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">register --team</span></div>
+          <div class="out" style="color:#9fb0c9;">→ 3–5 members · ₹399 per team · X0 places<span class="cursor"></span></div>
+        </div>
       </div>
-      <div class="console-body">
-        <div><span class="prompt">$</span> <span class="cmd">event --info</span></div>
-        <div class="out ok">&rarr; <a href="https://www.google.com/search?q=comedkares+gopalan+mall" style="color: inherit; text-decoration: underline;" target="_blank">ComedKares Innovation Hub, Sirsi Circle</a></div>
-        <div class="out ok">&rarr; Monday, September 7, 2026</div>
-        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">event --status</span></div>
-        <div class="out ok" style="color: #7fd8a4; font-weight:600;">&rarr; COMPLETED &check;</div>
-        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">winners --list</span></div>
-        <div class="out ok">&rarr; &#x1F947; Neuro bots (Manufacturing)</div>
-        <div class="out ok">&rarr; &#x1F948; Namma Mavericks (Healthcare)</div>
-        <div class="out ok">&rarr; &#x1F949; Vortex (Agritech)</div>
-        <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">next --city</span></div>
-        <div class="out warn" style="color: #facc15;">&rarr; Next Stop: Mysore. Coming soon!<span class="cursor"></span></div>
-      </div>
-    </div>
     </div>
   </div>
 </section>
 
-<!-- ═════ WINNERS ═════ -->
-<section id="winners" style="background: var(--surface-2); padding-top: 80px; padding-bottom: 80px; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line);">
+<!-- ═════ EDITIONS (platform: past + current) ═════ -->
+<section id="editions" style="background: var(--surface-2);">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Results</span>
-      <h2>Meet the champions of Bengaluru.</h2>
-      <p>30 teams. 6 hours. These teams built the most innovative, viable, and technically impressive AI prototypes.</p>
+      <span class="eyebrow">Editions</span>
+      <h2>Bengaluru set the standard. Mangaluru raises it.</h2>
+      <p>Build 4 Karnataka travels city to city. Every edition stays on this site with its winners, jury and highlights, so the next one knows the bar it has to clear.</p>
     </div>
-
-    <h3 style="margin-bottom: 24px; font-size: 24px;">🏆 Top 3 Overall</h3>
-    <div class="winners-podium">
-      <!-- 1st Place -->
-      <div class="winner-card gold reveal">
-        <img src="award_1st_neurobots.jpg" alt="Neuro bots - 1st Place" class="winner-img">
-        <div class="winner-body">
-          <div class="winner-rank gold">🥇 1st Place</div>
-          <div class="winner-team">Neuro bots</div>
-          <div class="winner-domain-tag">Manufacturing</div>
-          <div class="winner-prize">&#x20B9;20,000 Prize</div>
-          <p class="winner-desc">Built a real-time edge AI voice translation and transcription system for industrial sites, enabling multilingual workforces to communicate safely without internet access.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 12px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Rupitha, Keerthana, Kaviya K<br>
-            <strong>College:</strong> Rajarajeshwari College of Engineering
-          </div>
+    <div class="edition-grid">
+      <article class="edition-card reveal">
+        <div class="edition-top"><span class="edition-num">Edition 01 · Bengaluru</span><span class="status-pill done">✓ Completed</span></div>
+        <h3>ComedKares Innovation Hub, Sirsi Circle</h3>
+        <p>Monday, 7 September 2026. Bengaluru's first Gen AI student buildathon.</p>
+        <div class="edition-stats">
+          <div><b>30</b><span>Teams</span></div>
+          <div><b>5</b><span>Domains</span></div>
+          <div><b>₹40k+</b><span>Awarded</span></div>
         </div>
-      </div>
-      <!-- 2nd Place -->
-      <div class="winner-card silver reveal reveal-delay-1">
-        <img src="award_2nd_namma_mavericks.png" alt="Namma Mavericks - 2nd Place" class="winner-img">
-        <div class="winner-body">
-          <div class="winner-rank silver">🥈 2nd Place</div>
-          <div class="winner-team">Namma Mavericks</div>
-          <div class="winner-domain-tag">Healthcare</div>
-          <div class="winner-prize">&#x20B9;10,000 Prize</div>
-          <p class="winner-desc">Developed a computer vision SDK using pose estimation to assess exercise form in real time, automatically counting reps and providing corrective feedback.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 12px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Daksha Mali Patil, Amulya Kamath, Anika Shreya Raju, Urvee S Bettadapur<br>
-            <strong>College:</strong> BNM Institute of Technology
-          </div>
+        <div class="edition-podium">
+          <span>🥇 <strong>Neuro bots</strong> · Manufacturing · Rajarajeshwari College of Engineering</span>
+          <span>🥈 <strong>Namma Mavericks</strong> · Healthcare · BNM Institute of Technology</span>
+          <span>🥉 <strong>Vortex</strong> · AgriTech · Global Academy of Technology</span>
         </div>
-      </div>
-      <!-- 3rd Place -->
-      <div class="winner-card bronze reveal reveal-delay-2">
-        <img src="award_3rd_vortex.jpg" alt="Vortex - 3rd Place" class="winner-img">
-        <div class="winner-body">
-          <div class="winner-rank bronze">🥉 3rd Place</div>
-          <div class="winner-team">Vortex</div>
-          <div class="winner-domain-tag">Agritech</div>
-          <div class="winner-prize">&#x20B9;5,000 Prize</div>
-          <p class="winner-desc">Created a multimodal AI decision support system that ingests photos, voice, and weather data to provide farmers with crop-stage-specific, sustainable recommendations.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 12px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Vinay G, Vikas G, Shashank B, Harsha B P<br>
-            <strong>College:</strong> Global Academy of Technology
-          </div>
+        <a href="bengaluru/" class="btn btn-ghost">Explore what happened in Bengaluru →</a>
+      </article>
+      <article class="edition-card live reveal reveal-delay-1">
+        <div class="edition-top"><span class="edition-num">Edition 02 · Mangaluru</span><span class="status-pill upcoming"><span class="dot-live"></span>Upcoming</span></div>
+        <h3>ComedKares Centre, Mangaluru</h3>
+        <p>Saturday, 28 November 2026. 12 coastal problem statements from local partners. Every registered team gets a seat until places run out.</p>
+        <div class="edition-stats">
+          <div><b><i class="xnum" aria-hidden="true">X</i>0<i class="sr-only">teams, to be revealed</i></b><span>Teams</span></div>
+          <div><b>5</b><span>Domains</span></div>
+          <div><b>₹40K+</b><span>Prize pool</span></div>
         </div>
-      </div>
-    </div>
-
-    <h3 style="margin-top: 64px; margin-bottom: 24px; font-size: 24px;">🏅 Domain Best Builds</h3>
-    <div class="domain-winners-grid">
-      <div class="domain-winner-card reveal">
-        <img src="award_healthcare.jpg" alt="Anvaya - Healthcare" class="domain-winner-img">
-        <div class="domain-winner-body">
-          <div class="domain-winner-badge">Healthcare Winner</div>
-          <div class="domain-winner-team">Anvaya</div>
-          <p class="domain-winner-desc">Computer Vision-Based Exercise Assessment SDK for live form correction.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 11.5px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Sneha C, Rishik P Kumar, Bhanu Shree M, Shimsha Shetty, Surendra<br>
-            <strong>College:</strong> CMR Institute of Technology
-          </div>
+        <div class="edition-podium">
+          <span>Your team could be on this card next.</span>
         </div>
-      </div>
-      <div class="domain-winner-card reveal">
-        <img src="award_retail.jpg" alt="TAS Innovaters - Retail" class="domain-winner-img">
-        <div class="domain-winner-body">
-          <div class="domain-winner-badge">Retail Winner</div>
-          <div class="domain-winner-team">TAS Innovaters</div>
-          <p class="domain-winner-desc">RAG-Powered Voice & In-Store Assistant for zero-staff returns and inventory queries.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 11.5px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Ashwath Narayanan P, Tejaswini S, Shashank R<br>
-            <strong>College:</strong> Yenepoya University
-          </div>
-        </div>
-      </div>
-      <div class="domain-winner-card reveal">
-        <img src="award_manufacturing.jpg" alt="Code Whisperers - Manufacturing" class="domain-winner-img">
-        <div class="domain-winner-body">
-          <div class="domain-winner-badge">Manufacturing Winner</div>
-          <div class="domain-winner-team">Code Whisperers</div>
-          <p class="domain-winner-desc">Real-Time Voice Translation & Transcription for industrial sites using local AI.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 11.5px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Shridevi Kambalimath, Sharada H P, Sinchana D P, Meghana N<br>
-            <strong>College:</strong> STJIT
-          </div>
-        </div>
-      </div>
-      <div class="domain-winner-card reveal">
-        <img src="award_agritech.jpg" alt="EdgeMinds - Agritech" class="domain-winner-img">
-        <div class="domain-winner-body">
-          <div class="domain-winner-badge">Agritech Winner</div>
-          <div class="domain-winner-team">EdgeMinds</div>
-          <p class="domain-winner-desc">Cross-Crop Germination Detection CV pipeline for automated seed quality grading.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 11.5px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> H M Prema, Bhagyashree B Patil, Trishul Gowda S, Yogesh Gowda H S<br>
-            <strong>College:</strong> Sir M. Visvesvaraya Institute of Technology
-          </div>
-        </div>
-      </div>
-      <div class="domain-winner-card reveal">
-        <img src="award_fintech.jpg" alt="Nivi - FinTech & Skilling" class="domain-winner-img">
-        <div class="domain-winner-body">
-          <div class="domain-winner-badge">FinTech & Skilling Winner</div>
-          <div class="domain-winner-team">Nivi</div>
-          <p class="domain-winner-desc">AI-powered Informal Worker Skilling Advisor with vernacular and government scheme matching.</p>
-          <div class="winner-students" style="margin-top: 12px; font-size: 11.5px; color: var(--ink-soft); padding-top: 12px; border-top: 1px solid var(--line); line-height: 1.5;">
-            <strong>Team:</strong> Ananth G Kowlagi, Jeet Bagdai, Sohan Vinod, Chiranth Y<br>
-            <strong>College:</strong> BNM Institute of Technology
-          </div>
-        </div>
-      </div>
+        <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary" target="_blank" rel="noopener">Register for Mangaluru</a>
+      </article>
     </div>
   </div>
 </section>
 
-<!-- ═════ COMING NEXT ═════ -->
-<section class="coming-next" id="next-city">
-  <div class="wrap reveal">
-    <h2>Build 4 Karnataka is hitting the road.</h2>
-    <p>Bengaluru was just the beginning. We're bringing the premier student AI buildathon to more cities across the state.</p>
-    <div class="city-badge">📍 Next Stop: Mysore</div>
-    <div style="margin-top: 32px;">
-      <a href="https://instagram.com/comedkares" target="_blank" class="btn btn-primary">Follow us for updates</a>
-    </div>
-  </div>
-</section>
-
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â ABOUT Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ═════ ABOUT ═════ -->
 <section id="what-is-this">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">What is Build 4 Karnataka?</span>
       <h2>A student AI buildathon to prove one thing:</h2>
-      <p>You don&rsquo;t need years of coding experience to ship a real product. With Gen AI AI tools, a great team can build something meaningful in 6 hours.</p>
+      <p>You don’t need years of coding experience to ship a real product. With Gen AI tools, a great team can build something meaningful in 6 hours.</p>
     </div>
     <div class="about-grid">
       <div class="about-card spot reveal reveal-delay-1">
-        <div class="icon">&#x1F9E0;</div>
+        <div class="icon">🧠</div>
         <h3>Gen AI</h3>
-        <p>Build with Voiceflow, Glide, Bubble, Airtable, OpenAI, Gemini &mdash; not raw code from scratch. The future of product building is happening now.</p>
+        <p>Build with Gen AI and vibe-code tools such as Voiceflow, Glide, Bubble, Airtable, OpenAI and Gemini, not raw code from scratch.</p>
       </div>
       <div class="about-card spot reveal reveal-delay-2">
-        <div class="icon">&#x26A1;</div>
+        <div class="icon">⚡</div>
         <h3>6-Hour Sprint</h3>
-        <p>One day. Problem statement revealed 48 hours before event start. Submission by 4:30 PM. Pitch to jury. </p>
+        <p>One day. Problem statements go live 48 hours before. Submit by 4:30 PM, then demo to the judges at your table.</p>
       </div>
       <div class="about-card spot reveal reveal-delay-3">
-        <div class="icon">&#x1F3C6;</div>
-        <h3>&#x20B9;40,000+ in Prizes</h3>
-        <p>Cash prizes for the top 3 teams, domain best-build trophies, and certificates of achievement for every shortlisted participant.</p>
+        <div class="icon">🏆</div>
+        <h3>₹40,000+ in Prizes</h3>
+        <p>A prize pool and goodies kits for the best builds, and certificates of achievement for every participant.</p>
       </div>
     </div>
-        <div class="about-card spot reveal" style="margin-top: 24px;">
-          <div class="icon">&#x1F91D;</div>
-          <h3>Startup Networking &amp; Incubation</h3>
-          <p>Gain exclusive opportunities to connect with industry experts and startup founders. Top prototypes will be evaluated for potential incubation support and funding.</p>
-        </div>
+    <div class="about-card spot reveal" style="margin-top: 24px;">
+      <div class="icon">🤝</div>
+      <h3>Real Problems from Local Partners</h3>
+      <p>Every problem statement comes from a coastal startup, co-operative, hospital or MSME, and the partner judges the teams that take it on. Top prototypes will be evaluated for incubation support and funding.</p>
+    </div>
   </div>
 </section>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â DOMAINS Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ═════ DOMAINS ═════ -->
 <section id="domains">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Build domains</span>
-      <h2>Five AI Buildathon domains. One day to make something real.</h2>
-      <p>Pick the domain that excites your team. Exact problem statements will be revealed 48 hours prior to the event.</p>
+      <h2>Five domains. Twelve coastal problems.</h2>
+      <p>Local partners set 12 problem statements across these domains, so 3–4 teams take on each one. Statements go live on Thu 26 Nov at 10:00 AM; pick yours by Fri 27 Nov, 6:00 PM.</p>
     </div>
     <div class="domain-grid">
       <div class="domain spot reveal reveal-delay-1">
-        <div class="domain-glyph">&#x1F33E;</div>
+        <div class="domain-glyph">🌾</div>
         <h3>AgriTech</h3>
         <p>Develop data-driven AI solutions that optimize agricultural yields, strengthen supply chains, and empower farmers with actionable insights.</p>
-        <div style="margin-top: 12px; margin-bottom: 12px; font-size: 11px; color: var(--ink-faint); text-transform: uppercase; font-family: var(--mono); font-weight: 500;">
-          Domain Partners<br>
-          <div style="display:flex; gap:16px; margin-top:8px;">
-            <a href="https://krishikan.com/" target="_blank" style="display:inline-block; text-decoration:none; text-align:center;">
-              <img src="agritech_sponsor.png" alt="AgriTech Sponsor" style="height: 36px; display:block; margin:0 auto 4px;">
-              <span style="font-size:10px; font-weight:600; color:var(--ink-soft); line-height:1; letter-spacing:0.5px;">KRISHIKAN</span>
-            </a>
-            <a href="#" target="_blank" style="display:inline-block; text-decoration:none; text-align:center;">
-              <img src="rootsgoods_logo.png" alt="Roots Goods Sponsor" style="height: 36px; display:block; margin:0 auto 4px;">
-            </a>
-          </div>
-        </div>
+        <p class="local">Arecanut and coconut crop-disease advice, cashew price info, advisories in Kannada and Tulu.</p>
+        <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Voiceflow</span><span class="chip">Gemini</span><span class="chip">Glide</span></div>
       </div>
       <div class="domain spot reveal reveal-delay-2">
-        <div class="domain-glyph">&#x1F3E5;</div>
+        <div class="domain-glyph">🏥</div>
         <h3>Healthcare</h3>
         <p>Leverage AI and computer vision to enhance patient care, optimize physical wellness, and revolutionize real-time medical diagnostics.</p>
-        <div style="margin-top: 12px; margin-bottom: 12px; font-size: 11px; color: var(--ink-faint); text-transform: uppercase; font-family: var(--mono); font-weight: 500;">
-          Domain Partner<br>
-          <a href="https://niramai.com/" target="_blank" style="display:inline-block; text-decoration:none; text-align:center; margin-top:8px;">
-            <img src="niramai_logo.png" alt="Healthcare Sponsor" style="height: 36px; display:block; margin:0 auto 4px;">
-          </a>
-        </div>
+        <p class="local">Patient follow-up and medicine reminders in local languages, rural triage, hospital queue info.</p>
+        <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Gemini API</span><span class="chip">Glide</span><span class="chip">Airtable</span></div>
       </div>
       <div class="domain spot reveal reveal-delay-3">
-        <div class="domain-glyph">&#x1F6CD;&#xFE0F;</div>
-        <h3>Retail</h3>
-        <p>Transform the shopping experience by deploying AI to negotiate personalized customer deals and bridge the gap between digital and physical storefronts.</p>
-        <div style="margin-top: 12px; margin-bottom: 12px; font-size: 11px; color: var(--ink-faint); text-transform: uppercase; font-family: var(--mono); font-weight: 500;">
-          Domain Partner<br>
-          <a href="https://www.coreetronix.com/" target="_blank" style="display:inline-block; text-decoration:none; text-align:center; margin-top:8px;">
-            <img src="core_logo.png" alt="Retail Sponsor" style="height: 36px; display:block; margin:0 auto 4px;">
-          </a>
-        </div>
+        <div class="domain-glyph">🛍️</div>
+        <h3>Retail &amp; Fisheries</h3>
+        <p>Use AI to connect local sellers with buyers, improve freshness and pricing, and bridge physical markets and online storefronts.</p>
+        <p class="local">Fish-market price and freshness info, cold chain, cashew and Udupi handloom sellers going online.</p>
+        <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Bhashini API</span><span class="chip">Glide</span><span class="chip">Zapier</span></div>
       </div>
       <div class="domain spot reveal reveal-delay-1">
-        <div class="domain-glyph">&#x1F4B0;</div>
+        <div class="domain-glyph">💰</div>
         <h3>FinTech &amp; Skilling</h3>
         <p>Build intelligent systems that secure financial ecosystems against fraud and empower the workforce through personalized, AI-driven career and learning pathways.</p>
+        <p class="local">Co-op bank customer assistants, fraud alerts for seniors, loan and scheme comparison.</p>
+        <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">OpenAI</span><span class="chip">Make.com</span><span class="chip">Airtable</span></div>
       </div>
       <div class="domain spot reveal reveal-delay-2">
-        <div class="domain-glyph">&#x1F3ED;</div>
-        <h3>Manufacturing</h3>
-        <p>Deploy multimodal edge AI to enhance workplace safety, automate visual inspections, and streamline communication across complex industrial environments.</p>
+        <div class="domain-glyph">🏭</div>
+        <h3>Manufacturing &amp; Port</h3>
+        <p>Deploy multimodal AI to improve workplace safety, automate visual inspection and keep maintenance on track across industrial and port-linked units.</p>
+        <p class="local">MSME maintenance logs, safety and compliance checklists, quality inspection.</p>
+        <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Teachable Machine</span><span class="chip">Bubble</span><span class="chip">Make</span></div>
       </div>
     </div>
-    <p class="sealed-note reveal">// problem statements will be revealed 48 hours prior to the event.</p>
+    <p class="sealed-note reveal">// problem statements go live Thu 26 Nov, 10:00 AM, 48 hours before the build.</p>
   </div>
 </section>
 
-<!-- ═══ JUDGING RUBRIC ═══ -->
+<!-- ═════ JUDGING RUBRIC ═════ -->
 <section id="rubric" style="background:var(--surface-2);">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Evaluation</span>
       <h2>Official Judging Rubric.</h2>
-      <p>How the jury will evaluate your final prototype on Build Day (100 Points Total).</p>
+      <p>100 points. Judges work in pairs and come to your table in your domain zone; partners also judge the teams on their own problem statement.</p>
     </div>
-    
     <div class="rubric-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
-      
       <div class="spot reveal" style="border-top: 4px solid var(--accent); padding: 32px;">
         <div style="font-size:32px; font-weight:700; color:var(--accent); margin-bottom:12px;">30%</div>
-        <h3 style="margin-bottom:8px; font-size:18px;">Innovation &amp; Creativity</h3>
-        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Is the application of AI novel? Does the team approach the problem from a unique angle?</p>
+        <h3 style="margin-bottom:8px; font-size:18px;">Working Prototype</h3>
+        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Does it actually work end to end in a live demo, not just on slides?</p>
       </div>
-
       <div class="spot reveal reveal-delay-1" style="border-top: 4px solid var(--accent); padding: 32px;">
         <div style="font-size:32px; font-weight:700; color:var(--accent); margin-bottom:12px;">25%</div>
-        <h3 style="margin-bottom:8px; font-size:18px;">Technical Execution</h3>
-        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Does the prototype actually work? We look for the quality of prompt engineering, logic, and seamless tool integration.</p>
+        <h3 style="margin-bottom:8px; font-size:18px;">Coastal Problem Fit</h3>
+        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Does it solve the partner's problem for the people of coastal Karnataka who actually face it?</p>
       </div>
-
       <div class="spot reveal reveal-delay-2" style="border-top: 4px solid var(--accent); padding: 32px;">
         <div style="font-size:32px; font-weight:700; color:var(--accent); margin-bottom:12px;">20%</div>
-        <h3 style="margin-bottom:8px; font-size:18px;">Real-World Impact</h3>
-        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Is this a viable, scalable solution? Does it address a clear target audience and demonstrate tangible impact?</p>
+        <h3 style="margin-bottom:8px; font-size:18px;">Smart Use of AI</h3>
+        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Is AI doing real work here? We look at prompt design, data use and how well the tools are put together.</p>
       </div>
-
       <div class="spot reveal" style="border-top: 4px solid var(--accent); padding: 32px;">
         <div style="font-size:32px; font-weight:700; color:var(--accent); margin-bottom:12px;">15%</div>
-        <h3 style="margin-bottom:8px; font-size:18px;">Presentation &amp; Demo</h3>
-        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Clarity and conciseness of the 5-slide pitch, alongside the smoothness of the live product demo.</p>
+        <h3 style="margin-bottom:8px; font-size:18px;">Pitch &amp; Viability</h3>
+        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">A clear 5-slide pitch: who it's for, why they'd use it and how it could keep running after the day.</p>
       </div>
-
       <div class="spot reveal reveal-delay-1" style="border-top: 4px solid var(--accent); padding: 32px;">
         <div style="font-size:32px; font-weight:700; color:var(--accent); margin-bottom:12px;">10%</div>
-        <h3 style="margin-bottom:8px; font-size:18px;">Team Collaboration</h3>
-        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Did the team divide roles effectively? How cohesively did they handle the Jury Q&amp;A session?</p>
+        <h3 style="margin-bottom:8px; font-size:18px;">User Experience</h3>
+        <p style="color:var(--ink-soft); font-size:14px; line-height:1.6;">Could a farmer, patient or shopkeeper use it without help, in their own language?</p>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- Ã¢â€¢Â Ã¢â€¢Â Ã¢â€¢Â  SELECTION Ã¢â€¢Â Ã¢â€¢Â Ã¢â€¢Â  -->
+<!-- ═════ SELECTION ═════ -->
 <section id="selection">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">Selection process</span>
-      <h2>30 teams get an on-site build day.</h2>
-      <p>Every registered team goes through a short screening round. Top 30 are shortlisted to build on-site at <a href="https://www.google.com/search?q=comedkares+gopalan+mall" style="color: inherit; text-decoration: underline;" target="_blank">ComedKares Innovation Hub, Sirsi Circle</a>.</p>
+      <span class="eyebrow">How it works</span>
+      <h2>Register, and you're in.</h2>
+      <p>No screening and no shortlist. Every team that registers and pays gets a seat at the ComedKares Centre, Mangaluru, on a first-come, first-served basis until all <i class="xnum">X</i>0 places are filled. Register early.</p>
     </div>
-    <div class="funnel reveal">
+    <div class="funnel funnel-4 reveal">
       <div class="fstep spot">
         <div class="num">// 01</div>
         <h3>Register online</h3>
-        <p>Submit your team details, pitch summary, and proposed tech stack. Pay the &#x20B9;399 (GST incl.) fee via UPI or card.</p>
-        <span class="tag">Aug 10&ndash;31</span>
+        <p>Submit your team details and pay ₹399 per team (GST incl.). Your seat is confirmed once payment goes through. Registration closes 16 Nov, or earlier if seats fill up.</p>
+        <span class="tag">Oct 28 – Nov 16</span>
       </div>
-      <div class="funnel-arrow">&rarr;</div>
+      <div class="funnel-arrow">→</div>
       <div class="fstep spot">
         <div class="num">// 02</div>
-        <h3>Online screening</h3>
-        <p>Panel reviews every application based on the detailed questionnaire submitted in the registration form. Reviewed Sep 1&ndash;2.</p>
-        <span class="tag">Sep 1&ndash;2</span>
+        <h3>Gen AI masterclass</h3>
+        <p>Every registered team gets the Gen AI masterclass and the Master Playbook, so you arrive ready to build.</p>
+        <span class="tag">Sat, Nov 21</span>
       </div>
-      <div class="funnel-arrow">&rarr;</div>
-            <div class="fstep spot">
+      <div class="funnel-arrow">→</div>
+      <div class="fstep spot">
         <div class="num">// 03</div>
-        <h3>Shortlist announced</h3>
-        <p>Top 30 teams get official confirmation + Team ID via email &amp; WhatsApp. 5 teams on standby waitlist.</p>
-        <span class="tag">Sep 3</span>
+        <h3>Problem statements live</h3>
+        <p>12 statements from local partners go live at 10:00 AM. Pick yours by 27 Nov, 6:00 PM and plan your build.</p>
+        <span class="tag">Nov 26</span>
       </div>
-      <div class="funnel-arrow">&rarr;</div>
-      <div class="fstep spot">
+      <div class="funnel-arrow">→</div>
+      <div class="fstep spot" style="border-color:var(--accent-bright);">
         <div class="num">// 04</div>
-        <h3>Problem statement revealed</h3>
-        <p>Actual problem statements are revealed 48 hours prior to the event for architecture prep.</p>
-        <span class="tag">Sep 3</span>
-      </div>
-      <div class="funnel-arrow">&rarr;</div>
-      <div class="fstep spot">
-        <div class="num">// 05</div>
         <h3>Build day</h3>
-        <p>Build a working prototype in 6 hours, submit at 4:30 PM, and pitch live to the domain jury.</p>
-        <span class="tag">Sep 7</span>
+        <p>Build a working prototype in 6 hours, submit by 4:30 PM, then demo to the judges at your table.</p>
+        <span class="tag">Sat, Nov 28</span>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â PRIZES Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ═════ PRIZES ═════ -->
 <section id="prizes">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Prizes</span>
-      <h2>What&rsquo;s on the table.</h2>
-      <p>Build the best product, pitch the strongest story, and walk away with real cash, trophies, and a LinkedIn feature that matters.</p>
+      <h2>What’s on the table.</h2>
+      <p>Build the best product, pitch the strongest story, and walk away with real cash, a trophy and a LinkedIn feature that matters.</p>
     </div>
-    <div class="prize-grid">
+    <div class="prize-grid prize-grid-2">
       <div class="prize first spot reveal reveal-delay-1">
-        <div class="medal">&#x1F947;</div>
-        <div class="rank">1st place &middot; Overall winner</div>
-        <div class="amt">&#x20B9;20,000</div>
-        <div class="perks">
-          <span>Trophy + certificate</span>
-          <span>LinkedIn feature by ComedKares</span>
-          <span>Mentorship session with CEO</span>
-          <span>Letters of recognition</span>
-        </div>
+        <div class="medal">🏆</div>
+        <div class="rank">Prize pool</div>
+        <div class="amt">₹40,000+</div>
+        <div class="desc">Cash prizes for the winning teams. Every winning team also gets:</div>
+        <div class="perks"><span>Trophy + certificate</span><span>LinkedIn feature by ComedKares</span><span>Mentorship session with CEO</span><span>Letters of recognition</span></div>
       </div>
       <div class="prize spot reveal reveal-delay-2">
-        <div class="medal">&#x1F948;</div>
-        <div class="rank">2nd place &middot; Runner-up</div>
-        <div class="amt">&#x20B9;10,000</div>
-        <div class="perks"><span>Trophy + certificate</span><span>LinkedIn shoutout</span><span>Letters of recognition</span></div>
-      </div>
-      <div class="prize spot reveal reveal-delay-3">
-        <div class="medal">&#x1F949;</div>
-        <div class="rank">3rd place</div>
-        <div class="amt">&#x20B9;5,000</div>
-        <div class="perks"><span>Medal + certificate</span><span>Letters of recognition</span></div>
-      </div>
-      <div class="prize spot reveal reveal-delay-1">
-        <div class="medal">&#x1F31F;</div>
-        <div class="rank">Domain best build &times;5</div>
-        <div class="amt" style="font-size:22px;">Goodies kit</div>
-        <div class="desc">One winner per domain. Certificate + special Instagram mention from ComedKares.</div>
-      </div>
-      <div class="prize spot reveal reveal-delay-2">
-        <div class="medal">&#x1F3AF;</div>
-        <div class="rank">Best pitch of the day</div>
-        <div class="amt" style="font-size:22px;">Goodies kit</div>
-        <div class="desc">Awarded to the team that delivers the most compelling, clear, and confident pitch regardless of overall ranking.</div>
+        <div class="medal">🎁</div>
+        <div class="rank">Domain best builds</div>
+        <div class="amt" style="font-size:36px;">Goodies kit</div>
+        <div class="desc">For the best build in each domain, with a certificate and a special Instagram mention from ComedKares.</div>
       </div>
     </div>
-    </div>
-
   </div>
 </section>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â JURY Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ═════ JURY ═════ -->
 <section id="jury">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Jury panel</span>
       <h2>Your work will be judged by real practitioners.</h2>
-      <p>Meet the industry professionals, startup founders, and academic leaders who will be evaluating your prototypes.</p>
+      <p>Ten judges from coastal industry, startups and academia, working in pairs across the five domain zones and coming to your table. The panel will be announced soon. <a href="bengaluru/#jury" style="color:var(--accent);text-decoration:underline;">See the Bengaluru jury</a>.</p>
     </div>
     <div class="jury-grid">
-      <div class="jury-card spot reveal reveal-delay-1">
-        <div class="jury-avatar"><img src="https://media.licdn.com/dms/image/v2/C5603AQFMlAaoUuaUMw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1517716047952?e=1790208000&v=beta&t=p2ZWSsGk9_OWcUlXW5DDCs470zVGHKn2MjnVCOo3zC4" alt="Prof. Nandagopal Govindan"></div>
-        <div class="jury-name">Prof. Nandagopal Govindan</div>
-        <div class="jury-role">Founder</div>
-        <div class="jury-org">Sustainow Technologies</div>
-        <span class="jury-domain">Sustainability &amp; Tech</span>
-      </div>
-      <div class="jury-card spot reveal reveal-delay-2">
-        <div class="jury-avatar"><img src="https://media.licdn.com/dms/image/v2/C5603AQGQeuU6zx5WGw/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1614776043479?e=1790208000&v=beta&t=0ALZNGfHYtzxzbK3XyV1zAsUTUxskvTO_p-_QT-7ltw" alt="Prasenjit Das"></div>
-        <div class="jury-name">Prasenjit Das</div>
-        <div class="jury-role">Founder &amp; CEO</div>
-        <div class="jury-org">Cinque Network Pvt Ltd</div>
-        <span class="jury-domain">Ecosystem &amp; Innovation</span>
-      </div>
-      <div class="jury-card spot reveal reveal-delay-3">
-        <div class="jury-avatar"><img src="https://expo.recommerceeco.com/wp-content/uploads/2026/04/Raj-Kancham-300x240.png" alt="Raj Kancham"></div>
-        <div class="jury-name">Raj Kancham</div>
-        <div class="jury-role">Founder &amp; CEO</div>
-        <div class="jury-org">Krishikan</div>
-        <span class="jury-domain">AgriTech</span>
-      </div>
-      <div class="jury-card spot reveal reveal-delay-4">
-        <div class="jury-avatar"><img src="https://media.licdn.com/dms/image/v2/C5603AQEi5ijjSMvkPg/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1608631551723?e=1790208000&v=beta&t=hdup9mxFCQzfAch2aNpgZDOBIjYihR219fb_sjTB7OA" alt="Dr. Pawan Kumar"></div>
-        <div class="jury-name">Dr. Pawan Kumar</div>
-        <div class="jury-role">Senior Engineer</div>
-        <div class="jury-org">C5i</div>
-        <span class="jury-domain">AI &amp; Machine Learning</span>
-      </div>
-      <div class="jury-card spot reveal reveal-delay-1">
-        <div class="jury-avatar"><img src="https://media.licdn.com/dms/image/v2/D5603AQEp9vis3tyGwA/profile-displayphoto-crop_800_800/B56Z00IkurK0AI-/0/1774696157678?e=1790208000&v=beta&t=5bm2xOKqk-KL6PRgGnpWucg8zwm2_UPo1pxW6_EdaqQ" alt="Dr. Ramesh Shankar P"></div>
-        <div class="jury-name">Dr. Ramesh Shankar P</div>
-        <div class="jury-role">Program Director</div>
-        <div class="jury-org">Comedkares</div>
-        <span class="jury-domain">Incubation &amp; Strategy</span>
-      </div>
-      <div class="jury-card spot reveal reveal-delay-2">
-        <div class="jury-avatar"><img src="https://media.licdn.com/dms/image/v2/D5603AQEulAPsUxmPXg/profile-displayphoto-crop_800_800/B56Z0Ugp3bJkAI-/0/1774165598102?e=1790208000&v=beta&t=ocJH2dNS3eFcuBPti21qVRf6FJIG-tKLoVibX7DObGY" alt="Gibson Manthopil"></div>
-        <div class="jury-name">Gibson Manthopil</div>
-        <div class="jury-role">Academic Head</div>
-        <div class="jury-org">Comedkares</div>
-        <span class="jury-domain">Academics</span>
-      </div>
-      <div class="jury-card spot reveal reveal-delay-3">
-        <div class="jury-avatar"><img src="https://media.licdn.com/dms/image/v2/C4D03AQEFrFyXiqnl2A/profile-displayphoto-shrink_800_800/profile-displayphoto-shrink_800_800/0/1653304197073?e=1790208000&v=beta&t=11f5U2OWF1BNwTC5Y1C6JL8LZtOGIhrlaGZ_L6RtYl8" alt="Siva Teja Kakileti"></div>
-        <div class="jury-name">Siva Teja Kakileti</div>
-        <div class="jury-role">Director</div>
-        <div class="jury-org">Niramai Health Analytix</div>
-        <span class="jury-domain">Healthcare</span>
-      </div>
+      <div class="jury-card spot reveal reveal-delay-1"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Founder / Industry</div><div class="jury-org">Mangaluru jury</div><span class="jury-domain">AgriTech</span></div>
+      <div class="jury-card spot reveal reveal-delay-2"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Clinician / HealthTech</div><div class="jury-org">Mangaluru jury</div><span class="jury-domain">Healthcare</span></div>
+      <div class="jury-card spot reveal reveal-delay-3"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Banking / FinTech</div><div class="jury-org">Mangaluru jury</div><span class="jury-domain">FinTech &amp; Skilling</span></div>
+      <div class="jury-card spot reveal reveal-delay-4"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Incubation</div><div class="jury-org">Mangaluru jury</div><span class="jury-domain">Incubation &amp; Strategy</span></div>
     </div>
   </div>
 </section>
 
+<!-- ═════ MENTORS ═════ -->
+<section id="mentors" style="background:var(--surface-2);">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">Mentor panel</span>
+      <h2>Mentors on the floor, all day.</h2>
+      <p>Eight mentors move between the tables, each looking after about six teams, with two scheduled check-ins during the build. Get unstuck on tools, sharpen your problem fit and rehearse your demo. The panel will be announced soon.</p>
+    </div>
+    <div class="jury-grid mentor-grid">
+      <div class="jury-card spot reveal reveal-delay-1"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Agents, RAG &amp; prompting</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Gen AI tools</span></div>
+      <div class="jury-card spot reveal reveal-delay-2"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Glide, Bubble &amp; Make</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Vibe-code build</span></div>
+      <div class="jury-card spot reveal reveal-delay-3"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Domain mentor</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">AgriTech</span></div>
+      <div class="jury-card spot reveal reveal-delay-4"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Domain mentor</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Healthcare</span></div>
+      <div class="jury-card spot reveal reveal-delay-1"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Domain mentor</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Retail &amp; Fisheries</span></div>
+      <div class="jury-card spot reveal reveal-delay-2"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Domain mentor</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">FinTech &amp; Skilling</span></div>
+      <div class="jury-card spot reveal reveal-delay-3"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Domain mentor</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Manufacturing &amp; Port</span></div>
+      <div class="jury-card spot reveal reveal-delay-4"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-role">Demo &amp; storytelling</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Pitch &amp; product</span></div>
+    </div>
+  </div>
+</section>
 
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â KIT Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
+<!-- ═════ KIT ═════ -->
 <section id="kit">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">On check-in</span>
-      <h2>Every shortlisted participant gets:</h2>
+      <span class="eyebrow">What you get</span>
+      <h2>Support from registration to demo.</h2>
     </div>
     <div class="kit-grid">
       <div class="kit-item spot reveal reveal-delay-1">
-        <div class="kit-icon">&#x1F4BB;</div>
-        <div class="text"><strong>Masterclass &amp; Playbook</strong><p>Exclusive access to a 1-hour masterclass on applied AI and agentic systems (worth &#x20B9;1,000) and an exclusive master playbook (worth &#x20B9;5,000).</p></div>
+        <div class="kit-icon">💻</div>
+        <div class="text"><strong>Masterclass &amp; Playbook</strong><p>For every registered team: the Gen AI masterclass on Sat 21 Nov (worth ₹1,000) and the Master Playbook (worth ₹5,000).</p></div>
       </div>
       <div class="kit-item spot reveal reveal-delay-2">
-        <div class="kit-icon">&#x1F393;</div>
-        <div class="text"><strong>Participation Certificate</strong><p>Official ComedKares participation certificate for every shortlisted member.</p></div>
+        <div class="kit-icon">🎓</div>
+        <div class="text"><strong>Participation Certificate</strong><p>Official ComedKares participation certificate for every team member who builds on the day.</p></div>
+      </div>
+      <div class="kit-item spot reveal reveal-delay-3">
+        <div class="kit-icon">🧭</div>
+        <div class="text"><strong>Mentors on Build Day</strong><p>Eight mentors on the floor, about six teams each, with two scheduled check-ins during the build. <a href="#mentors" style="color:var(--accent);text-decoration:underline;">Meet the panel</a>.</p></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ═════ GALLERY ═════ -->
-<section id="gallery" style="background:var(--surface-2);">
-  <div class="wrap">
-    <div class="section-head reveal">
-      <span class="eyebrow">Event highlights</span>
-      <h2>Energy. Innovation. Impact.</h2>
-    </div>
-    <div class="gallery-grid">
-      <img src="gallery_1.jpg" alt="Event Highlights 1" class="reveal">
-      <img src="gallery_2.jpg" alt="Event Highlights 2" class="reveal reveal-delay-1">
-      <img src="gallery_3.jpg" alt="Event Highlights 3" class="reveal reveal-delay-2">
-      <img src="gallery_4.jpg" alt="Event Highlights 4" class="reveal reveal-delay-3">
-    </div>
-  </div>
-</section>
-<!-- Ã¢â€¢Â Ã¢â€¢Â Ã¢â€¢Â  SPONSORS Ã¢â€¢Â Ã¢â€¢Â Ã¢â€¢Â  -->
-<section id="sponsors">
+<!-- ═════ SPONSORS ═════ -->
+<section id="sponsors" style="background:var(--surface-2);">
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Partners &amp; sponsors</span>
-      <h2>Backed by Bengaluru&rsquo;s ecosystem.</h2>
+      <h2>Back the builders of coastal Karnataka.</h2>
     </div>
     <div class="sponsor-tier reveal">
       <div class="tier-label">Organized by</div>
       <div class="sponsor-row">
-        <div class="s-logo"><a href="https://comedkares.org/" target="_blank"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></a></div>
-        <div class="s-logo"><a href="https://www.erafoundationindia.org/" target="_blank"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></a></div>
+        <div class="s-logo"><a href="https://comedkares.org/" target="_blank" rel="noopener"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer"></a></div>
+        <div class="s-logo"><a href="https://www.erafoundationindia.org/" target="_blank" rel="noopener"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner"></a></div>
       </div>
     </div>
     <div class="sponsor-tier reveal">
-      <div class="tier-label">Incubation Partner</div>
+      <div class="tier-label">Partner slots open for Mangaluru</div>
       <div class="sponsor-row">
-        <div class="s-slot"><div class="sl-icon" style="background:transparent; border:none; width:auto; max-width:80%; height:48px; border-radius:0;"><a href="https://ic.iiitb.ac.in/" target="_blank" style="display:block; height:100%;"><img src="iiitb_logo.png" alt="IIITB" style="height: 100%; object-fit: contain;"></a></div><div class="sl">IIITB</div><div class="sc" style="background:var(--accent-pale); color:var(--accent); font-weight:600; border-color:var(--accent-soft);"><a href="https://ic.iiitb.ac.in/" target="_blank" style="color:inherit; text-decoration:none;">Incubation Partner</a></div></div>
+        <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">⭐</div><div class="sl">Headline partner ×1</div><div class="sc">Slot open</div></a>
+        <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🤖</div><div class="sl">AI platform partners ×3</div><div class="sc">Slots open</div></a>
+        <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🎯</div><div class="sl">Domain partners ×5</div><div class="sc">Slots open</div></a>
+        <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🧩</div><div class="sl">Problem statement partners ×5</div><div class="sc">Slots open</div></a>
       </div>
     </div>
-    <div class="sponsor-tier reveal">
-      <div class="tier-label">Domain sponsors</div>
-      <div class="sponsor-row">
-        <div class="s-slot"><div class="sl-icon" style="background:transparent; border:none;"><a href="https://krishikan.com/" target="_blank" style="display:block; height:32px;"><img src="agritech_sponsor.png" alt="AgriTech Sponsor" style="height: 100%; object-fit: contain;"></a></div><div class="sl">AgriTech</div><div class="sc" style="background:var(--accent-pale); color:var(--accent); font-weight:600; border-color:var(--accent-soft);"><a href="https://krishikan.com/" target="_blank" style="color:inherit; text-decoration:none;">Krishikan</a></div></div>
-        <div class="s-slot"><div class="sl-icon" style="background:transparent; border:none;"><a href="#" target="_blank" style="display:block; height:32px;"><img src="rootsgoods_logo.png" alt="AgriTech Sponsor" style="height: 100%; object-fit: contain;"></a></div><div class="sl">AgriTech</div><div class="sc" style="background:var(--accent-pale); color:var(--accent); font-weight:600; border-color:var(--accent-soft);"><a href="#" target="_blank" style="color:inherit; text-decoration:none;">Roots Goods</a></div></div>
-        <div class="s-slot"><div class="sl-icon" style="background:transparent; border:none;"><a href="https://niramai.com/" target="_blank" style="display:block; height:32px;"><img src="niramai_logo.png" alt="Healthcare Sponsor" style="height: 100%; object-fit: contain;"></a></div><div class="sl">Healthcare</div><div class="sc" style="background:var(--accent-pale); color:var(--accent); font-weight:600; border-color:var(--accent-soft);"><a href="https://niramai.com/" target="_blank" style="color:inherit; text-decoration:none;">Niramai</a></div></div>
-        <div class="s-slot"><div class="sl-icon" style="background:transparent; border:none;"><a href="https://www.coreetronix.com/" target="_blank" style="display:block; height:32px;"><img src="core_logo.png" alt="Retail Sponsor" style="height: 100%; object-fit: contain;"></a></div><div class="sl">Retail</div><div class="sc" style="background:var(--accent-pale); color:var(--accent); font-weight:600; border-color:var(--accent-soft);"><a href="https://www.coreetronix.com/" target="_blank" style="color:inherit; text-decoration:none;">Core Etronix</a></div></div>
-      </div>
-    </div>
-    <div class="s-cta reveal">&#x1F4E2; <strong>Want to sponsor?</strong> Get your brand in front of 200+ engineering students, your logo on all printed materials, and a shoutout from stage. Contact: <a href="mailto:reachus@comedkares.org">reachus@comedkares.org</a></div>
+    <div class="s-cta reveal">📢 <strong>Want to sponsor?</strong> Put your brand in front of engineering students from 15+ colleges across coastal Karnataka. Problem statement partners set a real challenge, get 3–4 teams working on it and judge their solutions. Contact: <a href="mailto:reachus@comedkares.org">reachus@comedkares.org</a></div>
   </div>
 </section>
 
+<!-- ═════ FAQ ═════ -->
+<section id="faq">
+  <div class="wrap">
+    <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Questions teams ask.</h2></div>
+    <div id="faqList">
+      <details><summary><span><span class="faq-tag">Eligibility</span> Who can take part?</span></summary><p>Undergraduate engineering students from any branch. Teams from across Karnataka are welcome. There is no screening: every team that registers gets a seat, first come, first served, until places run out.</p></details>
+      <details><summary><span><span class="faq-tag">Team</span> How big can a team be, and what does it cost?</span></summary><p>Teams of 3 to 5 members, all present on the day. One fee of ₹399 (GST incl.) covers the whole team. Registration is open from 28 Oct to 16 Nov; places are first come, first served, so it may close earlier Nov if seats remain.</p></details>
+      <details><summary><span><span class="faq-tag">Skills</span> Do we need to know how to code?</span></summary><p>No. The event is built around Gen AI and vibe-code tools. Good thinking, prompting and teamwork matter more than raw coding.</p></details>
+      <details><summary><span><span class="faq-tag">Venue</span> Where exactly is the venue?</span></summary><p>At the ComedKares Centre in Mangaluru. The full address and directions will be shared with every registered team.</p></details>
+      <details><summary><span><span class="faq-tag">Prep</span> Can we start building before the event?</span></summary><p>You can plan once problem statements go live on 26 Nov. The build itself starts from scratch on the day: free tiers of Gen AI and vibe-code tools and templates are allowed, pre-built project code is not.</p></details>
+      <details><summary><span><span class="faq-tag">Submit</span> What do we submit on build day?</span></summary><p>By 4:30 PM: a working demo link, a 5-slide deck and a 2-minute demo video. Then the judges come to your table for the live demo.</p></details>
+      <details><summary><span><span class="faq-tag">Check-in</span> What should we bring?</span></summary><p>Laptops and chargers. Make sure your tool accounts are set up before the day.</p></details>
+      <details><summary><span><span class="faq-tag">Previous</span> What happened at the Bengaluru edition?</span></summary><p>30 teams competed on 7 September 2026 and ₹40,000+ was awarded. <a href="bengaluru/" style="color:var(--accent);text-decoration:underline;">See the winners, jury and highlights</a>.</p></details>
+    </div>
+  </div>
+</section>
 
-
-<!-- Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â SOCIAL Ã¢â€¢ÂÃ¢â€¢ÂÃ¢â€¢Â -->
-
-<!-- TERMS & CONDITIONS -->
+<!-- ═════ TERMS ═════ -->
 <section id="terms" style="background:var(--surface-2);">
   <div class="wrap">
     <div class="section-head reveal"><span class="eyebrow">Terms &amp; Conditions</span><h2>The fine print.</h2><p>By participating in Build 4 Karnataka, you agree to the following terms.</p></div>
     <div id="termsList">
-      <details><summary><span><span class="faq-tag">Travel</span> Travel &amp; Accommodation</span></summary><p>Participants are responsible for their own travel and accommodation. If you are traveling from outside Bengaluru or from far locations, please plan your journey and stay accordingly as these will not be provided by the organizers.</p></details>
+      <details><summary><span><span class="faq-tag">Travel</span> Travel &amp; Accommodation</span></summary><p>Participants are responsible for their own travel and accommodation. If you are traveling from outside Mangaluru or from far locations, please plan your journey and stay accordingly as these will not be provided by the organizers.</p></details>
       <details><summary><span><span class="faq-tag">IP Rights</span> Intellectual Property</span></summary><p>All intellectual property (IP) rights for the products, prototypes, and code built during this event will be owned by ComedKares and ERA Foundation. Participants may be credited as creators, but the final ownership remains with the organizers.</p></details>
-      <details><summary><span><span class="faq-tag">Liability</span> Property Damage</span></summary><p>Participants are fully liable for any damage caused to the premises, equipment, or assets within the ComedKares Innovation Hub during the event. Treat the workspace with respect.</p></details>
+      <details><summary><span><span class="faq-tag">Liability</span> Property Damage</span></summary><p>Participants are fully liable for any damage caused to the premises, equipment, or assets at the ComedKares Centre during the event. Treat the workspace with respect.</p></details>
     </div>
   </div>
 </section>
-<section class="social-section" id="social">
+
+<!-- ═════ REGISTER / SOCIAL ═════ -->
+<section class="social-section" id="register">
   <div class="wrap reveal">
-    <span class="eyebrow">Stay connected</span>
-    <h2>Follow the build. Join the community.</h2>
-    <p style="margin-top:14px;font-size:16px;">Get live updates, shortlist announcements, domain spotlights, and event-day coverage.</p>
+    <span class="eyebrow">Registrations open 28 Oct – 16 Nov</span>
+    <h2>Get your team on the Mangaluru list.</h2>
+    <p style="margin-top:14px;font-size:16px;">Fill in the registration form and pay ₹399 per team. Places are first come, first served. Questions? Message us on WhatsApp. Follow along for partner and jury reveals and build-day coverage.</p>
     <div class="social-links">
-      <a href="https://www.instagram.com/comed_kares/" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></span> @comed_kares on Instagram</a>
-      <a href="https://linkedin.com/company/comedkares" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg></span> ComedKares on LinkedIn</a>
-      <a href="https://www.youtube.com/@comedkares9694" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"/></svg></span> YouTube &mdash; ComedKares</a>
-      <a href="https://wa.me/+916366879353" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.791.994.996-3.699-.237-.377a9.99 9.99 0 0 1-1.528-5.234c0-5.522 4.494-10.016 10.021-10.016 5.525 0 10.018 4.494 10.018 10.016 0 5.525-4.493 10.018-10.02 10.018l-.004-.088zm5.495-7.514c-.302-.151-1.782-.879-2.059-.979-.277-.101-.479-.151-.681.151-.202.302-.78 1.002-.958 1.204-.177.202-.353.227-.655.076-.302-.151-1.274-.471-2.427-1.5-.898-.802-1.503-1.792-1.68-2.095-.177-.302-.019-.465.132-.616.136-.136.302-.353.454-.53.151-.177.202-.302.302-.504.101-.202.051-.378-.025-.53-.076-.151-.681-1.642-.932-2.247-.245-.591-.494-.51-.681-.519-.177-.008-.378-.008-.58-.008s-.53.076-.807.378c-.277.302-1.059 1.034-1.059 2.52 0 1.487 1.084 2.924 1.235 3.125.151.202 2.128 3.248 5.158 4.551.72.309 1.282.494 1.723.633.722.228 1.38.196 1.897.119.58-.087 1.782-.728 2.034-1.431.252-.704.252-1.309.177-1.431-.077-.126-.278-.202-.58-.353z"/></svg></span> WhatsApp us directly</a>
+      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="social-link reg-link" target="_blank" rel="noopener"><span class="sl-icon">📝</span> Register now (Google Form)</a>
+      <a href="https://wa.me/+916366879353?text=Hi%20Build4Karnataka%20team!%20I%20want%20to%20register%20for%20the%20Mangaluru%20edition." class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.791.994.996-3.699-.237-.377a9.99 9.99 0 0 1-1.528-5.234c0-5.522 4.494-10.016 10.021-10.016 5.525 0 10.018 4.494 10.018 10.016 0 5.525-4.493 10.018-10.02 10.018l-.004-.088zm5.495-7.514c-.302-.151-1.782-.879-2.059-.979-.277-.101-.479-.151-.681.151-.202.302-.78 1.002-.958 1.204-.177.202-.353.227-.655.076-.302-.151-1.274-.471-2.427-1.5-.898-.802-1.503-1.792-1.68-2.095-.177-.302-.019-.465.132-.616.136-.136.302-.353.454-.53.151-.177.202-.302.302-.504.101-.202.051-.378-.025-.53-.076-.151-.681-1.642-.932-2.247-.245-.591-.494-.51-.681-.519-.177-.008-.378-.008-.58-.008s-.53.076-.807.378c-.277.302-1.059 1.034-1.059 2.52 0 1.487 1.084 2.924 1.235 3.125.151.202 2.128 3.248 5.158 4.551.72.309 1.282.494 1.723.633.722.228 1.38.196 1.897.119.58-.087 1.782-.728 2.034-1.431.252-.704.252-1.309.177-1.431-.077-.126-.278-.202-.58-.353z"></path></svg></span> Ask us on WhatsApp</a>
+      <a href="https://www.instagram.com/comed_kares/" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></span> @comed_kares on Instagram</a>
+      <a href="https://linkedin.com/company/comedkares" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></span> ComedKares on LinkedIn</a>
+      <a href="https://www.youtube.com/@comedkares9694" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path></svg></span> YouTube  -  ComedKares</a>
     </div>
   </div>
 </section>
@@ -1168,30 +1088,21 @@ img { max-width: 100%; height: auto; }
     <div class="foot-grid">
       <div>
         <div class="logo-row" style="margin-bottom: 16px;">
-          <div class="logo-chip"><a href="https://comedkares.org/" target="_blank"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer" ></a></div>
+          <div class="logo-chip"><a href="https://comedkares.org/" target="_blank" rel="noopener"><img src="https://comedkares.org/uploads/2023/04/Comedkares-Logo-EPS.png" alt="ComedKares Innovation Hub - Student Buildathon Organizer"></a></div>
           <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner" ></a></div>
+          <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank" rel="noopener"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner"></a></div>
           <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
-          <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="https://krishikan.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="agritech_sponsor.png" alt="AgriTech Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"><span style="font-size:10px; font-weight:600; color:var(--ink-soft); line-height:1; text-transform:uppercase;">Krishikan</span></a></div>
-          <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="#" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="rootsgoods_logo.png" alt="AgriTech Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"></a></div>
-          <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="https://niramai.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="niramai_logo.png" alt="Healthcare Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"></a></div>
-          <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="https://www.coreetronix.com/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="core_logo.png" alt="Retail Domain Sponsor" style="height: 32px; width: auto; object-fit: contain;"></a></div>
-          <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="https://ic.iiitb.ac.in/" target="_blank" style="display:flex; flex-direction:column; align-items:center; gap:4px; text-decoration:none;"><img src="iiitb_logo.png" alt="IIITB Incubation Partner" style="height: 32px; width: auto; object-fit: contain;"></a></div>
+          <div class="logo-chip"><a href="#"><img src="/b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
         </div>
+        <p class="foot-desc">Build 4 Karnataka travels across the state. Edition 02: Mangaluru, 28 Nov 2026.<br><a href="bengaluru/" style="color:var(--accent);">Edition 01: Bengaluru, 7 Sep 2026 →</a></p>
       </div>
       <div class="foot-col">
         <h5>Event</h5>
-        <a href="#about">About</a><a href="#selection">Selection</a><a href="#domains">Domains</a><a href="#prizes">Prizes</a>
+        <a href="#about">About</a><a href="#selection">How it works</a><a href="#domains">Domains</a><a href="#prizes">Prizes</a><a href="#faq">FAQ</a>
       </div>
       <div class="foot-col">
         <h5>Details</h5>
-        <a href="#kit">What you get</a><a href="#jury">Jury panel</a><a href="#sponsors">Sponsors</a>
+        <a href="#kit">What you get</a><a href="#jury">Jury panel</a><a href="#mentors">Mentor panel</a><a href="#sponsors">Sponsors</a><a href="bengaluru/">Bengaluru 2026 results</a>
       </div>
       <div class="foot-col">
         <h5>Socials &amp; Contact</h5>
@@ -1201,25 +1112,27 @@ img { max-width: 100%; height: auto; }
         <a href="https://www.linkedin.com/company/comedkares/" target="_blank" rel="noopener">LinkedIn</a>
         <a href="https://www.facebook.com/profile.php?id=100085802719812" target="_blank" rel="noopener">Facebook</a>
         <a href="https://www.youtube.com/@comedkares9694" target="_blank" rel="noopener">YouTube</a>
-        <a href="mailto:reachus@comedkares.org" style="margin-top: 8px;">reachus@comedkares.org</a>
         <h5 style="margin-top: 24px;">Venue</h5>
-        <a href="https://www.google.com/maps/search/Comedkares+Innovation+Hub,+Sirsi+circle,+Bengaluru" target="_blank" rel="noopener" style="line-height: 1.5;">ComedKares Innovation Hub,<br>Sirsi Circle, Bengaluru</a>
+        <span style="font-size:14px;color:var(--ink-soft);">ComedKares Centre, Mangaluru</span>
       </div>
     </div>
     <div class="foot-divider"></div>
     <div class="foot-bottom">
-      <span class="foot-legal">&copy; 2026 ComedKares &middot; ERA Foundation &middot; COMEDK. All rights reserved.</span>
-      <div class="foot-links"><a href="#">Privacy Policy</a><a href="#">Terms</a><a href="#">Code of Conduct</a></div>
+      <span class="foot-legal">© 2026 ComedKares · ERA Foundation · COMEDK. All rights reserved.</span>
+      <div class="foot-links"><a href="#">Privacy Policy</a><a href="#terms">Terms</a><a href="#">Code of Conduct</a></div>
     </div>
   </div>
 </footer>
 
 <script>
-
-
-
-// Hero accent
-setTimeout(()=>{const a=document.getElementById('heroAccent');if(a)a.classList.add('revealed');},400);
+// Countdown to build day (Sat 28 Nov 2026, 9:30 AM IST)
+(function(){
+  const target=new Date('2026-11-28T09:30:00+05:30').getTime();
+  const el={d:document.getElementById('cdD'),h:document.getElementById('cdH'),m:document.getElementById('cdM'),s:document.getElementById('cdS')};
+  const pad=n=>String(n).padStart(2,'0');
+  function tick(){let s=Math.max(0,Math.floor((target-Date.now())/1000));el.d.textContent=Math.floor(s/86400);el.h.textContent=pad(Math.floor(s%86400/3600));el.m.textContent=pad(Math.floor(s%3600/60));el.s.textContent=pad(s%60);}
+  tick();setInterval(tick,1000);
+})();
 
 // Hamburger
 const ham=document.getElementById('hamburger'),mn=document.getElementById('mobileNav');
@@ -1234,18 +1147,12 @@ window.addEventListener('scroll',()=>bt.classList.toggle('visible',window.scroll
 const ro=new IntersectionObserver((e)=>e.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');ro.unobserve(e.target);}}),{threshold:0.12,rootMargin:'0px 0px -40px 0px'});
 document.querySelectorAll('.reveal').forEach(el=>ro.observe(el));
 
-// Criteria bar animation
-const bo=new IntersectionObserver((e)=>e.forEach(e=>{if(e.isIntersecting)e.target.querySelectorAll('.fill[data-width]').forEach(f=>f.style.width=f.dataset.width);}),{threshold:0.3});
-document.querySelectorAll('.criteria').forEach(el=>bo.observe(el));
-
 // Spotlight
 document.querySelectorAll('.spot').forEach(c=>c.addEventListener('mousemove',e=>{const r=c.getBoundingClientRect();c.style.setProperty('--mx',(e.clientX-r.left)+'px');c.style.setProperty('--my',(e.clientY-r.top)+'px');}));
 
-
 // Active nav highlight
 const navLinks=document.querySelectorAll('nav.links a');
-new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.style.color='');const l=document.querySelector('nav.links a[href="#'+e.target.id+'"]');if(l)l.style.color='var(--accent)';}}),{threshold:0.4}).observe;
-document.querySelectorAll('section[id]').forEach(s=>{new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.style.color='');const l=document.querySelector(`nav.links a[href="#${s.id}"]`);if(l)l.style.color='var(--accent)';};}),{threshold:0.4}).observe(s);});
+document.querySelectorAll('section[id]').forEach(s=>{new IntersectionObserver((es)=>es.forEach(e=>{if(e.isIntersecting){navLinks.forEach(a=>a.style.color='');const l=document.querySelector(`nav.links a[href="#${s.id}"]`);if(l)l.style.color='var(--accent)';}}),{threshold:0.4}).observe(s);});
 
 // Neural canvas
 (function(){
@@ -1264,62 +1171,5 @@ document.querySelectorAll('section[id]').forEach(s=>{new IntersectionObserver((e
   resize();rm?step():requestAnimationFrame(step);
 })();
 </script>
-<!-- Lightbox HTML -->
-<div class="lightbox" id="lightbox">
-  <div class="lightbox-close" id="lightboxClose">&times;</div>
-  <img src="" alt="Fullscreen Image" id="lightboxImg">
-</div>
-
-<script>
-  const lb = document.getElementById('lightbox');
-  const lbImg = document.getElementById('lightboxImg');
-  const lbClose = document.getElementById('lightboxClose');
-  
-  document.querySelectorAll('.gallery-grid img').forEach(img => {
-    img.addEventListener('click', () => {
-      lbImg.src = img.src;
-      lb.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    });
-  });
-
-  const closeLb = () => {
-    lb.classList.remove('active');
-    setTimeout(() => lbImg.src = '', 300);
-    document.body.style.overflow = '';
-  };
-
-  lbClose.addEventListener('click', closeLb);
-  lb.addEventListener('click', (e) => {
-    if(e.target === lb) closeLb();
-  });
-  document.addEventListener('keydown', (e) => {
-    if(e.key === 'Escape' && lb.classList.contains('active')) closeLb();
-  });
-</script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

@@ -24,6 +24,12 @@
 | **Roster Live Search & Instant Highlight** | Real-time name, email, and role search filtering across all team members with instant unshift insertion, green highlight badge, and smooth scroll focus. | Complete |
 | **Staff Sign-In Auto-Registration** | Automated directory registration and metadata sync for ERA Foundation and ComedKares staff on Google OAuth login. | Complete |
 | **Facilitator Script Dual Recognition** | Dual recognition of facilitator scripts whether linked via Google Doc URL or typed directly as formatted text, preventing 0 of N false positives. | Complete |
+| **B4K Mangaluru Edition Deployment** | Transferred the home page (/) to the Mangaluru edition with updated prize pool, domain problem statements, and registration forms. | Complete |
+| **B4K Bengaluru Archive Migration** | Moved previous Bengaluru edition with full winners podium, student details, and lightbox gallery to /bengaluru/. | Complete |
+| **Statewide Regional Coming-Soon Hubs** | Created dedicated edition pages for Mysuru, Belagavi, Hubballi, Kalaburagi, and Tumakuru with WhatsApp notifications. | Complete |
+| **Interactive Map Navigation** | Integrated hero SVG map graphic with interactive SVG district layers and routing to respective city pages. | Complete |
+| **Vercel Web Analytics Integration** | Injected tracking snippet across root and city edition templates. | Complete |
+| **Sitemap Multi-City Expansion** | Updated sitemap.xml with daily/weekly crawl priorities across all regional edition URLs. | Complete |
 
 ## Required Screenshots
 No new UI features were developed as part of this document generation task, so screenshots are not required here.
@@ -751,3 +757,26 @@ Successfully deployed the official operational rollout of **HubQuiz**, ComedKare
 6. **Documentation & Deliverables**:
    - Master Word Guide generated and saved at `C:\Users\DELL\Desktop\ComedKares_HubQuiz_Mentor_Guide.docx` and `d:\Anti_spamm\ComedKares_HubQuiz_Mentor_Guide.docx`.
    - Complete mentor announcement email drafted with embedded FAQs and step-by-step instructions.
+
+
+## Update - October 27, 2026: Build 4 Karnataka Mangaluru Edition & Statewide Regional Hubs
+
+### 1. Executive Summary
+Build 4 Karnataka has expanded statewide, moving its flagship edition from Bengaluru to Mangaluru. The primary landing page (build4karnataka.comedkares.com/) has been deployed with the Mangaluru edition, highlighting coastal problem statements, revised prize structures (Rs. 1,40,000+ prize pool), and live Google Form registration links. The Bengaluru edition results have been safely migrated to a dedicated permanent archive at /bengaluru/. In addition, dedicated coming-soon pages have been established for Mysuru, Belagavi, Hubballi, Kalaburagi, and Tumakuru, linked via an interactive vector map.
+
+### 2. Architecture & File Distribution
+- **Root Page (/index.html)**: Mangaluru edition featuring 5 coastal build domains (AgriTech, Healthcare, Retail & Fisheries, FinTech & Skilling, Manufacturing & Port), event dates (Saturday, 28 November 2026 at ComedKares Centre, Mangaluru), and registration links.
+- **Bengaluru Archive (/bengaluru/index.html)**: The complete Bengaluru post-event portal with Top 3 overall podium winners, domain champions, student names and colleges, and full-resolution lightbox gallery.
+- **Regional Hubs**:
+  - /mysuru/index.html: Mysuru edition coming-soon portal with WhatsApp notification link.
+  - /belagavi/index.html: Belagavi edition coming-soon portal.
+  - /hubballi/index.html: Hubballi edition coming-soon portal.
+  - /kalaburagi/index.html: Kalaburagi edition coming-soon portal.
+  - /tumakuru/index.html: Tumakuru edition coming-soon portal.
+- **Interactive SVG Map (/hero_graphic_mangaluru.svg)**: Vector map of Karnataka overlaid with interactive city hotspots and hover states directing visitors to live and upcoming editions.
+- **Web Analytics (_vercel/insights/script.js)**: Real-time traffic monitoring across the new homepage and sub-pages.
+- **SEO & Discoverability (sitemap.xml)**: Multi-page sitemap index covering all city paths with priority weights.
+
+### 3. Required Screenshots
+- [ ] Please provide a screenshot of the new Mangaluru Home Page showing the hero section and registration action (screenshot_mangaluru_hero.png).
+- [ ] Please provide a screenshot of the Interactive Karnataka Map showing the city hotspot navigation (screenshot_karnataka_map.png).
