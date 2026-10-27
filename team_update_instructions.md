@@ -542,3 +542,11 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 ### Update - Mentor & Jury Placeholder Cleanup
 - **Designations Temporarily Cleared**: All placeholder roles on the Jury and Mentor cards have been removed for the Mangaluru edition.
 - **Announcement Protocol**: As official jury members and floor mentors are confirmed, their verified names, photos, and professional designations will be updated simultaneously.
+
+### Update - Expanded Eligibility & Team Size Rules
+1. **Who is Eligible**:
+   - All undergraduate engineering students (any branch).
+   - MCA students.
+   - Recent passouts / graduates from the past academic year.
+2. **Team Size Limit**:
+   - Maximum 4 members per team (teams of 2 to 4 members). Teams larger than 4 cannot be accepted.

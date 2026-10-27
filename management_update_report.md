@@ -804,3 +804,11 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 
 ![Jury Panel](assets/jury_panel_tba.png)
 *Figure: Jury panel cards on the Mangaluru edition homepage.*
+
+### 7. Eligibility Expansion (MCA & Recent Passouts) & Max Team Cap
+- **Expanded Candidate Eligibility**: Updated FAQ guidelines and branch tags to officially open registrations to MCA students as well as recent college graduates/passouts from the past academic year alongside undergraduate engineering students.
+- **Maximum Team Cap Enforcement**: Updated team size rules across the terminal box and FAQ from 3-5 members to a strict cap of up to 4 members (maximum 4 members per team).
+- **Hero Branch Chips**: Added dedicated 'MCA' and 'Recent Passouts' tags to the hero branch cluster for high-visibility applicant onboarding.
+
+![FAQ Eligibility](assets/faq_eligibility_updated.png)
+*Figure: Eligibility FAQ section on the Mangaluru edition homepage.*
