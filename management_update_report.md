@@ -785,3 +785,15 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 - **Slot Capacity Explicitly Set**: Updated all references of placeholder team counts to 50 Slots across the hero badge, meta descriptions, terminal emulator, edition breakdown, and registration funnel.
 - **Build Day Timing Realigned**: Removed the generic 6 hours mention. Replaced with structured schedule: 9:00 AM - 2:00 PM build time, then present to juries from 2:00 PM - 4:00 PM.
 - **Contact Number Updated**: Replaced contact number +91 99458 39323 with +91 89519 55096 across the root landing page and all 6 regional city edition footers.
+
+### 5. Hero Map Responsive Resizing & Clipping Fix
+- **Issue Identified**: On standard laptop displays (e.g. 1366x768 or scaled displays), the Karnataka map was overflowing vertically and cutting off the southern border and the Mysuru edition marker.
+- **Size & Position Optimization**:
+  - Reduced large desktop width from 700px to 490px (height 448px, top -30px, left -50px).
+  - Reduced medium laptop width (940px - 1219px) from 540px to 400px (top -20px, left -40px).
+  - Adjusted mobile/tablet max-width to 380px centered.
+  - Reduced container height from 900px to 720px / 660px to preserve tight vertical spacing without extra empty space.
+  - Resolved clipping completely, keeping Mysuru, Mangaluru, and Kalaburagi fully visible in the initial viewport fold.
+
+![Karnataka Map Issue](assets/karnataka_map_clipping_fix.png)
+*Figure: User screenshot highlighting map clipping on laptop viewports prior to size reduction.*

@@ -534,3 +534,7 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - 9:00 AM - 2:00 PM: Dedicated build time for product development.
    - 2:00 PM - 4:00 PM: Presentation to the jury panel at tables.
 3. **Official Contact Number**: Updated to +91 89519 55096. Please update your outreach copy and student communication channels accordingly.
+
+### Update - Hero Map Responsive Scaling Fix
+- **Viewport Optimization**: Scaled down the interactive Karnataka map from 700px to 490px on desktop and 400px on laptops.
+- **Full Regional Visibility**: The map no longer clips at the bottom, ensuring the Mysuru edition marker and southern Karnataka border are completely visible on all laptop and mobile screen resolutions.
