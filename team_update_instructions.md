@@ -538,3 +538,7 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 ### Update - Hero Map Responsive Scaling Fix
 - **Viewport Optimization**: Scaled down the interactive Karnataka map from 700px to 490px on desktop and 400px on laptops.
 - **Full Regional Visibility**: The map no longer clips at the bottom, ensuring the Mysuru edition marker and southern Karnataka border are completely visible on all laptop and mobile screen resolutions.
+
+### Update - Mentor & Jury Placeholder Cleanup
+- **Designations Temporarily Cleared**: All placeholder roles on the Jury and Mentor cards have been removed for the Mangaluru edition.
+- **Announcement Protocol**: As official jury members and floor mentors are confirmed, their verified names, photos, and professional designations will be updated simultaneously.

@@ -797,3 +797,10 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 
 ![Karnataka Map Issue](assets/karnataka_map_clipping_fix.png)
 *Figure: User screenshot highlighting map clipping on laptop viewports prior to size reduction.*
+
+### 6. Mentor and Jury Placeholder Designation Cleanup
+- **Designations Removed**: Removed preliminary placeholder role labels (such as 'Founder / Industry', 'Clinician / HealthTech', 'Agents, RAG & prompting') from all 4 Jury cards and 8 Mentor cards on the Mangaluru homepage.
+- **Simplified TBA Cards**: Each card now cleanly displays the avatar placeholder, 'To be announced' heading, hub role ('Mangaluru jury' or 'Mangaluru mentor'), and domain tag. Exact designations and titles will be added once official practitioner confirmations are finalized.
+
+![Jury Panel](assets/jury_panel_tba.png)
+*Figure: Jury panel cards on the Mangaluru edition homepage.*
