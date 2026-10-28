@@ -1,6 +1,45 @@
 # Team Update Instructions
 
 ## Workflow Updates
+
+### HubQuiz Hub Account Sign-In & Resilience Updates
+- **Canonical Hub Login Directory**:
+  - *Yelahanka Hub*: `blryelahanka.hub@comedkares.org`
+  - *Tumkur Hub*: `internship@erafoundationindia.org`
+  - *JP Nagar Hub*: `blrjpnagar.hub@comedkares.org`
+  - *Mysore Road Hub*: `blrgopalan.hub@comedkares.org`
+  - *Mysuru Hub*: `mysuru.hub@comedkares.org`
+  - *Mangaluru Hub*: `mangaluru.hub@comedkares.org`
+  - *Belagavi Hub*: `belagavi.hub@comedkares.org`
+  - *Kalaburagi Hub*: `kalaburagi.hub@comedkares.org`
+  - *Hubballi Hub*: `hubballi.hub@comedkares.org`
+  - *Central Admin*: `admin@comedkares.org`
+- **Automatic Email Alias Normalization**: Mentors who enter regional variations (such as `tumkur.hub@comedkares.org`, `yelahanka.hub@comedkares.org`, or `mysoreroad.hub@comedkares.org`) are now automatically mapped to the underlying canonical database accounts without returning invalid credential errors.
+- **Immediate Form Responsiveness**: The login interface renders and activates immediately on load, preventing browser freeze loops.
+- **Failover Architecture**: By default, HubQuiz connects to Cloud Supabase for 24/7 high availability, with automatic failover to the JP Nagar local server if Cloud is unreachable.
+- **Required Screenshot**: Mentors or admins are requested to capture and upload a screenshot of the Host Dashboard (`hubquiz_host_dashboard.png`) once logged in at `https://hubquiz.vercel.app/host`.
+
+### LMS Quality Audit & Email Governance Workflow
+- **Mangaluru Hub PM Mapping**: Mangaluru Innovation Hub directives and communications are officially assigned to **Kavya Rao** (`kavya.r@erafoundationindia.org`).
+- **Dashboard Visibility by Role**:
+  - *Super Admins*: Full statewide view across all 10 hubs and all 64 batches, with permissions to execute bulk session status flips and trigger automated email runs.
+  - *Hub Program Managers*: Scoped to their assigned hub, with direct email preview, mailto reply launcher, and hub batch compliance monitoring.
+  - *Mentors & Facilitators*: Scoped to delivery SOP and assigned session attendance.
+- **Portal Access (`#/admin/audit`)**: Administrators can navigate to the "Quality Audit" link in the top bar to inspect statewide batch health across all 10 hubs.
+- **Weekly Schedule**:
+  - Primary Audit runs every **Friday at 12:00 PM IST**.
+  - Weekly Nudge runs every **Monday at 09:00 AM IST**.
+  - SLA Resolution Deadline is **Tuesday at 05:00 PM IST**.
+- **Hub PM Email Dispatch**:
+  - Every hub directive email is sent to the respective Hub Program Manager (`astle.j`, `chandana.p`, `nivedha.d`, `kalmesh`, `sandeep.s`, `nithil.d`, `siddagouda.patil`, `sandhya.b`, `askabbur`).
+  - The central team (`uditb@erafoundationindia.org`) is automatically kept in CC on 100% of transmissions.
+  - An executive master briefing is sent directly to `uditb@erafoundationindia.org`.
+- **Safe Auto-Fixes Execution**:
+  - Concluded past sessions left in "Scheduled" status can be converted to "Completed" with one click directly from the portal, unlocking student milestones in Supabase.
+- **Required Screenshots**:
+  - Please capture and upload screenshots of the new Quality Audit Dashboard tab, the Hub Email Modal, and the Safe Auto-Fixes panel.
+
+
 - **Newsletter Generation Strategy:** We have transitioned from standard DOCX python automation to generating highly detailed Markdown (`.md`) reports for rich-text publications. This allows for inline CSS styling, better image alignment, and a more magazine-like layout while remaining entirely text-based and easy to version control.
 - **Image Referencing:** Ensure that when rendering the Markdown newsletter (`D:\Mgmt_Reports\ComedKares_Jan_Sept_2026_Newsletter.md`), the absolute local paths pointing to `D:\Mgmt_Reports\extracted_images\...` remain valid on the host machine.
 - **Copywriting Standard:** Ensure no em-dashes are used in future copy additions, adhering strictly to commas or hyphens.
@@ -10,11 +49,11 @@
 - **Programs Activated**: Several Yelahanka and Mangaluru programs have been enabled in the LMS.
 - **Syllabus Automation**: The program syllabi have been bulk-uploaded from the provided document to the `program_syllabus` tables. Note that some programs (like Applied AI) did not have a syllabus in the master document and will need to be manually updated later.
 
-- **Applied AI Syllabus Generation**: Created and successfully injected a 12-week custom syllabus for "Applied AI & Agentic Systems – Semester 6" which was previously missing from the master document.
+- **Applied AI Syllabus Generation**: Created and successfully injected a 12-week custom syllabus for "Applied AI & Agentic Systems - Semester 6" which was previously missing from the master document.
 
-- **Robotics & System Intelligence Syllabus Generation**: Created and successfully injected a 12-week custom syllabus for "Robotics & System Intelligence – Semester 3" which was previously missing from the master document.
+- **Robotics & System Intelligence Syllabus Generation**: Created and successfully injected a 12-week custom syllabus for "Robotics & System Intelligence - Semester 3" which was previously missing from the master document.
 
-- **Data Science Internship & Semester 5 Syllabus Sync**: Corrected a mapping issue where the 90-day internship was applied to Semester 5. The 96 internship entries are now loaded correctly in the `DATA SCIENCE & AI/ML Internship`, and a new 12-week syllabus has been generated and populated for `Data Science & AI/ML – Semester 5`.
+- **Data Science Internship & Semester 5 Syllabus Sync**: Corrected a mapping issue where the 90-day internship was applied to Semester 5. The 96 internship entries are now loaded correctly in the `DATA SCIENCE & AI/ML Internship`, and a new 12-week syllabus has been generated and populated for `Data Science & AI/ML - Semester 5`.
 
 ### Flagship Programs HTML Portal
 - **New Deliverable**: Created `ComedKares_Flagship_Programs.html`, a fully styled, responsive HTML file containing the collated flagship programs data. 
@@ -314,7 +353,7 @@
 ## Update - October 23, 2026: Kalaburagi Robotics Batch Classwork & Feedback Live
 
 ### What is New for Mentors in Kalaburagi
-- **Kalaburagi Robotics Batch Ready (`Robotics Workshop · Kalaburagi · Oct 2026`)**:
+- **Kalaburagi Robotics Batch Ready (`Robotics Workshop - Kalaburagi - Oct 2026`)**:
   - All content is live inside the batch portal for Saturday, October 24, 2026.
   - Mentors can navigate directly to the batch to review the delivery schedule, run student feedback checkpoints, and evaluate the final arena challenge.
 - **Classwork Schedule (7 Sessions)**:

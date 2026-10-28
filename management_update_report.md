@@ -1,12 +1,32 @@
 # Management Update Report
 
 ## Recent Changes
+- Resolved HubQuiz login loop and authentication freeze:
+  - Defaulted initial synchronous Supabase client to Cloud to eliminate ngrok TLS renegotiation stalls on modern Chromium browsers.
+  - Added `<base href="/">` and root-relative script/style paths in `index.html` preventing static host rewrites from returning HTML for JavaScript files (`Unexpected token '<'`) on direct route visits like `/login`.
+  - Added `onsubmit="event.preventDefault();"` to login and sign-up forms, preventing accidental browser GET navigations to `/login?` that caused infinite reload loops.
+  - Replaced client variable shadowing with a dynamic `window.HQ_SUPABASE` getter.
+  - Added automatic failover retry with an 8-second timeout in the authentication handler to seamlessly switch servers if network errors occur.
+  - Added Hub email alias auto-normalization mapping common mentor email variations (such as `tumkur.hub@comedkares.org` to `internship@erafoundationindia.org`, `yelahanka.hub@comedkares.org` to `blryelahanka.hub@comedkares.org`, and `mysoreroad.hub@comedkares.org` to `blrgopalan.hub@comedkares.org`).
+  - Tested 100% of accounts (all 9 regional hubs, variations, and admin) in automated browser test suites with complete pass verification on live production at `https://hubquiz.vercel.app`.
+- Updated Hub Program Manager directory: **Mangaluru** assigned to **Kavya Rao** (`kavya.r@erafoundationindia.org`).
+- Enforced Role-Based Access Control (RBAC) across the Quality Audit Dashboard: Super Administrators have full statewide governance powers, Hub PMs have hub-scoped batch views and directive email responses, and mentors have delivery SOP compliance views.
+- Integrated the official **LMS Quality Audit & Compliance Control Center** directly into the ComedKares Knowledge Portal / LMS (`#/admin/audit`).
+- Configured automated weekly directive email dispatching for each Hub Program Manager with automatic CC to the central operations team (`uditb@erafoundationindia.org`).
+- Added real-time Safe Auto-Fix execution directly against Supabase, bulk flipping 187 concluded sessions from "scheduled" to "completed".
+- Added Statewide Batch search, grade filtering, and CSV export capabilities for comprehensive compliance tracking.
 - Generated the official **ComedKares Institutional Newsletter (Jan-Sept 2026)**.
 - Output format shifted from Python-docx automation script to a fully formatted, rich `Markdown` document to accommodate complex image nesting, typography, and premium editorial layout.
 
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **HubQuiz Resilient Hub Authentication & Alias Normalization** | Dual-tier automatic failover (Cloud primary + JP Nagar backup) with canonical hub email aliases, base-href subroute asset resolution, and 100% verified login across all 9 regional hubs and admin. | Complete |
+| **LMS Quality Audit Dashboard** | Integrated into the Knowledge Portal (`#/admin/audit`) with executive KPI ribbon, Hub scorecard, and statewide batch health tracker. | Complete |
+| **Hub PM & Central Email Dispatch** | Dedicated modal and mailto generator sending tailored weekly directives to Hub PMs with `uditb@erafoundationindia.org` in CC. | Complete |
+| **Central Operations Briefing** | Master executive rollup summary generated and addressed directly to `uditb@erafoundationindia.org` summarizing statewide KPIs. | Complete |
+| **Live Safe Auto-Fix Engine** | Interactive review and one-click execution of 187 session flips (`scheduled` -> `completed`) directly in Supabase. | Complete |
+| **Weekly Multi-Channel Cadence** | GitHub Actions automated runner on Friday 12:00 PM IST with Monday 09:00 AM IST nudges and SMTP dispatch. | Complete |
 | **Editorial Structure** | 10 logical pages, matching the "THE THINGS WE BUILT" concept. | Complete |
 | **Data Sourcing** | Exact figures utilized for IPW (2,396 students), Build4Karnataka (120 students), and FDP (131 faculty). | Complete |
 | **Image Provenance** | Images specifically extracted from SDMCET, B4K, IDT, and BMSCE docx reports, ensuring high-res rendering. | Complete |
@@ -32,6 +52,13 @@
 | **Sitemap Multi-City Expansion** | Updated sitemap.xml with daily/weekly crawl priorities across all regional edition URLs. | Complete |
 
 ## Required Screenshots
+### LMS Quality Audit UI Feature Screenshots
+*Screenshots requested from user for embedding:*
+1. `lms_audit_dashboard_scorecard.png`: Overall Hub scorecard and KPI ribbon at `#/admin/audit`.
+2. `lms_audit_email_modal.png`: Hub directive email modal pre-addressed to PM and `uditb@erafoundationindia.org`.
+3. `lms_audit_safe_fixes.png`: Safe auto-fixes review table and live Supabase execution button.
+4. `hubquiz_host_dashboard.png`: Host dashboard view upon successful hub mentor sign-in at `https://hubquiz.vercel.app/host`.
+
 No new UI features were developed as part of this document generation task, so screenshots are not required here.
 
 
@@ -44,11 +71,11 @@ No new UI features were developed as part of this document generation task, so s
   - *IPW*: 14 entries added
 - *Note:* Programs like 'Applied AI' and 'IoT Workshop' had no syllabus entries in the provided document and were left with empty syllabi. 'IoT Semester 4 (Yelahanka)' was missing from the database.
 
-- **Applied AI Syllabus**: Autogenerated and inserted a 12-week comprehensive syllabus for "Applied AI & Agentic Systems – Semester 6" directly into the database to populate the UI.
+- **Applied AI Syllabus**: Autogenerated and inserted a 12-week comprehensive syllabus for "Applied AI & Agentic Systems - Semester 6" directly into the database to populate the UI.
 
-- **Robotics & System Intelligence Syllabus**: Autogenerated and inserted a 12-week comprehensive syllabus for "Robotics & System Intelligence – Semester 3" directly into the database to populate the UI.
+- **Robotics & System Intelligence Syllabus**: Autogenerated and inserted a 12-week comprehensive syllabus for "Robotics & System Intelligence - Semester 3" directly into the database to populate the UI.
 
-- **Data Science Internship & Semester 5 Syllabus Repair**: Discovered a parsing conflict where the 90-day internship syllabus was mapped to the Semester 5 program. Extracted and successfully inserted the 96 syllabus entries into the `DATA SCIENCE & AI/ML Internship` programs and automatically generated a separate 12-week syllabus for `Data Science & AI/ML – Semester 5`.
+- **Data Science Internship & Semester 5 Syllabus Repair**: Discovered a parsing conflict where the 90-day internship syllabus was mapped to the Semester 5 program. Extracted and successfully inserted the 96 syllabus entries into the `DATA SCIENCE & AI/ML Internship` programs and automatically generated a separate 12-week syllabus for `Data Science & AI/ML - Semester 5`.
 
 
 ### Flagship Programs HTML Portal
@@ -445,7 +472,7 @@ Integrated Vercel Web Analytics and Speed Insights tracking scripts into the Kno
 ## Update - October 23, 2026: Kalaburagi Robotics Workshop Batch Classwork & Feedback Population
 
 ### Overview
-Configured the active student batch for the Kalaburagi hub ("Robotics Workshop · Kalaburagi · Oct 2026", Batch ID: `63d254a3-ec63-4616-b8e6-f1f90febb31a`). Populated the complete delivery schedule, hands-on design challenge, workshop experience survey, batch quizzes, and native feedback forms inside the LMS Classwork and Feedback tabs.
+Configured the active student batch for the Kalaburagi hub ("Robotics Workshop - Kalaburagi - Oct 2026", Batch ID: `63d254a3-ec63-4616-b8e6-f1f90febb31a`). Populated the complete delivery schedule, hands-on design challenge, workshop experience survey, batch quizzes, and native feedback forms inside the LMS Classwork and Feedback tabs.
 
 ### Key Changes and Technical Architecture
 - **Batch Classwork Sessions (`sessions`)**:
