@@ -839,3 +839,13 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 
 ![FAQ Eligibility](assets/faq_eligibility_updated.png)
 *Figure: Eligibility FAQ section on the Mangaluru edition homepage.*
+
+### 8. Console Floating Widget Repositioning (Zero Overlap on Karnataka Map)
+- **Issue Resolved**: The floating dark console widget (live status terminal box) in the right hero column was vertically overlapping the southern section of the Karnataka interactive map, covering Mysuru, Tumakuru, and Bengaluru.
+- **Layout Decoupling & Spacing**:
+  - Replaced the flex bottom alignment on .hero-right with top-aligned flow (justify-content: flex-start, height: auto, min-height: 800px).
+  - Pushed the console widget cleanly below the map boundary by applying a responsive top margin (margin-top: 440px on large displays and margin-top: 365px on medium laptops).
+  - The interactive Karnataka map is now 100% unobstructed across all regional markers, while the console widget sits neatly underneath it.
+
+![Console Overlapping Map](assets/console_overlapping_map.png)
+*Figure: Hero right section showing initial overlap before moving the console widget down.*

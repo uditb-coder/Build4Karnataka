@@ -589,3 +589,6 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - Recent passouts / graduates from the past academic year.
 2. **Team Size Limit**:
    - Maximum 4 members per team (teams of 2 to 4 members). Teams larger than 4 cannot be accepted.
+
+### Update - Hero Floating Console Repositioned
+- **Map Visibility**: Moved the floating status console widget below the Karnataka map so all districts (including Mysuru and Bengaluru) remain 100% clear and interactive without any visual overlap.

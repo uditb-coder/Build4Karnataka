@@ -153,8 +153,8 @@ h1.headline .accent.revealed::after{transform:scaleX(1);}
 .console { background: var(--console-bg); border: 1px solid var(--console-line); border-radius: var(--radius-lg); overflow: hidden; box-shadow: 0 40px 80px -24px rgba(0,0,0,0.4), 0 0 0 1px rgba(139,92,246,0.1); position: relative; z-index: 10; width: 100%; top: 0; }
 
 @media(min-width:940px) {
-  .hero-right { height: 720px; align-items: flex-end; justify-content: flex-end; margin-top: 0; }
-  .console { top: 0; }
+  .hero-right { height: auto; min-height: 800px; align-items: flex-end; justify-content: flex-start; margin-top: 0; }
+  .console { margin-top: 440px; top: 0; }
 }
 
 .console-bar{display:flex;align-items:center;gap:8px;padding:12px 18px;background:var(--console-bg-2);border-bottom:1px solid var(--console-line);}
@@ -569,15 +569,16 @@ img { max-width: 100%; height: auto; }
 @media(max-width:939px){.hero-graphic{margin-bottom:8px !important;}}
 /* map meets the top bar: hero column starts at the top of the grid, graphic sits 72px (hero padding) above it */
 @media(min-width:940px){
-  .hero-right{align-self:start;height:720px;}
+  .hero-right{align-self:start;height:auto;min-height:800px;justify-content:flex-start;}
   .hero-graphic{position:absolute;top:-30px;left:-50px;width:490px;max-width:none;margin-bottom:0;}
-  .console{top:0;}
+  .console{margin-top:440px;top:0;}
 }
 
 /* narrower laptops: shrink the map proportionally so all cities including Mysuru stay fully visible */
 @media(min-width:940px) and (max-width:1219px){
-  .hero-right{height:660px;}
+  .hero-right{min-height:720px;}
   .hero-graphic{width:400px;left:-40px;top:-20px;}
+  .console{margin-top:365px;}
 }
 
 @media(min-width:1000px){
