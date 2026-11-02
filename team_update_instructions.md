@@ -1,6 +1,203 @@
+## Statewide LMS Quality Audit: Weekly Hub PM Directives & Action Protocol (October 2026)
+### 1. Statewide Audit Executive Summary
+- **Audited Scope**: 89 Batches, 10 Hubs, 27 Institutes, 125 Programs, 3,927 Students, 1,029 Sessions, 14,316 Attendance Rows.
+- **Statewide Health Score**: **89.1/100 (Grade A)** across 89 batches.
+- **30-Hour Programs Attendance Cleared**: All 54 missing attendance records across Sessions 6 through 15 for 30-Hour IoT & Python programs in Mysuru Hub have been fully populated. Both cohorts achieved 100% attendance completion, 0 open audit findings, and Grade A ratings (92.0/100).
+- **Session & Batch Date Intelligence**: Restored 4 ongoing batches to active and 66 placeholder sessions to scheduled. Batches with sessions conducted in distinct weekly cadences (IDT 1 to 9, MITM IDT, JP Nagar T John, RNSIT) remain preserved.
+- **Late-Joiner Absent Protection**: Historical attendance for late-enrolled students remains protected as absent.
+- **Mentor Cadence & Clean Directives**: Defined Mentor Cadence dimension (RULE-06: instructor assignment, RULE-05: regular delivery intervals <= 14 days). Cleaned center emails to present directives directly without exclusion disclaimers.
+
+### 2. Hub-by-Hub Quality Scorecard & Action Directives
+1. **Belagavi Hub (Score: 95.8/100 | Grade A | 0 Open Findings)**
+   - *Owner*: Belagavi Siddagouda Patil (belagavi.hub@comedkares.org)
+   - *Action*: Full compliance maintained across all batches.
+2. **Hubballi Hub (Score: 95.1/100 | Grade A | 0 Open Findings)**
+   - *Owner*: Kalmesh V K (hubballi.hub@comedkares.org)
+   - *Action*: Full compliance maintained across all batches.
+3. **Bengaluru - JP Nagar Hub (Score: 93.6/100 | Grade A | 5 Open Findings)**
+   - *Owner*: Astle John (jpnagar.hub@comedkares.org)
+   - *Action*: 5 past conducted sessions require mentor attendance entry.
+4. **Bengaluru - Mysore Road Hub (Score: 93.0/100 | Grade A | 48 Open Findings)**
+   - *Owner*: Abhinandan Kabbur (mysoreroad.hub@comedkares.org)
+   - *Action*: East West batches 1 and 2 placeholder sessions restored to scheduled. Mentors to complete attendance for conducted sessions and align batch date bounds.
+5. **Tumkur Hub (Score: 92.8/100 | Grade A | 7 Open Findings)**
+   - *Owner*: Nithil Das (tumkur.hub@comedkares.org)
+   - *Action*: CIT batches (B1, B2, B3) restored to active with sessions scheduled. Hub PM to update weekly calendar dates as sessions are scheduled.
+6. **Bengaluru - Yelahanka Hub (Score: 82.6/100 | Grade B | 42 Open Findings)**
+   - *Owner*: Nivedha D (yelahanka.hub@comedkares.org)
+   - *Action*: 10 past sessions require attendance marks; 32 sessions scheduled outside batch date bounds requiring date alignment.
+7. **Mysuru Hub (Score: 82.1/100 | Grade B | 56 Open Findings)**
+   - *Owner*: Chandana P (mysuru.hub@comedkares.org)
+   - *Action*: 30-Hour IoT and Python programs are 100% complete (0 open issues). Mentors across remaining Mysuru batches to record attendance for conducted sessions using the bulk 'Mark All Present' action.
+8. **Kalaburagi Hub (Score: 74.3/100 | Grade B | 2 Open Findings)**
+   - *Owner*: Sandeep Samson (kalaburagi.hub@comedkares.org)
+   - *Action*: Robotics Workshop restored to active with sessions scheduled.
+9. **Mangaluru Hub (Score: 71.2/100 | Grade B | 8 Open Findings)**
+   - *Owner*: Kavya Rao (kavya.r@erafoundationindia.org)
+   - *Action*: Link curriculum modules and attach syllabus for planned cohorts.
+
+### 3. Escalation & Compliance Resolution Cadence
+- **Standard Resolution Window**: Hub PMs and mentors must resolve active attendance and date bound findings within 7 business days.
+- **Central Escalation Tracking**: Findings unresolved after 14 days are automatically escalated to Central Operations (uditb@erafoundationindia.org) during the weekly Friday audit run.
+
+## Attendance Tab Enhancements: Bulk Actions & Late-Joiner Rules (October 2026)
+### 1. New Bulk Quick Actions
+To streamline attendance marking across cohorts of 50 to 60 students, mentors now have two one-click bulk buttons:
+- **Mark All Present**: Sets every student in the session roster to "present". Ideal when the vast majority of students are present; mentors only need to uncheck the few absentees.
+- **Mark All Absent**: Sets every student in the session roster to "absent". Ideal for low-attendance sessions or makeup labs; mentors only need to click the students who actually attended.
+
+### 2. Automatic Absent Default for Late-Joining Students
+- **Prior Problem**: If a student joined a batch in Week 2 or Week 3, opening Session 1 attendance previously defaulted them to "present" because no prior record existed.
+- **New Behavior**: The system now checks each student's enrollment date against the session date. If a student enrolled after Session 1 took place, their default initial status for Session 1 is automatically set to **Absent**.
+- **Visual Badge**: Mentors will see a badge `Joined DD MMM (After Session)` next to any late-joining student's name in the attendance table.
+
+## RNSIT RPDT Mandatory CIE Deliverables, Evaluation Rubrics & CIMS Integration (October 2026)
+### 1. Scope and Target Cohorts
+- **Program**: Rapid Prototyping & Design Thinking | RNSIT | Mysore Road
+- **Program ID**: `903fcd5d-b811-4cf0-9d6a-59f6c008a15d`
+- **Regional Hub**: Bengaluru - Mysore Road Hub (`6e67d924-9ea2-438f-82b1-1114511e1619`)
+- **Institution**: RNS Institute of Technology (RNSIT), Bengaluru
+- **Active Cohorts**: 32 distinct branch and section batches configured across AIML (A to F), CSBS, CSE (A to L), CV, CY (A/B), DS (A to C), ECE (A to D), ECE-VLSI, EEE, and MECH.
+
+### 2. Mandatory CIE Structure (25 of 50 Marks)
+All 32 cohorts have 12 structured academic deliverables (Sessions 1 to 6) configured in the LMS `assignments` table, carrying 25 of 50 CIE marks:
+- **6 Individual Assignments (10 Points Each)**:
+  - Session 1: *Assignment 1: From Invention to Innovation: Product Evolution Study*
+  - Session 2: *Assignment 2: 5 Why Analysis and Paper Wireframes*
+  - Session 3: *Assignment 3: Fit, Form and Function Product Critique*
+  - Session 4: *Assignment 4: Circuit Basics Worksheet*
+  - Session 5: *Assignment 5: IoT Architecture Mapping*
+  - Session 6: *Assignment 6: Observe, Interview, Empathise*
+  - *Submission Window*: Due dynamically prior to 09:00 AM on the date of the next session.
+  - *File Naming*: `USN_S#_Assignment.pdf` (e.g., `1RN23CS001_S1_Assignment.pdf`).
+- **6 Team Design Challenges (10 Points Each)**:
+  - Session 1: *Design Challenge 1: The Catapult Challenge*
+  - Session 2: *Design Challenge 2: Clickable App Prototype in Figma*
+  - Session 3: *Design Challenge 3: Onshape Redesign Challenge*
+  - Session 4: *Design Challenge 4: Parking Assistance System*
+  - Session 5: *Design Challenge 5: Energy Use Tracker on ThingSpeak*
+  - Session 6: *Design Challenge 6: Stakeholder Map and How Might We Statement*
+  - *Submission Window*: Done collaboratively during in-center lab hours; submitted by 11:59 PM on the session day.
+  - *File Naming*: `TeamID_S#_Challenge.pdf` (e.g., `Team4_S1_Challenge.pdf`). One submission per multidisciplinary team.
+
+### 3. Transparent 10-Point Grading Rubrics
+Every task is configured with transparent grading rubrics visible to students and mentors in the Classwork tab. Mentors grade directly against rubric criteria (e.g., 5 Why depth, wireframe fidelity, circuit correctness, and test logs).
+
+### 4. Official Notice & Institutional CIMS Portal Access
+A pinned notice has been posted on the Stream tab across all 32 batches instructing students to maintain timely submissions and providing access to the college CIMS academic management portal:
+- **CIMS Portal Link**: `https://comedkares.s.gy/cims`
+
+![RNSIT RPDT Stream Announcement](assets/rnsit_rpdt_stream_announcement.png)
+*Figure: Pinned stream announcement and CIMS link visible to students across all 32 RNSIT RPDT cohorts.*
+
+![RNSIT RPDT Classwork Assignments](assets/rnsit_rpdt_classwork_assignments.png)
+*Figure: Classwork tab showing all 12 session assignments, design challenges, and full rubrics.*
+
+## AI ML 100-Hour Internship Program Deployment (October 2026)
+### 1. Tumkur Hub Cohort Operational Specifications
+- **Program Name**: AI ML 100 Hour Internship Program
+- **Program ID**: 544a12de-4533-4f15-8ef1-e9d812a16101 (category: 'core', isibility_scope: 'all')
+- **Batch Name**: AI ML 100-Hour Internship · Batch 1 Tumkur · Oct 2026
+- **Batch ID**: 9a524df9-f34c-4da7-8ff7-03226dd75a0b
+- **Target Hub**: Tumkur Innovation Hub (7374738e-9ac1-4f1b-a875-74b1aae678cd)
+- **Hub Program Manager**: Lohith Tumkur (lohith.t@erafoundationindia.org)
+- **Fee**: ₹3,500 (inclusive of GST)
+- **Batch Capacity**: 15 students (5 multidisciplinary teams of 3)
+- **Duration & Schedule**: 14 weeks (100 hours total, 7 hours in-center every Saturday from 09:00 AM to 05:00 PM, running 31-Oct-2026 to 30-Jan-2027)
+
+### 2. Curriculum, Modules & Daily Block Structure
+- **14 Saturday Modules**: Each Saturday operates as a distinct module in the LMS:
+  - Module 1: Python Data Science Foundation (NumPy & Pandas)
+  - Module 2: Data Cleaning & Exploratory Data Analysis
+  - Module 3: Classical Machine Learning & Baseline Regression (Gate 1)
+  - Module 4: Supervised Classification & Model Validation
+  - Module 5: Advanced Feature Engineering & Ensembles
+  - Module 6: Unsupervised Learning & Clustering Workflows
+  - Module 7: Deep Learning Fundamentals with PyTorch
+  - Module 8: Computer Vision & Convolutional Neural Networks
+  - Module 9: Object Detection with YOLO & Video Pipelines (Gate 2)
+  - Module 10: Natural Language Processing & Vector Embeddings
+  - Module 11: Generative AI, RAG Systems & Vector Stores (Gate 3)
+  - Module 12: Autonomous AI Agents & Multi-Agent Workflows
+  - Module 13: Model Packaging, Streamlit UI & Dockerization (Gate 4)
+  - Module 14: Capstone Showcase, Live Demonstration & Viva Defense
+- **56 Granular Lessons**: Every module features 4 structured daily learning blocks:
+  - Block 1 (90 min): Interactive Lecture & Live Code Walkthrough
+  - Block 2 (90 min): Hands-on Guided Laboratory Exercises
+  - Block 3 (90 min): Applied Capstone Sprint Implementation
+  - Block 4 (30 min): Code Review, Git Push & Session Journal Reflection
+
+### 3. Capstone Problem Statement Bank (P1 to P9)
+All 9 industry-grade statements are live in the LMS Problem Bank (problem_statements table) under status 'Available':
+- P1: [P1] Multi-Agent Fraud Investigation Copilot (Blockchain & Cybersecurity)
+- P2: [P2] Informal Worker Skilling Advisor (Smart Education)
+- P3: [P3] Computer-Vision Exercise Assessment SDK (Fitness & Sports)
+- P4: [P4] AI-Powered Mammography for Early Detection of Breast Abnormalities (MedTech/ BioTech/ Health Tech)
+- P5: [P5] Multimodal AI Farm Decision Support System (Agriculture, FoodTech & Rural Development)
+- P6: [P6] Cross-Crop Seed Germination Detection (Agriculture, FoodTech & Rural Development)
+- P7: [P7] Agentic Personal Shopping Negotiator (Smart Automation)
+- P8: [P8] RAG-Based Voice & In-Store Assistant for Inventory & Retail (Smart Automation)
+- P9: [P9] Real-Time Voice Translation & Transcription for Industrial Floor (Smart Automation)
+
+### 4. Complete Quizzes, Gate Rubrics & Gamification Rules
+- **Online Tests Tab**: 19 total quizzes with 102 questions deployed (mode: 'both'):
+  - **Diagnostic Baseline**: Session 1 Pre-Assessment Diagnostic Quiz (20 MCQs covering Python basics, NumPy, Pandas, and supervised learning fundamentals).
+  - **14 Weekly Modular Quizzes**: Weeks 1 through 14 feature dedicated 5-question weekly quizzes (20 min, 60% pass threshold) directly testing the Saturday lab topic (from NumPy slicing and EDA to YOLO detection, RAG systems, agents, and Docker packaging).
+  - **4 Milestone Gates**: Gate 1 (S03 baseline models, 65% pass), Gate 2 (S09 deep learning and YOLO vision, 65% pass), Gate 3 (S11 Generative AI and RAG, 65% pass), and Gate 4 (S13 production packaging and viva readiness, 70% pass).
+- **Feedback Forms System**: 15 distinct forms active in the LMS eedback_forms table:
+  - 14 Weekly Session Feedback Forms (Sessions 1 to 14) collecting quantitative ratings (concept clarity, lab utility, mentor support, overall learning) and qualitative reflection notes (key technical takeaways and capstone blockers).
+  - 1 Program Exit Comprehensive Evaluation Form measuring overarching curriculum impact, mentorship quality, and professional readiness.
+- **Maker Journey Gamification**: Active on Tumkur Batch 1. Students earn +50 XP per attended Saturday session and +40 XP per weekly session feedback submission across all 14 checkpoints.
+
+![LMS Classroom View](assets/aiml_batch_classroom.png)
+*Figure: Live Classroom overview for AI ML 100-Hour Internship Batch 1 Tumkur.*
+
+![LMS Classwork Modules & Lessons](assets/aiml_batch_classwork.png)
+*Figure: Classwork tab showing 14 weekly modules and 56 granular block lessons.*
+
+![LMS Online Tests & Gate Quizzes](assets/aiml_batch_tests_all.png)
+*Figure: Updated Online Tests dashboard showing 19 active quizzes across Pre-Assessment, Weekly Quizzes, and Gate Evaluations.*
+*Figure: Online Tests view showing Pre-Assessment Diagnostic Quiz and Gate Evaluations.*
+
+## LMS Quality Audit & Profile Completion Live Update (October 2026)
+### 1. Quality Audit Dashboard Deployed
+- **URL**: Accessible directly at `https://students.comedkares.com/quality-audit` or via the "Quality Audit" and "Open Quality Console" buttons in the Admin Header.
+- **Statewide Health Score**: 73.78/100 (Grade C, +2.18 improvement). Past pending flips are at 0.
+- **Weekly Directives Cadence**: Friday 12:00 PM IST and Monday 09:00 AM IST digests with automatic CC to central operations (`uditb@erafoundationindia.org`).
+- **Hub Scorecard**: Real-time health scores across all regional hubs (Belagavi: 87.5, Hubballi: 83.38, Tumkur: 83.38, Mysore Road: 80.25, Yelahanka: 76.87, Mangaluru: 75.45, Kalaburagi: 74.14, JP Nagar: 70.69, Mysuru: 53.76).
+
+### 2. Student Profile Incompleteness Fix
+- Profile completeness tracking has been reconfigured.
+- Only core fields (**First Name, Last Name, Phone Number, USN / Roll Number**, and linked **College & Email**) are compulsory.
+- Optional fields such as Bio, Skills, Resume URL, LinkedIn URL, and Semester no longer block student profile completion or trigger false-positive warnings in Hub Program Manager dashboards.
+
+## Maker Journey & Student Video Update (October 2026)
+### 1. Statewide Gamification Backfill
+- **72 IDT & RPDT Batches Activated**: All active Innovation and Design Thinking (CIT, VVIT, MITM, JP Nagar T John, Hubballi, Kalaburagi) and Rapid Prototyping (RNSIT sections) cohorts now have Maker Journey and Leaderboards switched ON.
+- **Historical Points Credited**: Total 554,800 XP backfilled across 2,471 students for 12,957 verified attendance (+50 XP) and feedback (+40 XP) records. Top students are now recognized as Design Thinkers (150+ XP) and Prototypers (400+ XP).
+
+### 2. Student Explainer Video Script & Storyboard
+- A 90-second production storyboard (`STUDENT_GAMIFICATION_EXPLAINER_VIDEO_STORYBOARD.md`) has been created for orientation and social rollout, featuring scene-by-scene camera zoom-in/out directions, verbatim voiceover cues, and high-definition screen captures.
+
 # Team Update Instructions
 
 ## Workflow Updates
+
+### RNSIT Parallel Classroom HubQuiz Accounts & Mentor Assignment
+- **Context & Operational Rule**:
+  - With multiple parallel classrooms running simultaneously at RNSIT, sharing a single login resulted in session collisions where a second mentor could inadvertently end an ongoing live game in another room.
+  - Exactly 7 dedicated room accounts have been provisioned on both Cloud Supabase and the JP Nagar server:
+    1. Room 1: `rns-1@erafoundationindia.org` | Password: `RnsitHub2026#1!`
+    2. Room 2: `rns-2@erafoundationindia.org` | Password: `RnsitHub2026#2!`
+    3. Room 3: `rns-3@erafoundationindia.org` | Password: `RnsitHub2026#3!`
+    4. Room 4: `rns-4@erafoundationindia.org` | Password: `RnsitHub2026#4!`
+    5. Room 5: `rns-5@erafoundationindia.org` | Password: `RnsitHub2026#5!`
+    6. Room 6: `rns-6@erafoundationindia.org` | Password: `RnsitHub2026#6!`
+    7. Room 7: `rns-7@erafoundationindia.org` | Password: `RnsitHub2026#7!`
+- **Mentor Responsibility**:
+  - Prior to entering classrooms, facilitators must coordinate and strictly assign one account per mentor/room.
+  - Mentors must never log into an account assigned to a colleague during live delivery hours.
+  - The "RNSIT Pre Assesment" quiz is already pre-loaded on each account dashboard, ready to start with one click at `https://hubquiz.vercel.app/login`.
 
 ### HubQuiz Hub Account Sign-In & Resilience Updates
 - **Canonical Hub Login Directory**:

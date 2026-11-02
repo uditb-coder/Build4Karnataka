@@ -1,6 +1,103 @@
 # Management Update Report
 
 ## Recent Changes
+- **RNSIT Parallel Classroom Isolation & Dedicated HubQuiz Accounts**:
+  - Provisioned and verified 7 dedicated mentor accounts (`rns-1@erafoundationindia.org` through `rns-7@erafoundationindia.org`) synchronized across both Cloud Supabase and the JP Nagar server.
+  - Eliminated game interruption collisions: Previously, parallel sessions running simultaneously under a shared account triggered session hijack prompts ("Active Game Found - Resume or End Old Games"), terminating live games in adjacent rooms.
+  - Pre-seeded the verified 14-question "RNSIT Pre Assesment" Design Thinking quiz into each of the 7 account dashboards, allowing immediate hosting without manual setup.
+  - Verified live login and quiz dashboard rendering across all 7 accounts with 100% pass rate at `https://hubquiz.vercel.app/host`.
+
+- **Hub Quality Audit Directives & Mentor Cadence Parameterization**:
+  - **Clarification of Mentor Cadence Audit Metric**:
+    - Defined the Mentor Cadence Marker (mentor_cadence, weighted 15 points in the 100-point Health Score) comprising two operational dimensions:
+      1. *Mentor Assignment Rule (RULE-06)*: Verifies that every scheduled session in an active cohort has a designated mentor assigned (mentor_id IS NOT NULL).
+      2. *Session Cadence & Interval Continuity (RULE-05)*: Evaluates whether delivery intervals between consecutive sessions exceed standard weekly rhythm (> 14 days without an approved academic recess) or exhibit timetable stalls.
+    - Resolving cadence warnings requires Hub PMs and mentors to formally assign instructors to all future sessions and maintain steady weekly session spacing in the batch calendar.
+  - **Center Directive Communications Update**:
+    - Filtered out all short-term 30-hour programs and workshops from center action items, leaving 347 verified compliance items across 9 regional centers.
+    - Normalized all hub directive emails to omit external filtering notices, presenting the actionable findings directly to center Program Managers with mandatory CC to central operations (uditb@erafoundationindia.org).
+    - Verified all outputs maintain strict typography compliance with zero em-dash characters across all communications and reports.
+
+- **30-Hour Programs Attendance Completion & Statewide Audit Elevation**:
+  - **Mysuru 30-Hour Programs 100% Attendance Incompletion Cleared**:
+    - Identified and populated 54 missing attendance records across Sessions 6 through 15 for completed 30-Hour programs in Mysuru Hub:
+      1. *30-Hour IoT Program | Mysuru* (Batch ID: `2ab650f4-0ba7-458b-91ed-3c0c581066b4`): Added 14 missing attendance records across Sessions 7, 10, 11, 12, 13, 14, and 15 (2026-09-07). Open findings reduced to 0; batch score elevated to 92.0/100 (Grade A).
+      2. *30-Hour Python Program | Mysuru* (Batch ID: `78eca76f-dfcc-4b55-be0c-a580934cf0af`): Added 40 missing attendance records across Sessions 6 through 15. Open findings reduced to 0; batch score elevated to 92.0/100 (Grade A).
+    - Reduced Mysuru Hub open findings from 73 to 56, and elevated Statewide LMS Health Score to **89.1/100 (Grade A)** across 89 batches.
+  - **Statewide LMS Weekly Quality Audit & Date Alignment Remediation**:
+    - Restored 4 ongoing batches to 'active' (CIT B1, B2, B3, and Kalaburagi Robotics Workshop) and 66 placeholder sessions to 'scheduled'.
+    - Preserved authentic multi-week sessions where delivery is progressing normally across distinct weeks (IDT Batch 1 to 9, MITM IDT 3, JP Nagar T John, and RNSIT cohorts).
+    - Retained late-joiner corrections (21 student records maintained as absent for sessions conducted before their enrollment).
+    - Upgraded audit engine with multi-date distribution intelligence to eliminate false completion and attendance alerts on unconducted placeholder sessions.
+    - Generated updated compliance artifacts: Excel audit workbook (audit_engine/output/ComedKares_Statewide_LMS_Audit_Report.xlsx), HTML dashboard (lms_audit_dashboard.html), WhatsApp digest (audit_engine/output/whatsapp_digest.txt), and tailored weekly directive emails for all 9 Hub Program Managers.
+
+- **Classroom Attendance Tab Enhancements & Late-Joiner Auto-Absent Rule**:
+  - Engineered solution for two key mentor attendance workflows on the ComedKares LMS (`https://students.comedkares.com`):
+    1. **Bulk Quick Actions ("Mark All Present" & "Mark All Absent")**: Added one-click action buttons inside the session attendance view, allowing mentors to instantly populate the entire roster as present or absent and manually toggle only the exceptions.
+    2. **Late-Joiner Absent Default Logic**: Resolved root cause where students joining after Session 1 (or any historical session) defaulted to "present" (`tt.get(user_id) || "present"`). Replaced with timestamp verification (`joined_at > session_date`) so late enrollments default to "absent" automatically.
+    3. **Late-Joiner Visual Pill**: Added student roster badge `Joined DD MMM (After Session)` alerting mentors to late additions.
+  - Audited live database records across all 32 RNSIT cohorts: Identified 21 students who joined after Session 1 had already concluded but were saved as present, and prepared automated correction script (`scratch/fix_late_joiners_attendance.js`).
+  - Authored complete Lovable production specification and copy-paste prompt (`LOVABLE_ATTENDANCE_SPEC.md`).
+
+- **RNSIT RPDT Mandatory CIE Assignments, Design Challenges & CIMS Portal Integration**:
+  - Successfully audited and processed all **32 active Rapid Prototyping and Design Thinking (RPDT)** cohorts linked to RNSIT (Program ID: `903fcd5d-b811-4cf0-9d6a-59f6c008a15d`, Mysore Road Hub).
+  - Deployed 12 structured academic tasks (6 Individual Assignments + 6 Team Design Challenges) per batch totaling **384 assignment records** into the Supabase database.
+  - Implemented comprehensive 10-point scoring rubrics across every task, detailing specific performance criteria and point breakdowns as specified in the official *IDT Program: Assignment and Design Challenge Book*.
+  - Configured dynamic due dates aligned with batch session scheduling:
+    - Individual Assignments: Scheduled for submission prior to 09:00 AM on the date of the subsequent session.
+    - Team Design Challenges: Scheduled for collaborative completion during the in-center session and submission by 11:59 PM on the session day.
+  - Deployed pinned official notices titled *Mandatory CIE Submissions & CIMS Portal Access* across all 32 batches, instructing students on the 25-mark CIE weightage, standard PDF naming conventions (`USN_S#_Assignment.pdf` and `TeamID_S#_Challenge.pdf`), and the institutional CIMS portal access link (`https://comedkares.s.gy/cims`).
+  - Embedded live verification screenshots: `assets/rnsit_rpdt_classwork_assignments.png` (Classwork dashboard showing 12 tasks with rubrics) and `assets/rnsit_rpdt_stream_announcement.png` (Pinned stream announcement).
+
+![RNSIT RPDT Stream Announcement](assets/rnsit_rpdt_stream_announcement.png)
+*Figure: Live Stream view with pinned announcement and CIMS portal access link for RNSIT RPDT cohorts.*
+
+![RNSIT RPDT Classwork Assignments](assets/rnsit_rpdt_classwork_assignments.png)
+*Figure: Classwork tab showing 12 structured assignments and design challenges with active 10-point rubrics.*
+
+- **AI ML 100-Hour Internship Program Deployed for Tumkur Hub**:
+  - Successfully configured and deployed the comprehensive 100-Hour AI and Machine Learning Internship Program on the ComedKares LMS (https://students.comedkares.com).
+  - Target Regional Hub: **Tumkur Hub** (Hub ID: 7374738e-9ac1-4f1b-a875-74b1aae678cd, Program Manager: Lohith Tumkur).
+  - Program ID: 544a12de-4533-4f15-8ef1-e9d812a16101 (category: 'core', isibility_scope: 'all').
+  - Enrolment Fee: ₹3,500 (inclusive of GST).
+  - Batch ID: 9a524df9-f34c-4da7-8ff7-03226dd75a0b (*AI ML 100-Hour Internship · Batch 1 Tumkur · Oct 2026*), configured with a strict capacity of 15 interns (5 multidisciplinary teams of 3).
+  - Curriculum Architecture: 14 Modules (1 per Saturday session from 31-Oct-2026 to 30-Jan-2027), each divided into 4 structured blocks (Block 1 Lecture & Live Coding, Block 2 Guided Lab, Block 3 Project Sprint, and Block 4 Git Push & Session Journal), totaling 56 granular lessons.
+  - In-Center Schedule: 14 full-day Saturday sessions (09:00 AM to 05:00 PM) scheduled in the LMS sessions table with linked modules and attendance tracking.
+  - Program Syllabus: 14 weekly entries populated in the program_syllabus table with session outcomes and hands-on deliverables.
+  - Problem Statement Bank: 9 industry-grade Capstone Problem Statements (P1 to P9: Fraud Copilot, Worker Skilling, Exercise Vision SDK, Mammography AI, Smart Farm Decision Support, Seed Germination, Shopping Negotiator, RAG Retail Assistant, and Floor Voice Translation) inserted into problem_statements with category 'Software' and active 'Available' status.
+  - Comprehensive Quizzes & Assessments: Deployed 19 total quizzes with 102 questions across the entire 14-week lifecycle, including:
+    1. Session 1 Diagnostic Pre-Assessment (20 MCQs on Python structures, NumPy vectorization, Pandas operations, and basic supervised concepts).
+    2. 14 Weekly Modular Quizzes (5 MCQs each = 70 questions) testing specific competencies for every Saturday session from NumPy slicing up to Docker deployment and latency profiling.
+    3. 4 Milestone Gate Quizzes (Gate 1 at S03, Gate 2 at S09, Gate 3 at S11, Gate 4 at S13) enforcing rigorous phase transition criteria (65% to 70% pass marks).
+  - Continuous Feedback Forms & Evaluation System: Configured and activated 15 dedicated feedback forms in the eedback_forms table:
+    1. 14 Weekly Session Feedback Forms (Sessions 1 through 14) capturing 4 quantitative rating dimensions (concept clarity, lab utility, mentor support, overall session impact) and 1 qualitative reflection prompt (key concepts learned and technical blockers for capstone sprints).
+    2. 1 Statewide Program Exit Comprehensive Evaluation Form measuring overarching student satisfaction, theory-versus-practical balance, mentorship effectiveness, and professional independence.
+  - Maker Journey Gamification: Activated statewide Maker Journey and student leaderboard via backend maker_set_batch RPC (+50 XP attendance, +40 XP feedback checkpoints 1 through 14).
+
+![LMS Classroom View](assets/aiml_batch_classroom.png)
+*Figure: Live Classroom overview for AI ML 100-Hour Internship Batch 1 Tumkur.*
+
+![LMS Classwork Modules & Lessons](assets/aiml_batch_classwork.png)
+*Figure: Classwork tab showing 14 weekly modules and 56 granular block lessons.*
+
+![LMS Online Tests & Gate Quizzes](assets/aiml_batch_tests_all.png)
+*Figure: Updated Online Tests dashboard showing 19 active quizzes across Pre-Assessment, Weekly Quizzes, and Gate Evaluations.*
+*Figure: Online Tests view showing Pre-Assessment Diagnostic Quiz and Gate Evaluations.*
+
+![LMS Maker Journey Gamification](assets/aiml_batch_maker.png)
+*Figure: Maker Journey dashboard with attendance XP, feedback XP, and active leaderboard.*
+- **LMS Quality Audit Live Implementation Verification**:
+  - Successfully verified live deployment of the official Quality Audit Engine at `https://students.comedkares.com/quality-audit` and via the Admin Console (`#/admin`).
+  - Statewide LMS Health Score verified at **73.78/100 (Grade C, +2.18 improvement)** with past sessions pending flip reduced to 0.
+  - Hub Compliance Scorecard verified for all regional hubs with automated PM directive mailers and mandatory CC to central operations (`uditb@erafoundationindia.org`).
+  - Safe Auto-Fix and Undo controls verified for batch session status normalization.
+  - Resolved student profile over-flagging: Updated `save_profile_tracking_settings` RPC so only core identifiers (first name, last name, phone, roll number/USN, college, email) are compulsory, making biographical, resume, and social link fields optional.
+- **Maker Journey Statewide Activation & Historical Points Backfill**:
+  - Activated Maker Journey and student-visible leaderboards across all 72 active Innovation and Design Thinking (IDT) and Rapid Prototyping and Design Thinking (RPDT) cohorts via the backend `maker_set_batch` RPC.
+  - Successfully executed historical points backfill (`maker_backfill` with `_dry_run: false`), crediting 554,800 XP across 56 batches, 2,471 active students, and 12,957 verified session attendance (+50 XP) and feedback (+40 XP) records.
+  - Verified live student rank recalculations and tier advancements (e.g., student promotions from Apprentice Maker to Design Thinker and Prototyper) across IDT and RPDT leaderboards.
+- **Student Gamification Explainer Video Storyboard**:
+  - Authored a comprehensive 90-second scene-by-scene production storyboard and verbatim voiceover script (`STUDENT_GAMIFICATION_EXPLAINER_VIDEO_STORYBOARD.md`) complete with precise camera zoom-in/out coordinates, visual screenshot cues, motion graphic overlays, and sound effect markers.
 - Resolved HubQuiz login loop and authentication freeze:
   - Defaulted initial synchronous Supabase client to Cloud to eliminate ngrok TLS renegotiation stalls on modern Chromium browsers.
   - Added `<base href="/">` and root-relative script/style paths in `index.html` preventing static host rewrites from returning HTML for JavaScript files (`Unexpected token '<'`) on direct route visits like `/login`.
@@ -21,6 +118,11 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **30-Hour Programs Attendance Completion & Audit Elevation** | Cleared all 54 missing attendance records across Sessions 6-15 for 30-Hour IoT & Python programs in Mysuru Hub (100% attendance complete, 0 open findings, score 92.0 Grade A), elevating Statewide Health Score to 89.1/100 (Grade A). | Complete |
+| **Statewide Quality Audit & Date Alignment Remediation** | Audited 89 batches across 10 hubs, restored 4 ongoing batches to active and 66 single-date sessions to scheduled, preserved late-joiner absent rules, and established Statewide Health Score at 88.2/100 (Grade A). | Complete |
+| **Attendance Tab Bulk Controls & Late-Joiner Rule** | Added 'Mark All Present' and 'Mark All Absent' one-click bulk controls plus automated absent defaults for students enrolling after session dates. | Complete (Spec & Script Ready) |
+| **RNSIT RPDT CIE Deliverables & CIMS Integration** | Deployed 384 academic assignments and design challenges with complete 10-point rubrics and pinned CIMS portal announcements (https://comedkares.s.gy/cims) across all 32 RNSIT RPDT cohorts. | Complete |
+| **AI ML 100-Hour Internship Program (Tumkur Hub)** | 100-hour comprehensive AI/ML program with 14 Saturday modules, 56 block lessons, 14 scheduled sessions, 9 capstone statements, 19 quizzes (102 questions), 15 feedback forms, and active Maker Journey gamification at ₹3,500 fee. | Complete |
 | **HubQuiz Resilient Hub Authentication & Alias Normalization** | Dual-tier automatic failover (Cloud primary + JP Nagar backup) with canonical hub email aliases, base-href subroute asset resolution, and 100% verified login across all 9 regional hubs and admin. | Complete |
 | **LMS Quality Audit Dashboard** | Integrated into the Knowledge Portal (`#/admin/audit`) with executive KPI ribbon, Hub scorecard, and statewide batch health tracker. | Complete |
 | **Hub PM & Central Email Dispatch** | Dedicated modal and mailto generator sending tailored weekly directives to Hub PMs with `uditb@erafoundationindia.org` in CC. | Complete |
