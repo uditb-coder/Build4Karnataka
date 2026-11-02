@@ -1,6 +1,32 @@
 # Management Update Report
 
 ## Recent Changes
+- **HubQuiz Statewide Delivery Data Audit & Export**:
+  - Extracted comprehensive live database records across all historical HubQuiz sessions conducted to date.
+  - Metrics Summary: 31 total quiz sessions created, 22 live classroom sessions successfully completed, 693 total student joins, and 4,323 student answers logged.
+  - Regional Center Engagement: Mysuru Hub (6 live sessions, 236 students), Bengaluru JP Nagar Hub (8 live sessions, 229 students), Bengaluru Mysore Road Hub (6 live sessions, 226 students), and Kalaburagi Hub (2 live test sessions, 2 students).
+  - Highest Recorded Student Score: 11,356 points (Akshatha Kini S, Bengaluru JP Nagar Hub, RNSIT Pre-Assessment).
+  - Generated and exported multi-format deliverables: `HubQuiz_Comprehensive_Report.xlsx` (with executive summary KPI cards, master sessions log, and complete student leaderboard), `HubQuiz_Sessions_Master.csv`, and `HubQuiz_Students_Leaderboard.csv`.
+
+- **RPDT HubQuiz Live Activation & Session Question Bank**:
+  - **HubQuiz Mode Normalization Across All RPDT Quizzes**:
+    - Resolved HubQuiz visibility bottleneck: Verified that all 8 RPDT quizzes (Weeks 1 through 7 and Final Assessment) were previously restricted to mode: 'classwork_only', hiding them from the live HubQuiz host console.
+    - Updated all 8 RPDT quizzes in Supabase to mode: 'both', immediately unlocking all 45 existing curriculum questions on HubQuiz live host (https://hubquiz.vercel.app/host).
+  - **Curated Live HubQuiz Question Bank (Sessions 1 to 7)**:
+    - Designed 35 gamified, scenario-driven live battle MCQs (5 per session) tailored for 20-second fast classroom rounds, covering Rapid Prototyping fundamentals, Figma UI/UX, Onshape CAD/slicing, Arduino electronics, ESP8266 IoT/ThingSpeak, Design Thinking problem definition, and Feasibility/MVP selection.
+    - Successfully inserted all 35 curated questions into the quiz_questions table. Every RPDT quiz (Weeks 1 through 7 and Final Assessment) now contains exactly 10 comprehensive questions set to mode: both, verified and ready for live classroom hosting.
+
+- **Session Feedback Word Input & Qualitative Reflection Upgrade**:
+  - **Statewide Database Normalization Across All 861 Feedback Forms**:
+    - Audited all 861 feedback forms in the Supabase database (feedback_forms table) across 89 batches statewide.
+    - Resolved critical configuration flaw where 787 forms had open suggestion questions (e.g. 'Any suggestions for improving this session?') erroneously configured as type: 'rating', forcing students to rate text prompts using 1 to 5 stars.
+    - Normalized all 861 forms to maintain clean 3-part quantitative rating questions (concept clarity, practical utility, pace) and unified exactly one dedicated qualitative Word Input Question (id: 'feedback_comment', type: 'text', question: 'Any feedback, key takeaways, or suggestions for improvement? (Word input)').
+    - Verified 100% database update completion (861 forms updated, 0 errors, 2,741 rating items, 861 word input items).
+  - **Lovable Frontend Architecture & Textarea Component**:
+    - Discovered and addressed frontend limitation in Classroom.tsx where the feedback modal unconditionally rendered 1 to 5 star rating buttons for all questions without checking question type.
+    - Authored production-ready Lovable specification and drop-in React/TypeScript component (LOVABLE_FEEDBACK_WORD_INPUT_SPEC.md) providing a clean conditional check: questions with type === 'text' or type === 'textarea' render an accessible multi-line Textarea with custom placeholder and auto-expanding rows.
+    - Verified aggregated view compatibility in 'View Responses' modal so unattributed written reflections render cleanly with left-border quotation styling.
+
 - **RNSIT Parallel Classroom Isolation & Dedicated HubQuiz Accounts**:
   - Provisioned and verified 7 dedicated mentor accounts (`rns-1@erafoundationindia.org` through `rns-7@erafoundationindia.org`) synchronized across both Cloud Supabase and the JP Nagar server.
   - Eliminated game interruption collisions: Previously, parallel sessions running simultaneously under a shared account triggered session hijack prompts ("Active Game Found - Resume or End Old Games"), terminating live games in adjacent rooms.

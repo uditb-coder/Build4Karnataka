@@ -6,6 +6,8 @@
 - **Session & Batch Date Intelligence**: Restored 4 ongoing batches to active and 66 placeholder sessions to scheduled. Batches with sessions conducted in distinct weekly cadences (IDT 1 to 9, MITM IDT, JP Nagar T John, RNSIT) remain preserved.
 - **Late-Joiner Absent Protection**: Historical attendance for late-enrolled students remains protected as absent.
 - **Mentor Cadence & Clean Directives**: Defined Mentor Cadence dimension (RULE-06: instructor assignment, RULE-05: regular delivery intervals <= 14 days). Cleaned center emails to present directives directly without exclusion disclaimers.
+- **Session Feedback Word Input Migration**: Audited and normalized all 861 feedback forms across all batches statewide. Converted 787 misconfigured rating questions to dedicated Word Input questions (Textarea), enabling students to type written reflections and suggestions alongside 1 to 5 star ratings. Delivered complete Lovable frontend specification (LOVABLE_FEEDBACK_WORD_INPUT_SPEC.md).
+- **RPDT HubQuiz Live Activation & Question Bank**: Unlocked all 8 RPDT quizzes on HubQuiz live host (mode flipped from classwork_only to both), making 45 existing questions live immediately. Successfully inserted all 35 curated scenario-based questions into Supabase quiz_questions. Every RPDT session quiz now has exactly 10 questions configured with mode: both, immediately ready for live mentor hosting.
 
 ### 2. Hub-by-Hub Quality Scorecard & Action Directives
 1. **Belagavi Hub (Score: 95.8/100 | Grade A | 0 Open Findings)**
@@ -182,6 +184,13 @@ All 9 industry-grade statements are live in the LMS Problem Bank (problem_statem
 # Team Update Instructions
 
 ## Workflow Updates
+
+### HubQuiz Delivery Data & Performance Reporting
+- **Statewide Engagement Milestone**:
+  - To date, HubQuiz has delivered 22 live classroom quiz sessions engaging 693 student participants with 4,323 questions answered across Mysuru, JP Nagar, and Mysore Road innovation cohorts.
+  - Overall student accuracy across all questions stands at 68.6%, with an average cohort size of 31.5 students per live session.
+- **Reporting Deliverables Available**:
+  - Mentors and regional coordinators can review full session results and individual student score rankings via `HubQuiz_Comprehensive_Report.xlsx` or `HubQuiz_Students_Leaderboard.csv` in the root repository.
 
 ### RNSIT Parallel Classroom HubQuiz Accounts & Mentor Assignment
 - **Context & Operational Rule**:
