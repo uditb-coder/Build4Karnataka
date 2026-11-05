@@ -807,3 +807,14 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 3. **Outreach & Communication**: Feel free to highlight Nitte Pharma Innovation Centre as an official partner in upcoming student outreach, college visits, and coastal hackathon announcements.
 
 ![Innovation Partner Nitte Pharma](assets/nitte_pharma_partner.png)
+
+### Update - AI Platform Partner Announced (Foxwel AI)
+1. **New Partnership Tier**: Foxwel AI (http://www.foxwel.ai/) has joined Build 4 Karnataka Mangaluru edition as the official AI Platform Partner.
+2. **Webpage Integration**: Featured across three prominent areas on the Mangaluru portal:
+   - **Header Navigation Bar**: Clickable Foxwel logo chip alongside ComedKares, ERA Foundation, Nitte Pharma, and Build 4 Karnataka.
+   - **Top Status & Announcement Bar**: Highlighted badge with direct link routing to `https://www.foxwel.ai/`.
+   - **Partners & Sponsors Section**: Dedicated AI Platform Partner card above the regional partner slots.
+3. **Open Slots Count**: AI platform partner slots updated from 3 to 2 open slots.
+4. **Outreach & Communication**: Highlight Foxwel AI in student and mentor briefings as an official AI platform enabling teams to build cutting-edge prototypes.
+
+![Foxwel AI Partner in Header](assets/foxwel_partner_header.png)

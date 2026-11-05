@@ -89,7 +89,7 @@ main{position:relative;z-index:1;}
 
 /* HEADER */
 header{position:sticky;top:0;z-index:100;background:var(--glass-bg);backdrop-filter:blur(16px);-webkit-backdrop-filter:blur(16px);border-bottom:1px solid var(--glass-border);transition:background .3s;}
-.nav{max-width:var(--maxw);margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:20px;flex-wrap:wrap;}
+.nav{max-width:var(--maxw);margin:0 auto;padding:12px 20px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:nowrap;}
 .logo-row{display:flex;align-items:center;gap:10px;flex:none;flex-wrap:wrap;}
 .logo-sep{width:1.5px;height:24px;background:var(--line-strong);margin:0 4px;border-radius:2px;}
 .logo-chip{display:flex;align-items:center;transition:opacity .15s;flex-shrink:0;}
@@ -98,18 +98,18 @@ header{position:sticky;top:0;z-index:100;background:var(--glass-bg);backdrop-fil
 .brand{display:flex;flex-direction:column;line-height:1.2;}
 .brand-en{font-family:var(--display);font-weight:700;font-size:17px;color:var(--ink);}
 .brand-kn{font-family:var(--mono);font-size:10.5px;color:var(--accent);}
-nav.links{display:flex;gap:22px;font-size:14px;}
-nav.links a{color:var(--ink-faint);padding:4px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;}
+nav.links{display:flex;gap:16px;font-size:13.5px;white-space:nowrap;flex-shrink:0;}
+nav.links a{color:var(--ink-faint);padding:4px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap;}
 nav.links a:hover{color:var(--accent);border-bottom-color:var(--accent-bright);}
 .nav-right{display:flex;align-items:center;gap:12px;}
 .nav-cta{display:none;}
-@media(min-width:1100px){.nav-cta{display:inline-flex;}}
+@media(min-width:1200px){.nav-cta{display:inline-flex;}}
 .hamburger{display:none;flex-direction:column;gap:5px;padding:8px;border:1px solid var(--line);border-radius:8px;background:none;}
 .hamburger span{width:20px;height:2px;background:var(--ink);display:block;transition:all .3s;}
 .hamburger.open span:nth-child(1){transform:rotate(45deg) translate(5px,5px);}
 .hamburger.open span:nth-child(2){opacity:0;}
 .hamburger.open span:nth-child(3){transform:rotate(-45deg) translate(5px,-5px);}
-@media(max-width:1100px){nav.links{display:none;}.hamburger{display:flex;}}
+@media(max-width:1200px){nav.links{display:none;}.hamburger{display:flex;}}
 .mobile-nav{display:none;position:fixed;inset:0;top:66px;z-index:99;background:var(--glass-bg);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);flex-direction:column;padding:32px 24px;gap:4px;border-top:1px solid var(--line);}
 .mobile-nav.open{display:flex;}
 .mobile-nav a{font-family:var(--display);font-size:22px;font-weight:600;color:var(--ink);padding:13px 0;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;}
@@ -317,6 +317,46 @@ h1.headline .accent.revealed::after{transform:scaleX(1);}
 .s-logo.s-logo-wide a{display:flex;align-items:center;justify-content:center;width:100%;height:100%;}
 .s-logo.s-logo-wide img{max-height:56px;max-width:340px;filter:none;width:auto;height:auto;}
 .s-logo.s-logo-wide:hover img{filter:none;}
+.logo-chip-nitte img{max-height:28px;max-width:145px;height:auto;width:auto;object-fit:contain;}
+.logo-chip-foxwel img{max-height:28px;max-width:115px;height:auto;width:auto;object-fit:contain;}
+@media (max-width: 1200px) {
+  .logo-chip-foxwel img{max-height:24px !important;max-width:95px !important;}
+}
+@media (max-width: 940px) {
+  .logo-chip-foxwel img{max-height:18px !important;max-width:70px !important;}
+}
+@media (max-width: 600px) {
+  .logo-chip-foxwel img{max-height:15px !important;max-width:58px !important;}
+}
+@media (max-width: 380px) {
+  .logo-chip-foxwel img{max-height:13px !important;max-width:50px !important;}
+}
+.logo-chip-b4k img{height:38px;max-width:140px;width:auto;object-fit:contain;background:var(--accent);padding:4px 8px;border-radius:7px;}
+@media (max-width: 1200px) {
+  .logo-chip-nitte img{max-height:24px !important;max-width:120px !important;}
+  .logo-chip-b4k img{height:34px !important;max-width:110px !important;}
+}
+@media (max-width: 940px) {
+  .logo-chip img{height:20px !important;}
+  .logo-chip-nitte img{max-height:18px !important;max-width:95px !important;}
+  .logo-chip-b4k img{height:28px !important;max-width:85px !important;padding:3px 6px !important;}
+}
+@media (max-width: 600px) {
+  .nav { padding: 6px 10px !important; gap: 4px !important; }
+  .logo-chip-b4k { display: none !important; }
+  .logo-row .logo-sep:last-of-type { display: none !important; }
+  .logo-row { gap: 3px !important; flex-shrink: 1 !important; min-width: 0 !important; }
+  .logo-sep { margin: 0 1px !important; width: 1px !important; height: 16px !important; opacity: 0.5; }
+  .logo-chip img { height: 17px !important; width: auto !important; }
+  .logo-chip-nitte img { max-height: 15px !important; max-width: 78px !important; }
+  .logo-chip-b4k img { height: 24px !important; max-width: 72px !important; padding: 2px 4px !important; }
+  .hamburger { width: 32px !important; height: 32px !important; padding: 4px !important; flex-shrink: 0 !important; }
+}
+@media (max-width: 380px) {
+  .logo-chip img { height: 15px !important; }
+  .logo-chip-nitte img { max-height: 13px !important; max-width: 65px !important; }
+  .logo-chip-b4k img { height: 21px !important; max-width: 60px !important; }
+}
 .s-cta{margin-top:24px;background: linear-gradient(135deg, var(--surface), var(--accent-soft));border:1px solid rgba(139,92,246,0.3);border-radius:12px;padding:18px 24px;font-size:14px;color:var(--ink-soft); display:flex; align-items:center; gap:10px;word-break:break-all; flex-wrap:wrap;}
 .s-cta a{color:var(--accent);text-decoration:underline; font-weight:600;}
 
@@ -616,7 +656,7 @@ img { max-width: 100%; height: auto; }
 
 <!-- Announcement bar -->
 <div class="announce-bar">
-  <span class="gold">🌊 Build 4 Karnataka Mangaluru · Sat, 28 Nov 2026 · Registrations open 28 Oct – 16 Nov.</span>&nbsp;&nbsp;Missed Bengaluru? <a href="bengaluru/" class="arrow">See what happened</a>
+  <span class="gold">🌊 Build 4 Karnataka Mangaluru · Sat, 28 Nov 2026 · Registrations open 28 Oct - 16 Nov.</span>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;Innovation Partner: <a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" class="arrow" style="color:var(--accent-bright); text-decoration:underline; font-weight:600;">Nitte Pharma</a>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;AI Platform Partner: <a href="https://www.foxwel.ai/" target="_blank" rel="noopener" class="arrow" style="color:#fdba74; text-decoration:underline; font-weight:600;">Foxwel AI</a>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;Missed Bengaluru? <a href="bengaluru/" class="arrow">See what happened</a>
 </div>
 
 <header id="siteHeader">
@@ -626,7 +666,11 @@ img { max-width: 100%; height: auto; }
       <div class="logo-sep"></div>
       <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank" rel="noopener"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner"></a></div>
       <div class="logo-sep"></div>
-      <div class="logo-chip"><a href="#"><img src="/b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
+      <div class="logo-chip logo-chip-nitte"><a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" title="NGSM Institute of Pharmaceutical Sciences, Nitte (Deemed to be University) - Innovation Partner"><img src="nitte_pharma.jpeg" alt="Nitte Pharma Innovation Centre - Innovation Partner" style="height:32px; width:auto; max-width:200px; object-fit:contain;"></a></div>
+      <div class="logo-sep"></div>
+      <div class="logo-chip logo-chip-foxwel"><a href="https://www.foxwel.ai/" target="_blank" rel="noopener" title="Foxwel AI - AI Platform Partner"><img src="foxwel_logo.png" alt="Foxwel AI - AI Platform Partner" style="height:32px; width:auto; max-width:130px; object-fit:contain;"></a></div>
+      <div class="logo-sep"></div>
+      <div class="logo-chip logo-chip-b4k"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
     </div>
     <nav class="links">
       <a href="#about">About</a>
@@ -662,7 +706,7 @@ img { max-width: 100%; height: auto; }
   <div class="wrap hero-grid">
     <div>
       <span class="eyebrow">ComedKares × ERA Foundation present</span>
-      <img src="/b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
+      <img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
       <div class="hero-badge"><span class="dot-live"></span>Edition 02 · Mangaluru</div>
       <h1 class="headline">Unleash AI:<br><span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 6px;">Build More.</span></h1>
       <p class="sub">Coastal Karnataka's first Gen AI student buildathon. <strong style="color:var(--accent);">50 slots across 5 domains</strong> with 9:00 AM - 2:00 PM build time to build a working product for a real coastal problem with Gen AI and vibe-code tools, then present to juries from 2:00 PM - 4:00 PM. ₹40,000+ in prizes.</p>
@@ -1043,10 +1087,20 @@ img { max-width: 100%; height: auto; }
       </div>
     </div>
     <div class="sponsor-tier reveal">
+      <div class="tier-label">AI Platform Partner</div>
+      <div class="sponsor-row">
+        <div class="s-logo s-logo-wide">
+          <a href="https://www.foxwel.ai/" target="_blank" rel="noopener" title="Foxwel AI - Official AI Platform Partner">
+            <img src="foxwel_logo.png" alt="Foxwel AI - AI Platform Partner" style="max-height: 52px; max-width: 260px; width: auto; object-fit: contain;">
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="sponsor-tier reveal">
       <div class="tier-label">Partner slots open for Mangaluru</div>
       <div class="sponsor-row">
         <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">⭐</div><div class="sl">Headline partner ×1</div><div class="sc">Slot open</div></a>
-        <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🤖</div><div class="sl">AI platform partners ×3</div><div class="sc">Slots open</div></a>
+        <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🤖</div><div class="sl">AI platform partners ×2</div><div class="sc">Slots open</div></a>
         <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🎯</div><div class="sl">Domain partners ×5</div><div class="sc">Slots open</div></a>
         <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🧩</div><div class="sl">Problem statement partners ×5</div><div class="sc">Slots open</div></a>
       </div>
@@ -1111,7 +1165,11 @@ img { max-width: 100%; height: auto; }
           <div class="logo-sep"></div>
           <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank" rel="noopener"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner"></a></div>
           <div class="logo-sep"></div>
-          <div class="logo-chip"><a href="#"><img src="/b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
+          <div class="logo-chip logo-chip-nitte"><a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" title="NGSM Institute of Pharmaceutical Sciences, Nitte (Deemed to be University) - Innovation Partner"><img src="nitte_pharma.jpeg" alt="Nitte Pharma Innovation Centre - Innovation Partner" style="height:32px; width:auto; max-width:200px; object-fit:contain;"></a></div>
+          <div class="logo-sep"></div>
+          <div class="logo-chip logo-chip-foxwel"><a href="https://www.foxwel.ai/" target="_blank" rel="noopener" title="Foxwel AI - AI Platform Partner"><img src="foxwel_logo.png" alt="Foxwel AI - AI Platform Partner" style="height:32px; width:auto; max-width:130px; object-fit:contain;"></a></div>
+          <div class="logo-sep"></div>
+          <div class="logo-chip logo-chip-b4k"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
         </div>
         <p class="foot-desc">Build 4 Karnataka travels across the state. Edition 02: Mangaluru, 28 Nov 2026.<br><a href="bengaluru/" style="color:var(--accent);">Edition 01: Bengaluru, 7 Sep 2026 →</a></p>
       </div>
