@@ -1,5 +1,7 @@
 ## Statewide LMS Quality Audit: Weekly Hub PM Directives & Action Protocol (October 2026)
 ### 1. Statewide Audit Executive Summary
+- **Leadership Student Database Portal Access**: The consolidated statewide master student database (29,915 students from LMS, Google Sheets, and Inunity databases) is now integrated into the ComedKares Knowledge Portal (https://comedkares-knowledge-portal.vercel.app). Access is strictly restricted to designated leadership members: Ramesh Pudale, Gibson M, Satish Chandra, Pove Raj, Supriya BS, Muralidhar Ponnaluri, and Udit B. When logged in with an authorized Google Workspace email, a new 'Student Database' button appears directly on the home page header as well as in the top navigation bar to search, filter by hub/college/branch, inspect student program histories, and export filtered shortlists to CSV. All other users cannot see or access this tab.
+  ![Knowledge Portal Home Page with Leadership Student Database Button](screenshots/knowledge_portal_student_db_button.png)
 - **Audited Scope**: 89 Batches, 10 Hubs, 27 Institutes, 125 Programs, 3,927 Students, 1,029 Sessions, 14,316 Attendance Rows.
 - **Statewide Health Score**: **89.1/100 (Grade A)** across 89 batches.
 - **30-Hour Programs Attendance Cleared**: All 54 missing attendance records across Sessions 6 through 15 for 30-Hour IoT & Python programs in Mysuru Hub have been fully populated. Both cohorts achieved 100% attendance completion, 0 open audit findings, and Grade A ratings (92.0/100).
@@ -798,3 +800,10 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 
 ### Update - Hero Floating Console Repositioned
 - **Map Visibility**: Moved the floating status console widget below the Karnataka map so all districts (including Mysuru and Bengaluru) remain 100% clear and interactive without any visual overlap.
+
+### Update - Innovation Partner Announced (Nitte Pharma)
+1. **New Partnership Tier**: NGSM Institute of Pharmaceutical Sciences, Nitte (Deemed to be University) has joined Build 4 Karnataka Mangaluru edition as the official Innovation Partner.
+2. **Webpage Integration**: Featured prominently under the Partners & Sponsors section with a clickable logo card routing to their official portal (`https://nitte.edu.in/ngsmips/`).
+3. **Outreach & Communication**: Feel free to highlight Nitte Pharma Innovation Centre as an official partner in upcoming student outreach, college visits, and coastal hackathon announcements.
+
+![Innovation Partner Nitte Pharma](assets/nitte_pharma_partner.png)

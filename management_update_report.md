@@ -1,6 +1,28 @@
 # Management Update Report
 
 ## Recent Changes
+- **ComedKares Leadership Student Database Portal Integration & Home Action Button**:
+  - **Verified UI Implementation Screenshot**:
+    ![Knowledge Portal Home Page with Leadership Student Database Button](screenshots/knowledge_portal_student_db_button.png)
+
+  - Added dedicated Home Page Leadership Action Button: On the Knowledge Portal home page (Programs catalog), whitelisted leadership members now see a prominent, branded 'Student Database (Leadership)' quick-access button alongside the top navigation link. This button is completely hidden from non-whitelisted accounts.
+  - Consolidated statewide master database (29,915 students across all hubs, programs, terms, and LMS records) accessible directly via both top navigation and home action button.
+  - Integrated the consolidated statewide master database (29,915 students across all hubs, programs, terms, and LMS records) into the live ComedKares Knowledge Portal (https://comedkares-knowledge-portal.vercel.app).
+  - Multi-tier Access Whitelist: Restricted database access exclusively to designated 7 leadership members:
+    1. Ramesh Pudale (ramesh.p@erafoundationindia.org)
+    2. Gibson M (gibson.m@erafoundationindia.org)
+    3. Satish Chandra (satish.c@erafoundationindia.org)
+    4. Pove Raj (pove.raj@erafoundationindia.org)
+    5. Supriya BS (supriya.bs@erafoundationindia.org)
+    6. Muralidhar Ponnaluri (muralidhar.p@erafoundationindia.org)
+    7. Udit B (uditb@erafoundationindia.org)
+  - Security Architecture & Enforcement:
+    - Dynamic Top-Navigation Gate: The 'Student Database' tab in the top navigation bar is conditionally rendered only for verified sessions matching the authorized email list. It is completely invisible to other staff, mentors, and visitors.
+    - Protected In-Portal Route: Accessing #/database validates leadership permissions. Unauthorized routes are bounced back to home (#/).
+    - Dedicated Page Auth Guard: Direct access to /database.html runs client-side Supabase authentication against Google OAuth. Unauthorized sessions are blocked with an Access Restricted screen and action prompts.
+    - Cloud Schema & RLS Policy: Created dd_database_access.sql establishing the database_access table with Row Level Security (RLS) allowing authenticated leadership members to verify their access status.
+    - Production Live Deployment: Successfully built, deployed, and aliased to production on Vercel at https://comedkares-knowledge-portal.vercel.app.
+
 - **HubQuiz Statewide Delivery Data Audit & Export**:
   - Extracted comprehensive live database records across all historical HubQuiz sessions conducted to date.
   - Metrics Summary: 31 total quiz sessions created, 22 live classroom sessions successfully completed, 693 total student joins, and 4,323 student answers logged.
@@ -144,6 +166,7 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **Leadership Student Database & Access Whitelist** | Consolidated master database (29,915 students) integrated into Knowledge Portal with conditional Home Page action button and top nav link, strictly restricted via Supabase Google OAuth to 7 leadership members (Ramesh Pudale, Gibson M, Satish Chandra, Pove Raj, Supriya BS, Murali, and Udit B). | Complete (Deployed Live) |
 | **30-Hour Programs Attendance Completion & Audit Elevation** | Cleared all 54 missing attendance records across Sessions 6-15 for 30-Hour IoT & Python programs in Mysuru Hub (100% attendance complete, 0 open findings, score 92.0 Grade A), elevating Statewide Health Score to 89.1/100 (Grade A). | Complete |
 | **Statewide Quality Audit & Date Alignment Remediation** | Audited 89 batches across 10 hubs, restored 4 ongoing batches to active and 66 single-date sessions to scheduled, preserved late-joiner absent rules, and established Statewide Health Score at 88.2/100 (Grade A). | Complete |
 | **Attendance Tab Bulk Controls & Late-Joiner Rule** | Added 'Mark All Present' and 'Mark All Absent' one-click bulk controls plus automated absent defaults for students enrolling after session dates. | Complete (Spec & Script Ready) |
@@ -178,6 +201,7 @@
 | **Interactive Map Navigation** | Integrated hero SVG map graphic with interactive SVG district layers and routing to respective city pages. | Complete |
 | **Vercel Web Analytics Integration** | Injected tracking snippet across root and city edition templates. | Complete |
 | **Sitemap Multi-City Expansion** | Updated sitemap.xml with daily/weekly crawl priorities across all regional edition URLs. | Complete |
+| **Innovation Partner Integration (Nitte Pharma)** | Integrated Nitte Pharma Innovation Centre (NGSM Institute of Pharmaceutical Sciences, Nitte Deemed to be University) as official Innovation Partner with a dedicated tier, responsive high-res clickable logo card, and direct URL routing in the Mangaluru edition sponsors section. | Complete (Deployed Live) |
 
 ## Required Screenshots
 ### LMS Quality Audit UI Feature Screenshots
@@ -986,3 +1010,11 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 
 ![Console Overlapping Map](assets/console_overlapping_map.png)
 *Figure: Hero right section showing initial overlap before moving the console widget down.*
+
+### 9. Innovation Partner Integration (Nitte Pharma Innovation Centre)
+- **Official Innovation Partner**: Added Nitte Pharma Innovation Centre (NGSM Institute of Pharmaceutical Sciences, Nitte, Deemed to be University, Mangaluru) as the official Innovation Partner for Build 4 Karnataka Mangaluru edition.
+- **Clickable Branding & Routing**: Embedded the high-resolution logo banner (`nitte_pharma.jpeg`) inside an interactive partner card (`.s-logo.s-logo-wide`) linking directly to the institution portal (`https://nitte.edu.in/ngsmips/`).
+- **Responsive Layout**: Designed dedicated responsive card styling (`min-width: 280px`, `max-width: 420px`, mobile breakpoint scaling to 200px) with subtle elevation, hover lighting, and zero clipping across desktop, tablet, and mobile screens.
+
+![Innovation Partner Nitte Pharma](assets/nitte_pharma_partner.png)
+*Figure: Innovation Partner section featuring Nitte Pharma Innovation Centre on the Build 4 Karnataka Mangaluru homepage.*
