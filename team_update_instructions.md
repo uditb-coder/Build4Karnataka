@@ -1,5 +1,6 @@
 ## Statewide LMS Quality Audit: Weekly Hub PM Directives & Action Protocol (October 2026)
 ### 1. Statewide Audit Executive Summary
+- **RPDT Weekly Program Report (RNSIT Bengaluru, 22-31 Oct 2026)**: Completed the official two-week kickoff program report for Rapid Prototyping & Design Thinking across all 32 cohorts at RNSIT. Sourced data from `lms_batch_progress_2026-11-06.csv` and live database logs, recording 1,780 student attendances across 33 completed sessions (82.8% marked attendance). Attendance showed a dramatic recovery from initial onboarding (34.5% - 52.2%) to steady-state delivery (89.2% - 96.3%). Delivered comprehensive curriculum dossiers for Session 1 (Catapult prototyping) and Session 2 (Figma interactive UI & 5 Whys), student feedback metrics (4.7/5 clarity, 93.4% confidence), and operational follow-ups. All photos were stripped, batch summary table removed, and zero em-dashes enforced.
 - **Leadership Student Database Portal Access**: The consolidated statewide master student database (29,915 students from LMS, Google Sheets, and Inunity databases) is now integrated into the ComedKares Knowledge Portal (https://comedkares-knowledge-portal.vercel.app). Access is strictly restricted to designated leadership members: Ramesh Pudale, Gibson M, Satish Chandra, Pove Raj, Supriya BS, Muralidhar Ponnaluri, and Udit B. When logged in with an authorized Google Workspace email, a new 'Student Database' button appears directly on the home page header as well as in the top navigation bar to search, filter by hub/college/branch, inspect student program histories, and export filtered shortlists to CSV. All other users cannot see or access this tab.
   ![Knowledge Portal Home Page with Leadership Student Database Button](screenshots/knowledge_portal_student_db_button.png)
 - **Audited Scope**: 89 Batches, 10 Hubs, 27 Institutes, 125 Programs, 3,927 Students, 1,029 Sessions, 14,316 Attendance Rows.
@@ -186,6 +187,14 @@ All 9 industry-grade statements are live in the LMS Problem Bank (problem_statem
 # Team Update Instructions
 
 ## Workflow Updates
+
+### HubQuiz Weekly Delivery Cadence (01 Nov - 06 Nov 2026)
+- **Weekly Cohort Performance**:
+  - Over the current delivery cycle (Nov 1 to Nov 6, 2026), 3 live classroom sessions engaged 137 students with 1,302 responses logged at a 78.6% comprehension accuracy rate.
+  - Dedicated RNSIT room logins proved completely stable: Room 1 conducted Session 9 (Figma Prototyping) for 48 students with zero interruptions.
+  - Mysuru Hub maintained consistent weekly delivery, completing Session 2 and Session 3 with 48 and 41 participants respectively.
+- **Weekly Reporting Deliverables**:
+  - Mentors can access the weekly performance summary via `HubQuiz_Weekly_Report_Nov2_Nov6.xlsx` on the desktop or repository root.
 
 ### HubQuiz Delivery Data & Performance Reporting
 - **Statewide Engagement Milestone**:
