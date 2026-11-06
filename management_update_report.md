@@ -203,6 +203,7 @@
 | **Sitemap Multi-City Expansion** | Updated sitemap.xml with daily/weekly crawl priorities across all regional edition URLs. | Complete |
 | **Innovation Partner Integration (Nitte Pharma)** | Integrated Nitte Pharma Innovation Centre (NGSM Institute of Pharmaceutical Sciences, Nitte Deemed to be University) as official Innovation Partner with a dedicated tier, responsive high-res clickable logo card, and direct URL routing in the Mangaluru edition sponsors section. | Complete (Deployed Live) |
 | **AI Platform Partner Integration (Foxwel AI)** | Integrated Foxwel AI (http://www.foxwel.ai/) as official AI Platform Partner with a dedicated tier in the sponsors section, clickable high-res branding, header navigation logo chip, footer logo chip, and announcement bar badge. Adjusted remaining open AI platform slots to 2. | Complete (Deployed Live) |
+| **IP Rights Terms Clause Deletion** | Removed the restrictive Intellectual Property clause from the Terms & Conditions section across the Mangaluru edition and archived Bengaluru edition pages as requested, ensuring participants retain creator rights over products and code built. | Complete (Deployed Live) |
 
 ## Required Screenshots
 ### LMS Quality Audit UI Feature Screenshots
@@ -1028,3 +1029,11 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 
 ![Foxwel AI Partner in Sponsors](assets/foxwel_partner_sponsors.png)
 *Figure: AI Platform Partner tier featuring Foxwel AI in the Partners & Sponsors section.*
+
+### 11. IP Rights Clause Removal (Terms & Conditions)
+- **Removal of Restrictive IP Clause**: Removed the "IP Rights - Intellectual Property" clause from the Terms & Conditions accordion section (`#terms`) across the Build 4 Karnataka portal (both Mangaluru homepage and Bengaluru edition).
+- **Previous Content Removed**: The deleted clause previously stated: *"All intellectual property (IP) rights for the products, prototypes, and code built during this event will be owned by ComedKares and ERA Foundation. Participants may be credited as creators, but the final ownership remains with the organizers."*
+- **Current Terms Preserved**: The Terms & Conditions section now contains only the essential operational clauses: Travel & Accommodation logistics, and Property Damage liability.
+
+![IP Rights Clause Removed](assets/ip_clause_removal_request.png)
+*Figure: The Intellectual Property clause identified and removed from the Terms & Conditions accordion.*

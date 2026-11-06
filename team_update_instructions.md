@@ -818,3 +818,10 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 4. **Outreach & Communication**: Highlight Foxwel AI in student and mentor briefings as an official AI platform enabling teams to build cutting-edge prototypes.
 
 ![Foxwel AI Partner in Header](assets/foxwel_partner_header.png)
+
+### Update - Intellectual Property Clause Removed from Terms & Conditions
+1. **Clause Deletion**: The Intellectual Property (IP Rights) clause under the Terms & Conditions section has been completely removed from https://build4karnataka.comedkares.com/.
+2. **Student & Team Inquiries**: If participating students or college mentors inquire about IP ownership, confirm that the clause claiming organizer ownership of built products, prototypes, and code has been removed.
+3. **Active Terms**: Only Travel & Accommodation guidelines and Property Damage liability remain active in the fine print.
+
+![IP Rights Clause Removed](assets/ip_clause_removal_request.png)
