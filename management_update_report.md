@@ -204,6 +204,7 @@
 | **Innovation Partner Integration (Nitte Pharma)** | Integrated Nitte Pharma Innovation Centre (NGSM Institute of Pharmaceutical Sciences, Nitte Deemed to be University) as official Innovation Partner with a dedicated tier, responsive high-res clickable logo card, and direct URL routing in the Mangaluru edition sponsors section. | Complete (Deployed Live) |
 | **AI Platform Partner Integration (Foxwel AI)** | Integrated Foxwel AI (http://www.foxwel.ai/) as official AI Platform Partner with a dedicated tier in the sponsors section, clickable high-res branding, header navigation logo chip, footer logo chip, and announcement bar badge. Adjusted remaining open AI platform slots to 2. | Complete (Deployed Live) |
 | **IP Rights Terms Clause Deletion** | Removed the restrictive Intellectual Property clause from the Terms & Conditions section across the Mangaluru edition and archived Bengaluru edition pages as requested, ensuring participants retain creator rights over products and code built. | Complete (Deployed Live) |
+| **Edition 02 (Mangaluru) Master Schedule Refinement** | Aligned the full event agenda: problem statements release at T-48h (Thu 26 Nov), statewide Hub open day at T-24h (Fri 27 Nov, 9 AM - 6 PM), build sprint till 1:00 PM on Sat 28 Nov, parallel 20-min jury reviews across 2 evaluation halls (2:00 - 5:30 PM), live music & private jury deliberation (5:30 - 6:30 PM), and grand finale prize distribution for 8 winning teams (Podium 1, 2, 3 + 5 Domain Champions). Noted no breakfast on arrival for participants. | Complete (Deployed Live) |
 
 ## Required Screenshots
 ### LMS Quality Audit UI Feature Screenshots
@@ -1037,3 +1038,15 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
 
 ![IP Rights Clause Removed](assets/ip_clause_removal_request.png)
 *Figure: The Intellectual Property clause identified and removed from the Terms & Conditions accordion.*
+
+### 12. Edition 02 (Mangaluru) Event Flow & Schedule Realignment
+- **T-48h Problem Statements Reveal (Thu, 26 Nov 2026)**: 12 coastal problem statements from local partners go live at 10:00 AM, giving teams 48 hours to analyze problems and design software architectures.
+- **T-24h Statewide Innovation Hub Open Day (Fri, 27 Nov 2026)**: All registered student teams are granted full access to ComedKares Innovation Hubs across Karnataka from 9:00 AM to 6:00 PM to explore hardware, test APIs, and consult floor mentors ahead of build day.
+- **Build Day Sprint (Sat, 28 Nov 2026)**:
+  - **Arrival & Registration (8:30 AM - 9:30 AM)**: Check-in, ID tagging, kit distribution. (Explicit operational notice: breakfast is not provided; participants must eat before arrival).
+  - **Opening Ceremony (9:30 AM - 10:00 AM)**: Welcome address and domain zones orientation.
+  - **Build & Refine Sprint (10:00 AM - 1:00 PM)**: 3-hour focused on-site sprint to finalize prototypes and slide decks.
+  - **Working Lunch (1:00 PM - 2:00 PM)**: Organizer-provided lunch in the dining area.
+  - **Parallel Jury Review Rounds (2:00 PM - 5:30 PM)**: Conducted across 2 parallel evaluation halls (20 minutes per team for PPT pitch, live prototype walkthrough, and jury Q&A).
+  - **Live Campus Band & Jury Deliberation (5:30 PM - 6:30 PM)**: Entertainment for students while the jury panel convenes privately to score and finalize awards.
+  - **Grand Finale & Felicitation (6:30 PM Onwards)**: Live prize distribution honoring 8 winning teams (1st, 2nd, and 3rd Podium Winners, plus 5 Domain Best Builds), followed by oversized dummy cheque ceremonies and group photography.

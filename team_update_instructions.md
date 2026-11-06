@@ -825,3 +825,15 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 3. **Active Terms**: Only Travel & Accommodation guidelines and Property Damage liability remain active in the fine print.
 
 ![IP Rights Clause Removed](assets/ip_clause_removal_request.png)
+
+### Update - Build 4 Karnataka Edition 02 (Mangaluru) Master Schedule Locked
+1. **Pre-Event Timeline (T-48h and T-24h)**:
+   - **Thursday, 26 Nov (T-48h, 10:00 AM)**: Problem statements go live on the portal.
+   - **Friday, 27 Nov (T-24h, 9:00 AM - 6:00 PM)**: Open Hub Access. All registered teams can visit ComedKares Hubs statewide to brainstorm and consult mentors.
+2. **Build Day Operations (Saturday, 28 Nov)**:
+   - **Morning Check-In**: Registration and arrival. **Note for student communications: Breakfast is NOT provided by organizers; students should eat before arriving.**
+   - **Build Window**: Closes at 1:00 PM sharp (teams submit prototype links and decks).
+   - **Working Lunch**: 1:00 PM - 2:00 PM (provided by ComedKares).
+   - **Jury Evaluation**: 2:00 PM - 5:30 PM across 2 parallel evaluation halls. Each team gets a full 20 minutes (PPT + live demo + Q&A).
+   - **Entertainment & Deliberation**: 5:30 PM - 6:30 PM live campus band while judges calculate scores.
+   - **Awards & Ceremony**: 6:30 PM onwards. Exactly 8 winning teams awarded (1st, 2nd, 3rd places + 5 Domain Champions).
