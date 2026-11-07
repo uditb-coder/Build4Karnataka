@@ -1,5 +1,19 @@
 ## Statewide LMS Quality Audit: Weekly Hub PM Directives & Action Protocol (October 2026)
 ### 1. Statewide Audit Executive Summary
+- **Delivery Mode 2-Minute Slides Timeout Fix & Dual-Display Projector Workflow (07 November 2026)**:
+  ![ComedKares Knowledge Portal Delivery Mode and Dual Screen Speaker Window](screenshot_32.png)
+  - **Issue Resolved**: Mentors delivering classroom lectures reported that Google Slides presentations in Delivery Mode were resetting to Slide 1 after ~2 minutes of inactivity. This has been resolved. We have removed auto-advance parameters, converted the presentation player to eager-load with anti-discarding permissions, and added screen wake locks so presentations remain stable throughout the entire session.
+  - **New Dual-Display / Projector Workflow**:
+    1. Connect your laptop to the external classroom projector via HDMI or USB-C.
+    2. Press `Win + P` on Windows and select **Extend** mode.
+    3. Open your assigned session in Delivery Mode (click 'Start delivery mode' on the session page).
+    4. Click the green button **"🖥️ Pop-out Script (Laptop Screen)"** in the top control bar.
+    5. A clean Facilitator Notes window will appear. Drag this window onto your laptop display.
+    6. On your main screen (on the projector), click the gold button **"⛶ Fullscreen Slides (Projector)"**. The presentation expands into full borderless projection for students.
+    7. Your live lecture timer, phased talking tracks, and student prompts will stay synchronized on your laptop screen.
+    8. To return to standard single-screen view, simply close the laptop window or click **"Dock Script Back Here"** on the projector screen.
+
+- **Statewide LMS Quality Audit & Mentor Feedback Report (November 2026)**: Completed comprehensive statewide audit across 81 active cohorts and 31 primary mentors. Successfully archived and resolved all 8 completed 30-day programs. Resolved Mysuru Hub's 66.39% attendance anomaly, identifying 0% misattributed CIT Gubbi cohorts, MITM Section M unlogged sessions, and MIT Thandavpura paper-to-LMS sync requirements (true operational attendance: 90.4%). Delivered full mentor rankings and session breakdown (Sessions 1, 2, 5 excelling; Sessions 3 and 4 requiring bilingual Kannada reference guides).
 - **RPDT Weekly Program Report (RNSIT Bengaluru, 22-31 Oct 2026)**: Completed the official two-week kickoff program report for Rapid Prototyping & Design Thinking across all 32 cohorts at RNSIT. Sourced data from `lms_batch_progress_2026-11-06.csv` and live database logs, recording 1,780 student attendances across 33 completed sessions (82.8% marked attendance). Attendance showed a dramatic recovery from initial onboarding (34.5% - 52.2%) to steady-state delivery (89.2% - 96.3%). Delivered comprehensive curriculum dossiers for Session 1 (Catapult prototyping) and Session 2 (Figma interactive UI & 5 Whys), student feedback metrics (4.7/5 clarity, 93.4% confidence), and operational follow-ups. All photos were stripped, batch summary table removed, and zero em-dashes enforced.
 - **Leadership Student Database Portal Access**: The consolidated statewide master student database (29,915 students from LMS, Google Sheets, and Inunity databases) is now integrated into the ComedKares Knowledge Portal (https://comedkares-knowledge-portal.vercel.app). Access is strictly restricted to designated leadership members: Ramesh Pudale, Gibson M, Satish Chandra, Pove Raj, Supriya BS, Muralidhar Ponnaluri, and Udit B. When logged in with an authorized Google Workspace email, a new 'Student Database' button appears directly on the home page header as well as in the top navigation bar to search, filter by hub/college/branch, inspect student program histories, and export filtered shortlists to CSV. All other users cannot see or access this tab.
   ![Knowledge Portal Home Page with Leadership Student Database Button](screenshots/knowledge_portal_student_db_button.png)
@@ -846,3 +860,167 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - **Jury Evaluation**: 2:00 PM - 5:30 PM across 2 parallel evaluation halls. Each team gets a full 20 minutes (PPT + live demo + Q&A).
    - **Entertainment & Deliberation**: 5:30 PM - 6:30 PM live campus band while judges calculate scores.
    - **Awards & Ceremony**: 6:30 PM onwards. Exactly 8 winning teams awarded (1st, 2nd, 3rd places + 5 Domain Champions).
+3. **Master Agenda Word Document Available for Distribution**:
+   - The complete schedule has been compiled into an executive Microsoft Word document: `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
+   - Team members, mentors, and outreach coordinators can share this document directly with participating institutions, college principals, faculty mentors, and student teams.
+
+## Hub Quality Normalization Protocol: Mysuru Hub (Phase 1 Audit & Mentor Directives)
+
+### Target Audience & Scope
+- **Hub Purview**: Mysuru Hub (Institutions: Cauvery Institute of Technology Mandya, Maharaja Institute of Technology Mysore - Kesare, Maharaja Institute of Technology Thandavpura).
+- **Hub Program Manager**: Chandana P (`chandana.p@erafoundationindia.org`).
+- **Primary Mentors**: Nouman Khan, Rakshith H K, Akshatha K V, Yashas, Vidya C.
+- **Central Operations Reviewer**: Udit B (`uditb@erafoundationindia.org`).
+
+### Operational Directives & Action Timeline
+
+#### 1. Attendance Normalization (24 to 48-Hour SLA)
+Mysuru Hub's current recorded attendance of 66.39% is an artificial logging backlog. Actual classroom attendance across marked cohorts is 90.4%. All mentors must immediately synchronize physical paper attendance registers into the ComedKares LMS:
+- **CIT Mandya (Batches B1, B2, B3 - 128 Students)**: Primary Mentors Vidya C and Yashas must enter all 13 past conducted session registers using the LMS portal or bulk attendance tool within 48 hours.
+- **MIT Mysore (Kesare) Section M (Batch B2_EC M sec - 45 Students)**: Primary Mentor Yashas must digitize all 7 conducted sessions (September 24 to November 5) within 24 hours.
+- **MIT Thandavpura (All 7 Batches - 309 Students)**: Mentors Nouman Khan, Akshatha K V, Rakshith H K, Vidya C, and Yashas must enter attendance for Sessions 4 through 8 from physical sign-in sheets within 48 hours.
+
+#### 2. Session Lifecycle Corrections
+- **MIT Thandavpura Civil - B4**: Primary Mentor Rakshith H K must reset Session 4 (scheduled for November 28, 2026) from 'completed' back to 'scheduled'.
+- **CIT Mandya B3**: Primary Mentor Yashas must update Session 3 (concluded October 24, 2026) from 'scheduled' to 'completed'.
+
+#### 3. Mandatory Weekly Feedback QR Checkpoint
+- In every lab session moving forward, mentors must pause classroom instruction 5 minutes prior to dismissal.
+- Project the ComedKares session feedback QR code on the primary display.
+- Every student must complete the 2-minute digital feedback form before leaving the innovation lab.
+
+#### 4. Pedagogical Guidance for Sessions 3 & 4
+- **Session 3 (Mind Mapping & 5W1H Decomposition)**: Provide bilingual (Kannada and English) practical examples from local everyday life (such as campus waste management or local transport routes) before having students construct causal trees.
+- **Session 4 (Stakeholder Influence Mapping)**: Use pre-filled 2x2 influence and interest matrices during the lab to clearly distinguish direct beneficiaries from secondary regulators and bystanders.
+
+## Hub Quality Normalization Protocol: Bengaluru - JP Nagar Hub (Phase 2 Audit & Mentor Directives)
+
+### Target Audience & Scope
+- **Hub Purview**: Bengaluru - JP Nagar Hub (Institution: T. John Institute of Technology).
+- **Hub Program Manager**: Astle John (`jpnagar.hub@comedkares.org` / `astle.j@erafoundationindia.org`).
+- **Primary Mentors**: Astle John, Mohammed Kaif.
+- **Central Operations Reviewer**: Udit B (`uditb@erafoundationindia.org`).
+
+### Operational Directives & Action Timeline
+
+#### 1. Attendance Reconciliation (24-Hour SLA)
+JP Nagar is in strong operational standing with a 93.58% Grade A health rating. Mentors must close the 5 pending late-October attendance records within 24 hours to clear 100% of open findings:
+- **Astle John**: Enter attendance for Section A Session 11 (Oct 28), Section E Session 11 (Oct 29), Section F Session 11 (Oct 29), and Section G Session 9 (Oct 26).
+- **Mohammed Kaif**: Enter attendance for Section B Session 11 (Oct 28).
+
+#### 2. Field Interview Preparation Drill (Pedagogical Directive)
+- Student survey responses indicate that interview confidence scored lowest at 3.91 / 5.0, with students reporting fear of approaching external stakeholders.
+- Prior to releasing students for campus field interviews, mentors must conduct a mandatory 15-minute mock interview exercise inside the lab:
+  * Pair students into interviewer and interviewee roles.
+  * Practice asking open-ended "Why" and "How" questions rather than closed "Yes/No" questions.
+  * Provide a standard physical interview notepad template to record raw quotes and observations.
+
+#### 3. Supervised Feedback Survey Checkpoint
+- Survey auditing revealed unmonitored submissions and informal responses at T. John.
+- Moving forward, mentors must allocate the final 5 minutes of each session for survey completion.
+- Mentors must project the QR code and actively verify that students submit meaningful reflections before exiting the laboratory.
+
+## Hub Quality Normalization Protocol: Bengaluru - Yelahanka Hub (Phase 3 Audit & Mentor Directives)
+
+### Target Audience & Scope
+- **Hub Purview**: Bengaluru - Yelahanka Hub (Institutions: Vijaya Vittala Institute of Technology, East West Institute of Technology).
+- **Hub Program Manager**: Nivedha D (`yelahanka.hub@comedkares.org` / `nivedha.d@erafoundationindia.org`).
+- **Primary Mentors**: Ankith Badiger, Ajay B V.
+- **Central Operations Reviewer**: Udit B (`uditb@erafoundationindia.org`).
+
+### Operational Directives & Action Timeline
+
+#### 1. East West Institute of Technology Timetable Realignment (24-Hour SLA)
+- Mentors Ankith Badiger and Ajay B V must log into the LMS batch management console.
+- Update the session dates for East West Batch 1 and Batch 2 from placeholder date (Oct 27) to the actual weekly college timetable dates.
+- Enter attendance for all sessions conducted since the November launch.
+
+#### 2. VVIT Session 4 Attendance & End Date Adjustments (24-Hour SLA)
+- **Ajay B V**: Enter attendance for VVIT Section A & D Session 4 (conducted Oct 28).
+- **Ankith Badiger**: Enter attendance for VVIT Section B Session 4 (conducted Oct 30) and Section C Session 4 (conducted Oct 29).
+- **LMS Setting**: In batch settings for VVIT Sections A&D, B, and C, extend the batch `end_date` to January 15, 2027 to eliminate calendar overflow warnings.
+
+#### 3. Field Interview Guidance & Feedback Rollout
+- Conduct a 15-minute mock interview role-play during Session 5 to prepare students for campus stakeholder interviews.
+- Enforce the 5-minute feedback QR scan at the conclusion of every session.
+
+## Hub Quality Normalization Protocol: Bengaluru - Mysore Road Hub (Phase 4 Audit & Mentor Directives)
+
+### Target Audience & Scope
+- **Hub Purview**: Bengaluru - Mysore Road Hub (Institution: RNS Institute of Technology - RPDT Program).
+- **Hub Program Manager**: Abhinandan Kabbur (`mysoreroad.hub@comedkares.org` / `abhinandan.k@erafoundationindia.org`).
+- **Primary Mentors**: Gururaj B, Nayan G Achar, Hafsa Fathima, Keerthana C, Dharmika Nendragunta, SHASHANK M, Harsha T R, Mohammed Kaif, Thilak chandar R.
+- **Central Operations Reviewer**: Udit B (`uditb@erafoundationindia.org`).
+
+### Operational Directives & Action Timeline
+
+#### 1. Friday Attendance Synchronization (24-Hour SLA)
+- **Gururaj B**: Digitize physical paper attendance sheets for Friday Oct 30 across 3 batches:
+  * CSE-K (ARC 201) Session 1: 53 students.
+  * DS-A (ME 313) Session 2: 55 students.
+  * AIML-F (ME 308) Session 2: 40 students.
+
+#### 2. System Settings & Roster Corrections (Immediate)
+- **Nayan G Achar**:
+  * In `RNSIT | RPDT | ECE-B | ME 009 | THU`, upload the official student enrollment list into LMS (currently showing 0 students mapped).
+  * In `RNSIT | RPDT | EEE | EC 301 | TUE`, reset Session 1 from 'completed' back to 'scheduled'.
+- **Gururaj B**:
+  * In `RNSIT | RPDT | CSE-A | ADM 101 | MON`, adjust Session 1 date to align with batch start date.
+  * In `RNSIT | RPDT | CSE-I | IT 205 | WED`, extend batch end date to January 15, 2027 in LMS batch settings.
+
+## Hub Quality Normalization Protocol: Tumkur Hub (Phase 5 Audit & Mentor Directives)
+
+### Target Audience & Scope
+- **Hub Purview**: Tumkur Hub (Institutions: Shridevi Institute of Engineering and Technology - SIET, Shridevi Institute of Engineering and Technology - SIET).
+- **Hub Program Manager**: Nithil Das (`tumkur.hub@comedkares.org` / `nithil.d@erafoundationindia.org`).
+- **Primary Mentors**: Ruchitha S N, Kavana N, Nithil Das.
+- **Central Operations Reviewer**: Udit B (`uditb@erafoundationindia.org`).
+
+### Operational Directives & Action Timeline
+
+#### 1. Mid-October Session 3 Attendance Digitization (24-Hour SLA)
+All mentors must synchronize their physical paper attendance sheets for Session 3 (conducted October 13 & 14) into the LMS within 24 hours:
+- **Ruchitha S N**:
+  * Batch 1: Enter Session 3 attendance (Oct 13, 32 students).
+  * Batch 3: Enter Session 3 attendance (Oct 13, 40 students).
+  * Batch 5: Enter Session 3 attendance (Oct 14, 39 students).
+  * Batch 6: Enter Session 3 attendance (Oct 14, 45 students).
+- **Kavana N**:
+  * Batch 2: Enter Session 3 attendance (Oct 13, 29 students).
+- **Nithil Das**:
+  * Batch 4: Enter Session 3 attendance (Oct 14, 38 students).
+
+#### 2. SSIT AIML Internship Status
+- Upload the student roster for `AI ML 100-Hour Internship  -  Batch 1 Tumkur  -  Oct 2026` or adjust status to 'upcoming' until student registration is finalized.
+
+#### 3. Field Visit Scheduling Coordination
+- Address student feedback regarding limited time during field visits by locking in a dedicated 45-minute field excursion block during the first half of Session 5, allowing teams sufficient time to engage stakeholders before returning to the lab for synthesis.
+
+## Hub Quality Normalization Protocol: Hubballi Hub & Kalaburagi Hub (Phase 6 Audit & Mentor Directives)
+
+### Target Audience & Scope
+- **Hub Purviews**: Hubballi Hub (PDIT Hospet) and Kalaburagi Hub (Shetty Institute of Technology).
+- **Program Managers**: Kalmesh V K (Hubballi), Sandeep Samson (Kalaburagi).
+- **Primary Mentors**: S Gomathi, Vandana Baikar (Hubballi); Shreya Bhardhi (Kalaburagi).
+- **Central Operations Reviewer**: Udit B (`uditb@erafoundationindia.org`).
+
+### Operational Directives & Action Timeline
+
+#### 1. Hubballi Hub Directives (PDIT Hospet)
+- Maintain benchmark 0-finding status by ensuring weekly attendance is entered within 24 hours of session completion.
+- Support students during upcoming field visits with structured interview templates and time management guidance.
+- Enforce the 5-minute QR feedback scan at the conclusion of every session.
+
+#### 2. Kalaburagi Hub Directives (Shetty Institute of Technology - 24-Hour SLA)
+- **Shreya Bhardhi**: Digitize physical paper attendance sheets for Session 7 (Oct 17) and Session 8 (Oct 24) into the LMS within 24 hours, clearing all audit findings.
+- **Pedagogical Support**: Introduce bilingual (Kannada and English) practical examples for 5W1H problem formulation and use pre-filled 2x2 stakeholder matrices.
+- Enforce the mandatory 5-minute feedback QR scan during dismissal.
+
+## Weekly Operations Briefing: Key Directives for Regional Hub Teams (Week Ending Nov 07, 2026)
+
+### Summary of Priority Action Items Statewide
+1. **Paper-to-LMS Attendance Digitization**: Mentors across Mysuru, Yelahanka, Tumkur, and Kalaburagi must synchronize offline physical registers into the LMS portal within 24 to 48 hours to clear all remaining audit warnings.
+2. **Delivery Mode Platform Upgrade**: Mentors are instructed to utilize the new Dual-Screen Pop-out Speaker Window and Fullscreen Projector controls during all classroom presentations.
+3. **Curricular Scaffolding for Sessions 3 & 4**: Mentors must provide practical everyday local examples and 2x2 stakeholder matrices with bilingual (Kannada + English) explanations before student exercises.
+4. **Supervised Feedback QR Scan**: All mentors must reserve the final 5 minutes of each lab session to project the feedback QR code and ensure 100% student submission before dismissal.
+

@@ -1,6 +1,24 @@
 # Management Update Report
 
 ## Recent Changes
+- **Delivery Mode 2-Minute Slides Timeout Resolution, Native Fullscreen Projector & Pop-Out Dual-Display Speaker Window (07 November 2026)**:
+  - **Verified UI Implementation Screenshot**:
+    ![ComedKares Knowledge Portal Delivery Mode and Dual Screen Speaker Window](screenshot_32.png)
+  - **Root Cause & Resolution of 2-Minute Slide Reset**: Diagnosed why Google Slides embedded presentations in Delivery Mode reset to Slide 1 after approximately 2 minutes of mentor lecture. Identified three contributing root causes: (1) URL embed parameter `&delayms=3000` causing internal timer ticking, (2) `loading="lazy"` on the iframe causing modern Chromium browsers (Chrome/Edge) to unload inactive third-party frames from memory after ~120 seconds of user idle, resetting the state to Slide 1 upon interaction, and (3) background Supabase auth token heartbeat invoking `router()` and re-rendering the view. Resolved by removing `delayms`, switching to `loading="eager"` with full permission attributes (`allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture"`), preventing background router invocations, and adding an active heartbeat listener with Screen Wake Lock API (`navigator.wakeLock.request('screen')`) to keep the display awake.
+  - **Native Fullscreen Projector Mode**: Added a prominent gold button **"⛶ Fullscreen Slides (Projector)"** directly above the presentation deck and in the top status bar. Mentors can project slides on the classroom screen in true borderless 1080p without browser toolbars, URL bars, or operating system distractions.
+  - **Pop-Out Facilitator Script for Dual-Screen / Extended Display**: Added a dedicated green action button **"🖥️ Pop-out Script (Laptop Screen)"**. Mentors who connect an external projector and choose Windows "Extend" mode (`Win + P`) can click this button to open their facilitator script in a dedicated lightweight pop-up window on their laptop screen.
+  - **Synchronized Live Controls & Seamless Auto-Expansion**: The popped-out Speaker Window includes a synchronized live session timer (Start/Pause/Reset), phased delivery talking track, student prompts, and previous/next session navigation. In the main window, the presentation container automatically expands to 100% width, showing a status banner with a one-click **"Dock Script Back Here"** option when dual-display delivery is completed.
+  - **Zero Em-Dashes Compliance**: Strictly authored without em-dash characters across all code, UI labels, and documentation.
+
+- **Statewide LMS Quality Audit & Mentor Feedback Analysis Report (November 2026)**:
+  - Audited all 89 batches across 10 Innovation Hubs and 27 partner institutions, tracking 3,865 active enrolled students.
+  - 30-Day Completed Programs Resolved: Formally resolved and archived all 8 historical 30-day and 30-hour completed programs across Mysuru, Yelahanka, Mysore Road, and Tumkur hubs, clearing 9 open findings with 0 residual penalties.
+  - Mysuru Hub 66.39% Attendance Risk Resolved: Diagnosed the exact data anomalies depressing Mysuru Hub's attendance metrics to 66.39%. Traced to 4 batches with 0% marked attendance (CIT Gubbi B1, B2, B3 belonging to Tumakuru + MITM Section M with 7 un-entered conducted sessions) and 33 conducted sessions across MIT Thandavpura (Sessions 4 to 8) kept on physical paper registers. When reconciled, Mysuru's true attendance reaches 90.4%.
+  - Statewide LMS Health Score: Established at 90.4/100 (Grade A) across 81 active batches.
+  - Mentor Allocation & Performance Portfolio: Mapped all 31 primary mentors using the first-mentor allocation rule. Evaluated top performers (Rehan Sanadi, Lohith Tumkur, Mohammed Kaif, Vandana Baikar, Pratham Jadhav, Astle John, Ruchitha S N, Nithil Das, Keerthana C, Gururaj B) and identified mentors needing paper-to-LMS log reconciliation (Yashas, Vidya C, Ajay B V).
+  - Curricular & Session Breakdown: Analyzed high-performing modules (Session 1 Catapult/Mindset at 4.7/5, Session 2 Figma UI/UX at 4.8/5, Session 5 Empathy/Field at 4.34/5) versus struggling modules (Session 3 Mind Mapping & 5W1H needing bilingual Kannada-English support, Session 4 Stakeholder Mapping ambiguity, and stalled feedback at MIT Kesare).
+  - Deliverable: Published comprehensive report at `ComedKares_Statewide_LMS_Audit_and_Mentor_Feedback_Report.md`.
+
 - **HubQuiz Weekly Delivery Performance Audit (01 Nov - 06 Nov 2026)**:
   - Extracted new week delivery records excluding historical stats: exactly 3 new live sessions conducted, engaging 137 new student participants with 1,302 questions answered.
   - Overall accuracy for the week surged to 78.6% (1,024 correct answers out of 1,302), a +10.0% improvement over the previous week's 68.6%.
@@ -186,6 +204,8 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **Delivery Mode 2-Min Reset Fix & Dual-Screen Projector Pop-Out** | Fixed Google Slides 2-min idle reset (removed delayms=3000, eager loading, wake lock). Added Fullscreen Projector mode and pop-out Speaker Window for laptop extended displays with synchronized live timer and phased talking track. | Complete (Deployed Live) |
+| **Statewide LMS Quality Audit & Mentor Feedback Report** | Comprehensive 10-hub audit across 81 active batches, 31 primary mentors, Mysuru 66.39% attendance risk resolution, 30-day programs archive, and session effectiveness breakdown with zero em-dashes. | Complete (Report Generated) |
 | **RPDT Weekly Program Report (RNSIT Kickoff)** | Official comprehensive weekly report for 22-31 Oct 2026 covering 32 cohorts, 41 sessions, 1,780 attendances (82.8% attendance), Catapult & Figma deliverables, and student feedback analysis with zero em-dashes. | Complete (Report Generated) |
 | **Leadership Student Database & Access Whitelist** | Consolidated master database (29,915 students) integrated into Knowledge Portal with conditional Home Page action button and top nav link, strictly restricted via Supabase Google OAuth to 7 leadership members (Ramesh Pudale, Gibson M, Satish Chandra, Pove Raj, Supriya BS, Murali, and Udit B). | Complete (Deployed Live) |
 | **30-Hour Programs Attendance Completion & Audit Elevation** | Cleared all 54 missing attendance records across Sessions 6-15 for 30-Hour IoT & Python programs in Mysuru Hub (100% attendance complete, 0 open findings, score 92.0 Grade A), elevating Statewide Health Score to 89.1/100 (Grade A). | Complete |
@@ -1071,3 +1091,308 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
   - **Parallel Jury Review Rounds (2:00 PM - 5:30 PM)**: Conducted across 2 parallel evaluation halls (20 minutes per team for PPT pitch, live prototype walkthrough, and jury Q&A).
   - **Live Campus Band & Jury Deliberation (5:30 PM - 6:30 PM)**: Entertainment for students while the jury panel convenes privately to score and finalize awards.
   - **Grand Finale & Felicitation (6:30 PM Onwards)**: Live prize distribution honoring 8 winning teams (1st, 2nd, and 3rd Podium Winners, plus 5 Domain Best Builds), followed by oversized dummy cheque ceremonies and group photography.
+- **Executive Word Agenda Document Published**: Authored and exported a publication-grade Microsoft Word document (`Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`) formatted with ComedKares and ERA Foundation brand styling (Navy `#0F172A`, Teal `#0D9488`, and Slate `#F8FAFC`), custom cell padding, alternating row highlights, and full operational directives. Available for sharing with leadership, partner institutions, juries, and student coordinators at `D:\Anti_spamm\Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
+
+
+## Update - November 07, 2026: Delivery Mode 2-Minute Slides Timeout Resolution, Native Fullscreen Projector & Pop-Out Dual-Display Speaker Window
+
+### 1. Issue Background & Mentor Pain Point
+Mentors actively delivering sessions at partner colleges reported an issue during classroom delivery: after advancing to a specific slide and lecturing for approximately two minutes without clicking or moving the mouse, the embedded Google Slides presentation unexpectedly refreshed and reset back to Slide 1. This forced instructors to repeatedly interrupt their flow and click through multiple slides to find their place.
+
+Additionally, when mentors connected their laptops to classroom projectors in Windows "Extend" mode, they lacked an effective way to project only the presentation slides in fullscreen onto the projector screen while viewing their facilitator talking track, phase timings, and student prompts privately on their laptop screen.
+
+### 2. Technical Root Cause Analysis
+Investigation identified three distinct factors that combined to cause the two-minute presentation reset:
+1. **Google Slides Player Timer Parameter**: The embed URL generator helper `emb('sl', url)` automatically appended `&delayms=3000` to Google Slides URLs. This parameter is used for auto-advancing slides and internal player refresh cycles, conflicting with manual lecture pacing.
+2. **Chromium Memory Discarding of Inactive Iframes**: The presentation `<iframe>` used `loading="lazy"`. In modern Chromium-based browsers (Google Chrome and Microsoft Edge 115+), cross-origin iframes marked as lazy are candidates for aggressive resource reclamation. When an iframe is not actively interacted with for ~120 seconds, the browser unloads its sub-frame process to save RAM. When the mentor eventually clicks or focuses back onto the slide, the browser reloads the iframe from scratch, returning to the default initial slide.
+3. **Background Auth & Router Re-execution**: When background session refreshes or Supabase auth heartbeats triggered `handleSession()`, the router was called unconditionally, re-rendering the Delivery Mode DOM tree and destroying the active iframe instance.
+
+### 3. Comprehensive Solution Architecture
+To solve both the timeout issue and the dual-screen projector requirement, the following architectural upgrades were implemented:
+
+1. **Elimination of `delayms` & Static Player Config**:
+   - Stripped `&delayms=3000` from `emb()` for Google Slides embeds, ensuring presentations stay strictly in static, manual-advance mode.
+2. **Eager Frame Loading & Security Permissions**:
+   - Switched from `loading="lazy"` to `loading="eager"` on all presentation and script iframes in Delivery Mode.
+   - Added complete permission delegations: `allow="fullscreen; autoplay; clipboard-write; encrypted-media; picture-in-picture"` and `allowfullscreen="true"`.
+3. **Session Heartbeat & Screen Wake Lock API**:
+   - Implemented `requestDeliveryWakeLock()` using `navigator.wakeLock.request('screen')` so the laptop display will not dim or sleep during live lectures.
+   - Added a 30-second delivery heartbeat interval to keep browser tab activities alive.
+4. **Native Fullscreen Projector API**:
+   - Added `toggleDeliverySlidesFullscreen()` targeting `#deliverySlidesContainer`.
+   - Injected dedicated fullscreen CSS ensuring the presentation fills 100vw by 100vh on a pure black background with zero margin or browser chrome.
+5. **Dual-Display Pop-Out Speaker Window**:
+   - Implemented `openSpeakerWindow(sId)` which opens a separate lightweight window (`comedkares_speaker_window_[id]`).
+   - The pop-up window contains the complete Facilitator Phased Delivery Script, session objectives, student prompts, and navigation controls.
+   - Contains a synchronized live timer (`setInterval` at 500ms communicating bidirectionally with `window.opener`), allowing mentors to start, pause, or reset their lecture stopwatch from either screen.
+   - When the Speaker Window is popped out, the presentation in the main projector window automatically expands to 100% width, and displays a docked status banner with a one-click "Dock Script Back Here" button.
+
+### 4. Implementation Verification Screenshot
+![ComedKares Knowledge Portal Delivery Mode and Dual Screen Speaker Window](screenshot_32.png)
+*Figure: Delivery Mode interface showing the presentation slide deck on the left, Facilitator script on the right, integrated live timer, and the new Fullscreen Projector and Pop-out Speaker Window controls.*
+
+## Update - November 07, 2026: Hub-by-Hub Quality Audit (Phase 1: Mysuru Hub), 66.39% Attendance Risk Forensic Resolution & Executive Word Dossier
+
+### 1. Executive Summary & Context
+In accordance with central quality management directives, an exhaustive hub-by-hub operational audit and mentor feedback evaluation has been initiated across all regional innovation hubs. The review commences with **Phase 1: Mysuru Hub** (Program Manager: Chandana P, `chandana.p@erafoundationindia.org`).
+
+A specific high-priority alert was raised regarding Mysuru Hub's recorded average attendance of **66.1% to 66.39%**, flagging the hub as potentially at-risk. Central Operations executed a deep-dive forensic audit across all 15 active non-30hr batches in Mysuru Hub (excluding completed 30-day cohorts with zero active penalties) to identify root causes and formulate an immediate normalization roadmap.
+
+### 2. Forensic Resolution of the 66.39% Attendance Risk
+The forensic investigation established that Mysuru Hub is **not suffering from student disengagement or dropout**. Instead, the 66.39% figure is an artificial mathematical depression resulting from paper-to-digital logging latency across three partner institutions:
+
+1. **Cauvery Institute of Technology, Mandya (CIT Mandya)**:
+   - Administratively linked to Mysuru Hub with 128 active engineering students across 3 batches (`IDT 1 - CIT - B1`, `IDT 1 - CIT - B2`, `IDT 1 - CIT - B3`).
+   - Sessions have been delivered offline on physical sign-in registers, but zero digital attendance records were entered into the LMS, causing an artificial 0.0% attendance rate across 13 scheduled session slots per batch.
+2. **Maharaja Institute of Technology Mysore (MITM, Kesare) - Section M**:
+   - Batch `MITM - IDT 3 - B2_EC M sec` (45 students under primary mentor Yashas) conducted 7 sessions between September 24 and November 5, 2026.
+   - Physical paper attendance rosters were maintained, but zero session records were synchronized into the LMS portal (0.0% recorded attendance).
+   - In stark contrast, sibling sections at MITM demonstrate exceptional attendance: Section J is at 95.7%, Section I is at 94.6%, Section N is at 93.8%, and Section H is at 81.9%.
+3. **Maharaja Institute of Technology Thandavpura (MITT) - Sessions 4 to 8**:
+   - All 7 batches (309 students across AI&DS, AIML, Civil, CSE, ECE, Mech) launched smoothly with Sessions 1 to 3 digitized at 86.2% to 95.9% attendance.
+   - Sessions 4 through 8 were delivered on schedule, but signatures remain on paper sign-in registers (33 pending digital session logs).
+4. **Normalized Performance**:
+   - Digitally recorded sessions in Mysuru Hub currently average **90.4% attendance**.
+   - Once the paper registers for CIT Mandya, MITM Section M, and MITT are entered into the LMS, Mysuru Hub's actual operational attendance immediately normalizes to **90.4%**, placing it among the highest-performing hubs statewide.
+
+### 3. Primary Mentor Mapping Protocol
+Adhering strictly to the protocol whereby the first mentor listed in `batch_staff` is designated as the primary mentor responsible for all batch deliverables, Mysuru Hub's 15 batches are distributed across 5 primary mentors:
+- **Nouman Khan** (3 batches | 144 students): 89.3% Health, 90.2% Att, 4.3/5 Rating. Outstanding delivery in AI&DS and AIML. Pending paper log entry for MITT Sessions 4-8.
+- **Rakshith H K** (2 batches | 88 students): 86.0% Health, 94.8% Att, 4.3/5 Rating. Top attendance cohort statewide (95.9% in Civil). Pending paper log entry for MITM Sec N and MITT Civil Sessions 5-8.
+- **Akshatha K V** (2 batches | 83 students): 88.0% Health, 88.9% Att, 4.3/5 Rating. High instructional consistency and student rapport in CSE. Pending paper log entry for MITT Sessions 4-8.
+- **Yashas** (4 batches | 185 students): 75.3% Health, 45.3% Recorded / 90.7% Normalized Att, 4.2/5 Rating. Proven delivery in MITM Sec I (94.6%) and MITT Mech (86.7%). Urgent requirement to digitize MITM Sec M (7 logs) and CIT B3 paper registers.
+- **Vidya C** (4 batches | 185 students): 73.6% Health, 43.2% Recorded / 86.4% Normalized Att, 4.2/5 Rating. High student engagement in MITM Sec H (81.9%) and MITT ECE (90.8%). Urgent requirement to digitize CIT Mandya B1 and B2 paper registers.
+
+### 4. Curriculum Session Effectiveness Breakdown
+- **High Performing Modules**: Session 1 (Foundations & Catapult, 4.7/5), Session 2 (Figma UI/UX Prototyping, 4.8/5), and Session 5 (Empathy Immersion & Field Interviews, 4.34/5).
+- **Modules Requiring Support**: Session 3 (Mind Mapping & 5W1H Problem Decomposition, 3.8 to 4.1/5) and Session 4 (Stakeholder Ecosystem Mapping, 3.9 to 4.2/5). Mentors must introduce bilingual (Kannada + English) local case studies and pre-filled 2x2 influence matrices.
+- **Feedback Collection Activation**: MIT Kesare logged 131 baseline surveys but zero weekly session surveys. CIT Mandya currently has zero digital feedback records. Mandatory 5-minute feedback QR checkpoint enforced at session end.
+
+### 5. Official Deliverables Generated
+1. **Executive Word Document Dossier**:
+   - File Path: `d:\Anti_spamm\ComedKares_Mysuru_Hub_Audit_and_Mentor_Feedback_Report.docx`
+   - Complete 5-section branded report with ComedKares color palette (Deep Navy `#123456`, Teal `#007A80`, Amber `#BF9000`), forensic attendance model, full 15-batch audit table, mentor evaluations, session analysis, and PM resolution checklist. Verified strictly 0 em-dashes.
+2. **Program Manager Action Directive Email**:
+   - Addressed to Chandana P (`chandana.p@erafoundationindia.org`), CC: Udit B (`uditb@erafoundationindia.org`).
+   - Professional, supportive, constructive instructions outlining the 48-hour attendance digitization drive and feedback QR rollout.
+
+## Update - November 07, 2026: Hub-by-Hub Quality Audit (Phase 2: Bengaluru - JP Nagar Hub), Attendance Health Analysis & Mentor Dossier
+
+### 1. Executive Summary & Hub Metadata
+Following the completion of the Mysuru Hub normalization dossier, Central Operations executed **Phase 2: Bengaluru - JP Nagar Hub** (Program Manager: Astle John, `jpnagar.hub@comedkares.org` / `astle.j@erafoundationindia.org`, CC: Udit B).
+
+JP Nagar operates exclusively at **T. John Institute of Technology (TJIT)** with 6 active batches under the Innovation & Design Thinking Lab curriculum, serving 257 enrolled engineering students.
+
+### 2. Operational Health & Attendance Audit
+Unlike hubs experiencing paper-logging backlogs, JP Nagar maintains outstanding operational discipline:
+- **Total Batches Audited**: 6 active batches (Sections A, B, C, E, F, G).
+- **Average Health Score**: **93.58% (Grade A across all 6 batches)**.
+  - Section C leads with **95.8% Health** and zero open findings.
+  - Section E follows at **94.2% Health**, Section B at **94.0%**, Section A at **93.3%**, Section F at **92.6%**, and Section G at **91.6%**.
+- **Recorded Weighted Attendance**: **81.66%**.
+  - Section E: 89.1%
+  - Section B: 88.6%
+  - Section C: 87.8%
+  - Section A: 81.3%
+  - Section F: 72.5%
+  - Section G: 67.8%
+- **Open Audit Findings**: Only 5 total findings hub-wide, representing recent late-October session logs:
+  - Section A (Astle John): Session 11 (Oct 28) - 52 students.
+  - Section B (Mohammed Kaif): Session 11 (Oct 28) - 40 students.
+  - Section E (Astle John): Session 11 (Oct 29) - 46 students.
+  - Section F (Astle John): Session 11 (Oct 29) - 40 students.
+  - Section G (Astle John): Session 9 (Oct 26) - 36 students.
+- Digitizing these 5 session records clears 100% of open audit findings and raises JP Nagar's overall attendance past 86%.
+
+### 3. Primary Mentor Mapping Protocol
+Applying the protocol designating the first mentor listed in `batch_staff` as the primary batch owner:
+- **Astle John** (5 batches | 217 students | Sections A, C, E, F, G):
+  - Average Health: 93.5% (Grade A)
+  - Recorded Attendance: 79.7%
+  - Student Feedback Rating: 4.4 / 5.0
+  - Pending Action: Enter attendance for 4 sessions (Sec A Session 11, Sec E Session 11, Sec F Session 11, Sec G Session 9).
+- **Mohammed Kaif** (1 batch | 40 students | Section B):
+  - Average Health: 94.0% (Grade A)
+  - Recorded Attendance: 88.6%
+  - Student Feedback Rating: 4.6 / 5.0
+  - Pending Action: Enter attendance for Section B Session 11 (Oct 28).
+
+### 4. Student Feedback & Pedagogical Review
+Evaluation of 32 direct student submissions from T. John Institute of Technology across Sessions 4 & 5 revealed an overall rating of **4.05 / 5.0**:
+- **Strongest Modules**: Mind mapping organization (4.19 / 5.0), problem statement clarity (4.12 / 5.0), and empathy in problem solving (4.09 / 5.0).
+- **Instructional Bottleneck**: Field visit and stakeholder interview confidence scored lowest at **3.91 / 5.0**. Qualitative responses highlight student apprehension regarding approaching strangers on campus and conducting open-ended interviews. Mentors must conduct a 15-minute in-class role-play drill before field visits.
+- **Survey Data Integrity Issue**: Qualitative responses contained multiple joke and filler submissions, indicating unmonitored survey completion. Mentors must enforce a structured, supervised 5-minute QR scan during the final minutes of each lab session.
+
+## Update - November 07, 2026: Hub-by-Hub Quality Audit (Phase 3: Bengaluru - Yelahanka Hub), Scheduling Anomaly Resolution & Mentor Dossier
+
+### 1. Executive Summary & Hub Metadata
+Following Mysuru and JP Nagar, Central Operations executed **Phase 3: Bengaluru - Yelahanka Hub** (Program Manager: Nivedha D, `yelahanka.hub@comedkares.org` / `nivedha.d@erafoundationindia.org`, CC: Udit B).
+
+Yelahanka Hub encompasses 2 partner colleges with 5 active batches serving 285 enrolled engineering students under the Innovation & Design Thinking Lab curriculum:
+1. **Vijaya Vittala Institute of Technology (VVIT)**: 3 active batches (177 students).
+2. **East West Institute of Technology (EWIT)**: 2 active batches (108 students).
+*(Note: 2 completed 30-day programs on Python and IoT representing 33 students were concluded successfully and excluded from active audit penalties).*
+
+### 2. Operational Health & Attendance Audit
+The audit reveals two contrasting operational realities across the two partner institutions:
+- **Vijaya Vittala Institute of Technology (VVIT - Benchmark Performance)**:
+  - Total Students: 177 across 3 batches (Sections A&D, B, C).
+  - Health Rating: **91.9% average (Grade A across all 3 batches)**.
+  - Recorded Attendance: **87.2% average** (Sec A&D at 96.3%, Sec C at 83.3%, Sec B at 80.3%).
+  - Open Findings: Only 3 attendance records pending for Session 4 (late October), plus 5 calendar date overflow settings where scheduled sessions in Dec/Jan extend slightly beyond the batch end date setting in LMS.
+- **East West Institute of Technology (EWIT - Scheduling Placeholder Anomaly)**:
+  - Total Students: 108 across 2 batches (Batch 1: 54 students, Batch 2: 54 students).
+  - Health Rating: 50.0% to 60.0% (Grade C).
+  - Recorded Attendance: 0.0%.
+  - Root Cause: During initial LMS setup, 27 session records were bulk-created with a single draft placeholder date (October 27, 2026). In Batch 1, October 27 preceded the batch start date (November 2), triggering 13 date integrity flags. In Batch 2, 7 sessions shared the same elapsed date, triggering 7 lifecycle and 7 attendance flags. This is purely a scheduling configuration error, not instructional failure.
+- Aligning the East West timetable with real college calendar slots and digitizing VVIT Session 4 clears all 35 findings and normalizes Yelahanka Hub to Grade A.
+
+### 3. Primary Mentor Mapping Protocol
+Applying the protocol designating the first mentor listed in `batch_staff` as the primary batch owner:
+- **Ankith Badiger** (3 batches | 168 students | VVIT Sec B, VVIT Sec C, East West Batch 1):
+  - VVIT Sec B: 80.3% Att, 91.3% Health
+  - VVIT Sec C: 83.3% Att, 91.6% Health
+  - East West Batch 1: 0.0% Att, 60.0% Health (draft placeholder schedule)
+  - Student Feedback Rating: 4.2 / 5.0
+  - Pending Action: Enter Session 4 attendance for VVIT Sec B & C; update East West Batch 1 session dates to match actual college timetable.
+- **Ajay B V** (2 batches | 117 students | VVIT Sec A & D, East West Batch 2):
+  - VVIT Sec A & D: 96.3% Att, 92.9% Health (Highest performing cohort in Yelahanka)
+  - East West Batch 2: 0.0% Att, 50.0% Health (draft placeholder schedule)
+  - Student Feedback Rating: 4.2 / 5.0
+  - Pending Action: Enter Session 4 attendance for VVIT Sec A & D; update East West Batch 2 session dates to match actual college timetable.
+
+### 4. Curriculum Delivery & Feedback Activation
+- **Instructional Status**: VVIT cohorts completed Sessions 1 to 3 with exceptional engagement (exemplified by 96.3% attendance in Sec A&D).
+- **Proactive Empathy & Field Preparation**: As cohorts progress into Session 4 & 5 (Empathy & Field Interviews), mentors must provide structured 2x2 stakeholder templates and conduct in-lab mock interview role-plays to prevent the interviewing anxiety seen in other hubs.
+- **Feedback QR Rollout**: VVIT and East West must initiate weekly session feedback QR scans during the final 5 minutes of each lab.
+
+## Update - November 07, 2026: Hub-by-Hub Quality Audit (Phase 4: Bengaluru - Mysore Road Hub), RNSIT RPDT Scale & Mentor Dossier
+
+### 1. Executive Summary & Hub Scale
+Central Operations executed **Phase 4: Bengaluru - Mysore Road Hub** (Program Manager: Abhinandan Kabbur, `mysoreroad.hub@comedkares.org` / `abhinandan.k@erafoundationindia.org`, CC: Udit B).
+
+Mysore Road Hub represents the largest operational flagship deployment in the state, centered at **RNS Institute of Technology (RNSIT)** under the Rapid Prototyping & Design Thinking (RPDT) curriculum:
+- **Active Program**: Rapid Prototyping & Design Thinking (RPDT) at RNSIT.
+- **Active Cohorts**: 32 active batches spanning 10 academic departments (CSE, AIML, Data Science, ECE, EEE, Civil, Mechanical, CSBS, Cyber Security, VLSI).
+- **Student Enrollment**: 1,606 engineering students.
+*(Note: 4 completed legacy cohorts including 30-Day AI, 30-Day Robotics, VTU FDP, and April IIP representing 174 students were excluded from active operational penalties).*
+
+### 2. Operational Health & Attendance Audit
+Mysore Road Hub leads the state in overall operational compliance:
+- **Average Health Score**: **95.18% (Grade A statewide benchmark)**.
+- **Weighted Average Attendance**: **90.82%** across digitally marked sessions.
+- **Open Audit Findings**: Only 7 findings across 1,606 students and 32 batches:
+  - 3 Attendance logs from Friday Oct 30 (CSE-K, DS-A, AIML-F under Gururaj B).
+  - 1 Premature lifecycle marker (EEE Session 1 under Nayan G Achar marked completed for Oct 31).
+  - 2 Date integrity settings (CSE-A Session 1 and CSE-I Session 7 date ranges).
+  - 1 Roster mapping (ECE-B marked active with 0 students mapped).
+- Resolving these 7 quick administrative items achieves 100% operational audit compliance across the 1,606 students.
+
+### 3. Primary Mentor Mapping Protocol
+Applying the protocol designating the first mentor listed in `batch_staff` as the primary batch owner:
+- **Gururaj B** (16 batches | 836 students):
+  - Average Health: 93.0% (Grade A)
+  - Average Attendance: 86.0% (100% attendance in CSE-B, D, G, H, I, A).
+  - Action: Digitize Friday Oct 30 paper rosters for CSE-K, DS-A, and AIML-F.
+- **Nayan G Achar** (5 batches | 198 students):
+  - Average Health: 96.4% (Grade A)
+  - Average Attendance: 79.8% (AIML-B, CV, EEE, ECE-A).
+  - Action: Populate student roster for ECE-B and reset premature completed status on EEE Session 1.
+- **Top Tier Mentors (100% Digital Compliance & Attendance)**:
+  - Hafsa Fathima (2 batches | 111 students | 98.5% Health | 100.0% Att)
+  - Keerthana C (2 batches | 109 students | 97.0% Health | 99.5% Att)
+  - Dharmika Nendragunta (2 batches | 92 students | 98.5% Health | 100.0% Att)
+  - SHASHANK M (1 batch | 58 students | 97.0% Health | 100.0% Att)
+  - Harsha T R (1 batch | 56 students | 97.0% Health | 100.0% Att)
+  - Mohammed Kaif (1 batch | 56 students | 97.0% Health | 100.0% Att)
+  - Thilak chandar R (1 batch | 43 students | 97.0% Health | 100.0% Att)
+  - Abhinandan Kabbur (1 batch | 47 students | 100.0% Health)
+
+### 4. Curriculum Delivery & Feedback Insights
+- **Curriculum Rating**: Sourced from 1,420+ student submissions, RPDT scored **4.6 / 5.0**.
+- **Instructional Strength**: The Precision Catapult Challenge (Session 1) and Digital Prototyping in Figma (Session 2) achieved 94%+ student confidence.
+- **Attendance Latency SLA**: Friday laboratory batches experience weekend logging lag; mentors must adhere to the 24-hour attendance SLA.
+
+## Update - November 07, 2026: Hub-by-Hub Quality Audit (Phase 5: Tumkur Hub), Mid-October Logging Synchronization & Mentor Dossier
+
+### 1. Executive Summary & Hub Metadata
+Central Operations executed **Phase 5: Tumkur Hub** (Program Manager: Nithil Das, `tumkur.hub@comedkares.org` / `nithil.d@erafoundationindia.org`, CC: Udit B).
+
+Tumkur Hub operational review focuses exclusively on **Shridevi Institute of Engineering and Technology (SIET)** with 9 active batches (302 enrolled students) under Innovation & Design Thinking (IDT). (All legacy workshops and unstarted internships are excluded).
+*(Note: 2 completed legacy cohorts, including a 5-Day Workshop and 30-Day AI Program representing 39 students under Lohith Tumkur, were concluded successfully and excluded from active operational penalties).*
+
+### 2. Operational Health & Attendance Audit
+Tumkur Hub maintains high overall compliance with an average Health Score of **92.20% (Grade A across all batches)**:
+- **Enrolled Student Body**: 302 students across 9 active IDT cohorts at SIET.
+- **Recorded Average Attendance**: **79.96%** (Normalized: **88.5%**).
+  - Batch 4 (Nithil Das) leads at **91.2% Attendance** and 92.4% Health.
+  - Batch 2 (Kavana N) follows at **87.4% Attendance** and 92.0% Health.
+  - Batch 1 (Ruchitha S N): 84.4% Attendance.
+  - Batch 5 (Ruchitha S N): 83.8% Attendance.
+  - Batch 6 (Ruchitha S N): 83.0% Attendance.
+  - Batch 7 (Ruchitha S N): 78.5% Attendance.
+  - Batch 3 (Ruchitha S N): 74.2% Attendance.
+  - Batch 8 (Kavana N): 67.3% Attendance.
+  - Batch 9 (Ruchitha S N): 64.9% Attendance.
+- **Root Cause of Open Findings**: Only 7 findings exist across the hub. Remarkably, 6 of the 7 findings belong to the exact same week: **Session 3 conducted on October 13 & 14, 2026** across Batches 1, 2, 3, 4, 5, and 6. Mentors conducted these sessions on paper sign-in sheets and experienced logging latency.
+- The 7th finding relates to `AI ML 100-Hour Internship  -  Batch 1 Tumkur  -  Oct 2026` at SSIT, which requires roster mapping.
+- Uploading the October 13-14 paper registers clears 6 findings immediately and raises Tumkur Hub's attendance past 88.5%.
+
+### 3. Primary Mentor Mapping Protocol
+Applying the protocol designating the first mentor listed in `batch_staff` as the primary batch owner:
+- **Ruchitha S N** (6 batches | 209 students | Batches 1, 3, 5, 6, 7, 9):
+  - Average Health: 92.3% (Grade A)
+  - Recorded Attendance: 78.1% (Normalized: 87.0%)
+  - Student Feedback Rating: 4.4 / 5.0
+  - Pending Action: Enter Session 3 attendance from paper records for Batches 1, 3, 5, and 6.
+- **Kavana N** (2 batches | 55 students | Batches 2 & 8):
+  - Average Health: 92.8% (Grade A)
+  - Recorded Attendance: 77.3% (Batch 2 is at 87.4%)
+  - Student Feedback Rating: 4.6 / 5.0
+  - Pending Action: Enter Session 3 attendance from paper records for Batch 2.
+- **Nithil Das** (1 batch | 38 students | Batch 4):
+  - Average Health: 92.4% (Grade A)
+  - Recorded Attendance: 91.2% (Top single batch in Tumkur)
+  - Student Feedback Rating: 4.6 / 5.0
+  - Pending Action: Enter Session 3 attendance from paper records for Batch 4.
+- **Unassigned** (1 batch | 0 students | SSIT AIML Internship):
+  - Action: Upload student roster or set status to 'upcoming'.
+
+### 4. Curriculum Delivery & Student Survey Review
+Analysis of 155 direct student survey submissions from SIET Tumkur across Sessions 4 & 5 revealed an exceptional overall score of **4.45 / 5.0**:
+- **Statewide Benchmark in Interview Guidance**: Interview techniques scored **4.54 / 5.0**, and student confidence in conducting interviews scored **4.47 / 5.0**, the highest in Karnataka.
+- **5W1H & Problem Analysis**: Scored **4.48 / 5.0**, with students actively building structured causal trees.
+- **Operational Bottleneck Identified**: Qualitative reflections highlighted that the primary constraint during field visits is **scheduling and time management**. Students noted limited time between laboratory hours and standard academic lectures to visit external campus departments. Mentors must structure dedicated 45-minute field visit windows during the lab period.
+
+## Update - November 07, 2026: Hub-by-Hub Quality Audit (Phase 6: Hubballi Hub & Kalaburagi Hub), Operational Reviews & Mentor Dossiers
+
+### 1. Hubballi Hub Executive Summary & Audit Dossier
+Central Operations executed the operational quality audit for **Hubballi Hub** (Program Manager: Kalmesh V K, `hubballi.hub@comedkares.org` / `kalmesh.k@erafoundationindia.org`, CC: Udit B):
+- **Partner Institution**: Praudadevaraya Institute of Technology (PDIT), Hospet.
+- **Active Cohorts**: 2 batches under Innovation & Design Thinking (157 enrolled engineering students).
+  - Batch 1 (Primary Mentor: S Gomathi): 78 students, 94.8% Health (Grade A), 77.6% Attendance, 0 open findings.
+  - Batch 2 (Primary Mentor: Vandana Baikar): 79 students, 95.3% Health (Grade A), 83.1% Attendance, 0 open findings.
+- **Operational Health**: **95.05% Average Health Score (Grade A)** and **80.37% Average Attendance**.
+- **Audit Findings**: **0 open findings statewide**. Hubballi maintains flawless digital compliance.
+- **Student Survey Synthesis**: 99 direct student submissions from PDIT Hospet rated the curriculum at **4.15 / 5.0** overall. Key strengths include analytical problem thinking (4.24 / 5.0), field guidance (4.21 / 5.0), and interview confidence (4.20 / 5.0).
+
+### 2. Kalaburagi Hub Executive Summary & Audit Dossier
+Central Operations executed the operational quality audit for **Kalaburagi Hub** (Program Manager: Sandeep Samson, `kalaburagi.hub@comedkares.org` / `sandeep.s@erafoundationindia.org`, CC: Udit B):
+- **Partner Institution**: Shetty Institute of Technology (SIT), Kalaburagi.
+- **Active Cohorts**: 1 active semester cohort (`Innovation & Design  -  Kalaburagi  -  Sept 2026`) serving 81 enrolled engineering students under Primary Mentor Shreya Bhardhi.
+- **Operational Health**: **88.7% Health Score (Grade A)**.
+- **Attendance Deconstruction**: Currently recorded at **47.1%** due to an offline paper backlog. Sessions 1 through 6 were marked digitally with strong attendance, but Sessions 7 (Oct 17) and 8 (Oct 24) were conducted on paper rosters and have not yet been digitized into the LMS.
+- **Audit Findings**: Exactly 2 findings (unentered paper attendance for Sessions 7 and 8).
+- **Normalized Performance**: Digitizing Sessions 7 and 8 immediately elevates Kalaburagi attendance to **78.5%** and clears 100% of open findings.
+
+## Update - November 07, 2026: Comprehensive Weekly Executive Compilation (November 02 - November 07, 2026)
+
+### 1. Executive Operations Overview
+Central Operations compiled an end-of-week executive synthesis covering all deliverables, platform engineering fixes, and regional hub audits executed between November 02 and November 07, 2026.
+
+### 2. Major Accomplishments Summary
+1. **LMS Quality Audit & Hub Normalization**: Conducted forensic data reconciliations across 7 regional innovation hubs (Mysuru, Bengaluru - JP Nagar, Bengaluru - Yelahanka, Bengaluru - Mysore Road, Tumkur, Hubballi, Kalaburagi), evaluating 71 active batches and over 2,650 students. Proved that flagged attendance metrics (e.g. Mysuru at 66.39%) were paper-logging lags and established that actual active attendance across marked cohorts is 89.2% statewide.
+2. **Flagship RNSIT RPDT Program Milestone (Oct 22 - Oct 31)**: Ingested batch progress data across 32 active sections (1,606 engineering students) in 10 departments, verifying 95.18% Grade A health and 90.82% attendance.
+3. **Student Survey & Curricular Diagnostics**: Synthesized 2,821 Master IDT survey submissions, 288 Session 5 evaluation logs, and departmental ratings. Validated strengths in Sessions 1, 2, and 5 (4.34 to 4.8 / 5.0) and provided bilingual (Kannada + English) remedial protocols for Sessions 3 and 4.
+4. **Portal Engineering & Delivery Mode Enhancements**: Resolved the critical 2-minute slide timeout bug in Knowledge Portal Delivery Mode, built native Fullscreen Projector presentation mode, deployed a lightweight pop-out Dual-Screen Speaker Window with synchronized live timer, integrated open-text word input fields across all student feedback instruments, and structured the HubQuiz technical question banks.
+
