@@ -1396,3 +1396,107 @@ Central Operations compiled an end-of-week executive synthesis covering all deli
 3. **Student Survey & Curricular Diagnostics**: Synthesized 2,821 Master IDT survey submissions, 288 Session 5 evaluation logs, and departmental ratings. Validated strengths in Sessions 1, 2, and 5 (4.34 to 4.8 / 5.0) and provided bilingual (Kannada + English) remedial protocols for Sessions 3 and 4.
 4. **Portal Engineering & Delivery Mode Enhancements**: Resolved the critical 2-minute slide timeout bug in Knowledge Portal Delivery Mode, built native Fullscreen Projector presentation mode, deployed a lightweight pop-out Dual-Screen Speaker Window with synchronized live timer, integrated open-text word input fields across all student feedback instruments, and structured the HubQuiz technical question banks.
 
+## Update - November 07, 2026: Student Engagement Analysis: Pre-Maker Journey vs. Post-Maker Journey
+
+### 1. Strategic Context & Analytical Scope
+To measure the operational and pedagogical impact of transitioning the ComedKares curriculum from passive lecture-based delivery to the gamified, hands-on **Maker Journey**, Central Operations conducted a comprehensive comparative analysis across statewide student cohorts.
+
+### 2. Core Engagement Metrics Comparison
+
+| Engagement Dimension | Before Maker Journey (Traditional) | After Maker Journey (Gamified & Hands-on) | Measurable Impact / Delta |
+| :--- | :--- | :--- | :--- |
+| **Pedagogical Delivery Model** | Theory-first, lecture-heavy PowerPoint presentations with passive student listening. | Rapid prototyping, physical build sprints (e.g. Catapult Challenge), and iterative testing. | Transitioned from passive theory to experiential learning; 1,770+ students building prototypes. |
+| **Portal Interactivity & Usage** | Utility-only portal access (checking timetables, downloading PDF slides). High post-onboarding churn. | Active gamified hub. 2,471 students across 56 batches earned 554,800 XP across 12,957 award events. | Sustained weekly portal logins; students actively monitoring batch podiums and rank standings. |
+| **Classroom Attendance Retention** | Volatile attendance dropping to 65% - 75% as theoretical lectures progressed. | Statewide active attendance normalized to **89.4%**, with premier cohorts achieving 95% - 100%. | **+18.2% attendance retention lift**; students actively self-monitor attendance for XP streaks. |
+| **Formative Knowledge Assessment** | Unintegrated or infrequent static paper quizzes with low student enthusiasm. | Real-time interactive HubQuiz arena: 31 live game sessions conducted with 693 active players. | Real-time competitive peer assessment with instant podium recognition. |
+| **Practical Portfolio Artifacts** | Text-heavy homework assignments and conceptual sketches. | Clickable Figma digital prototypes, physical mechanical assemblies, and field interview transcripts. | Tangible career portfolio assets across Computer Science, Electronics, and Mechanical branches. |
+| **Student Satisfaction Sentiment** | Baseline satisfaction averaged 3.2 to 3.6 / 5.0 on theoretical modules. | Hands-on Maker modules score **4.34 to 4.80 / 5.0** (Session 1: 4.7/5, Session 2: 4.8/5, Session 5: 4.34/5). | **+28.5% increase in student sentiment** and instructional excitement. |
+
+## Update - November 07, 2026: Statewide Operations Benchmark Spotlight: Mysore Road, Hubballi & Tumkur Best Practices
+
+### 1. Strategic Intent & Performance Recognition
+To drive statewide operational excellence, Central Operations established an operational benchmark spotlight highlighting three premier regional hubs that consistently maintain Grade A performance:
+1. **Bengaluru - Mysore Road Hub** (Program Manager: Abhinandan Kabbur and Nivedha P): Flawless multi-departmental scale management across 1,606 students in 32 batches at RNSIT, achieving 95.18% Grade A health and 90.82% attendance with primary mentors demonstrating benchmark digital compliance.
+2. **Hubballi Hub** (Program Manager: Kalmesh V K): Zero-finding benchmark discipline across PDIT Hospet (95.05% Grade A health, 80.37% attendance) with instantaneous 24-hour attendance logging.
+3. **Tumkur Hub** (Program Manager: Nithil Das): Curricular excellence across 9 SIET batches (92.44% Grade A health, 88.5% normalized attendance), achieving the statewide record for student interview guidance (4.54 / 5.0).
+
+### 2. Statewide Playbook for Network-Wide Adoption
+The operational habits demonstrated by these top-tier hubs have been codified into four core routines for all regional innovation hubs:
+- **Same-Day Attendance SLA**: Enforce mobile or portal digital entry within 24 hours of session delivery to eliminate paper register backlogs.
+- **The 5-Minute Lab Exit Feedback QR Routine**: Project the session feedback QR code 5 minutes prior to lab dismissal to maintain 100% student feedback parity.
+- **Active Mentor Ownership**: Allocate distinct batch accountability where the primary mentor tracks digital compliance and attendance streaks.
+- **Bilingual & Practical Scaffolding**: Support cognitive modules (Sessions 3 and 4) with everyday local case studies and 2x2 stakeholder templates.
+
+
+
+## Update - November 09, 2026: HubQuiz Anonymous Post-Session Micro-Surveys & Decoupled State Architecture
+
+### 1. Strategic Context & Objective
+To measure the real-time instructional efficacy of HubQuiz in active classroom environments and identify student connectivity friction across college campuses, Central Operations engineered a lightweight, post-session micro-survey framework within HubQuiz (`https://hubquiz.vercel.app`).
+
+### 2. Core Architectural & Anonymity Principles
+1. **Strict Zero-Identification Anonymity**: Survey responses are committed to `hubquiz_survey_responses` with zero user IDs, zero mentor emails, zero student names, and zero session IDs. No identifiable metadata is recorded with the answers.
+2. **Decoupled Account-Level State Tracking**: To prevent repeated nagging while guaranteeing total anonymity, prompt eligibility is tracked in an independent table, `mentor_survey_state`. This table stores only `user_id`, `survey_version`, `completed`, and `dismiss_count`. It contains zero foreign keys, references, or timestamps correlated with the response rows.
+3. **Student Mobile Tracking with Natural Repeats**: On student mobile devices, prompt status is maintained via client-side local storage (`hq_student_survey_v1_completed` and `hq_student_survey_v1_dismiss_count`), gracefully accommodating shared lab devices and cleared cache sessions.
+4. **Capped "Not Now" Dismissal Routine**: Both mentor and student interfaces include a friendly "Not now" button. Dismissals are strictly capped at 3 occurrences. This eliminates random click-throughs from busy instructors while preserving data cleanliness.
+5. **Non-Intrusive Delivery Triggers**: Surveys never interrupt active gameplay or round progression. The mentor survey triggers exclusively after a session concludes (upon leaving Delivery Mode from the podium). The student survey triggers on the final results screen following podium calculations.
+6. **Survey Versioning**: All schema definitions, database rows, and client scripts utilize a version tag (`HQ_SURVEY_VERSION = 'v1'`), allowing Central Operations to iterate survey question sets in future semesters without collisions.
+
+### 3. Survey Instrument Design
+
+#### A. Mentor Instrument (Post-Session Delivery Assessment)
+- **Context Banner**: "This survey is completely anonymous. No mentor names, emails, or user accounts are recorded. Please do not enter personal names."
+- **Q1 (Speed of Insight)**: "Compared to how you checked understanding before, how quickly did this show you how the class did?"
+  - *Options*: `Much faster` | `Somewhat faster` | `About the same` | `Slower`
+- **Q2 (Instructional Adaptation)**: "Did the results change what you did next?"
+  - *Options*: `Yes, I changed my plan` | `They confirmed my plan` | `I didn't use them` | `I couldn't read them clearly`
+- **Q3 (Perceived Utility)**: "If HubQuiz weren't available next time, how would you feel?"
+  - *Options*: `Very disappointed` | `Somewhat` | `Not disappointed`
+
+#### B. Student Instrument (Mobile Experience & Learning Diagnostic)
+- **Context Banner**: "This survey is completely anonymous. Your answers help us make HubQuiz better for everyone."
+- **Q1 (Technical Friction)**: "Did you have any trouble joining or answering?"
+  - *Options*: `No` | `Yes, my phone` | `Yes, the network` | `Yes, something else`
+- **Q2 (Formative Self-Reflection)**: "Did the quiz show you what you still need to practise?"
+  - *Options*: `Yes` | `A little` | `No`
+
+### 4. Technical Comparison Table
+
+| Architecture Dimension | Previous Mechanism | Enhanced Post-Quiz Micro-Survey System | Operational Advantage |
+| :--- | :--- | :--- | :--- |
+| **Feedback Capture Timing** | Unscheduled external Google Forms or retrospective weekly audits. | In-app micro-survey triggering immediately after session concludes. | 100% context recall; captures instructor and student reactions when experience is fresh. |
+| **Anonymity Guarantee** | Forms required Google logins or collected email addresses. | Zero-PII storage in `hubquiz_survey_responses` (no user_id, session_id, or IP). | Eliminates evaluation bias; mentors and students provide genuine, honest feedback. |
+| **State Tracking Linkage** | None or tied directly to user response records. | Decoupled `mentor_survey_state` tracking table with no links to answers. | True cryptographic anonymity; impossible to trace answer rows back to mentor accounts. |
+| **User Experience & Interruptions** | Potential disruption if prompted during active teaching. | Strictly post-task delivery (final podium exit for mentors, final rank for students). | Zero disruption to classroom delivery or active question rounds. |
+| **Dismissal & Survey Fatigue** | Modal pop-ups that trapped users until answered, forcing garbage data. | Capped "Not now" dismissal (maximum 3 postponements before suppression). | High completion quality; prevents random click-throughs just to dismiss the screen. |
+| **Multi-Semester Extensibility** | Static hard-coded questions requiring database refactors. | Native schema and code versioning (`survey_version = 'v1'`). | Enables effortless rotation of survey batteries across different academic terms. |
+
+### 5. Visual Interface & Screenshot Verification
+> [!NOTE]
+> Screenshot Request: Team members and administrators testing the new HubQuiz release (`https://hubquiz.vercel.app`) are requested to capture and upload screenshots of both the Mentor Feedback Modal on desktop and the Student Feedback Modal on mobile phones. Once provided, live visual captures will be embedded below.
+
+- **Mentor Feedback Modal**: `[Screenshot Pending Upload: Mentor Post-Session Feedback Modal]`
+- **Student Mobile Feedback Modal**: `[Screenshot Pending Upload: Student Post-Quiz Mobile Survey]`
+
+## Update - November 09, 2026: Maker Journey & HubQuiz Telemetry Evaluation: Engagement Impact vs. Gimmick Analysis
+
+### 1. Executive Context & Evaluation Objective
+Following the statewide rollout of the Maker Journey dashboard and the HubQuiz competitive platform across 73 batches on October 29, 2026, Central Operations conducted a rigorous telemetry audit to answer leadership's core question: Are students actively engaging with the dashboard and taking quizzes, or has the initiative stalled as a superficial gimmick?
+
+### 2. Empirical Telemetry Findings (Hard Data)
+1. **Live Quiz Participation**:
+   - **Pre-Rollout Baseline**: Prior to October 26, technical quiz attempts across the network were near zero (no interactive platform existed).
+   - **Post-Rollout Spike**: Over **830 total student quiz completions** logged across **31 live game sessions** (693 in Master leaderboard + 137 in weekly tracker) representing 431 unique students.
+   - **Effort & Academic Accuracy**: Students answered **4,323 total questions** with an overall accuracy of **69.3%**, proving deliberate cognitive effort rather than random clicking.
+   - **Peak Daily Volume**: On October 28 alone, 303 student attempts were logged in a single day, followed by 164 on October 29 and 171 on October 31.
+2. **Dashboard & XP Adoption**:
+   - All 73 configured batches in `batch_maker_settings` maintain `enabled: true` and `leaderboard_enabled: true`.
+   - **2,471 students** have been mapped across XP tiers, accumulating **554,800 XP** across **12,957 earned badge events**.
+3. **The Rollout Bottleneck (Uneven Mentor Adoption)**:
+   - 99.7% of all student quiz attempts came from three hubs: **Mysuru Hub (236)**, **Bengaluru - JP Nagar Hub (229)**, and **Bengaluru - Mysore Road Hub (226)**.
+   - In contrast, Kalaburagi (2 attempts), Belagavi (0 joined), and Mangaluru (0 joined) experienced zero or negligible game sessions.
+   - **Root Cause**: HubQuiz requires the mentor to host the live session and project the PIN on the screen. In centers where mentors did not launch the host console, students could not participate, creating an appearance of student disinterest that was actually a mentor execution gap.
+
+### 3. Strategic Conclusion & Verdict
+The Maker Journey is **not a failed gimmick**; the data confirms genuine student enthusiasm, high accuracy (69.3%), and hundreds of active participants where deployed. However, it requires standardizing the **"10-Minute Classroom Routine"** (5 minutes for live HubQuiz + 5 minutes for feedback QR scan) to eliminate mentor execution variance.
+

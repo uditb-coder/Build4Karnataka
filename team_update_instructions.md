@@ -1024,3 +1024,75 @@ All mentors must synchronize their physical paper attendance sheets for Session 
 3. **Curricular Scaffolding for Sessions 3 & 4**: Mentors must provide practical everyday local examples and 2x2 stakeholder matrices with bilingual (Kannada + English) explanations before student exercises.
 4. **Supervised Feedback QR Scan**: All mentors must reserve the final 5 minutes of each lab session to project the feedback QR code and ensure 100% student submission before dismissal.
 
+## Curriculum Delivery Protocol: Leveraging the Maker Journey for Student Engagement
+
+### Key Guidance for Mentors & Program Managers
+1. **Physical Build First, Theory Second**: Always launch sessions with rapid tactile challenges (e.g., Catapult iterations, breadboard wiring, Figma wireframing) before introducing abstract frameworks.
+2. **Batch Leaderboard Visibility**: Project the batch leaderboard at the beginning and conclusion of every session to highlight Top-3 podium winners and students with active XP streaks.
+3. **Closing the Feedback Loop via Gamification**: Remind students that submitting their weekly 2-minute feedback form awards +40 XP towards their Maker status, eliminating survey drop-off.
+
+## Statewide Mentor Briefing: Operational Benchmark Spotlight & Excellence Playbook
+
+### Celebrating Our Top-Tier Hubs
+We celebrate three regional hubs demonstrating benchmark leadership across Karnataka:
+- **Mysore Road Hub (Scale & Mentor Ownership)**: Abhinandan Kabbur, Nivedha P, and the dedicated mentor team managing 1,606 students across 32 batches with 95.18% Grade A health.
+- **Hubballi Hub (Flawless Operational Hygiene)**: Kalmesh V K, Vandana Baikar, and S Gomathi maintaining a perfect zero-finding record statewide.
+- **Tumkur Hub (Pedagogical Excellence)**: Nithil Das, Ruchitha S N, and Kavana N achieving a statewide record of 4.54 / 5.0 in student interview ratings across 155 responses.
+
+### Four Operational Habits for All Regional Teams
+1. **Never Let Paper Logs Sleep**: Enter attendance into the LMS portal on the same day the lab concludes.
+2. **The 5-Minute Dismissal QR Routine**: Dedicate the final 5 minutes of every lab to the feedback QR scan.
+3. **Bring Local Everyday Examples**: Explain 5W1H and stakeholder trees bilingually (Kannada + English) using familiar examples before asking students to build.
+4. **Celebrate Student XP & Leaderboards**: Project the batch leaderboard at the start of class to recognize Top-3 podium holders.
+
+
+
+## Operations & Mentor Protocol: HubQuiz Anonymous Post-Session Micro-Surveys (Version 1 Protocol)
+
+### Target Audience & Applicability
+- **Audience**: All Regional Innovation Hub Mentors, Program Managers, and Delivery Leads.
+- **Application**: HubQuiz Live Classroom Arena (`https://hubquiz.vercel.app`).
+- **Release Version**: `v1` Micro-Survey Engine.
+
+### 1. Purpose of the Post-Quiz Survey
+To support continuous instructional improvement across all partner colleges, HubQuiz now features an automated, anonymous micro-survey at the conclusion of every live quiz session. This feedback informs Central Operations about real-time teaching adaptations and campus network stability.
+
+### 2. Strict Anonymity & Data Decoupling
+- **Zero Identification**: Neither your name, email, user account, nor session ID is linked to your survey submission.
+- **Decoupled Tracking**: The system tracks whether your account has completed the survey in an isolated status table that contains zero links to the answer database.
+- **No Personal Names**: When providing free-form input or feedback, please never type personal names, since regional hubs with small mentor cohorts could otherwise be identified.
+
+### 3. Mentor Interaction Protocol
+- **When It Appears**: The feedback modal only appears when you end the quiz session from the final podium screen or return to the host dashboard. It will never interrupt an active question round or teaching moment.
+- **Questions Asked**:
+  1. *Compared to how you checked understanding before, how quickly did this show you how the class did?* (`Much faster` / `Somewhat faster` / `About the same` / `Slower`)
+  2. *Did the results change what you did next?* (`Yes, I changed my plan` / `They confirmed my plan` / `I didn't use them` / `I couldn't read them clearly`)
+  3. *If HubQuiz weren't available next time, how would you feel?* (`Very disappointed` / `Somewhat` / `Not disappointed`)
+- **"Not Now" Option**: If you are in a rush between back-to-back classes, you may tap "Not now". The prompt will return after a future session (capped at 3 postponements).
+
+### 4. Student Interaction Protocol
+- **When It Appears**: On student mobile screens, the survey appears 1.2 seconds after their final podium rank and score are displayed.
+- **Student Questions**:
+  1. *Did you have any trouble joining or answering?* (`No` / `Yes, my phone` / `Yes, the network` / `Yes, something else`)
+  2. *Did the quiz show you what you still need to practise?* (`Yes` / `A little` / `No`)
+- **Mentor Guidance**: Please inform students that their answers are 100% anonymous and encourage them to report any Wi-Fi or phone lag honestly so technical teams can optimize hub routers.
+
+### 5. Verification & Live Screenshot Request
+> [!IMPORTANT]
+> Mentors and Hub Leads: Please capture high-resolution screenshots of the new feedback prompt on your host laptop and student smartphones during your next live session, and share them with Central Operations for inclusion in statewide program documentation.
+
+## Curriculum Operational Directive: Standardizing the 10-Minute Maker & Quiz Routine
+
+### Objective: Overcoming Mentor Execution Variance
+Telemetry analysis confirms that when mentors project the HubQuiz PIN, student participation and accuracy (69.3%) are exceptionally high. However, several hubs showed zero participation because mentors did not launch the quiz console.
+
+### Mandatory Weekly 10-Minute Laboratory Protocol
+Every mentor across all regional hubs must integrate this standard routine into the final 10 minutes of every session:
+1. **Minutes 0 - 5 (Interactive HubQuiz Arena)**:
+   - Launch the HubQuiz host screen for the current session.
+   - Project the 6-digit game PIN on the main display.
+   - Students join from mobile devices or laptops and compete on the live leaderboard.
+2. **Minutes 5 - 10 (Feedback QR Checkpoint)**:
+   - Project the session feedback QR code.
+   - Ensure all students submit their reflections (+40 Maker XP) before packing up.
+
