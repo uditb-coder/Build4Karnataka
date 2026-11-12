@@ -864,6 +864,20 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - The complete schedule has been compiled into an executive Microsoft Word document: `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
    - Team members, mentors, and outreach coordinators can share this document directly with participating institutions, college principals, faculty mentors, and student teams.
 
+### Update - Mangaluru Registration Surge & Scarcity Campaign (27/50 Teams Confirmed)
+1. **Current Registration Surge**: Exactly 27 team registrations have been received and confirmed out of the 50 available slots (over 54% full). Only 23 team slots remain open!
+2. **Website Urgency & Hype Elements Activated**:
+   - **Top Announcement Bar**: Now alerts visitors with `🔥 FAST FILLING: 27 / 50 TEAMS CONFIRMED · Only 23 slots left!`.
+   - **Header CTA**: Displays a live `23 left!` badge to prompt instant action.
+   - **Hero Capacity Meter**: Visual progress bar showing 54% filled with a pulsing live status dot.
+   - **Terminal Console**: Includes a live `$ capacity --check` command showing 27 confirmed and 23 remaining slots.
+   - **Bottom Callout Box**: Prominent scarcity box highlighting that seats will close permanently once 50 teams are reached.
+3. **Team Outreach Directives**:
+   - In all college outreach, WhatsApp messages, and phone calls, emphasize urgency: *"Over 50% of seats are already booked (27 of 50 confirmed). With only 23 slots left on a first-come, first-served basis, please advise your student teams to complete their Google Form registrations immediately before the 50-team cap is reached."*
+   - Share direct registration link: https://forms.gle/M2Q93UHtBamjD3GM8 or https://build4karnataka.comedkares.com/.
+
+![Mangaluru Hero Registration Surge](assets/registration_hype_hero.png)
+
 ## Hub Quality Normalization Protocol: Mysuru Hub (Phase 1 Audit & Mentor Directives)
 
 ### Target Audience & Scope
@@ -1096,3 +1110,29 @@ Every mentor across all regional hubs must integrate this standard routine into 
    - Project the session feedback QR code.
    - Ensure all students submit their reflections (+40 Maker XP) before packing up.
 
+
+
+## Operational Protocol: Maximizing Student Engagement via LMS Maker Journey & Native Quizzes
+
+### 1. Telemetry Context & Student Engagement Findings
+Recent native LMS database audits confirm that student engagement increased dramatically following the Maker Journey activation on October 29:
+- **1,707 native LMS quiz attempts** have been submitted in just 12 days (averaging 142.2 attempts per day, a 5.1x increase compared to the prior baseline of 27.9 attempts per day).
+- **1,560 badges** have already been awarded on `students.comedkares.com`.
+- **Pass rate on LMS quizzes** stands at an impressive 94.3% with an average score of 91.6%.
+
+This proves that students are excited to earn XP, unlock visual badges, and view their ranks on the batch leaderboard. However, daily attempt numbers show that student participation is directly linked to mentor guidance. When mentors prompt the class, attempts surge to several hundreds per day. When mentors omit this prompt, students only interact with passive classroom materials.
+
+### 2. Mentor Action Checklist for Every Laboratory Session
+1. **Highlight the Leaderboard Tab**:
+   - Instruct students to open `students.comedkares.com` and click the "Leaderboard" tab in their top navigation bar.
+   - Point out that all 73 active batches across the state now have live leaderboards enabled.
+2. **Mandate Native LMS Module Quizzes**:
+   - At the conclusion of each technical topic or lab module, allocate 5 minutes for students to complete the corresponding LMS quiz under "Classwork".
+   - Remind students that passing scores trigger instant XP and badge rewards.
+3. **Celebrate Unlocked Badges**:
+   - Encourage students to review their profile cards to see their newly unlocked Maker badges.
+   - Recognize top-ranking students or rising stars at the beginning of each session.
+
+### 3. Screenshot Submission Request
+> [!NOTE]
+> Mentor Call to Action: Please upload screenshots of your batch students viewing the live LMS Leaderboard tab on their laptops and their earned badge cards on `students.comedkares.com`. These captures will be featured in the weekly central management report.

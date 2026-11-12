@@ -102,7 +102,7 @@ nav.links{display:flex;gap:16px;font-size:13.5px;white-space:nowrap;flex-shrink:
 nav.links a{color:var(--ink-faint);padding:4px 0;border-bottom:2px solid transparent;transition:color .15s,border-color .15s;white-space:nowrap;}
 nav.links a:hover{color:var(--accent);border-bottom-color:var(--accent-bright);}
 .nav-right{display:flex;align-items:center;gap:12px;}
-.nav-cta{display:none;}
+.nav-cta{display:none;padding:8px 16px;font-size:12px;gap:6px;}
 @media(min-width:1200px){.nav-cta{display:inline-flex;}}
 .hamburger{display:none;flex-direction:column;gap:5px;padding:8px;border:1px solid var(--line);border-radius:8px;background:none;}
 .hamburger span{width:20px;height:2px;background:var(--ink);display:block;transition:all .3s;}
@@ -638,6 +638,143 @@ img { max-width: 100%; height: auto; }
   #heroCountdown{display:flex;}
   .edition-card .btn{white-space:normal;}
 }
+
+/* ===== Registration Hype & Urgency Meter Styles ===== */
+.urgency-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #ef4444;
+  color: #ffffff;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 9px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+  margin-right: 8px;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.4);
+  animation: pulse-urgency 2s infinite ease-in-out;
+}
+@keyframes pulse-urgency {
+  0%, 100% { transform: scale(1); box-shadow: 0 0 0 rgba(239, 68, 68, 0); }
+  50% { transform: scale(1.03); box-shadow: 0 0 14px rgba(239, 68, 68, 0.6); }
+}
+.nav-urgent-badge {
+  display: inline-block;
+  background: #ef4444;
+  color: #ffffff;
+  font-size: 9.5px;
+  font-weight: 700;
+  padding: 1px 6px;
+  border-radius: 10px;
+  margin-left: 5px;
+  letter-spacing: 0.02em;
+  box-shadow: 0 1px 6px rgba(239, 68, 68, 0.4);
+  vertical-align: middle;
+  line-height: 1.2;
+}
+.live-hype-card {
+  margin: 20px 0 22px;
+  padding: 16px 20px;
+  background: rgba(239, 68, 68, 0.04);
+  border: 1.5px solid rgba(239, 68, 68, 0.3);
+  border-radius: 14px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(239, 68, 68, 0.08);
+}
+[data-theme="dark"] .live-hype-card {
+  background: rgba(15, 23, 42, 0.65);
+  border-color: rgba(239, 68, 68, 0.45);
+}
+.live-hype-card .hype-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+}
+.live-hype-card .hype-left {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.live-hype-card .hype-dot {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: #ef4444;
+  box-shadow: 0 0 10px #ef4444;
+  animation: pulse-dot 1.5s infinite;
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.85); }
+}
+.live-hype-card .hype-title {
+  font-family: var(--mono);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.live-hype-card .hype-badge {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  color: #ef4444;
+  background: rgba(239, 68, 68, 0.12);
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  padding: 2px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+.live-hype-card .hype-meter-track {
+  height: 10px;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 99px;
+  overflow: hidden;
+  margin-bottom: 10px;
+  position: relative;
+}
+[data-theme="dark"] .live-hype-card .hype-meter-track {
+  background: rgba(255, 255, 255, 0.1);
+}
+.live-hype-card .hype-meter-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #10b981 0%, #f59e0b 60%, #ef4444 100%);
+  border-radius: 99px;
+  position: relative;
+  box-shadow: 0 0 12px rgba(239, 68, 68, 0.5);
+}
+.live-hype-card .hype-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12.5px;
+  color: var(--ink-soft);
+  flex-wrap: wrap;
+}
+.live-hype-card .hype-footer strong {
+  color: var(--ink);
+}
+.live-hype-card .hype-footer .hype-alert {
+  color: #ef4444;
+  font-weight: 700;
+  font-family: var(--mono);
+  font-size: 12px;
+}
+.stat.highlight-stat {
+  border: 1px solid rgba(239, 68, 68, 0.35);
+  background: rgba(239, 68, 68, 0.04);
+  border-radius: 8px;
+}
+
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -656,7 +793,7 @@ img { max-width: 100%; height: auto; }
 
 <!-- Announcement bar -->
 <div class="announce-bar">
-  <span class="gold">🌊 Build 4 Karnataka Mangaluru · Sat, 28 Nov 2026 · Registrations open 28 Oct - 16 Nov.</span>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;Innovation Partner: <a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" class="arrow" style="color:var(--accent-bright); text-decoration:underline; font-weight:600;">Nitte Pharma</a>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;AI Platform Partner: <a href="https://www.foxwel.ai/" target="_blank" rel="noopener" class="arrow" style="color:#fdba74; text-decoration:underline; font-weight:600;">Foxwel AI</a>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;Missed Bengaluru? <a href="bengaluru/" class="arrow">See what happened</a>
+  <span class="urgency-tag">🔥 FAST FILLING: 27 / 50 TEAMS CONFIRMED</span>&nbsp;&nbsp;<span class="gold">Only 23 slots left for Mangaluru (Sat, 28 Nov) · Register now before seats run out!</span>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;Innovation Partner: <a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" class="arrow" style="color:var(--accent-bright); text-decoration:underline; font-weight:600;">Nitte Pharma</a>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;AI Platform Partner: <a href="https://www.foxwel.ai/" target="_blank" rel="noopener" class="arrow" style="color:#fdba74; text-decoration:underline; font-weight:600;">Foxwel AI</a>&nbsp;&nbsp;<span style="opacity:0.6;">|</span>&nbsp;&nbsp;Missed Bengaluru? <a href="bengaluru/" class="arrow">See what happened</a>
 </div>
 
 <header id="siteHeader">
@@ -680,7 +817,7 @@ img { max-width: 100%; height: auto; }
       <a href="bengaluru/" style="font-weight:600;">Bengaluru '26</a>
     </nav>
     <div class="nav-right">
-      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary nav-cta" target="_blank" rel="noopener">Register</a>
+      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary nav-cta" target="_blank" rel="noopener" style="position:relative;">Register <span class="nav-urgent-badge">23 left!</span></a>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -696,7 +833,7 @@ img { max-width: 100%; height: auto; }
   <a href="#jury" class="mobile-link">Jury</a>
   <a href="#faq" class="mobile-link">FAQ</a>
   <a href="bengaluru/" class="mobile-link">Bengaluru 2026 results</a>
-  <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Register your team</a>
+  <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener" style="background:#ef4444; border-color:#ef4444; color:#fff;">Register your team (23 slots left!)</a>
 </div>
 
 <main>
@@ -709,7 +846,25 @@ img { max-width: 100%; height: auto; }
       <img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
       <div class="hero-badge"><span class="dot-live"></span>Edition 02 · Mangaluru</div>
       <h1 class="headline">Unleash AI:<br><span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 6px;">Build More.</span></h1>
-      <p class="sub">Coastal Karnataka's first Gen AI student buildathon. <strong style="color:var(--accent);">50 slots across 5 domains</strong> with problem statements live T-48h, hub access on Friday, build sprint until 1:00 PM Saturday, then live parallel jury demos from 2:00 PM - 5:30 PM, live music, and 8 team awards. ₹40,000+ in prizes.</p>
+      <p class="sub">Coastal Karnataka's first Gen AI student buildathon. <strong style="color:var(--accent);">27 of 50 slots already confirmed across 5 domains</strong> with problem statements live T-48h, hub access on Friday, build sprint until 1:00 PM Saturday, then live parallel jury demos from 2:00 PM - 5:30 PM, live music, and 8 team awards. ₹40,000+ in prizes. Only 23 seats remaining!</p>
+
+      <!-- Live Capacity Surge Widget -->
+      <div class="live-hype-card">
+        <div class="hype-header">
+          <div class="hype-left">
+            <span class="hype-dot"></span>
+            <span class="hype-title">REGISTRATION SURGE: 27 / 50 SLOTS CLAIMED</span>
+          </div>
+          <span class="hype-badge">🔥 54% FULL · FAST FILLING</span>
+        </div>
+        <div class="hype-meter-track" title="27 of 50 slots claimed">
+          <div class="hype-meter-fill" style="width: 54%;"></div>
+        </div>
+        <div class="hype-footer">
+          <span class="hype-stat">⚡ <strong>27 teams registered</strong> across coastal colleges</span>
+          <span class="hype-alert">🚨 <strong>ONLY 23 SLOTS REMAINING</strong> (First-come, first-served)</span>
+        </div>
+      </div>
       <div class="branch-cluster">
         <span class="branch-chip">Mechanical</span>
         <span class="branch-chip">Civil</span>
@@ -721,7 +876,7 @@ img { max-width: 100%; height: auto; }
         <span class="branch-chip">Recent Passouts</span>
       </div>
       <div class="hero-cta">
-        <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Register your team</a>
+        <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Register your team (23 slots left!) →</a>
         <a href="bengaluru/" class="btn btn-ghost btn-lg">🏆 See what happened in Bengaluru →</a>
       </div>
       <span class="cd-label">// countdown to build day</span>
@@ -734,7 +889,7 @@ img { max-width: 100%; height: auto; }
       <div class="stat-strip">
         <div class="stat"><div class="k">Event date</div><div class="v">Sat, 28 Nov '26</div></div>
         <div class="stat"><div class="k">Venue</div><div class="v" style="font-size: 13.5px; line-height: 1.4;">ComedKares Centre,<br>Mangaluru</div></div>
-        <div class="stat"><div class="k">On-site capacity</div><div class="v">50 Slots</div></div>
+        <div class="stat highlight-stat"><div class="k" style="color:#ef4444;font-weight:700;">Live Seats Status</div><div class="v" style="color:#ef4444;font-weight:700;font-size:16px;">27 Booked · 23 Left!</div></div>
         <div class="stat"><div class="k">Prize pool</div><div class="v">₹40,000+</div></div>
       </div>
     </div>
@@ -753,13 +908,16 @@ img { max-width: 100%; height: auto; }
           <div><span class="prompt">$</span> <span class="cmd">event --info</span></div>
           <div class="out ok">→ ComedKares Centre, Mangaluru</div>
           <div class="out ok">→ Saturday, November 28, 2026</div>
+          <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">capacity --check</span></div>
+          <div class="out" style="color:#38bdf8;font-weight:600;">→ 27 / 50 TEAMS CONFIRMED [54% SLOTS BOOKED]</div>
+          <div class="out warn" style="color:#f87171;font-weight:700;">→ ONLY 23 SLOTS REMAINING (FAST FILLING!)</div>
           <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">event --status</span></div>
-          <div class="out warn" style="color:#facc15;font-weight:600;">→ REGISTRATIONS 28 OCT - 16 NOV</div>
+          <div class="out warn" style="color:#facc15;font-weight:600;">→ REGISTRATIONS ACTIVE · CLOSING ONCE 50 IS REACHED</div>
           <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">editions --list</span></div>
           <div class="out ok">→ 01 Bengaluru · 7 Sep · COMPLETED ✓ <a href="bengaluru/" style="color:inherit;text-decoration:underline;">view</a></div>
           <div class="out ok">→ 02 Mangaluru · 28 Nov · UPCOMING</div>
           <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">register --team</span></div>
-          <div class="out" style="color:#9fb0c9;">→ 2-4 members (max 4) · ₹399 per team · 50 slots<span class="cursor"></span></div>
+          <div class="out" style="color:#9fb0c9;">→ 2-4 members (max 4) · ₹399 per team · Direct entry, no screening<span class="cursor"></span></div>
         </div>
       </div>
     </div>
@@ -940,14 +1098,15 @@ img { max-width: 100%; height: auto; }
     <div class="section-head reveal">
       <span class="eyebrow">How it works</span>
       <h2>Register, and you're in.</h2>
-      <p>No screening and no shortlist. Every team that registers and pays gets a seat at the ComedKares Centre, Mangaluru, on a first-come, first-served basis until all 50 slots are filled. Register early.</p>
+      <p>No screening and no shortlist. Every team that registers and pays gets a seat at the ComedKares Centre, Mangaluru, on a first-come, first-served basis. <strong>27 of 50 slots are already booked</strong>, leaving only 23 seats remaining. Register early before capacity is reached.</p>
     </div>
     <div class="funnel reveal">
       <div class="fstep spot">
         <div class="num">// 01</div>
+        <div style="display:inline-block; font-size:11px; font-weight:700; color:#fff; background:#ef4444; padding:2px 8px; border-radius:4px; margin-bottom:8px; font-family:var(--mono);">27 / 50 BOOKED</div>
         <h3>Register online</h3>
-        <p>Submit team details and pay ₹399 (GST incl.). First-come, first-served seat confirmation. Closes 16 Nov.</p>
-        <span class="tag">Oct 28 - Nov 16</span>
+        <p>Submit team details and pay ₹399 (GST incl.). First-come, first-served seat confirmation. Only 23 seats remaining.</p>
+        <span class="tag" style="color:#ef4444; font-weight:600;">Fast filling · Closes 16 Nov</span>
       </div>
       <div class="funnel-arrow">→</div>
       <div class="fstep spot">
@@ -1121,8 +1280,8 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Questions teams ask.</h2></div>
     <div id="faqList">
-      <details><summary><span><span class="faq-tag">Eligibility</span> Who can take part?</span></summary><p>Undergraduate engineering students from any branch, MCA students, and recent passouts from the past academic year. Teams from across Karnataka are welcome. There is no screening: every team that registers gets a seat, first come, first served, until places run out.</p></details>
-      <details><summary><span><span class="faq-tag">Team</span> How big can a team be, and what does it cost?</span></summary><p>Teams of up to 4 members (maximum 4 members per team), all present on the day. One fee of ₹399 (GST incl.) covers the whole team. Registration is open from 28 Oct to 16 Nov; places are first come, first served, so it may close earlier if seats fill up.</p></details>
+      <details><summary><span><span class="faq-tag">Eligibility</span> Who can take part?</span></summary><p>Undergraduate engineering students from any branch, MCA students, and recent passouts from the past academic year. Teams from across Karnataka are welcome. There is no screening: every team that registers gets a seat, first come, first served. 27 of 50 slots are already booked, so reserve your spot while seats remain.</p></details>
+      <details><summary><span><span class="faq-tag">Team</span> How big can a team be, and what does it cost?</span></summary><p>Teams of up to 4 members (maximum 4 members per team), all present on the day. One fee of ₹399 (GST incl.) covers the whole team. 27 teams are already confirmed out of 50 total slots. Registration will close on 16 Nov or earlier the moment all 50 slots are filled.</p></details>
       <details><summary><span><span class="faq-tag">Skills</span> Do we need to know how to code?</span></summary><p>No. The event is built around Gen AI and vibe-code tools. Good thinking, prompting and teamwork matter more than raw coding.</p></details>
       <details><summary><span><span class="faq-tag">Venue</span> Where exactly is the venue?</span></summary><p>At the ComedKares Centre in Mangaluru. The full address and directions will be shared with every registered team.</p></details>
       <details><summary><span><span class="faq-tag">Prep</span> Can we start building before the event, and can we visit your hubs?</span></summary><p>Problem statements are released T-48 hours ahead on Thursday, 26 Nov at 10:00 AM. On Friday, 27 Nov (T-24h), all registered teams are invited to visit ComedKares Innovation Hubs across Karnataka from 9:00 AM to 6:00 PM to brainstorm, test hardware/APIs, and consult mentors before build day. Code should be developed during the buildathon window.</p></details>
@@ -1148,11 +1307,20 @@ img { max-width: 100%; height: auto; }
 <!-- ═════ REGISTER / SOCIAL ═════ -->
 <section class="social-section" id="register">
   <div class="wrap reveal">
-    <span class="eyebrow">Registrations open 28 Oct – 16 Nov</span>
-    <h2>Get your team on the Mangaluru list.</h2>
-    <p style="margin-top:14px;font-size:16px;">Fill in the registration form and pay ₹399 per team. Places are first come, first served. Questions? Message us on WhatsApp. Follow along for partner and jury reveals and build-day coverage.</p>
+    <span class="eyebrow" style="color:#ef4444;">🚨 Fast Filling · Over 50% Seats Claimed</span>
+    <h2>Get your team on the Mangaluru list before slots run out.</h2>
+    <div class="hype-box-bottom" style="margin:20px auto 24px; background:rgba(239, 68, 68, 0.08); border:1.5px solid rgba(239, 68, 68, 0.4); border-radius:14px; padding:20px 24px; max-width:680px; text-align:left;">
+      <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:13px; font-weight:700; color:#f8fafc; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
+        <span style="display:inline-flex; align-items:center; gap:6px;">🔥 <span style="color:#f8fafc;">27 TEAMS REGISTERED</span></span>
+        <span style="color:#fca5a5; background:rgba(239,68,68,0.2); padding:3px 10px; border-radius:6px; border:1px solid rgba(239,68,68,0.45);">ONLY 23 SLOTS REMAINING</span>
+      </div>
+      <div style="height:10px; width:100%; background:rgba(255,255,255,0.12); border-radius:99px; overflow:hidden; margin-bottom:12px;">
+        <div style="height:100%; width:54%; background:linear-gradient(90deg, #10b981 0%, #f59e0b 60%, #ef4444 100%); border-radius:99px; box-shadow:0 0 12px rgba(239,68,68,0.6);"></div>
+      </div>
+      <p style="margin:0; font-size:14px; color:#cbd5e1; line-height:1.6;">27 student teams from coastal and statewide Karnataka engineering colleges have already confirmed their spots. There is no shortlisting or screening; registrations close permanently as soon as all 50 slots are filled.</p>
+    </div>
     <div class="social-links">
-      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="social-link reg-link" target="_blank" rel="noopener"><span class="sl-icon">📝</span> Register now (Google Form)</a>
+      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="social-link reg-link" target="_blank" rel="noopener" style="background:#ef4444; border-color:#ef4444; color:#fff; font-weight:700; box-shadow:0 4px 16px rgba(239,68,68,0.35);"><span class="sl-icon">⚡</span> Register now (23 slots left)</a>
       <a href="https://wa.me/+916366879353?text=Hi%20Build4Karnataka%20team!%20I%20want%20to%20register%20for%20the%20Mangaluru%20edition." class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.791.994.996-3.699-.237-.377a9.99 9.99 0 0 1-1.528-5.234c0-5.522 4.494-10.016 10.021-10.016 5.525 0 10.018 4.494 10.018 10.016 0 5.525-4.493 10.018-10.02 10.018l-.004-.088zm5.495-7.514c-.302-.151-1.782-.879-2.059-.979-.277-.101-.479-.151-.681.151-.202.302-.78 1.002-.958 1.204-.177.202-.353.227-.655.076-.302-.151-1.274-.471-2.427-1.5-.898-.802-1.503-1.792-1.68-2.095-.177-.302-.019-.465.132-.616.136-.136.302-.353.454-.53.151-.177.202-.302.302-.504.101-.202.051-.378-.025-.53-.076-.151-.681-1.642-.932-2.247-.245-.591-.494-.51-.681-.519-.177-.008-.378-.008-.58-.008s-.53.076-.807.378c-.277.302-1.059 1.034-1.059 2.52 0 1.487 1.084 2.924 1.235 3.125.151.202 2.128 3.248 5.158 4.551.72.309 1.282.494 1.723.633.722.228 1.38.196 1.897.119.58-.087 1.782-.728 2.034-1.431.252-.704.252-1.309.177-1.431-.077-.126-.278-.202-.58-.353z"></path></svg></span> Ask us on WhatsApp</a>
       <a href="https://www.instagram.com/comed_kares/" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"></path></svg></span> @comed_kares on Instagram</a>
       <a href="https://linkedin.com/company/comedkares" class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg></span> ComedKares on LinkedIn</a>
