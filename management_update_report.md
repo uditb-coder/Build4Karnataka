@@ -5,13 +5,14 @@
   - **Verified UI Implementation Screenshots**:
     ![Build 4 Karnataka Mangaluru Hero with Registration Surge Meter](assets/registration_hype_hero.png)
     ![Build 4 Karnataka Mangaluru Bottom Registration Urgency Callout](assets/registration_hype_register.png)
-  - **Registration Milestone & Real-time Scarcity Signals**: With 27 confirmed team registrations already received (exceeding 54% of the strict 50-team capacity limit), deployed statewide scarcity and urgency indicators across all primary conversion touchpoints on the live portal (https://build4karnataka.comedkares.com/).
-  - **Top Announcement Bar**: Deployed an animated high-voltage urgency pill (`🔥 FAST FILLING: 27 / 50 TEAMS CONFIRMED`) paired with prominent copy informing visitors that only 23 slots remain before registrations close.
-  - **Header Navigation & Mobile Drawer**: Integrated a glowing scarcity chip (`23 left!`) directly inside the desktop navigation 'Register' CTA and updated the mobile drawer button to highlight real-time seat availability.
-  - **Hero Live Capacity Progress Meter**: Engineered an interactive capacity widget between the hero value proposition and branch tags. Features a live pulsing radar dot, dynamic 54% multi-stop gradient progress bar (#10b981 to #f59e0b to #ef4444), and real-time counter highlighting 27 confirmed teams vs 23 remaining seats.
-  - **Stat Strip & Terminal Console Diagnostics**: Upgraded the On-site capacity metric to `Live Seats Status: 27 Booked · 23 Left!`. Added a new terminal command `$ capacity --check` returning `27 / 50 TEAMS CONFIRMED [54% SLOTS BOOKED]` with an active fast-filling warning.
-  - **How It Works & Bottom Register Callout**: Updated Step 01 with a `27 / 50 BOOKED` tag and inserted an executive high-contrast registration scarcity card above the Google Form button.
-  - **Bengaluru Archive Cross-Promotion**: Updated the global announcement bar on the Bengaluru archive page (`bengaluru/index.html`) to alert visitors that Mangaluru has already reached 27/50 teams.
+  - **Capacity Re-calibration & Real-time Scarcity Signals**: With 27 confirmed team registrations already received and event capacity calibrated to 30 slots (reaching 90% full capacity), deployed statewide scarcity and urgency indicators across all primary conversion touchpoints on the live portal (https://build4karnataka.comedkares.com/).
+  - **Top Announcement Bar**: Deployed an animated high-voltage urgency pill (`🔥 FINAL CALL: 27 / 30 SLOTS CLAIMED (90% FULL)`) paired with prominent copy informing visitors that the last 3 slots remain before registrations close permanently.
+  - **Header Navigation & Mobile Drawer**: Integrated a glowing scarcity chip (`Only 3 left!`) directly inside the desktop navigation 'Register' CTA and updated the mobile drawer button to highlight real-time seat availability.
+  - **Hero Live Capacity Progress Meter**: Engineered an interactive capacity widget between the hero value proposition and branch tags. Features a live pulsing radar dot, dynamic 90% multi-stop gradient progress bar (#10b981 to #f59e0b to #ef4444), and real-time counter highlighting 27 confirmed teams vs 3 remaining seats.
+  - **Stat Strip & Terminal Console Diagnostics**: Upgraded the On-site capacity metric to `Live Seats Status: 27 Booked · 3 Left!`. Added a new terminal command `$ capacity --check` returning `27 / 30 TEAMS CONFIRMED [90% SLOTS BOOKED]` with an active fast-filling warning.
+  - **How It Works & Bottom Register Callout**: Updated Step 01 with a `27 / 30 BOOKED` tag and inserted an executive high-contrast registration scarcity card above the Google Form button.
+  - **Bengaluru Archive Cross-Promotion**: Updated the global announcement bar on the Bengaluru archive page (`bengaluru/index.html`) to alert visitors that Mangaluru has reached 27/30 teams.
+  - **Master Agenda Document Alignment**: Updated `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx` to reflect the 30-team capacity cap.
   - **Strict Copywriting Compliance**: Verified 0 em-dashes throughout all copy, UI labels, and documentation.
 
 - **Delivery Mode 2-Minute Slides Timeout Resolution, Native Fullscreen Projector & Pop-Out Dual-Display Speaker Window (07 November 2026)**:
@@ -217,7 +218,7 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
-| **Edition 02 (Mangaluru) Registration Surge & Hype Integration** | Integrated real-time capacity and scarcity urgency signals across the live portal: 27 of 50 confirmed teams (54% capacity booked) and only 23 slots remaining. Implemented top announcement bar high-voltage tag, desktop header live scarcity badge, hero live capacity progress bar meter, terminal console capacity diagnostics, and high-contrast bottom callout box. | Complete (Deployed Live) |
+| **Edition 02 (Mangaluru) Registration Surge & Hype Integration** | Integrated real-time capacity and scarcity urgency signals across the live portal: 27 of 30 confirmed teams (90% capacity booked) and only 3 slots remaining. Implemented top announcement bar final call tag, desktop header live scarcity badge, hero live capacity progress bar meter (90% filled), terminal console capacity diagnostics, and high-contrast bottom callout box. | Complete (Deployed Live) |
 | **Delivery Mode 2-Min Reset Fix & Dual-Screen Projector Pop-Out** | Fixed Google Slides 2-min idle reset (removed delayms=3000, eager loading, wake lock). Added Fullscreen Projector mode and pop-out Speaker Window for laptop extended displays with synchronized live timer and phased talking track. | Complete (Deployed Live) |
 | **Statewide LMS Quality Audit & Mentor Feedback Report** | Comprehensive 10-hub audit across 81 active batches, 31 primary mentors, Mysuru 66.39% attendance risk resolution, 30-day programs archive, and session effectiveness breakdown with zero em-dashes. | Complete (Report Generated) |
 | **RPDT Weekly Program Report (RNSIT Kickoff)** | Official comprehensive weekly report for 22-31 Oct 2026 covering 32 cohorts, 41 sessions, 1,780 attendances (82.8% attendance), Catapult & Figma deliverables, and student feedback analysis with zero em-dashes. | Complete (Report Generated) |
@@ -1107,16 +1108,17 @@ Build 4 Karnataka has expanded statewide, moving its flagship edition from Benga
   - **Grand Finale & Felicitation (6:30 PM Onwards)**: Live prize distribution honoring 8 winning teams (1st, 2nd, and 3rd Podium Winners, plus 5 Domain Best Builds), followed by oversized dummy cheque ceremonies and group photography.
 - **Executive Word Agenda Document Published**: Authored and exported a publication-grade Microsoft Word document (`Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`) formatted with ComedKares and ERA Foundation brand styling (Navy `#0F172A`, Teal `#0D9488`, and Slate `#F8FAFC`), custom cell padding, alternating row highlights, and full operational directives. Available for sharing with leadership, partner institutions, juries, and student coordinators at `D:\Anti_spamm\Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
 
-### 13. Build 4 Karnataka Mangaluru Registration Surge & Scarcity Hype System (27/50 Confirmed, 23 Left)
-- **Real-Time Registration Milestone**: Confirmed team registrations reached 27 out of the 50 available seats, officially crossing 54% of total event capacity.
+### 13. Build 4 Karnataka Mangaluru Registration Surge & Scarcity Hype System (27/30 Confirmed, 3 Left)
+- **Real-Time Registration Milestone**: Confirmed team registrations reached 27 out of 30 available seats, officially crossing 90% of total event capacity.
 - **Urgency & Hype Components Deployed**:
-  - **Top Announcement Bar**: Animated red urgency pill (`🔥 FAST FILLING: 27 / 50 TEAMS CONFIRMED`) with real-time slot alert.
-  - **Header Nav Register CTA**: Integrated a glowing `23 left!` badge to prompt instant action before seats fill up.
-  - **Hero Live Capacity Progress Meter**: Multi-stop gradient bar (54% filled), pulsating live radar beacon, and exact seat breakdown.
-  - **Interactive Terminal Console**: Added `$ capacity --check` command displaying live slot status and fast-filling warnings.
-  - **Section 01 ('Register Online') in How It Works**: Updated with a `27 / 50 BOOKED` tag and 23 seats remaining notice.
-  - **Bottom Registration Section**: Added an executive registration surge callout box with progress bar and urgent CTA `⚡ Register now (23 slots left)`.
+  - **Top Announcement Bar**: Animated red urgency pill (`🔥 FINAL CALL: 27 / 30 SLOTS CLAIMED (90% FULL)`) with immediate closing alert.
+  - **Header Nav Register CTA**: Integrated a glowing `Only 3 left!` badge to prompt instant action before seats fill up.
+  - **Hero Live Capacity Progress Meter**: Multi-stop gradient bar (90% filled), pulsating live radar beacon, and exact seat breakdown (27 confirmed vs 3 left).
+  - **Interactive Terminal Console**: Added `$ capacity --check` command displaying live slot status and final warning that registration closes at 30 teams.
+  - **Section 01 ('Register Online') in How It Works**: Updated with a `27 / 30 BOOKED` tag and 3 seats remaining notice.
+  - **Bottom Registration Section**: Added an executive registration surge callout box with 90% progress bar and urgent CTA `⚡ Register now (Only 3 slots left)`.
   - **Cross-Edition Promotion**: Synchronized the Bengaluru archive page (`bengaluru/index.html`) announcement ticker with Mangaluru's real-time slot availability.
+  - **Document Synchronization**: Aligned `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx` with the 30-team operational capacity.
 
 - **Verified Visual Implementation**:
   ![Build 4 Karnataka Mangaluru Hero with Registration Surge Meter](assets/registration_hype_hero.png)

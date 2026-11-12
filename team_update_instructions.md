@@ -864,16 +864,16 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - The complete schedule has been compiled into an executive Microsoft Word document: `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
    - Team members, mentors, and outreach coordinators can share this document directly with participating institutions, college principals, faculty mentors, and student teams.
 
-### Update - Mangaluru Registration Surge & Scarcity Campaign (27/50 Teams Confirmed)
-1. **Current Registration Surge**: Exactly 27 team registrations have been received and confirmed out of the 50 available slots (over 54% full). Only 23 team slots remain open!
+### Update - Mangaluru Registration Surge & Scarcity Campaign (27/30 Teams Confirmed - 90% Full)
+1. **Current Registration Surge & Adjusted Cap**: With total slots calibrated to 30 teams and 27 team registrations confirmed, the event is 90% full. Exactly 3 slots remain open!
 2. **Website Urgency & Hype Elements Activated**:
-   - **Top Announcement Bar**: Now alerts visitors with `🔥 FAST FILLING: 27 / 50 TEAMS CONFIRMED · Only 23 slots left!`.
-   - **Header CTA**: Displays a live `23 left!` badge to prompt instant action.
-   - **Hero Capacity Meter**: Visual progress bar showing 54% filled with a pulsing live status dot.
-   - **Terminal Console**: Includes a live `$ capacity --check` command showing 27 confirmed and 23 remaining slots.
-   - **Bottom Callout Box**: Prominent scarcity box highlighting that seats will close permanently once 50 teams are reached.
+   - **Top Announcement Bar**: Now alerts visitors with `🔥 FINAL CALL: 27 / 30 SLOTS CLAIMED (90% FULL) · LAST 3 SLOTS REMAINING!`.
+   - **Header CTA**: Displays a live `Only 3 left!` badge to prompt immediate action.
+   - **Hero Capacity Meter**: Visual progress bar showing 90% filled with a pulsing live status dot.
+   - **Terminal Console**: Includes a live `$ capacity --check` command showing 27 confirmed and 3 remaining slots.
+   - **Bottom Callout Box**: Prominent scarcity box highlighting that registrations close permanently as soon as all 30 slots are filled.
 3. **Team Outreach Directives**:
-   - In all college outreach, WhatsApp messages, and phone calls, emphasize urgency: *"Over 50% of seats are already booked (27 of 50 confirmed). With only 23 slots left on a first-come, first-served basis, please advise your student teams to complete their Google Form registrations immediately before the 50-team cap is reached."*
+   - In all college outreach, WhatsApp messages, and phone calls, emphasize peak urgency: *"90% of seats are already booked (27 of 30 confirmed). With only 3 slots left on a strict first-come, first-served basis, please advise your student teams to complete their Google Form registrations immediately before the 30-team cap is reached."*
    - Share direct registration link: https://forms.gle/M2Q93UHtBamjD3GM8 or https://build4karnataka.comedkares.com/.
 
 ![Mangaluru Hero Registration Surge](assets/registration_hype_hero.png)
