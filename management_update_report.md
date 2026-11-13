@@ -1,6 +1,16 @@
 # Management Update Report
 
 ## Recent Changes
+- **Build 4 Karnataka Mangaluru Header Clean-Up & Light Surface Theme Refinement (13 November 2026)**:
+  - **Verified UI Implementation Screenshots**:
+    ![Build 4 Karnataka Clean Top Bar and Header Navigation](assets/header_clean_top.png)
+    ![Build 4 Karnataka Hero Clean Light Capacity Card](assets/capacity_card_clean.png)
+    ![Build 4 Karnataka Hero Clean Section View](assets/hero_clean_light_card.png)
+  - **Top Announcement Bar Clean-Up**: Removed the red 'registrations closed' banner from the top bar to restore a clean, elegant layout that highlights event date, Innovation Partner (Nitte Pharma), AI Platform Partner (Foxwel AI), and past edition archive.
+  - **Header Nav CTA Removal**: Removed the redundant 'Registrations Closed' button from the top navigation header, ensuring clean visual balance for desktop and mobile viewports.
+  - **Grey Shading Removal & Light Surface Theme**: Overhauled the hero capacity card by removing the dark charcoal grey shading. Converted to a clean pure white card surface with crisp 1.5px teal border, vibrant emerald pulsing dot, high-contrast typography, and full 100% teal-emerald gradient fill.
+  - **Action-Oriented Hero CTA**: Converted hero button to 'View Event Agenda & Awards →' routing directly to the 7-stage run of show and 8-team podium structure.
+
 - **Build 4 Karnataka Mangaluru 100% Capacity Milestone & Registration Closure (13 November 2026)**:
   - **Verified UI Implementation Screenshots**:
     ![Build 4 Karnataka Mangaluru Hero with 100% Capacity and Closed Status](assets/registration_closed_hero.png)
@@ -1690,3 +1700,20 @@ With all 30 team slots locked, the organizing committee has initiated the pre-ev
 3. **T-48h Partner Problem Statements Drop**: Releasing the 12 problem statements from coastal industry partners on Thursday, 26 November 2026 at 10:00 AM IST.
 4. **T-24h Statewide Hub Access**: Opening ComedKares Hubs on Friday, 27 November 2026 (9:00 AM to 6:00 PM) for pre-build consultation and environment setup.
 5. **Build Day Execution**: On-site prototyping and jury evaluation on Saturday, 28 November 2026.
+
+
+### 15.5 Header Clean-Up & Hero Light Surface Theme Refinement
+Following executive review of the closed-state presentation, two visual refinements were applied to enhance brand elegance and contrast:
+1. **Top Section Clean-Up**:
+   - The heavy red 'registrations closed' tag was removed from the announcement bar.
+   - The navbar CTA button was retired, leaving clean text navigation across `About`, `Domains`, `Agenda`, `Prizes`, `Jury`, and `Bengaluru '26`.
+2. **Elimination of Grey Shading & Conversion to Light Card Architecture**:
+   - The dark charcoal grey shading (`rgba(15, 23, 42, 0.65)` / `rgba(2, 6, 23, 0.96)`) was eliminated.
+   - Replaced with a pure white surface (`var(--surface)`), clean teal border (`rgba(13, 148, 136, 0.3)`), high-contrast ink text (`#18181b`), and vibrant teal/emerald progress bar.
+   - The primary hero CTA directs visitors smoothly to `#agenda` for the minute-by-minute schedule and award structure.
+
+![Build 4 Karnataka Clean Top Bar and Header Navigation](assets/header_clean_top.png)
+*Figure 15.4: Live clean announcement bar and header navigation bar free of redundant registration tags.*
+
+![Build 4 Karnataka Hero Clean Light Capacity Card](assets/capacity_card_clean.png)
+*Figure 15.5: Hero capacity card updated to crisp white surface with vibrant emerald/teal accents and zero grey shading.*

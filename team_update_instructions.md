@@ -864,6 +864,18 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - The complete schedule has been compiled into an executive Microsoft Word document: `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
    - Team members, mentors, and outreach coordinators can share this document directly with participating institutions, college principals, faculty mentors, and student teams.
 
+### Update - Website Visual Polish: Clean Top Section & Light-Theme Capacity Card
+1. **Top Navigation Polish**:
+   - The red 'Registrations Closed' pill has been removed from the top announcement bar to maintain clean partner visibility (Nitte Pharma & Foxwel AI).
+   - The header CTA button has been removed from desktop navigation for a minimalist, balanced header.
+2. **Hero Capacity Card Redesign**:
+   - All dark grey shading has been removed.
+   - The capacity card now features a crisp white background with emerald/teal progress indicators and clean, high-contrast typography.
+   - Primary hero button directs visitors to **'View Event Agenda & Awards →'**.
+
+![Clean Top Navigation](assets/header_clean_top.png)
+![Clean Capacity Card](assets/capacity_card_clean.png)
+
 ### Update - Mangaluru Registrations Officially Closed: 100% Capacity Reached (30/30 Confirmed Teams)
 1. **Capacity Cap Achieved & Public Registration Lockdown**:
    - As of 13 November 2026, the 30th confirmed team registration has been validated. Total venue capacity is now 100% full!
