@@ -1217,6 +1217,7 @@ All regional Program Managers, Hub coordinators, and college mentors across Mang
    - **FinTech & Skilling**: Regional cooperative credit scoring, micro-lending, rural vocational skilling.
    - **Open Innovation**: Cross-domain breakthrough Gen AI applications.
 3. **Registration Urgency & Cutoff Policy**: Clearly inform faculty coordinators that slots are allocated on a first-confirmed, first-secured basis. Once team 40 completes payment and roster submission, intake will close permanently.
+4. **Desktop & Mobile Top Bar & Navigation Alignment**: Both the top announcement bar and header navigation bar have been calibrated with centered alignment and zero-overflow styling so the announcement items are horizontally balanced and the primary teal `Register (10 left)` CTA button remains fully visible and clickable across all laptop screens, tablets, and classroom projector displays.
 
 ### 3. Verified UI Implementation Screenshots
 

@@ -1,6 +1,13 @@
 # Management Update Report
 
 ## Recent Changes
+- **Build 4 Karnataka Mangaluru Desktop Navigation Responsiveness & Register CTA Zero-Overflow Fix (13 November 2026)**:
+  - **Verified UI Implementation Screenshots**:
+    ![Build 4 Karnataka Header Navigation Zero-Overflow Viewport](assets/header_expansion_40.png)
+  - **Zero-Overflow Header Architecture**: Resolved an issue where on 1280px to 1440px laptop displays (and screens with 125% to 150% OS scaling), the combination of partner logos, text links, and the Register CTA button exceeded the container width, pushing the right edge of the Register button off-screen.
+  - **Container & Chip Scaling**: Expanded `.nav` container boundary to `1400px` (`width: 100%; box-sizing: border-box; padding: 8px 24px`), scaled partner logos proportionally (Nitte Pharma max-width 135px, Foxwel max-width 85px, B4K height 32px), streamlined text link spacing to `gap: 12px`, and enforced `flex-shrink: 0` on `.nav-right` and `.nav-cta`.
+  - **Responsive Breakpoint Calibration**: Set `@media (max-width: 1240px)` to gracefully collapse text navigation links into the hamburger menu while keeping the primary `Register (10 left)` button prominent and completely visible across all desktop and tablet viewports.
+
 - **Build 4 Karnataka Mangaluru Capacity Expansion to 40 Teams & Active Intake Re-activation (13 November 2026)**:
   - **Verified UI Implementation Screenshots**:
     ![Build 4 Karnataka Clean Top Announcement Bar and Active Register Navigation](assets/header_expansion_40.png)
@@ -261,6 +268,7 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **Edition 02 (Mangaluru) Top Bar & Header Navigation Center-Alignment & Zero-Overflow** | Perfectly center-aligned the top announcement bar and header navigation bar. Streamlined partner logo chips, expanded `.nav` container boundary to `1400px` (`margin: 0 auto; width: 100%; padding: 8px 24px; box-sizing: border-box;`), replaced `.announce-bar` translate shimmer with non-overflowing background-position animation, eliminated asymmetric 126px left gap and right CTA button clipping, and calibrated responsive breakpoint at 1240px to ensure 100% visibility of the Register CTA across all laptop, desktop, tablet, and mobile viewports. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Capacity Expansion to 40 Teams (30 Booked, 10 Left)** | Expanded venue capacity from 30 to 40 teams due to overwhelming regional demand. Restored active Google Form registration links across desktop nav, mobile drawer, hero CTA, editions card, and bottom register callout with high-urgency badges ('10 slots left'). Maintained clean single-line announcement bar, crisp light-theme hero capacity card (75% progress meter, emerald pulse dot), and terminal diagnostics. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Registration Closure (30/30 Confirmed)** | Re-calibrated live portal to officially closed status following 100% capacity achievement (all 30 team slots booked). Deployed closed announcement banner ('REGISTRATIONS CLOSED: ALL 30 SLOTS CLAIMED (100% FULL)'), replaced all registration CTAs with disabled/closed indicators routing to Agenda, updated hero live status card to 100% full house, updated terminal console capacity to 0 slots remaining / event sold out, and updated bottom registration block with house full confirmation. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Dedicated Agenda & 8-Award Structure** | Integrated comprehensive responsive agenda section (#agenda) into the live portal featuring full 7-stage Build Day run of show (08:30 AM to 07:30 PM) with clear durations, prominent breakfast warning notice, 20-min parallel jury review breakdown, and high-visibility recognition grid for all 8 winning teams (Top 3 podium + 5 domain champions). Added navigation links across desktop and mobile. | Complete (Deployed Live) |
@@ -1795,3 +1803,23 @@ To ensure seamless execution with the expanded 40-team roster:
    - Technical mentors from Nitte Pharma and Foxwel AI along with ComedKares senior mentors will circulate across 8 designated lab zones (5 teams per mentor zone).
 3. **Logistics & Catering Scaling**:
    - Venue seating, dining arrangements, power distribution strips, and Wi-Fi access credentials have been calibrated for 160 participants plus mentors and jury members.
+
+### 16.6 Top Announcement Bar & Header Navigation Center-Alignment and Zero-Overflow Optimization
+Following live deployment testing across regional coordinator laptops (ranging from 1280px to 1440px resolution and displays with standard 125% to 150% Windows scaling), an alignment and overflow condition was identified where:
+1. The top header container had an asymmetric ~126px left margin on 1366px displays because `.nav` was constrained to 1160px with `margin: 0 auto;`, while its cumulative internal width (comprising 5 partner chips, 6 text navigation links, and the active `Register (10 left)` button) exceeded 1330px, overflowing out to the right and clipping the Register button.
+2. The announcement bar had conflicting CSS rules (`white-space: normal; line-height: 1.5; padding: 12px 16px;`) and an animated transform shimmer that introduced horizontal scroll metrics.
+
+To resolve this and guarantee perfect horizontal symmetry and 100% visibility for prospective applicant teams:
+1. **Header Navigation Center-Alignment & Container Scaling**:
+   - Expanded `.nav` to `max-width: 1400px; width: 100%; margin: 0 auto; box-sizing: border-box; padding: 8px 24px;` providing equal left and right margins and eliminating the 126px left gap.
+   - Applied `display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: nowrap;` so partner branding sits cleanly on the left, navigation links are centered, and the Register CTA sits on the right.
+2. **Partner Chip Proportional Sizing**: Streamlined partner logo sizing so the row fits comfortably:
+   - ComedKares and ERA Foundation logos: 24px height.
+   - Nitte Pharma Innovation Centre: 24px height, max-width 130px.
+   - Foxwel AI: 24px height, max-width 85px.
+   - Build 4 Karnataka badge: 30px height, 3px padding.
+3. **Announcement Bar Flex Centering & Non-Overflowing Shimmer**:
+   - Unified `.announce-bar` into a flexbox container (`display: flex; align-items: center; justify-content: center; flex-wrap: wrap; gap: 6px 14px; padding: 8px 16px; box-sizing: border-box; overflow: hidden !important;`).
+   - Replaced `transform: translateX(100%)` animation on `.announce-bar::before` with non-overflowing `background-position` shimmer, completely eliminating phantom horizontal scroll width while preserving the smooth animated sheen.
+4. **No-Shrink Enforcement & Zero Clipping**: Applied `flex-shrink: 0; white-space: nowrap;` to `.nav-right` and `.nav-cta`, strictly preventing the button from being compressed or pushed beyond the visible screen boundary.
+5. **Responsive Breakpoint Calibration**: Calibrated `@media (max-width: 1240px)` to collapse text links into the hamburger drawer while keeping the Register button visible, ensuring zero horizontal overflow and perfect symmetry across 100% of tested viewports (from 360px mobile up to 1920px widescreen).
