@@ -1,6 +1,13 @@
 # Management Update Report
 
 ## Recent Changes
+- **Build 4 Karnataka Mangaluru Intake Acceleration to 33 Teams & Navigation Streamlining (13 November 2026)**:
+  - **Verified UI Implementation Screenshots**:
+    ![Build 4 Karnataka Header Navigation with 33 Teams Confirmed and About Removed](assets/header_expansion_40.png)
+    ![Build 4 Karnataka Hero Live Capacity Card at 33 Teams](assets/hero_card_33.png)
+  - **Intake Acceleration (33 Confirmed / 7 Slots Left)**: Updated live portal metrics to reflect 33 confirmed teams out of the expanded 40-team capacity, reaching 82.5% total intake. Scarcity chips and indicators across the top announcement bar, header CTA badge, hero capacity meter, terminal diagnostics, editions card, and bottom registration card have been dynamically aligned to highlight the final 7 remaining slots.
+  - **Navigation Bar Streamlining ('About' Removal)**: Per explicit user directive, removed the redundant 'About' anchor button from the desktop header navigation and mobile drawer navigation. This eliminates horizontal congestion in `nav.links`, leaving direct high-intent anchors (`Domains`, `Agenda`, `Prizes`, `Jury`, `Bengaluru '26`) and providing additional breathing room for the primary teal `Register (7 left)` CTA button across all laptop and desktop displays.
+
 - **Build 4 Karnataka Mangaluru Desktop Navigation Responsiveness & Register CTA Zero-Overflow Fix (13 November 2026)**:
   - **Verified UI Implementation Screenshots**:
     ![Build 4 Karnataka Header Navigation Zero-Overflow Viewport](assets/header_expansion_40.png)
@@ -268,6 +275,7 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **Edition 02 (Mangaluru) Intake Surge to 33 Teams & About Nav Link Removal** | Re-calibrated intake metrics to 33 confirmed teams / 7 slots remaining (82.5% full) across top announcement bar, header nav badge, hero light capacity card (82.5% meter fill), terminal console diagnostics, and bottom register callout. Removed redundant 'About' navigation button from desktop header links and mobile drawer, optimizing horizontal spacing for section anchors and the primary Register CTA. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Top Bar & Header Navigation Center-Alignment & Zero-Overflow** | Perfectly center-aligned the top announcement bar and header navigation bar. Streamlined partner logo chips, expanded `.nav` container boundary to `1400px` (`margin: 0 auto; width: 100%; padding: 8px 24px; box-sizing: border-box;`), replaced `.announce-bar` translate shimmer with non-overflowing background-position animation, eliminated asymmetric 126px left gap and right CTA button clipping, and calibrated responsive breakpoint at 1240px to ensure 100% visibility of the Register CTA across all laptop, desktop, tablet, and mobile viewports. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Capacity Expansion to 40 Teams (30 Booked, 10 Left)** | Expanded venue capacity from 30 to 40 teams due to overwhelming regional demand. Restored active Google Form registration links across desktop nav, mobile drawer, hero CTA, editions card, and bottom register callout with high-urgency badges ('10 slots left'). Maintained clean single-line announcement bar, crisp light-theme hero capacity card (75% progress meter, emerald pulse dot), and terminal diagnostics. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Registration Closure (30/30 Confirmed)** | Re-calibrated live portal to officially closed status following 100% capacity achievement (all 30 team slots booked). Deployed closed announcement banner ('REGISTRATIONS CLOSED: ALL 30 SLOTS CLAIMED (100% FULL)'), replaced all registration CTAs with disabled/closed indicators routing to Agenda, updated hero live status card to 100% full house, updated terminal console capacity to 0 slots remaining / event sold out, and updated bottom registration block with house full confirmation. | Complete (Deployed Live) |
@@ -1823,3 +1831,10 @@ To resolve this and guarantee perfect horizontal symmetry and 100% visibility fo
    - Replaced `transform: translateX(100%)` animation on `.announce-bar::before` with non-overflowing `background-position` shimmer, completely eliminating phantom horizontal scroll width while preserving the smooth animated sheen.
 4. **No-Shrink Enforcement & Zero Clipping**: Applied `flex-shrink: 0; white-space: nowrap;` to `.nav-right` and `.nav-cta`, strictly preventing the button from being compressed or pushed beyond the visible screen boundary.
 5. **Responsive Breakpoint Calibration**: Calibrated `@media (max-width: 1240px)` to collapse text links into the hamburger drawer while keeping the Register button visible, ensuring zero horizontal overflow and perfect symmetry across 100% of tested viewports (from 360px mobile up to 1920px widescreen).
+
+### 16.7 Intake Surge to 33 Teams (82.5% Full) & Navigation Link Streamlining
+Following the expansion to 40 slots, regional registration velocity accelerated rapidly with 3 additional teams completing payment and verification, bringing the active confirmed count to 33 teams with only 7 slots remaining.
+
+Simultaneously, the top navigation structure was streamlined:
+1. **Intake Metric Synchronization**: All site touchpoints now display `33 Booked · 7 Slots Left` (`82.5% full`), including the top announcement bar, desktop CTA badge (`Register 7 left`), hero capacity meter, terminal console `$ capacity --check` output, editions card, and bottom registration section.
+2. **Removal of Redundant 'About' Link**: Removed the 'About' link from both `nav.links` and `mobile-nav`. Since the hero section itself serves as the event introduction and value proposition, having an explicit 'About' anchor was redundant and occupied ~55px of horizontal header width. Removing it ensures generous breathing room for the remaining navigation links (`Domains`, `Agenda`, `Prizes`, `Jury`, `Bengaluru '26`) and guarantees the `Register (7 left)` button remains centered, unclipped, and fully prominent across every screen resolution.

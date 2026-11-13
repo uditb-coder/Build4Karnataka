@@ -1216,22 +1216,22 @@ All regional Program Managers, Hub coordinators, and college mentors across Mang
    - **Retail & Fisheries**: Coastal catch freshness, jetty price transparency, local retail inventory automation.
    - **FinTech & Skilling**: Regional cooperative credit scoring, micro-lending, rural vocational skilling.
    - **Open Innovation**: Cross-domain breakthrough Gen AI applications.
-3. **Registration Urgency & Cutoff Policy**: Clearly inform faculty coordinators that slots are allocated on a first-confirmed, first-secured basis. Once team 40 completes payment and roster submission, intake will close permanently.
-4. **Desktop & Mobile Top Bar & Navigation Alignment**: Both the top announcement bar and header navigation bar have been calibrated with centered alignment and zero-overflow styling so the announcement items are horizontally balanced and the primary teal `Register (10 left)` CTA button remains fully visible and clickable across all laptop screens, tablets, and classroom projector displays.
+3. **Registration Urgency & Cutoff Policy**: Clearly inform faculty coordinators that slots are allocated on a first-confirmed, first-secured basis. Currently, 33 teams are officially confirmed out of the expanded 40-team cap, leaving only 7 slots open. Once team 40 completes payment and roster submission, intake will close permanently.
+4. **Desktop & Mobile Top Bar & Streamlined Navigation**: Both the top announcement bar and header navigation bar have been calibrated with centered alignment and zero-overflow styling. The redundant 'About' button has been removed from header links, and the primary teal `Register (7 left)` CTA button remains fully visible and clickable across all laptop screens, tablets, and classroom projector displays.
 
 ### 3. Verified UI Implementation Screenshots
 
 ![Build 4 Karnataka Clean Top Announcement Bar and Active Register Navigation](assets/header_expansion_40.png)
-*Figure 1: Clean desktop top announcement bar highlighting 40-team expansion, 10 slots left, and active teal header navigation button ('Register 10 left').*
+*Figure 1: Clean desktop top announcement bar highlighting 40-team expansion, 33 booked, 7 slots left, streamlined navigation without About button, and active teal header button ('Register 7 left').*
 
-![Build 4 Karnataka Hero Clean Light Capacity Card with 40-Team Expansion](assets/hero_expansion_40.png)
-*Figure 2: Desktop hero section featuring the clean white light capacity card (75% progress meter, emerald pulse dot, 10 slots remaining alert), active primary CTA ('Register your team (10 slots left!) ->'), and interactive terminal diagnostics.*
+![Build 4 Karnataka Hero Clean Light Capacity Card with 40-Team Expansion](assets/hero_card_33.png)
+*Figure 2: Desktop hero section featuring the clean white light capacity card (82.5% progress meter, emerald pulse dot, 7 slots remaining alert), active primary CTA ('Register your team (7 slots left!) ->'), and interactive terminal diagnostics.*
 
-![Build 4 Karnataka Bottom Registration Callout with Active 10 Slots Left Button](assets/register_expansion_40.png)
-*Figure 3: Bottom registration callout box (#register) showing 75% progress meter, high-contrast typography, and active teal CTA button ('⚡ Register now (10 slots left)').*
+![Build 4 Karnataka Bottom Registration Callout with Active 7 Slots Left Button](assets/register_expansion_40.png)
+*Figure 3: Bottom registration callout box (#register) showing 82.5% progress meter, high-contrast typography, and active teal CTA button ('⚡ Register now (7 slots left)').*
 
 ![Build 4 Karnataka Mobile Viewport with Active Registration Drawer Button](assets/mobile_expansion_40.png)
-*Figure 4: Mobile viewport display confirming seamless single-line banner scaling, legible light capacity card, and full-width active drawer CTA ('Register your team (10 slots left!)').*
+*Figure 4: Mobile viewport display confirming seamless single-line banner scaling, legible light capacity card, and full-width active drawer CTA ('Register your team (7 slots left!)').*
 
 ### 4. Technical Checklist for Participating Teams
 When advising student leads during registration, emphasize the following prerequisites:
