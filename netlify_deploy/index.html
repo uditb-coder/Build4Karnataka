@@ -775,6 +775,279 @@ img { max-width: 100%; height: auto; }
   border-radius: 8px;
 }
 
+
+/* ═════ AGENDA & AWARDS ═════ */
+#agenda {
+  padding: 80px 0;
+  position: relative;
+}
+.agenda-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 36px;
+}
+.agenda-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 24px 28px;
+  box-shadow: var(--shadow);
+  display: grid;
+  grid-template-columns: 240px 1fr;
+  gap: 24px;
+  align-items: flex-start;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.agenda-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--accent-bright);
+  box-shadow: var(--shadow-lg);
+}
+.agenda-card.highlight {
+  border-left: 4px solid var(--accent);
+  background: linear-gradient(90deg, var(--accent-pale) 0%, var(--surface) 100%);
+}
+.agenda-card.finale-card {
+  border-left: 4px solid #f59e0b;
+  background: linear-gradient(90deg, rgba(245,158,11,0.06) 0%, var(--surface) 100%);
+}
+.agenda-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.agenda-time {
+  font-family: var(--mono);
+  font-size: 14px;
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.agenda-time::before {
+  content: "";
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
+}
+.agenda-card.finale-card .agenda-time::before {
+  background: #f59e0b;
+}
+.agenda-duration {
+  display: inline-flex;
+  align-items: center;
+  align-self: flex-start;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--accent);
+  background: var(--accent-soft);
+  padding: 3px 8px;
+  border-radius: 6px;
+  letter-spacing: 0.04em;
+}
+.agenda-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.agenda-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  line-height: 1.3;
+}
+.agenda-desc {
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.6;
+}
+.agenda-list {
+  margin: 6px 0 0 0;
+  padding-left: 18px;
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.6;
+}
+.agenda-list li {
+  margin-bottom: 4px;
+}
+.agenda-notice {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  line-height: 1.5;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.agenda-notice.warning {
+  background: rgba(239, 68, 68, 0.08);
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  color: #991b1b;
+}
+.agenda-notice.warning strong {
+  color: #b91c1c;
+}
+.agenda-notice .notice-icon {
+  font-size: 16px;
+  flex-shrink: 0;
+  line-height: 1.2;
+}
+
+/* Awards Sub-Section */
+.awards-section-head {
+  margin-top: 64px;
+  margin-bottom: 24px;
+}
+.awards-podium-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+  margin-bottom: 20px;
+}
+.award-podium-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 26px 22px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.award-podium-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+.award-podium-card.first {
+  border-color: #f59e0b;
+  background: linear-gradient(165deg, rgba(245, 158, 11, 0.08) 0%, var(--surface) 60%);
+}
+.award-podium-card.second {
+  border-color: #94a3b8;
+  background: linear-gradient(165deg, rgba(148, 163, 184, 0.12) 0%, var(--surface) 60%);
+}
+.award-podium-card.third {
+  border-color: #d97706;
+  background: linear-gradient(165deg, rgba(217, 119, 6, 0.08) 0%, var(--surface) 60%);
+}
+.award-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  padding: 4px 10px;
+  border-radius: 6px;
+  width: fit-content;
+  margin-bottom: 12px;
+}
+.award-badge.gold {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+.award-badge.silver {
+  background: #f1f5f9;
+  color: #334155;
+  border: 1px solid #cbd5e1;
+}
+.award-badge.bronze {
+  background: #ffedd5;
+  color: #9a3412;
+  border: 1px solid #fed7aa;
+}
+.award-badge.domain {
+  background: var(--accent-soft);
+  color: var(--accent);
+  border: 1px solid rgba(13, 148, 136, 0.2);
+}
+.award-title {
+  font-family: var(--display);
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--ink);
+  margin-bottom: 8px;
+  line-height: 1.3;
+}
+.award-desc {
+  color: var(--ink-soft);
+  font-size: 13.5px;
+  line-height: 1.55;
+  flex: 1;
+}
+.award-perks {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--line);
+  font-family: var(--mono);
+  font-size: 11.5px;
+  color: var(--ink-soft);
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.award-perks span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.award-perks span::before {
+  content: "✦";
+  color: var(--accent);
+  font-size: 10px;
+}
+.award-podium-card.first .award-perks span::before {
+  color: #d97706;
+}
+.awards-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  gap: 16px;
+}
+.award-domain-card {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 22px 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  transition: transform .2s, border-color .2s, box-shadow .2s;
+}
+.award-domain-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent-bright);
+  box-shadow: var(--shadow-lg);
+}
+
+@media (max-width: 860px) {
+  .agenda-card {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 20px 18px;
+  }
+  .awards-podium-grid {
+    grid-template-columns: 1fr;
+  }
+  .awards-domain-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -812,6 +1085,7 @@ img { max-width: 100%; height: auto; }
     <nav class="links">
       <a href="#about">About</a>
       <a href="#domains">Domains</a>
+      <a href="#agenda">Agenda</a>
       <a href="#prizes">Prizes</a>
       <a href="#jury">Jury</a>
       <a href="bengaluru/" style="font-weight:600;">Bengaluru '26</a>
@@ -829,6 +1103,7 @@ img { max-width: 100%; height: auto; }
   <a href="#about" class="mobile-link">About</a>
   <a href="#domains" class="mobile-link">Domains</a>
   <a href="#selection" class="mobile-link">How it works</a>
+  <a href="#agenda" class="mobile-link">Agenda & Awards</a>
   <a href="#prizes" class="mobile-link">Prizes</a>
   <a href="#jury" class="mobile-link">Jury</a>
   <a href="#faq" class="mobile-link">FAQ</a>
@@ -1135,6 +1410,201 @@ img { max-width: 100%; height: auto; }
         <h3>Build day &amp; finale</h3>
         <p>Build till 1:00 PM, 20-min parallel jury demos (2:00 - 5:30 PM), live music, and 8 team prize awards.</p>
         <span class="tag">Sat, Nov 28</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═════ AGENDA & AWARDS ═════ -->
+<section id="agenda">
+  <div class="wrap">
+    <div class="section-head reveal">
+      <span class="eyebrow">// Build Day Agenda & Awards</span>
+      <h2>Run of show & award structure.</h2>
+      <p>A high-intensity sprint from morning check-in to live music and grand felicitation. Eight winning teams recognized on stage across overall podium finishes and domain tracks.</p>
+    </div>
+
+    <!-- Saturday Run of Show Timeline -->
+    <div class="agenda-timeline">
+      <!-- 01 -->
+      <div class="agenda-card spot reveal">
+        <div class="agenda-meta">
+          <div class="agenda-time">08:30 AM - 09:30 AM</div>
+          <span class="agenda-duration">60 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Registration & Check-In Desk</div>
+          <div class="agenda-desc">Team arrival, verification against confirmed roster, badge & kit distribution.</div>
+          <div class="agenda-notice warning">
+            <span class="notice-icon">⚠️</span>
+            <div><strong>IMPORTANT NOTICE:</strong> Breakfast is NOT served at the venue; participants must have breakfast prior to arrival.</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- 02 -->
+      <div class="agenda-card spot reveal reveal-delay-1">
+        <div class="agenda-meta">
+          <div class="agenda-time">09:30 AM - 10:00 AM</div>
+          <span class="agenda-duration">30 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Opening Ceremony & Briefing</div>
+          <div class="agenda-desc">Welcome address by ComedKares & ERA Foundation leadership. Orientation on domain zones, 100-point judging rubric, lab locations, and technical guidelines.</div>
+        </div>
+      </div>
+
+      <!-- 03 -->
+      <div class="agenda-card highlight spot reveal reveal-delay-2">
+        <div class="agenda-meta">
+          <div class="agenda-time">10:00 AM - 01:00 PM</div>
+          <span class="agenda-duration">180 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Build & Refinement Sprint</div>
+          <div class="agenda-desc">On-site build sprint. With problem statements revealed 48 hours earlier, teams use this dedicated block to assemble prototypes, connect Gen AI APIs, and finish pitch decks. Floor mentors circulate to unblock teams.</div>
+        </div>
+      </div>
+
+      <!-- 04 -->
+      <div class="agenda-card spot reveal reveal-delay-1">
+        <div class="agenda-meta">
+          <div class="agenda-time">01:00 PM - 02:00 PM</div>
+          <span class="agenda-duration">60 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Submission Lock & Working Lunch</div>
+          <div class="agenda-desc">Code freeze at 01:00 PM. Teams upload prototype URLs and slide decks. Complimentary working buffet lunch served in dining hall for all participants and guests.</div>
+        </div>
+      </div>
+
+      <!-- 05 -->
+      <div class="agenda-card highlight spot reveal reveal-delay-2">
+        <div class="agenda-meta">
+          <div class="agenda-time">02:00 PM - 05:30 PM</div>
+          <span class="agenda-duration">210 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Parallel Jury Review (2 Tracks / Rooms)</div>
+          <div class="agenda-desc">Conducted concurrently across 2 evaluation halls (Lecture Hall 1 & Lecture Hall 2).</div>
+          <ul class="agenda-list">
+            <li><strong>20 minutes allocated per team:</strong> 5 min pitch, 7 min working demo, 8 min jury Q&A and scoring.</li>
+            <li>Allows deep technical validation without rushed judging.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 06 -->
+      <div class="agenda-card spot reveal reveal-delay-1">
+        <div class="agenda-meta">
+          <div class="agenda-time">05:30 PM - 06:30 PM</div>
+          <span class="agenda-duration">60 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Live Campus Music & Private Deliberation</div>
+          <div class="agenda-desc">High-energy live campus band performance, evening tea & snacks, and photo booth for students. Meanwhile, jury panel retreats to private conference room to consolidate scores and finalize winners.</div>
+        </div>
+      </div>
+
+      <!-- 07 -->
+      <div class="agenda-card finale-card spot reveal reveal-delay-2">
+        <div class="agenda-meta">
+          <div class="agenda-time">06:30 PM - 07:30 PM</div>
+          <span class="agenda-duration">60 MIN</span>
+        </div>
+        <div class="agenda-content">
+          <div class="agenda-title">Grand Finale & Prize Distribution</div>
+          <div class="agenda-desc">Official felicitation of 8 WINNING TEAMS:</div>
+          <ul class="agenda-list">
+            <li><strong>1st Place Grand Champion</strong>, <strong>2nd Place Runner-Up</strong>, and <strong>3rd Place Second Runner-Up</strong></li>
+            <li><strong>5 Domain Champions:</strong> AgriTech, Healthcare, Retail & Fisheries, FinTech & Skilling, Open Innovation</li>
+          </ul>
+          <div class="agenda-desc" style="margin-top:6px;">Oversized dummy cheque presentations, certificates, and official press photos.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Award Categories & Evaluation Structure -->
+    <div class="awards-section-head reveal">
+      <span class="eyebrow">// Evaluation Structure & Honors</span>
+      <h3 style="font-family:var(--display); font-size:24px; font-weight:700; color:var(--ink); margin-top:8px;">8 Winning Teams Recognized on Stage</h3>
+      <p style="color:var(--ink-soft); font-size:14px; margin-top:6px; max-width:760px;">Evaluated strictly against the 100-point judging rubric. Every winning team takes home honors, recognition, and post-event support.</p>
+    </div>
+
+    <!-- Podium Finishers (Top 3) -->
+    <div class="awards-podium-grid">
+      <!-- 1st Place -->
+      <div class="award-podium-card first spot reveal">
+        <span class="award-badge gold">🥇 1st Place Grand Winner</span>
+        <div class="award-title">Grand Champion</div>
+        <div class="award-desc">Overall highest-scoring team across all domains. Celebrated for top architectural elegance, practical utility, and prototype completeness.</div>
+        <div class="award-perks">
+          <span>Grand Trophy + Winner Certificates</span>
+          <span>Top Cash Prize from ₹40,000+ pool</span>
+          <span>Fast-track incubation & mentor access</span>
+        </div>
+      </div>
+
+      <!-- 2nd Place -->
+      <div class="award-podium-card second spot reveal reveal-delay-1">
+        <span class="award-badge silver">🥈 2nd Place Runner-Up</span>
+        <div class="award-title">First Runner-Up</div>
+        <div class="award-desc">Second highest overall score across the buildathon. Recognized for exceptional engineering depth and impactful domain problem execution.</div>
+        <div class="award-perks">
+          <span>Official Trophy + Runner-Up Certificates</span>
+          <span>Cash Prize from ₹40,000+ pool</span>
+          <span>ComedKares showcase feature</span>
+        </div>
+      </div>
+
+      <!-- 3rd Place -->
+      <div class="award-podium-card third spot reveal reveal-delay-2">
+        <span class="award-badge bronze">🥉 3rd Place Second Runner-Up</span>
+        <div class="award-title">Second Runner-Up</div>
+        <div class="award-desc">Third highest overall score across the buildathon. High technical rigor and strong demonstration of autonomous AI tooling.</div>
+        <div class="award-perks">
+          <span>Official Trophy + Certificates</span>
+          <span>Cash Prize from ₹40,000+ pool</span>
+          <span>ComedKares network recognition</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- 5 Domain Champions -->
+    <div class="awards-domain-grid">
+      <!-- AgriTech -->
+      <div class="award-domain-card spot reveal">
+        <span class="award-badge domain">🌾 Domain Champion</span>
+        <div class="award-title" style="font-size:16.5px;">AgriTech</div>
+        <div class="award-desc">Best product solving coastal agriculture, soil health, crop disease, or farmers' market challenges.</div>
+      </div>
+
+      <!-- Healthcare -->
+      <div class="award-domain-card spot reveal reveal-delay-1">
+        <span class="award-badge domain">🩺 Domain Champion</span>
+        <div class="award-title" style="font-size:16.5px;">Healthcare</div>
+        <div class="award-desc">Best prototype addressing local health triage, medicine reminders, diagnostics, or patient wellness.</div>
+      </div>
+
+      <!-- Retail & Fisheries -->
+      <div class="award-domain-card spot reveal reveal-delay-2">
+        <span class="award-badge domain">🐟 Domain Champion</span>
+        <div class="award-title" style="font-size:16.5px;">Retail & Fisheries</div>
+        <div class="award-desc">Best solution for coastal fish freshness, market pricing, cold chain, or local vendor commerce.</div>
+      </div>
+
+      <!-- FinTech & Skilling -->
+      <div class="award-domain-card spot reveal reveal-delay-1">
+        <span class="award-badge domain">💳 Domain Champion</span>
+        <div class="award-title" style="font-size:16.5px;">FinTech & Skilling</div>
+        <div class="award-desc">Best application for regional financial inclusion, co-operative banking, micro-loans, or vocational skills.</div>
+      </div>
+
+      <!-- Open Innovation -->
+      <div class="award-domain-card spot reveal reveal-delay-2">
+        <span class="award-badge domain">🚀 Domain Champion</span>
+        <div class="award-title" style="font-size:16.5px;">Open Innovation / Incubation</div>
+        <div class="award-desc">Best cross-domain breakthrough prototype showing high startup potential.</div>
       </div>
     </div>
   </div>

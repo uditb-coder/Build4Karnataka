@@ -878,6 +878,29 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
 
 ![Mangaluru Hero Registration Surge](assets/registration_hype_hero.png)
 
+### Update - Edition 02 (Mangaluru) Build Day Agenda & 8-Award Recognition Structure
+1. **Live Portal Agenda Section Activated**:
+   A dedicated, responsive Agenda & Award Recognition section (`#agenda`) is now live on the portal (https://build4karnataka.comedkares.com/#agenda). Mentors, coordinators, and college liaisons can direct all registered students to this section for the official schedule.
+
+2. **Saturday Build Day Run of Show (28 November 2026)**:
+   - **08:30 AM - 09:30 AM (60 min) | Registration & Check-In Desk**: Verification against confirmed roster, badge & kit distribution.
+     - *CRITICAL VENUE ADVISORY: Breakfast is NOT served at the venue. All students and mentors must have breakfast prior to arrival.*
+   - **09:30 AM - 10:00 AM (30 min) | Opening Ceremony & Briefing**: Welcome address by ComedKares & ERA Foundation leadership; orientation on domain zones, 100-point judging rubric, lab locations, and technical guidelines.
+   - **10:00 AM - 01:00 PM (180 min) | Build & Refinement Sprint**: On-site prototyping and API connection. Dedicated floor mentors circulate to unblock teams.
+   - **01:00 PM - 02:00 PM (60 min) | Submission Lock & Working Lunch**: Code freeze at 01:00 PM sharp. Prototype URLs and slide decks uploaded. Working buffet lunch served in dining hall for all participants and guests.
+   - **02:00 PM - 05:30 PM (210 min) | Parallel Jury Review (2 Tracks / Rooms)**: Held concurrently across Lecture Hall 1 & Lecture Hall 2. 20 minutes allocated per team (5 min pitch, 7 min working demo, 8 min jury Q&A and scoring) ensuring deep technical evaluation.
+   - **05:30 PM - 06:30 PM (60 min) | Live Campus Music & Private Deliberation**: High-energy campus band performance, evening tea & snacks, and student photo booth while the jury retreats to private deliberation.
+   - **06:30 PM - 07:30 PM (60 min) | Grand Finale & Prize Distribution**: Felicitation of 8 winning teams on stage with oversized dummy cheques, trophies, certificates, and press photos.
+
+3. **Eight (8) Winning Teams Recognized on Stage**:
+   - **1st Place Grand Winner**: Overall highest-scoring team across all domains. Receives Grand Trophy, top cash prize, and winner certificates.
+   - **2nd Place Runner-Up**: Second highest overall score across the buildathon. Receives Trophy, cash prize, and runner-up certificates.
+   - **3rd Place Second Runner-Up**: Third highest overall score across the buildathon. Receives Trophy, cash prize, and certificates.
+   - **5 Domain Champions**: AgriTech, Healthcare, Retail & Fisheries, FinTech & Skilling, and Open Innovation / Incubation.
+
+![Build 4 Karnataka Mangaluru Build Day Run of Show Schedule](assets/agenda_schedule_desktop.png)
+![Build 4 Karnataka Mangaluru 8 Award Categories and Podium Structure](assets/agenda_awards_desktop.png)
+
 ## Hub Quality Normalization Protocol: Mysuru Hub (Phase 1 Audit & Mentor Directives)
 
 ### Target Audience & Scope

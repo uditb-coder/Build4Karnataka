@@ -1,6 +1,17 @@
 # Management Update Report
 
 ## Recent Changes
+- **Build 4 Karnataka Mangaluru Dedicated Build Day Agenda & 8-Award Recognition Structure (13 November 2026)**:
+  - **Verified UI Implementation Screenshots**:
+    ![Build 4 Karnataka Mangaluru Build Day Run of Show Schedule](assets/agenda_schedule_desktop.png)
+    ![Build 4 Karnataka Mangaluru 8 Award Categories and Podium Structure](assets/agenda_awards_desktop.png)
+    ![Build 4 Karnataka Mangaluru Responsive Mobile Agenda View](assets/agenda_mobile.png)
+  - **Full Saturday Run of Show Integration**: Deployed a dedicated responsive section (`#agenda`) between the event progression flow (`#selection`) and prize rewards (`#prizes`). Features all 7 minute-by-minute stages spanning 08:30 AM to 07:30 PM with prominent duration badges, interactive hover spotlights, and visual milestone accents.
+  - **Critical Breakfast Policy Callout**: Embedded an amber/red warning callout box within the Check-In stage explicitly notifying participants that breakfast is NOT served at the venue and must be taken prior to arrival.
+  - **Parallel Jury Review Operational Architecture**: Clarified concurrent 2-room judging (Lecture Hall 1 & Lecture Hall 2) with a strict 20-minute allocation per team (5 min pitch, 7 min working demo, 8 min jury Q&A and rubric scoring).
+  - **Eight Winning Teams Recognition Grid**: Integrated stage recognition honoring 8 winning teams, comprising 3 podium champions (1st Place Grand Winner with gold badge and perks, 2nd Place Runner-Up with silver badge, and 3rd Place Second Runner-Up with bronze badge) and 5 domain champions (AgriTech, Healthcare, Retail & Fisheries, FinTech & Skilling, and Open Innovation / Incubation).
+  - **Multi-Viewport Navigation Links**: Seamlessly added 'Agenda' routing to both desktop navigation bar and mobile drawer navigation.
+
 - **Build 4 Karnataka Mangaluru Registration Surge & Scarcity Hype Integration (12 November 2026)**:
   - **Verified UI Implementation Screenshots**:
     ![Build 4 Karnataka Mangaluru Hero with Registration Surge Meter](assets/registration_hype_hero.png)
@@ -218,6 +229,7 @@
 ## Features & Comparison
 | Feature | Details | Status |
 |---------|---------|--------|
+| **Edition 02 (Mangaluru) Dedicated Agenda & 8-Award Structure** | Integrated comprehensive responsive agenda section (#agenda) into the live portal featuring full 7-stage Build Day run of show (08:30 AM to 07:30 PM) with clear durations, prominent breakfast warning notice, 20-min parallel jury review breakdown, and high-visibility recognition grid for all 8 winning teams (Top 3 podium + 5 domain champions). Added navigation links across desktop and mobile. | Complete (Deployed Live) |
 | **Edition 02 (Mangaluru) Registration Surge & Hype Integration** | Integrated real-time capacity and scarcity urgency signals across the live portal: 29 of 30 confirmed teams (97% capacity booked) and final 1 slot remaining. Implemented top announcement bar final call tag, desktop header live scarcity badge, hero live capacity progress bar meter (97% filled), terminal console capacity diagnostics, and high-contrast bottom callout box. | Complete (Deployed Live) |
 | **Delivery Mode 2-Min Reset Fix & Dual-Screen Projector Pop-Out** | Fixed Google Slides 2-min idle reset (removed delayms=3000, eager loading, wake lock). Added Fullscreen Projector mode and pop-out Speaker Window for laptop extended displays with synchronized live timer and phased talking track. | Complete (Deployed Live) |
 | **Statewide LMS Quality Audit & Mentor Feedback Report** | Comprehensive 10-hub audit across 81 active batches, 31 primary mentors, Mysuru 66.39% attendance risk resolution, 30-day programs archive, and session effectiveness breakdown with zero em-dashes. | Complete (Report Generated) |
@@ -1574,3 +1586,54 @@ Yes, students are actively viewing and interacting with the Maker Journey dashbo
 
 - **Student LMS Leaderboard Tab**: `[Screenshot Pending Upload: Student View of Batch Leaderboard on students.comedkares.com]`
 - **Student Profile Badge Card**: `[Screenshot Pending Upload: Student Profile Card with Unlocked Maker Badges]`
+
+
+## 14. Dedicated Build Day Agenda & 8-Team Award Recognition Structure
+
+### 14.1 Operational Overview & Motivation
+Following the progression of candidate teams through the 48-hour statement release and 24-hour statewide hub open day, the buildathon culminates in a high-intensity, 11-hour on-site experience on Saturday, 28 November 2026 at the ComedKares Innovation Hub, Mangaluru.
+
+To provide total operational transparency to confirmed participants, jury members, corporate partners, and institutional leaders, a dedicated responsive Agenda and Award Recognition Section (`#agenda`) has been engineered and deployed directly to the live portal (https://build4karnataka.comedkares.com/#agenda).
+
+### 14.2 Verified UI Implementation Screenshots
+![Build 4 Karnataka Mangaluru Build Day Run of Show Schedule](assets/agenda_schedule_desktop.png)
+*Figure 14.1: Live desktop schedule view illustrating minute-by-minute time blocks, duration chips, spotlight gradients, and prominent participant breakfast warning.*
+
+![Build 4 Karnataka Mangaluru 8 Award Categories and Podium Structure](assets/agenda_awards_desktop.png)
+*Figure 14.2: Live desktop award recognition grid showcasing 1st Place Grand Champion, 2nd Place Runner-Up, 3rd Place Second Runner-Up, and domain category champions.*
+
+![Build 4 Karnataka Mangaluru Responsive Mobile Agenda View](assets/agenda_mobile.png)
+*Figure 14.3: Fully responsive mobile rendering ensuring clean, accessible single-column stacking across smartphones and tablets.*
+
+### 14.3 Build Day Minute-by-Minute Run of Show
+The Saturday Build Day schedule is structured into 7 sequential operational blocks:
+
+| Time Slot | Duration | Stage & Title | Core Operational Details & Protocols |
+| :--- | :--- | :--- | :--- |
+| **08:30 AM - 09:30 AM** | 60 min | Registration & Check-In Desk | Team arrival, verification against confirmed roster, badge & kit distribution. <br>**⚠️ IMPORTANT NOTICE:** Breakfast is NOT served at the venue; participants must have breakfast prior to arrival. |
+| **09:30 AM - 10:00 AM** | 30 min | Opening Ceremony & Briefing | Welcome address by ComedKares & ERA Foundation leadership. Orientation on domain zones, 100-point judging rubric, lab locations, and technical guidelines. |
+| **10:00 AM - 01:00 PM** | 180 min | Build & Refinement Sprint | On-site build sprint. With problem statements revealed 48 hours earlier, teams use this dedicated block to assemble prototypes, connect Gen AI APIs, and finish pitch decks. Floor mentors circulate to unblock teams. |
+| **01:00 PM - 02:00 PM** | 60 min | Submission Lock & Working Lunch | Code freeze at 01:00 PM sharp. Teams upload prototype URLs and slide decks. Complimentary working buffet lunch served in dining hall for all participants and guests. |
+| **02:00 PM - 05:30 PM** | 210 min | Parallel Jury Review (2 Tracks / Rooms) | Conducted concurrently across 2 evaluation halls (Lecture Hall 1 & Lecture Hall 2). 20 minutes allocated per team (5 min pitch, 7 min working demo, 8 min jury Q&A and scoring). Allows deep technical validation without rushed judging. |
+| **05:30 PM - 06:30 PM** | 60 min | Live Campus Music & Private Deliberation | High-energy live campus band performance, evening tea & snacks, and photo booth for students. Meanwhile, jury panel retreats to private conference room to consolidate scores and finalize winners. |
+| **06:30 PM - 07:30 PM** | 60 min | Grand Finale & Prize Distribution | Official felicitation of 8 WINNING TEAMS (1st, 2nd, 3rd Podium + 5 Domain Champions). Oversized dummy cheque presentations, certificates, and official press photos. |
+
+### 14.4 Eight (8) Winning Teams Recognition & Award Architecture
+To maximize celebration and domain-specific excellence across Coastal Karnataka, the event awards eight distinct teams on stage:
+
+1. **Overall Podium Champions**:
+   - **🥇 1st Place Grand Winner (Grand Champion)**: Overall highest-scoring team across all domains. Receives Grand Trophy, top cash prize from the ₹40,000+ pool, winner certificates, and fast-track incubation support.
+   - **🥈 2nd Place Runner-Up (First Runner-Up)**: Second highest overall score across the buildathon. Receives Official Trophy, cash prize, runner-up certificates, and ComedKares showcase feature.
+   - **🥉 3rd Place Second Runner-Up (Second Runner-Up)**: Third highest overall score across the buildathon. Receives Official Trophy, cash prize, and certificates recognizing technical excellence.
+
+2. **Five (5) Domain Champions**:
+   - **🌾 Domain Champion - AgriTech**: Best product solving coastal agriculture, soil health, crop disease, or farmers' market challenges.
+   - **🩺 Domain Champion - Healthcare**: Best prototype addressing local health triage, medicine reminders, diagnostics, or patient wellness.
+   - **🐟 Domain Champion - Retail & Fisheries**: Best solution for coastal fish freshness, market pricing, cold chain, or local vendor commerce.
+   - **💳 Domain Champion - FinTech & Skilling**: Best application for regional financial inclusion, co-operative banking, micro-loans, or vocational skills.
+   - **🚀 Domain Champion - Open Innovation / Incubation**: Best cross-domain breakthrough prototype showing high startup potential.
+
+### 14.5 Responsive Front-End Technical Implementation
+- **Spotlight Hover Interaction**: Attached `.spot` classes with dynamic CSS mouse-tracking variables (`--mx`, `--my`) to provide interactive radial illumination matching existing portal cards.
+- **Visual Milestones**: The 180-min Build Sprint and 210-min Jury Review cards feature teal accent borders, while the Grand Finale card features a gold border with warm amber gradient backdrop.
+- **Zero Em-Dashes**: Strictly sanitized across all markup, CSS comments, and documentation text.
