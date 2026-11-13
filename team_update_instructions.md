@@ -1193,3 +1193,49 @@ This proves that students are excited to earn XP, unlock visual badges, and view
 ### 3. Screenshot Submission Request
 > [!NOTE]
 > Mentor Call to Action: Please upload screenshots of your batch students viewing the live LMS Leaderboard tab on their laptops and their earned badge cards on `students.comedkares.com`. These captures will be featured in the weekly central management report.
+
+
+## Operations & Outreach Directive: Build 4 Karnataka Mangaluru 40-Team Capacity Expansion (Final 10 Slots)
+
+### 1. Executive Context & Rationale for Expansion
+Following the initial announcement that Mangaluru capacity had reached 30/30 teams, ComedKares and ERA Foundation leadership received numerous requests from coastal Karnataka engineering institutions requesting team slots. To honour this strong regional student momentum, leadership has officially expanded total capacity from 30 to **40 teams** (allowing up to 160 participants).
+
+Key Operational Numbers:
+- **Total Venue Ceiling**: 40 Teams (Expanded from 30)
+- **Confirmed Registered Teams**: 30 Teams (75% of capacity)
+- **Open Remaining Slots**: Exactly 10 Slots
+- **Registration Status**: Live & Active across all website channels
+- **Official Registration Link**: https://forms.gle/M2Q93UHtBamjD3GM8
+
+### 2. Operational Guidance for Hub PMs, College Leads & Mentors
+All regional Program Managers, Hub coordinators, and college mentors across Mangaluru, Udupi, Karwar, Puttur, Moodbidri, and Sullia must execute the following outreach actions immediately:
+1. **Target Unrepresented Branches**: Focus outreach on multidisciplinary branches including Biotechnology, Mechanical, Civil, and Electronics, ensuring teams form cross-functional groups with CS/IS students.
+2. **Domain Representation Balancing**: Drive student awareness across all 5 buildathon challenge tracks:
+   - **AgriTech**: Arecanut processing, coastal soil health, automated yield monitoring, farmer market intelligence.
+   - **Healthcare**: Rural clinic triage, smart prescription translation, elder care wellness, diagnostic chatbots.
+   - **Retail & Fisheries**: Coastal catch freshness, jetty price transparency, local retail inventory automation.
+   - **FinTech & Skilling**: Regional cooperative credit scoring, micro-lending, rural vocational skilling.
+   - **Open Innovation**: Cross-domain breakthrough Gen AI applications.
+3. **Registration Urgency & Cutoff Policy**: Clearly inform faculty coordinators that slots are allocated on a first-confirmed, first-secured basis. Once team 40 completes payment and roster submission, intake will close permanently.
+
+### 3. Verified UI Implementation Screenshots
+
+![Build 4 Karnataka Clean Top Announcement Bar and Active Register Navigation](assets/header_expansion_40.png)
+*Figure 1: Clean desktop top announcement bar highlighting 40-team expansion, 10 slots left, and active teal header navigation button ('Register 10 left').*
+
+![Build 4 Karnataka Hero Clean Light Capacity Card with 40-Team Expansion](assets/hero_expansion_40.png)
+*Figure 2: Desktop hero section featuring the clean white light capacity card (75% progress meter, emerald pulse dot, 10 slots remaining alert), active primary CTA ('Register your team (10 slots left!) ->'), and interactive terminal diagnostics.*
+
+![Build 4 Karnataka Bottom Registration Callout with Active 10 Slots Left Button](assets/register_expansion_40.png)
+*Figure 3: Bottom registration callout box (#register) showing 75% progress meter, high-contrast typography, and active teal CTA button ('⚡ Register now (10 slots left)').*
+
+![Build 4 Karnataka Mobile Viewport with Active Registration Drawer Button](assets/mobile_expansion_40.png)
+*Figure 4: Mobile viewport display confirming seamless single-line banner scaling, legible light capacity card, and full-width active drawer CTA ('Register your team (10 slots left!)').*
+
+### 4. Technical Checklist for Participating Teams
+When advising student leads during registration, emphasize the following prerequisites:
+- **Team Size**: 2 to 4 members per team (interdisciplinary teams strongly encouraged).
+- **Registration Fee**: ₹399 per team (covers hub access, working buffet lunch, participant kits, mentor guidance, and competition entry).
+- **Breakfast Policy**: Remind all students that breakfast is NOT served on site; participants must eat prior to 08:30 AM arrival at ComedKares Mangaluru.
+- **Problem Statements Release**: Problem statements drop 48 hours prior to Build Day (Thursday, 26 November 2026 at 10:00 AM IST).
+- **Pre-Event Hub Access**: Teams can access ComedKares Mangaluru Hub on Friday, 27 November 2026 (09:00 AM to 06:00 PM) for hardware, testing environments, and mentor consultation.
