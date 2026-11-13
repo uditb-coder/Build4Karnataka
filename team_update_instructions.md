@@ -864,6 +864,28 @@ The Build 4 Karnataka web portal has officially launched the **Mangaluru Edition
    - The complete schedule has been compiled into an executive Microsoft Word document: `Build4Karnataka_Edition02_Mangaluru_Master_Agenda.docx`.
    - Team members, mentors, and outreach coordinators can share this document directly with participating institutions, college principals, faculty mentors, and student teams.
 
+### Update - Mangaluru Registrations Officially Closed: 100% Capacity Reached (30/30 Confirmed Teams)
+1. **Capacity Cap Achieved & Public Registration Lockdown**:
+   - As of 13 November 2026, the 30th confirmed team registration has been validated. Total venue capacity is now 100% full!
+   - All public registration links (Google Forms) on the live portal (https://build4karnataka.comedkares.com/) have been deactivated.
+   - The site now prominently displays **'REGISTRATIONS CLOSED (100% CAPACITY REACHED - HOUSE FULL)'**.
+
+2. **College Outreach & Liaison Directives**:
+   - **Immediately halt active registration recruitment**: Notify all college principals, HODs, faculty coordinators, and student placement cells that all 30 slots for the Mangaluru edition have been claimed.
+   - **Handling Late Inquiries & Waitlist**: For teams asking to register, politely inform them:
+     *"Thank you for the tremendous interest in Build 4 Karnataka Mangaluru. All 30 physical team slots have now been confirmed, and registrations are officially closed. We encourage students to follow our social channels (@comed_kares) and stay tuned for subsequent regional editions across Karnataka."*
+   - Inquiries regarding confirmed team rosters or logistics should be directed to the ComedKares WhatsApp helpline (+91 63668 79353).
+
+3. **Confirmed Teams Pre-Event Milestones**:
+   - **Sat, Nov 21**: Dispatch of the Gen AI Master Playbook and virtual technical orientation.
+   - **Thu, Nov 26 (10:00 AM IST | T-48h)**: Public release of the 12 coastal problem statements from local industry partners.
+   - **Fri, Nov 27 (09:00 AM - 06:00 PM IST | T-24h)**: Hub Open Day at ComedKares Hubs for prototype testing, API setup, and floor mentor consultations.
+   - **Sat, Nov 28 (08:30 AM - 07:30 PM IST)**: On-site Build Day at ComedKares Centre, Mangaluru.
+     - *Important venue reminder: Breakfast is NOT served at the venue; participants must have breakfast prior to 08:30 AM check-in.*
+
+![Mangaluru Hero 100% Capacity Closed Status](assets/registration_closed_hero.png)
+![Mangaluru Bottom Closed Callout Box](assets/registration_closed_register.png)
+
 ### Update - Mangaluru Registration Surge & Scarcity Campaign (29/30 Teams Confirmed - 97% Full)
 1. **Current Registration Surge & Final Seat Alert**: With 29 confirmed team registrations received out of the 30 available seats, the event has reached 97% capacity. Exactly 1 slot remains open!
 2. **Website Urgency & Hype Elements Activated**:
