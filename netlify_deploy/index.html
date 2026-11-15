@@ -5,10 +5,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Build 4 Karnataka Mangaluru | Unleash AI: Build More</title>
 <link rel="icon" type="image/png" href="https://build4karnataka.comedkares.com/favicon.png">
-<meta name="description" content="Build 4 Karnataka comes to Mangaluru. Coastal Karnataka's student Gen AI buildathon by ComedKares × ERA Foundation. 1 day, 30 slots, ₹40,000+ in prizes. Saturday, 28 November 2026 at the ComedKares Centre, Mangaluru.">
+<meta name="description" content="Build 4 Karnataka comes to Mangaluru. Coastal Karnataka's student Gen AI buildathon by ComedKares × ERA Foundation. 1 day, 50 teams, ₹40,000+ in prizes. Saturday, 28 November 2026 at the ComedKares Centre, Mangaluru.">
 <meta name="keywords" content="Build 4 Karnataka, Build4Karnataka Mangaluru, Mangalore Hackathon, Mangaluru AI Buildathon, ComedKares Buildathon, Student Hackathon Karnataka, AI Buildathon">
 <meta property="og:title" content="Build 4 Karnataka Mangaluru | Unleash AI: Build More">
-<meta property="og:description" content="Coastal Karnataka's student Gen AI buildathon. 1 day. 30 slots. ₹40,000+ prize pool. Saturday, 28 November 2026, ComedKares Centre, Mangaluru.">
+<meta property="og:description" content="Coastal Karnataka's student Gen AI buildathon. 1 day. 50 teams. ₹40,000+ prize pool. Saturday, 28 November 2026, ComedKares Centre, Mangaluru.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://build4karnataka.comedkares.com/">
 <meta property="og:image" content="https://build4karnataka.comedkares.com/Share-preview.png">
@@ -531,7 +531,7 @@ img { max-width: 100%; height: auto; }
   .b4k-logo { font-size: 14px !important; padding: 6px 10px !important; }
 }
 @media (max-width: 480px) {
-  section { padding: 48px 16px !important; }
+  section { padding: 48px 0 !important; }
   .sponsor-row { justify-content: center; }
   .s-logo { min-width: 120px; padding: 12px; }
   .s-logo.s-logo-wide { min-width: 200px; max-width: 100%; padding: 12px 16px; }
@@ -1044,6 +1044,21 @@ img { max-width: 100%; height: auto; }
   }
 }
 
+.is-closed{background:#64748b !important;border-color:#64748b !important;color:#fff !important;cursor:default !important;box-shadow:none !important;transform:none !important;pointer-events:none;}
+/* --- Mobile layout fixes (2026-11-15) --- */
+@media (max-width:600px){
+  .wrap{padding:0 18px !important;}
+  .eyebrow{display:inline-block;line-height:1.6;}
+  .eyebrow::before{margin-right:8px;}
+  .sponsor-row:has(.s-slot){display:grid;grid-template-columns:1fr 1fr;gap:12px;}
+  .s-slot{min-width:0 !important;width:auto;padding:18px 12px !important;}
+  .s-slot .sl{font-size:11.5px;}
+  .faq-tag{display:table;margin:0 0 6px 0;}
+  details summary{align-items:flex-start;}
+  details summary::after{margin-top:22px;}
+  .hero-cta .btn{width:100%;justify-content:center;text-align:center;}
+  .announce-bar > span:not(.gold):not(.urgency-tag), .announce-bar > a{display:none !important;}
+}
 /* --- Header logos and nav: larger sizing (2026-11-13) --- */
 #siteHeader .logo-row{gap:10px !important;}
 #siteHeader .logo-sep{height:28px !important;margin:0 4px !important;}
@@ -1102,8 +1117,8 @@ img { max-width: 100%; height: auto; }
 
 <!-- Announcement bar -->
 <div class="announce-bar">
-  <span class="gold" style="font-weight:700;">🚀 High Demand: Expanded to <span data-slot="total">45</span> Teams!</span>
-  <span class="urgency-tag" style="background:var(--accent); color:#fff; font-weight:700; padding:2px 8px; border-radius:5px;"><span data-slot="booked">39</span> Booked · <span data-slot="left">6</span> Slots Left</span>
+  <span class="gold" style="font-weight:700;">🔒 Registrations Closed: 50 Teams Registered</span>
+  <span class="urgency-tag" style="background:var(--accent); color:#fff; font-weight:700; padding:2px 8px; border-radius:5px;">50 / 50 Teams Booked</span>
   <span class="announce-sep">|</span>
   <span>Innovation Partner: <a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" class="arrow" style="color:var(--accent-bright); text-decoration:underline; font-weight:600;">Nitte Pharma</a></span>
   <span class="announce-sep">|</span>
@@ -1131,7 +1146,7 @@ img { max-width: 100%; height: auto; }
       <a href="bengaluru/" style="font-weight:600;">Bengaluru '26</a>
     </nav>
     <div class="nav-right">
-      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary nav-cta" target="_blank" rel="noopener" style="position:relative;">Register <span class="nav-urgent-badge" style="background:#f59e0b; color:#fff;"><span data-slot="left">6</span> left</span></a>
+      <span class="btn btn-primary nav-cta is-closed" aria-disabled="true">Registrations Closed</span>
       <button class="hamburger" id="hamburger" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
@@ -1147,7 +1162,7 @@ img { max-width: 100%; height: auto; }
   <a href="#jury" class="mobile-link">Jury</a>
   <a href="#faq" class="mobile-link">FAQ</a>
   <a href="bengaluru/" class="mobile-link">Bengaluru 2026 results</a>
-  <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener" style="background:var(--accent); border-color:var(--accent); color:#fff;">Register your team (<span data-slot="left">6</span> slots left!)</a>
+  <span class="btn btn-primary btn-lg is-closed" aria-disabled="true">Registrations closed</span>
 </div>
 
 <main>
@@ -1160,23 +1175,23 @@ img { max-width: 100%; height: auto; }
       <img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="display: block; height: 80px; margin: 24px 0 16px; max-width: 100%; object-fit: contain; background:var(--accent); padding:8px; border-radius:12px;">
       <div class="hero-badge"><span class="dot-live"></span>Edition 02 · Mangaluru</div>
       <h1 class="headline">Unleash AI:<br><span style="text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 4px; text-underline-offset: 6px;">Build More.</span></h1>
-      <p class="sub">Coastal Karnataka's first Gen AI student buildathon. <strong style="color:var(--accent);">Due to high demand, capacity expanded to <span data-slot="total">45</span> teams across 5 domains (<span data-slot="booked">39</span> already confirmed, <span data-slot="left">6</span> slots remaining)</strong> with problem statements live T-48h, hub access on Friday, build sprint until 1:00 PM Saturday, then live parallel jury demos from 2:00 PM - 5:30 PM, live music, and 8 team awards. ₹40,000+ in prizes.</p>
+      <p class="sub">Coastal Karnataka's first Gen AI student buildathon. <strong style="color:var(--accent);">Registrations are closed: all 50 team slots are filled.</strong> Problem statements go live 48 hours before the event and ComedKares hubs are open to teams on Friday. On Saturday, teams build until 1:00 PM and demo to the jury in the afternoon. Prize pool: ₹40,000+.</p>
 
       <!-- Live Capacity Status Widget (Light Surface, No Grey Shading) -->
       <div class="live-hype-card">
         <div class="hype-header">
           <div class="hype-left">
             <span class="hype-dot" style="background:#10b981; box-shadow:0 0 10px #10b981;"></span>
-            <span class="hype-title">HIGH DEMAND: EXPANDED TO <span data-slot="total">45</span> TEAMS</span>
+            <span class="hype-title">REGISTRATIONS CLOSED · 50 TEAMS</span>
           </div>
-          <span class="hype-badge" style="background:rgba(13,148,136,0.1); color:var(--accent); border:1px solid rgba(13,148,136,0.25);">🔥 <span data-slot="booked">39</span> / <span data-slot="total">45</span> CLAIMED · <span data-slot="left">6</span> SLOTS LEFT</span>
+          <span class="hype-badge" style="background:rgba(13,148,136,0.1); color:var(--accent); border:1px solid rgba(13,148,136,0.25);">50 / 50 SLOTS FILLED</span>
         </div>
-        <div class="hype-meter-track" data-slot-title title="39 of 45 slots claimed (86.7% full)">
-          <div class="hype-meter-fill" data-slot-bar style="width: 86.7%; background:linear-gradient(90deg, #10b981 0%, #14b8a6 65%, #f59e0b 100%);"></div>
+        <div class="hype-meter-track" title="50 of 50 slots claimed (100% full)">
+          <div class="hype-meter-fill" style="width: 100%; background:linear-gradient(90deg, #10b981 0%, #14b8a6 65%, #f59e0b 100%);"></div>
         </div>
         <div class="hype-footer">
-          <span class="hype-stat">⚡ <strong><span data-slot="booked">39</span> student teams registered</strong> · Slots expanded due to overwhelming demand</span>
-          <span class="hype-alert" style="color:var(--accent); font-weight:700; font-family:var(--mono); font-size:12px;">🚨 <strong><span data-slot="left">6</span> SLOTS REMAINING</strong></span>
+          <span class="hype-stat">⚡ <strong>50 student teams registered</strong></span>
+          <span class="hype-alert" style="color:var(--accent); font-weight:700; font-family:var(--mono); font-size:12px;">🔒 <strong>REGISTRATIONS CLOSED</strong></span>
         </div>
       </div>
       <div class="branch-cluster">
@@ -1190,8 +1205,8 @@ img { max-width: 100%; height: auto; }
         <span class="branch-chip">Recent Passouts</span>
       </div>
       <div class="hero-cta">
-        <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary btn-lg" target="_blank" rel="noopener">Register your team (<span data-slot="left">6</span> slots left!) →</a>
-        <a href="#agenda" class="btn btn-ghost btn-lg">View Event Agenda & Awards →</a>
+        <span class="btn btn-primary btn-lg is-closed" aria-disabled="true">Registrations closed</span>
+        <a href="#agenda" class="btn btn-ghost btn-lg">View Agenda & Awards →</a>
       </div>
       <span class="cd-label">// countdown to build day</span>
       <div id="heroCountdown" aria-live="polite">
@@ -1203,7 +1218,7 @@ img { max-width: 100%; height: auto; }
       <div class="stat-strip">
         <div class="stat"><div class="k">Event date</div><div class="v">Sat, 28 Nov '26</div></div>
         <div class="stat"><div class="k">Venue</div><div class="v" style="font-size: 13.5px; line-height: 1.4;">ComedKares Centre,<br>Mangaluru</div></div>
-        <div class="stat highlight-stat" style="border-color:rgba(13,148,136,0.35); background:rgba(13,148,136,0.04);"><div class="k" style="color:var(--accent);font-weight:700;">Expanded Capacity</div><div class="v" style="color:var(--accent);font-weight:700;font-size:16px;"><span data-slot="booked">39</span> / <span data-slot="total">45</span> Booked · <span data-slot="left">6</span> Left</div></div>
+        <div class="stat highlight-stat" style="border-color:rgba(13,148,136,0.35); background:rgba(13,148,136,0.04);"><div class="k" style="color:var(--accent);font-weight:700;">Registrations</div><div class="v" style="color:var(--accent);font-weight:700;font-size:16px;">50 / 50 Booked · Closed</div></div>
         <div class="stat"><div class="k">Prize pool</div><div class="v">₹40,000+</div></div>
       </div>
     </div>
@@ -1223,15 +1238,14 @@ img { max-width: 100%; height: auto; }
           <div class="out ok">→ ComedKares Centre, Mangaluru</div>
           <div class="out ok">→ Saturday, November 28, 2026</div>
           <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">capacity --check</span></div>
-          <div class="out" style="color:#38bdf8;font-weight:600;">→ <span data-slot="booked">39</span> / <span data-slot="total">45</span> TEAMS CONFIRMED [<span data-slot="pct">86.7</span>% SLOTS BOOKED]</div>
-          <div class="out ok" style="color:#34d399;font-weight:700;">→ DUE TO HIGH DEMAND: CAPACITY EXPANDED TO <span data-slot="total">45</span> TEAMS</div>
-          <div class="out warn" style="color:#f59e0b;font-weight:700;">→ FINAL <span data-slot="left">6</span> SLOTS REMAINING (APPLY NOW)</div>
+          <div class="out" style="color:#38bdf8;font-weight:600;">→ 50 / 50 TEAMS CONFIRMED</div>
+          <div class="out warn" style="color:#f59e0b;font-weight:700;">→ REGISTRATIONS CLOSED FOR NOW</div>
           <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">event --status</span></div>
-          <div class="out ok" style="color:#34d399;font-weight:700;">→ REGISTRATIONS ACTIVE · <span data-slot="left">6</span> SLOTS LEFT</div>
+          <div class="out ok" style="color:#34d399;font-weight:700;">→ BUILD DAY: SAT 28 NOV · CHECK-IN 8:30 AM</div>
           <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">editions --list</span></div>
           <div class="out ok">→ 01 Bengaluru · 7 Sep · COMPLETED ✓ <a href="bengaluru/" style="color:inherit;text-decoration:underline;">view</a></div>
           <div class="out ok">→ 02 Mangaluru · 28 Nov · UPCOMING</div>
-          <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">register --team</span></div>
+          <div style="margin-top:12px;"><span class="prompt">$</span> <span class="cmd">team --format</span></div>
           <div class="out" style="color:#9fb0c9;">→ 2-4 members (max 4) · ₹399 per team · Direct entry, no screening<span class="cursor"></span></div>
         </div>
       </div>
@@ -1244,8 +1258,8 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Editions</span>
-      <h2>Bengaluru set the standard. Mangaluru raises it.</h2>
-      <p>Build 4 Karnataka travels city to city. Every edition stays on this site with its winners, jury and highlights, so the next one knows the bar it has to clear.</p>
+      <h2>Editions</h2>
+      <p>Build 4 Karnataka runs in a different city each time. The winners, jury and photos from every edition stay on this site.</p>
     </div>
     <div class="edition-grid">
       <article class="edition-card reveal">
@@ -1265,18 +1279,18 @@ img { max-width: 100%; height: auto; }
         <a href="bengaluru/" class="btn btn-ghost">Explore what happened in Bengaluru →</a>
       </article>
       <article class="edition-card live reveal reveal-delay-1">
-        <div class="edition-top"><span class="edition-num">Edition 02 · Mangaluru</span><span class="status-pill upcoming" style="background:rgba(13,148,136,0.1); color:var(--accent); border-color:rgba(13,148,136,0.3);"><span class="dot-live" style="background:var(--accent);"></span>Expanded to <span data-slot="total">45</span> Teams</span></div>
+        <div class="edition-top"><span class="edition-num">Edition 02 · Mangaluru</span><span class="status-pill upcoming" style="background:rgba(13,148,136,0.1); color:var(--accent); border-color:rgba(13,148,136,0.3);"><span class="dot-live" style="background:var(--accent);"></span>Registrations Closed</span></div>
         <h3>ComedKares Centre, Mangaluru</h3>
-        <p>Saturday, 28 November 2026. 12 coastal problem statements from local partners. Due to overwhelming demand, slots expanded to <span data-slot="total">45</span> teams (<span data-slot="booked">39</span> already confirmed, <span data-slot="left">6</span> remaining).</p>
+        <p>Saturday, 28 November 2026. 12 problem statements from local partners on the coast. Registrations are closed: all 50 team slots are filled.</p>
         <div class="edition-stats">
-          <div><b><span data-slot="total">45</span></b><span>Slots (<span data-slot="booked">39</span> Booked)</span></div>
+          <div><b>50</b><span>Teams</span></div>
           <div><b>5</b><span>Domains</span></div>
           <div><b>₹40K+</b><span>Prize pool</span></div>
         </div>
         <div class="edition-podium">
-          <span><span data-slot="booked">39</span> confirmed teams. <span data-slot="left">6</span> slots remaining.</span>
+          <span>50 confirmed teams. Registrations closed.</span>
         </div>
-        <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="btn btn-primary" target="_blank" rel="noopener">Register for Mangaluru</a>
+        <span class="btn btn-primary is-closed" aria-disabled="true">Registrations Closed</span>
       </article>
     </div>
   </div>
@@ -1287,30 +1301,30 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">What is Build 4 Karnataka?</span>
-      <h2>A student AI buildathon to prove one thing:</h2>
-      <p>You don’t need years of coding experience to ship a real product. With Gen AI tools, a great team can build something meaningful during build time.</p>
+      <h2>A one-day Gen AI buildathon for students.</h2>
+      <p>Teams take a real problem from a local partner and build a working prototype in a day, mostly with Gen AI and no-code tools. Strong coding skills help, but they are not required.</p>
     </div>
     <div class="about-grid">
       <div class="about-card spot reveal reveal-delay-1">
         <div class="icon">🧠</div>
         <h3>Gen AI</h3>
-        <p>Build with Gen AI and vibe-code tools such as Voiceflow, Glide, Bubble, Airtable, OpenAI and Gemini, not raw code from scratch.</p>
+        <p>Teams build with tools like Voiceflow, Glide, Bubble, Airtable, OpenAI and Gemini instead of writing everything from scratch.</p>
       </div>
       <div class="about-card spot reveal reveal-delay-2">
         <div class="icon">⚡</div>
-        <h3>6-Hour Sprint</h3>
-        <p>One day. Problem statements go live 48 hours before. Submit by 4:30 PM, then demo to the judges at your table.</p>
+        <h3>One Build Day</h3>
+        <p>Problem statements go live 48 hours before. On the day, teams build until 1:00 PM and demo to the jury in the afternoon.</p>
       </div>
       <div class="about-card spot reveal reveal-delay-3">
         <div class="icon">🏆</div>
         <h3>₹40,000+ in Prizes</h3>
-        <p>A prize pool and goodies kits for the best builds, and certificates of achievement for every participant.</p>
+        <p>Cash prizes and goodies kits for the winning teams, and a certificate for every participant.</p>
       </div>
     </div>
     <div class="about-card spot reveal" style="margin-top: 24px;">
       <div class="icon">🤝</div>
       <h3>Real Problems from Local Partners</h3>
-      <p>Every problem statement comes from a coastal startup, co-operative, hospital or MSME, and the partner judges the teams that take it on. Top prototypes will be evaluated for incubation support and funding.</p>
+      <p>Each problem statement comes from a coastal startup, co-operative, hospital or MSME, and that partner helps judge the teams working on it. The best prototypes will be considered for incubation support and funding.</p>
     </div>
   </div>
 </section>
@@ -1321,13 +1335,13 @@ img { max-width: 100%; height: auto; }
     <div class="section-head reveal">
       <span class="eyebrow">Build domains</span>
       <h2>Five domains. Twelve coastal problems.</h2>
-      <p>Local partners set 12 problem statements across these domains, so 3–4 teams take on each one. Statements go live on Thu 26 Nov at 10:00 AM; pick yours by Fri 27 Nov, 6:00 PM.</p>
+      <p>Local partners have set 12 problem statements across these five domains, so 3 to 4 teams work on each one. Statements go live on Thu 26 Nov at 10:00 AM, and teams pick one by Fri 27 Nov, 6:00 PM.</p>
     </div>
     <div class="domain-grid">
       <div class="domain spot reveal reveal-delay-1">
         <div class="domain-glyph">🌾</div>
         <h3>AgriTech</h3>
-        <p>Develop data-driven AI solutions that optimize agricultural yields, strengthen supply chains, and empower farmers with actionable insights.</p>
+        <p>Tools that help coastal farmers decide what to grow, spot crop problems early and get a fair price for their produce.</p>
         <p class="local">Arecanut and coconut crop-disease advice, cashew price info, advisories in Kannada and Tulu.</p>
         <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Voiceflow</span><span class="chip">Gemini</span><span class="chip">Glide</span></div>
@@ -1335,7 +1349,7 @@ img { max-width: 100%; height: auto; }
       <div class="domain spot reveal reveal-delay-2">
         <div class="domain-glyph">🏥</div>
         <h3>Healthcare</h3>
-        <p>Leverage AI and computer vision to enhance patient care, optimize physical wellness, and revolutionize real-time medical diagnostics.</p>
+        <p>Tools that help patients, clinics and hospitals with follow-ups, basic triage and getting health information to people in rural areas.</p>
         <p class="local">Patient follow-up and medicine reminders in local languages, rural triage, hospital queue info.</p>
         <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Gemini API</span><span class="chip">Glide</span><span class="chip">Airtable</span></div>
@@ -1343,7 +1357,7 @@ img { max-width: 100%; height: auto; }
       <div class="domain spot reveal reveal-delay-3">
         <div class="domain-glyph">🛍️</div>
         <h3>Retail &amp; Fisheries</h3>
-        <p>Use AI to connect local sellers with buyers, improve freshness and pricing, and bridge physical markets and online storefronts.</p>
+        <p>Tools that help fish markets and small local sellers reach buyers, keep track of freshness and price their goods fairly.</p>
         <p class="local">Fish-market price and freshness info, cold chain, cashew and Udupi handloom sellers going online.</p>
         <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Bhashini API</span><span class="chip">Glide</span><span class="chip">Zapier</span></div>
@@ -1351,7 +1365,7 @@ img { max-width: 100%; height: auto; }
       <div class="domain spot reveal reveal-delay-1">
         <div class="domain-glyph">💰</div>
         <h3>FinTech &amp; Skilling</h3>
-        <p>Build intelligent systems that secure financial ecosystems against fraud and empower the workforce through personalized, AI-driven career and learning pathways.</p>
+        <p>Tools that help people use banks and government schemes safely, avoid fraud, and find the right job or skills training.</p>
         <p class="local">Co-op bank customer assistants, fraud alerts for seniors, loan and scheme comparison.</p>
         <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">OpenAI</span><span class="chip">Make.com</span><span class="chip">Airtable</span></div>
@@ -1359,7 +1373,7 @@ img { max-width: 100%; height: auto; }
       <div class="domain spot reveal reveal-delay-2">
         <div class="domain-glyph">🏭</div>
         <h3>Manufacturing &amp; Port</h3>
-        <p>Deploy multimodal AI to improve workplace safety, automate visual inspection and keep maintenance on track across industrial and port-linked units.</p>
+        <p>Tools that help small factories and port-linked units with safety checks, quality inspection and maintenance records.</p>
         <p class="local">MSME maintenance logs, safety and compliance checklists, quality inspection.</p>
         <div class="partner-open">Domain partner: <b>slot open</b></div>
         <div class="tools-hint"><span class="chip">Teachable Machine</span><span class="chip">Bubble</span><span class="chip">Make</span></div>
@@ -1374,7 +1388,7 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Evaluation</span>
-      <h2>Official Judging Rubric.</h2>
+      <h2>How teams are judged.</h2>
       <p>100 points. Judges work in pairs and come to your table in your domain zone; partners also judge the teams on their own problem statement.</p>
     </div>
     <div class="rubric-grid" style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:24px;">
@@ -1412,42 +1426,42 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">How it works</span>
-      <h2>Register, and you're in.</h2>
-      <p>No screening and no shortlist. Every team that registers and pays gets a seat at the ComedKares Centre, Mangaluru on a first-come, first-served basis. <strong>Due to high demand, capacity has been expanded to <span data-slot="total">45</span> teams.</strong> <span data-slot="booked">39</span> slots are already confirmed, leaving <span data-slot="left">6</span> slots open.</p></div>
+      <h2>Registrations are closed.</h2>
+      <p>All 50 team slots for Mangaluru are filled, so registrations are closed for now. Registered teams will get the venue details and next steps directly.</p></div>
     <div class="funnel reveal">
       <div class="fstep spot">
         <div class="num">// 01</div>
-        <div style="display:inline-block; font-size:11px; font-weight:700; color:#fff; background:var(--accent); padding:2px 8px; border-radius:4px; margin-bottom:8px; font-family:var(--mono);"><span data-slot="booked">39</span> / <span data-slot="total">45</span> BOOKED</div>
+        <div style="display:inline-block; font-size:11px; font-weight:700; color:#fff; background:var(--accent); padding:2px 8px; border-radius:4px; margin-bottom:8px; font-family:var(--mono);">50 / 50 BOOKED</div>
         <h3>Register online</h3>
-        <p>Submit team details and pay ₹399 (GST incl.). Capacity expanded to <span data-slot="total">45</span> teams due to high demand. <span data-slot="left">6</span> slots remaining.</p>
-        <span class="tag" style="color:var(--accent); font-weight:600;"><span data-slot="pct">86.7</span>% Full · <span data-slot="left">6</span> Seats Left</span>
+        <p>Teams registered and paid ₹399 (GST incl.). All 50 slots are now filled.</p>
+        <span class="tag" style="color:var(--accent); font-weight:600;">Registrations closed</span>
       </div>
       <div class="funnel-arrow">→</div>
       <div class="fstep spot">
         <div class="num">// 02</div>
         <h3>Gen AI masterclass</h3>
-        <p>Online Masterclass and Master Playbook delivered to all confirmed teams so you arrive ready to build.</p>
+        <p>An online Gen AI masterclass and the Master Playbook for all confirmed teams, to prepare before build day.</p>
         <span class="tag">Sat, Nov 21</span>
       </div>
       <div class="funnel-arrow">→</div>
       <div class="fstep spot">
         <div class="num">// 03</div>
         <h3>Statements live (T-48h)</h3>
-        <p>12 local partner statements go live at 10:00 AM. Pick yours and start technical architecture planning.</p>
+        <p>The 12 partner problem statements go live at 10:00 AM. Teams pick one and start planning.</p>
         <span class="tag">Thu, Nov 26</span>
       </div>
       <div class="funnel-arrow">→</div>
       <div class="fstep spot">
         <div class="num">// 04</div>
         <h3>Hub access (T-24h)</h3>
-        <p>Visit any ComedKares Hub across Karnataka (9:00 AM - 6:00 PM) to test tools and consult mentors.</p>
+        <p>Teams can visit any ComedKares Hub in Karnataka (9:00 AM - 6:00 PM) to try out tools and talk to mentors.</p>
         <span class="tag">Fri, Nov 27</span>
       </div>
       <div class="funnel-arrow">→</div>
       <div class="fstep spot" style="border-color:var(--accent-bright);">
         <div class="num">// 05</div>
         <h3>Build day &amp; finale</h3>
-        <p>Build till 1:00 PM, 20-min parallel jury demos (2:00 - 5:30 PM), live music, and 8 team prize awards.</p>
+        <p>Build until 1:00 PM, jury demos in the afternoon, then the prize distribution.</p>
         <span class="tag">Sat, Nov 28</span>
       </div>
     </div>
@@ -1458,9 +1472,9 @@ img { max-width: 100%; height: auto; }
 <section id="agenda">
   <div class="wrap">
     <div class="section-head reveal">
-      <span class="eyebrow">// Build Day Agenda & Awards</span>
-      <h2>Run of show & award structure.</h2>
-      <p>A high-intensity sprint from morning check-in to live music and grand felicitation. Eight winning teams recognized on stage across overall podium finishes and domain tracks.</p>
+      <span class="eyebrow">Build Day Agenda & Awards</span>
+      <h2>Build day schedule and awards.</h2>
+      <p>Saturday, 28 November.</p>
     </div>
 
     <!-- Saturday Run of Show Timeline -->
@@ -1473,10 +1487,10 @@ img { max-width: 100%; height: auto; }
         </div>
         <div class="agenda-content">
           <div class="agenda-title">Registration & Check-In Desk</div>
-          <div class="agenda-desc">Team arrival, verification against confirmed roster, badge & kit distribution.</div>
+          <div class="agenda-desc">Check-in and kit pickup.</div>
           <div class="agenda-notice warning">
             <span class="notice-icon">⚠️</span>
-            <div><strong>IMPORTANT NOTICE:</strong> Breakfast is NOT served at the venue; participants must have breakfast prior to arrival.</div>
+            <div><strong>Please note:</strong> breakfast is not served at the venue, so eat before you arrive.</div>
           </div>
         </div>
       </div>
@@ -1489,7 +1503,7 @@ img { max-width: 100%; height: auto; }
         </div>
         <div class="agenda-content">
           <div class="agenda-title">Opening Ceremony & Briefing</div>
-          <div class="agenda-desc">Welcome address by ComedKares & ERA Foundation leadership. Orientation on domain zones, 100-point judging rubric, lab locations, and technical guidelines.</div>
+          <div class="agenda-desc">Welcome and briefing.</div>
         </div>
       </div>
 
@@ -1500,8 +1514,8 @@ img { max-width: 100%; height: auto; }
           <span class="agenda-duration">180 MIN</span>
         </div>
         <div class="agenda-content">
-          <div class="agenda-title">Build & Refinement Sprint</div>
-          <div class="agenda-desc">On-site build sprint. With problem statements revealed 48 hours earlier, teams use this dedicated block to assemble prototypes, connect Gen AI APIs, and finish pitch decks. Floor mentors circulate to unblock teams.</div>
+          <div class="agenda-title">Build Sprint</div>
+          <div class="agenda-desc">Teams build their prototypes, with mentors on the floor.</div>
         </div>
       </div>
 
@@ -1512,8 +1526,8 @@ img { max-width: 100%; height: auto; }
           <span class="agenda-duration">60 MIN</span>
         </div>
         <div class="agenda-content">
-          <div class="agenda-title">Submission Lock & Working Lunch</div>
-          <div class="agenda-desc">Code freeze at 01:00 PM. Teams upload prototype URLs and slide decks. Complimentary working buffet lunch served in dining hall for all participants and guests.</div>
+          <div class="agenda-title">Submissions & Lunch</div>
+          <div class="agenda-desc">Submissions close at 1:00 PM, followed by lunch.</div>
         </div>
       </div>
 
@@ -1524,12 +1538,8 @@ img { max-width: 100%; height: auto; }
           <span class="agenda-duration">210 MIN</span>
         </div>
         <div class="agenda-content">
-          <div class="agenda-title">Parallel Jury Review (2 Tracks / Rooms)</div>
-          <div class="agenda-desc">Conducted concurrently across 2 evaluation halls (Lecture Hall 1 & Lecture Hall 2).</div>
-          <ul class="agenda-list">
-            <li><strong>20 minutes allocated per team:</strong> 5 min pitch, 7 min working demo, 8 min jury Q&A and scoring.</li>
-            <li>Allows deep technical validation without rushed judging.</li>
-          </ul>
+          <div class="agenda-title">Jury Review</div>
+          <div class="agenda-desc">Teams present and demo to the jury.</div>
         </div>
       </div>
 
@@ -1540,8 +1550,8 @@ img { max-width: 100%; height: auto; }
           <span class="agenda-duration">60 MIN</span>
         </div>
         <div class="agenda-content">
-          <div class="agenda-title">Live Campus Music & Private Deliberation</div>
-          <div class="agenda-desc">High-energy live campus band performance, evening tea & snacks, and photo booth for students. Meanwhile, jury panel retreats to private conference room to consolidate scores and finalize winners.</div>
+          <div class="agenda-title">Live Music</div>
+          <div class="agenda-desc">Live music and evening snacks while the jury finalises results.</div>
         </div>
       </div>
 
@@ -1552,22 +1562,15 @@ img { max-width: 100%; height: auto; }
           <span class="agenda-duration">60 MIN</span>
         </div>
         <div class="agenda-content">
-          <div class="agenda-title">Grand Finale & Prize Distribution</div>
-          <div class="agenda-desc">Official felicitation of 8 WINNING TEAMS:</div>
-          <ul class="agenda-list">
-            <li><strong>1st Place Grand Champion</strong>, <strong>2nd Place Runner-Up</strong>, and <strong>3rd Place Second Runner-Up</strong></li>
-            <li><strong>5 Domain Champions:</strong> AgriTech, Healthcare, Retail & Fisheries, FinTech & Skilling, Open Innovation</li>
-          </ul>
-          <div class="agenda-desc" style="margin-top:6px;">Oversized dummy cheque presentations, certificates, and official press photos.</div>
+          <div class="agenda-title">Prize Distribution</div>
+          <div class="agenda-desc">Results and prizes for the winning teams.</div>
         </div>
       </div>
     </div>
 
     <!-- Award Categories & Evaluation Structure -->
     <div class="awards-section-head reveal">
-      <span class="eyebrow">// Evaluation Structure & Honors</span>
-      <h3 style="font-family:var(--display); font-size:24px; font-weight:700; color:var(--ink); margin-top:8px;">8 Winning Teams Recognized on Stage</h3>
-      <p style="color:var(--ink-soft); font-size:14px; margin-top:6px; max-width:760px;">Evaluated strictly against the 100-point judging rubric. Every winning team takes home honors, recognition, and post-event support.</p>
+      <span class="eyebrow">Awards</span>
     </div>
 
     <!-- Podium Finishers (Top 3) -->
@@ -1576,11 +1579,9 @@ img { max-width: 100%; height: auto; }
       <div class="award-podium-card first spot reveal">
         <span class="award-badge gold">🥇 1st Place Grand Winner</span>
         <div class="award-title">Grand Champion</div>
-        <div class="award-desc">Overall highest-scoring team across all domains. Celebrated for top architectural elegance, practical utility, and prototype completeness.</div>
         <div class="award-perks">
           <span>Grand Trophy + Winner Certificates</span>
           <span>Top Cash Prize from ₹40,000+ pool</span>
-          <span>Fast-track incubation & mentor access</span>
         </div>
       </div>
 
@@ -1588,7 +1589,6 @@ img { max-width: 100%; height: auto; }
       <div class="award-podium-card second spot reveal reveal-delay-1">
         <span class="award-badge silver">🥈 2nd Place Runner-Up</span>
         <div class="award-title">First Runner-Up</div>
-        <div class="award-desc">Second highest overall score across the buildathon. Recognized for exceptional engineering depth and impactful domain problem execution.</div>
         <div class="award-perks">
           <span>Official Trophy + Runner-Up Certificates</span>
           <span>Cash Prize from ₹40,000+ pool</span>
@@ -1600,7 +1600,6 @@ img { max-width: 100%; height: auto; }
       <div class="award-podium-card third spot reveal reveal-delay-2">
         <span class="award-badge bronze">🥉 3rd Place Second Runner-Up</span>
         <div class="award-title">Second Runner-Up</div>
-        <div class="award-desc">Third highest overall score across the buildathon. High technical rigor and strong demonstration of autonomous AI tooling.</div>
         <div class="award-perks">
           <span>Official Trophy + Certificates</span>
           <span>Cash Prize from ₹40,000+ pool</span>
@@ -1609,41 +1608,34 @@ img { max-width: 100%; height: auto; }
       </div>
     </div>
 
-    <!-- 5 Domain Champions -->
+    <!-- Domain Champions -->
     <div class="awards-domain-grid">
       <!-- AgriTech -->
       <div class="award-domain-card spot reveal">
         <span class="award-badge domain">🌾 Domain Champion</span>
         <div class="award-title" style="font-size:16.5px;">AgriTech</div>
-        <div class="award-desc">Best product solving coastal agriculture, soil health, crop disease, or farmers' market challenges.</div>
+        <div class="award-desc">Best build in AgriTech: crops, soil, plant disease or farm prices.</div>
       </div>
 
       <!-- Healthcare -->
       <div class="award-domain-card spot reveal reveal-delay-1">
         <span class="award-badge domain">🩺 Domain Champion</span>
         <div class="award-title" style="font-size:16.5px;">Healthcare</div>
-        <div class="award-desc">Best prototype addressing local health triage, medicine reminders, diagnostics, or patient wellness.</div>
+        <div class="award-desc">Best build in Healthcare: triage, medicine reminders or patient support.</div>
       </div>
 
       <!-- Retail & Fisheries -->
       <div class="award-domain-card spot reveal reveal-delay-2">
         <span class="award-badge domain">🐟 Domain Champion</span>
         <div class="award-title" style="font-size:16.5px;">Retail & Fisheries</div>
-        <div class="award-desc">Best solution for coastal fish freshness, market pricing, cold chain, or local vendor commerce.</div>
+        <div class="award-desc">Best build in Retail & Fisheries: fish freshness, pricing, cold chain or local sellers.</div>
       </div>
 
       <!-- FinTech & Skilling -->
       <div class="award-domain-card spot reveal reveal-delay-1">
         <span class="award-badge domain">💳 Domain Champion</span>
         <div class="award-title" style="font-size:16.5px;">FinTech & Skilling</div>
-        <div class="award-desc">Best application for regional financial inclusion, co-operative banking, micro-loans, or vocational skills.</div>
-      </div>
-
-      <!-- Open Innovation -->
-      <div class="award-domain-card spot reveal reveal-delay-2">
-        <span class="award-badge domain">🚀 Domain Champion</span>
-        <div class="award-title" style="font-size:16.5px;">Open Innovation / Incubation</div>
-        <div class="award-desc">Best cross-domain breakthrough prototype showing high startup potential.</div>
+        <div class="award-desc">Best build in FinTech & Skilling: co-op banking, small loans, fraud or job skills.</div>
       </div>
     </div>
   </div>
@@ -1654,8 +1646,8 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Prizes</span>
-      <h2>What’s on the table.</h2>
-      <p>Build the best product, pitch the strongest story, and walk away with real cash, a trophy and a LinkedIn feature that matters.</p>
+      <h2>Prizes.</h2>
+      <p>Cash prizes for the top teams, plus trophies, certificates and a LinkedIn feature from ComedKares.</p>
     </div>
     <div class="prize-grid prize-grid-2">
       <div class="prize first spot reveal reveal-delay-1">
@@ -1680,8 +1672,8 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Jury panel</span>
-      <h2>Your work will be judged by real practitioners.</h2>
-      <p>Ten judges from coastal industry, startups and academia, working in pairs across the five domain zones and coming to your table. The panel will be announced soon. <a href="bengaluru/#jury" style="color:var(--accent);text-decoration:underline;">See the Bengaluru jury</a>.</p>
+      <h2>Judges from industry, startups and colleges.</h2>
+      <p>Ten judges from coastal industry, startups and colleges. They work in pairs across the five domain zones and come to your table. The panel will be announced soon. <a href="bengaluru/#jury" style="color:var(--accent);text-decoration:underline;">See the Bengaluru jury</a>.</p>
     </div>
     <div class="jury-grid">
       <div class="jury-card spot reveal reveal-delay-1"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru jury</div><span class="jury-domain">AgriTech</span></div>
@@ -1698,11 +1690,11 @@ img { max-width: 100%; height: auto; }
     <div class="section-head reveal">
       <span class="eyebrow">Mentor panel</span>
       <h2>Mentors on the floor, all day.</h2>
-      <p>Eight mentors move between the tables, each looking after about six teams, with two scheduled check-ins during the build. Get unstuck on tools, sharpen your problem fit and rehearse your demo. The panel will be announced soon.</p>
+      <p>Eight mentors move between the tables, each looking after about six teams, with two scheduled check-ins during the build. They can help with tools, with fitting your idea to the problem, and with practising your demo. The panel will be announced soon.</p>
     </div>
     <div class="jury-grid mentor-grid">
       <div class="jury-card spot reveal reveal-delay-1"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Gen AI tools</span></div>
-      <div class="jury-card spot reveal reveal-delay-2"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Vibe-code build</span></div>
+      <div class="jury-card spot reveal reveal-delay-2"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">No-code build</span></div>
       <div class="jury-card spot reveal reveal-delay-3"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">AgriTech</span></div>
       <div class="jury-card spot reveal reveal-delay-4"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Healthcare</span></div>
       <div class="jury-card spot reveal reveal-delay-1"><div class="jury-avatar tba">?</div><div class="jury-name">To be announced</div><div class="jury-org">Mangaluru mentor</div><span class="jury-domain">Retail &amp; Fisheries</span></div>
@@ -1718,7 +1710,7 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">What you get</span>
-      <h2>Support from registration to demo.</h2>
+      <h2>What registered teams get.</h2>
     </div>
     <div class="kit-grid">
       <div class="kit-item spot reveal reveal-delay-1">
@@ -1742,7 +1734,7 @@ img { max-width: 100%; height: auto; }
   <div class="wrap">
     <div class="section-head reveal">
       <span class="eyebrow">Partners &amp; sponsors</span>
-      <h2>Back the builders of coastal Karnataka.</h2>
+      <h2>Partners and sponsors.</h2>
     </div>
     <div class="sponsor-tier reveal">
       <div class="tier-label">Organized by</div>
@@ -1780,22 +1772,22 @@ img { max-width: 100%; height: auto; }
         <a class="s-slot" href="mailto:reachus@comedkares.org?subject=Build%204%20Karnataka%20Mangaluru%20-%20Partnership"><div class="sl-icon">🧩</div><div class="sl">Problem statement partners ×5</div><div class="sc">Slots open</div></a>
       </div>
     </div>
-    <div class="s-cta reveal">📢 <strong>Want to sponsor?</strong> Put your brand in front of engineering students from 15+ colleges across coastal Karnataka. Problem statement partners set a real challenge, get 3–4 teams working on it and judge their solutions. Contact: <a href="mailto:reachus@comedkares.org">reachus@comedkares.org</a></div>
+    <div class="s-cta reveal">📢 <strong>Want to sponsor?</strong> Reach engineering students from 15+ colleges across coastal Karnataka. Problem statement partners set a real challenge, have 3 to 4 teams work on it and judge their solutions. Contact: <a href="mailto:reachus@comedkares.org">reachus@comedkares.org</a></div>
   </div>
 </section>
 
 <!-- ═════ FAQ ═════ -->
 <section id="faq">
   <div class="wrap">
-    <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Questions teams ask.</h2></div>
+    <div class="section-head reveal"><span class="eyebrow">FAQ</span><h2>Frequently asked questions.</h2></div>
     <div id="faqList">
-      <details><summary><span><span class="faq-tag">Eligibility</span> Who can take part?</span></summary><p>Undergraduate engineering students from any branch, MCA students, and recent passouts from the past academic year. Teams from across Karnataka are welcome. There is no screening: every team that registers gets a seat, first come, first served. All 30 of 30 slots have been booked, and registrations are now officially closed.</p></details>
-      <details><summary><span><span class="faq-tag">Team</span> How big can a team be, and what does it cost?</span></summary><p>Teams of up to 4 members (maximum 4 members per team), all present on the day. One fee of ₹399 (GST incl.) covers the whole team. All 30 team slots have been confirmed and registrations are now officially closed as venue capacity has been reached.</p></details>
-      <details><summary><span><span class="faq-tag">Skills</span> Do we need to know how to code?</span></summary><p>No. The event is built around Gen AI and vibe-code tools. Good thinking, prompting and teamwork matter more than raw coding.</p></details>
+      <details><summary><span><span class="faq-tag">Eligibility</span> Who can take part?</span></summary><p>Undergraduate engineering students from any branch, MCA students, and recent passouts from the past academic year. Teams from across Karnataka are welcome. There was no screening: seats went to teams first come, first served. All 50 slots are now booked and registrations are closed.</p></details>
+      <details><summary><span><span class="faq-tag">Team</span> How big can a team be, and what does it cost?</span></summary><p>Up to 4 members per team, all present on the day. One fee of ₹399 (GST incl.) covers the whole team. All 50 slots are booked and registrations are closed.</p></details>
+      <details><summary><span><span class="faq-tag">Skills</span> Do we need to know how to code?</span></summary><p>No. The event uses Gen AI and no-code tools. Clear thinking, good prompts and teamwork matter more than coding.</p></details>
       <details><summary><span><span class="faq-tag">Venue</span> Where exactly is the venue?</span></summary><p>At the ComedKares Centre in Mangaluru. The full address and directions will be shared with every registered team.</p></details>
-      <details><summary><span><span class="faq-tag">Prep</span> Can we start building before the event, and can we visit your hubs?</span></summary><p>Problem statements are released T-48 hours ahead on Thursday, 26 Nov at 10:00 AM. On Friday, 27 Nov (T-24h), all registered teams are invited to visit ComedKares Innovation Hubs across Karnataka from 9:00 AM to 6:00 PM to brainstorm, test hardware/APIs, and consult mentors before build day. Code should be developed during the buildathon window.</p></details>
-      <details><summary><span><span class="faq-tag">Submit</span> What do we submit on build day and how does judging work?</span></summary><p>Building and refining wraps up at 1:00 PM. Teams submit their working prototype and presentation deck before lunch. Starting at 2:00 PM, teams present a 20-minute PPT pitch and live prototype walkthrough in 2 parallel evaluation rooms to domain juries, followed by live music (5:30 - 6:30 PM) and the grand finale prize distribution for 8 winning teams.</p></details>
-      <details><summary><span><span class="faq-tag">Schedule</span> What is the Build Day schedule and is food provided?</span></summary><p>Registration opens Saturday morning (please note that breakfast is not provided; participants should have breakfast before arriving). The on-site build sprint runs until 1:00 PM followed by working lunch (1:00 PM - 2:00 PM, provided by organizers). Parallel jury reviews run 2:00 PM - 5:30 PM (20 mins per team across 2 evaluation halls), live music runs 5:30 PM - 6:30 PM while judges deliberate privately, and the grand finale prize distribution takes place at 6:30 PM recognizing 8 winning teams (1st, 2nd, 3rd places and 5 domain champions).</p></details>
+      <details><summary><span><span class="faq-tag">Prep</span> Can we start building before the event, and can we visit your hubs?</span></summary><p>Problem statements are released T-48 hours ahead on Thursday, 26 Nov at 10:00 AM. On Friday, 27 Nov (T-24h), all registered teams are invited to visit ComedKares Innovation Hubs across Karnataka from 9:00 AM to 6:00 PM to plan, try out tools and talk to mentors. The prototype itself should be built during the event.</p></details>
+      <details><summary><span><span class="faq-tag">Submit</span> What do we submit on build day and how does judging work?</span></summary><p>Building and refining wraps up at 1:00 PM. Teams submit their prototype and pitch deck before lunch. From 2:00 PM, teams present their pitch and a live demo to the jury, followed by live music and the prize distribution.</p></details>
+      <details><summary><span><span class="faq-tag">Schedule</span> What is the Build Day schedule and is food provided?</span></summary><p>Check-in opens at 8:30 AM on Saturday. Breakfast is not provided, so please eat before you arrive. Teams build until 1:00 PM, then lunch is provided. Jury reviews run 2:00 PM - 5:30 PM, followed by live music and the prize distribution at 6:30 PM.</p></details>
       <details><summary><span><span class="faq-tag">Check-in</span> What should we bring?</span></summary><p>Laptops and chargers. Make sure your tool accounts are set up before the day.</p></details>
       <details><summary><span><span class="faq-tag">Previous</span> What happened at the Bengaluru edition?</span></summary><p>30 teams competed on 7 September 2026 and ₹40,000+ was awarded. <a href="bengaluru/" style="color:var(--accent);text-decoration:underline;">See the winners, jury and highlights</a>.</p></details>
     </div>
@@ -1805,7 +1797,7 @@ img { max-width: 100%; height: auto; }
 <!-- ═════ TERMS ═════ -->
 <section id="terms" style="background:var(--surface-2);">
   <div class="wrap">
-    <div class="section-head reveal"><span class="eyebrow">Terms &amp; Conditions</span><h2>The fine print.</h2><p>By participating in Build 4 Karnataka, you agree to the following terms.</p></div>
+    <div class="section-head reveal"><span class="eyebrow">Terms &amp; Conditions</span><h2>Terms for participants.</h2><p>By participating in Build 4 Karnataka, you agree to the following terms.</p></div>
     <div id="termsList">
       <details><summary><span><span class="faq-tag">Travel</span> Travel &amp; Accommodation</span></summary><p>Participants are responsible for their own travel and accommodation. If you are traveling from outside Mangaluru or from far locations, please plan your journey and stay accordingly as these will not be provided by the organizers.</p></details>
       <details><summary><span><span class="faq-tag">Liability</span> Property Damage</span></summary><p>Participants are fully liable for any damage caused to the premises, equipment, or assets at the ComedKares Centre during the event. Treat the workspace with respect.</p></details>
@@ -1816,21 +1808,21 @@ img { max-width: 100%; height: auto; }
 <!-- ═════ REGISTER / SOCIAL ═════ -->
 <section class="social-section" id="register">
   <div class="wrap reveal">
-    <span class="eyebrow" style="color:var(--accent);">⚡ High Demand · Capacity Expanded to <span data-slot="total">45</span> Teams</span>
-    <h2>Get your team on the Mangaluru list before remaining slots fill up.</h2>
+    <span class="eyebrow" style="color:var(--accent);">Registrations Closed</span>
+    <h2>Registrations for Mangaluru are closed.</h2>
     <div class="hype-box-bottom" style="margin:20px auto 24px; background:rgba(255, 255, 255, 0.05); border:1.5px solid rgba(20, 184, 166, 0.35); border-radius:14px; padding:20px 24px; max-width:680px; text-align:left;">
       <div style="display:flex; justify-content:space-between; align-items:center; font-family:var(--mono); font-size:13px; font-weight:700; color:#f8fafc; margin-bottom:10px; flex-wrap:wrap; gap:8px;">
-        <span style="display:inline-flex; align-items:center; gap:6px;">🚀 <span style="color:#f8fafc;"><span data-slot="booked">39</span> OF <span data-slot="total">45</span> SLOTS CONFIRMED</span></span>
-        <span style="color:#5eead4; background:rgba(20,184,166,0.15); padding:3px 10px; border-radius:6px; border:1px solid rgba(20,184,166,0.35);"><span data-slot="left">6</span> SLOTS REMAINING</span>
+        <span style="display:inline-flex; align-items:center; gap:6px;">🚀 <span style="color:#f8fafc;">50 OF 50 SLOTS CONFIRMED</span></span>
+        <span style="color:#5eead4; background:rgba(20,184,166,0.15); padding:3px 10px; border-radius:6px; border:1px solid rgba(20,184,166,0.35);">REGISTRATIONS CLOSED</span>
       </div>
       <div style="height:10px; width:100%; background:rgba(255,255,255,0.12); border-radius:99px; overflow:hidden; margin-bottom:12px;">
-        <div data-slot-bar style="height:100%; width:86.7%; background:linear-gradient(90deg, #10b981 0%, #14b8a6 65%, #f59e0b 100%); border-radius:99px; box-shadow:0 0 10px rgba(20,184,166,0.4);"></div>
+        <div style="height:100%; width:100%; background:linear-gradient(90deg, #10b981 0%, #14b8a6 65%, #f59e0b 100%); border-radius:99px; box-shadow:0 0 10px rgba(20,184,166,0.4);"></div>
       </div>
-      <p style="margin:0; font-size:14px; color:#cbd5e1; line-height:1.6;">Due to overwhelming demand from engineering colleges across Karnataka, capacity has been officially expanded from 30 to <span data-slot="total">45</span> teams. <span data-slot="booked">39</span> spots are already confirmed. First-come, first-served seat confirmation until the final <span data-slot="left">6</span> slots are filled.</p>
+      <p style="margin:0; font-size:14px; color:#cbd5e1; line-height:1.6;">We raised capacity from 30 to 50 teams after strong interest from colleges across Karnataka, and all 50 slots are now booked. For questions, message the team on WhatsApp.</p>
     </div>
     <div class="social-links">
-      <a href="https://forms.gle/M2Q93UHtBamjD3GM8" class="social-link reg-link" target="_blank" rel="noopener" style="background:var(--accent); border-color:var(--accent); color:#fff; font-weight:700; box-shadow:0 4px 16px rgba(13,148,136,0.35);"><span class="sl-icon">⚡</span> Register now (7 slots left)</a>
-      <a href="https://wa.me/+916366879353?text=Hi%20Build4Karnataka%20team!%20I%20want%20to%20register%20for%20the%20Mangaluru%20edition." class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.79 1.002 1.01-3.731-.232-.374C3.064 16.29 2.5 14.195 2.5 12.022c0-5.26 4.27-9.53 9.531-9.53 5.259 0 9.529 4.27 9.529 9.53 0 5.26-4.27 9.525-9.529 9.525z"/></svg></span> WhatsApp Team</a>
+      <span class="social-link reg-link is-closed" aria-disabled="true"><span class="sl-icon">🔒</span> Registrations closed (50 / 50)</span>
+      <a href="https://wa.me/+916366879353?text=Hi%20Build4Karnataka%20team!%20I%20have%20a%20question%20about%20the%20Mangaluru%20edition." class="social-link" target="_blank" rel="noopener"><span class="sl-icon"><svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 0C5.394 0 .012 5.385.012 12.022c0 2.122.553 4.195 1.602 6.02L.034 23.992l6.096-1.597c1.758 1.01 3.754 1.545 5.898 1.545 6.634 0 12.016-5.383 12.016-12.022C24.044 5.385 18.665 0 12.031 0zm.003 21.947c-1.802 0-3.56-.484-5.1-1.398l-.365-.216-3.79 1.002 1.01-3.731-.232-.374C3.064 16.29 2.5 14.195 2.5 12.022c0-5.26 4.27-9.53 9.531-9.53 5.259 0 9.529 4.27 9.529 9.53 0 5.26-4.27 9.525-9.529 9.525z"/></svg></span> WhatsApp Team</a>
     </div>
   </div>
 </section>
@@ -1927,39 +1919,6 @@ document.querySelectorAll('section[id]').forEach(s=>{new IntersectionObserver((e
   window.addEventListener('mousemove',e=>{mouse.x=e.clientX;mouse.y=e.clientY;mouse.active=true;},{passive:true});
   window.addEventListener('mouseleave',()=>{mouse.active=false;});
   resize();rm?step():requestAnimationFrame(step);
-})();
-</script>
-<script>
-/* Live slot counter (read-only).
-   Reads ONE number (the response count) from a published Google Sheet tab.
-   It never writes to the form or the sheet. If the fetch fails, the numbers
-   already in the HTML stay as they are. */
-(function(){
-  var SLOT_CSV_URL = 'https://docs.google.com/spreadsheets/d/e/2PACX-1vTgSAN-37y1TTYZqhIMxMpoeRNjHPFu4ujWc2TjPN1zmYWK3b2sgUwwcKK3hulgvzJpfXqDyZRPWyb-/pub?gid=323921027&single=true&output=csv'; /* paste the "Publish to web" CSV link of the count tab here */
-  var TOTAL_SLOTS = 45;
-  if (!SLOT_CSV_URL) return;
-  function fmtPct(n){ var v = Math.round(n*10)/10; return (v % 1 === 0) ? String(v) : v.toFixed(1); }
-  function apply(booked){
-    var left = Math.max(0, TOTAL_SLOTS - booked);
-    var pct = Math.min(100, booked / TOTAL_SLOTS * 100);
-    document.querySelectorAll('[data-slot="total"]').forEach(function(e){ e.textContent = TOTAL_SLOTS; });
-    document.querySelectorAll('[data-slot="booked"]').forEach(function(e){ e.textContent = booked; });
-    document.querySelectorAll('[data-slot="left"]').forEach(function(e){ e.textContent = left; });
-    document.querySelectorAll('[data-slot="pct"]').forEach(function(e){ e.textContent = fmtPct(pct); });
-    document.querySelectorAll('[data-slot-bar]').forEach(function(e){ e.style.width = pct + '%'; });
-    document.querySelectorAll('[data-slot-title]').forEach(function(e){ e.title = booked + ' of ' + TOTAL_SLOTS + ' slots claimed (' + fmtPct(pct) + '% full)'; });
-  }
-  var url = SLOT_CSV_URL + (SLOT_CSV_URL.indexOf('?') > -1 ? '&' : '?') + 't=' + Date.now();
-  fetch(url, {cache:'no-store'})
-    .then(function(r){ if(!r.ok) throw new Error(r.status); return r.text(); })
-    .then(function(t){
-      var m = t.match(/\d+/);
-      if (!m) return;
-      var n = parseInt(m[0], 10);
-      if (isNaN(n) || n < 0 || n > 1000) return;
-      apply(n);
-    })
-    .catch(function(){ /* keep the static numbers */ });
 })();
 </script>
 </body>
