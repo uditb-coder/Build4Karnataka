@@ -1121,6 +1121,44 @@ footer .logo-row{flex-wrap:wrap !important;row-gap:10px;}
   #siteHeader .logo-chip-nitte img{height:15px !important;max-width:80px !important;}
   #siteHeader .logo-chip-foxwel img{height:15px !important;max-width:56px !important;}
 }
+/* Accolade (wide logo) in header, 2026-11-18 */
+#siteHeader .logo-chip-accolade img{height:26px !important;max-width:105px !important;}
+@media (min-width:1241px) and (max-width:1400px){#siteHeader .logo-chip-accolade img{height:21px !important;max-width:84px !important;}}
+@media (max-width:1240px){#siteHeader .logo-chip-accolade img{height:23px !important;max-width:92px !important;}}
+@media (max-width:940px){#siteHeader .logo-chip-accolade img{height:17px !important;max-width:68px !important;}}
+@media (max-width:600px){#siteHeader .logo-chip-accolade img{height:15px !important;max-width:60px !important;}}
+@media (max-width:400px){#siteHeader .logo-chip-accolade img{height:13px !important;max-width:52px !important;}}
+/* six-logo header fit, 2026-11-18 */
+@media (min-width:1401px){
+  #siteHeader .logo-row{gap:6px !important;}
+  #siteHeader .logo-sep{margin:0 2px !important;}
+  #siteHeader .logo-chip img{height:30px !important;}
+  #siteHeader .logo-chip-nitte img{height:28px !important;max-width:150px !important;}
+  #siteHeader .logo-chip-foxwel img{height:28px !important;max-width:100px !important;}
+  #siteHeader .logo-chip-accolade img{height:23px !important;max-width:92px !important;}
+}
+@media (min-width:1241px) and (max-width:1400px){
+  #siteHeader .logo-row{gap:4px !important;}
+  #siteHeader .logo-chip img{height:24px !important;}
+  #siteHeader .logo-chip-nitte img{height:22px !important;max-width:120px !important;}
+  #siteHeader .logo-chip-foxwel img{height:22px !important;max-width:80px !important;}
+  #siteHeader .logo-chip-accolade img{height:18px !important;max-width:74px !important;}
+}
+@media (max-width:1240px){ #siteHeader .nav-cta{display:none !important;} }
+@media (max-width:600px){
+  #siteHeader .logo-chip img{height:19px !important;}
+  #siteHeader .logo-chip-nitte img{height:17px !important;max-width:92px !important;}
+  #siteHeader .logo-chip-foxwel img{height:17px !important;max-width:64px !important;}
+  #siteHeader .logo-chip-accolade img{height:14px !important;max-width:56px !important;}
+}
+@media (max-width:400px){
+  #siteHeader .logo-row{gap:3px !important;}
+  #siteHeader .logo-sep{margin:0 !important;}
+  #siteHeader .logo-chip img{height:16px !important;}
+  #siteHeader .logo-chip-nitte img{height:15px !important;max-width:80px !important;}
+  #siteHeader .logo-chip-foxwel img{height:15px !important;max-width:56px !important;}
+  #siteHeader .logo-chip-accolade img{height:12px !important;max-width:48px !important;}
+}
 </style>
 <script>
   window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
@@ -1145,6 +1183,8 @@ footer .logo-row{flex-wrap:wrap !important;row-gap:10px;}
       <div class="logo-chip"><a href="https://www.erafoundationindia.org/" target="_blank" rel="noopener"><img src="https://www.erafoundationindia.org/images/logo.svg" alt="ERA Foundation - Buildathon Education Partner"></a></div>
       <div class="logo-sep"></div>
       <div class="logo-chip logo-chip-nitte"><a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" title="NGSM Institute of Pharmaceutical Sciences, Nitte (Deemed to be University) - Innovation Partner"><img src="nitte_pharma.jpeg" alt="Nitte Pharma Innovation Centre - Innovation Partner"></a></div>
+      <div class="logo-sep"></div>
+      <div class="logo-chip logo-chip-accolade"><a href="https://www.accoladetechsolutions.com/" target="_blank" rel="noopener" title="Accolade Tech Solutions - AI Innovation Partner"><img src="accolade_logo.png" alt="Accolade Tech Solutions - AI Innovation Partner"></a></div>
       <div class="logo-sep"></div>
       <div class="logo-chip logo-chip-foxwel"><a href="https://www.foxwel.ai/" target="_blank" rel="noopener" title="Foxwel AI - AI Platform Partner"><img src="foxwel_logo.png" alt="Foxwel AI - AI Platform Partner"></a></div>
       <div class="logo-sep"></div>
@@ -1766,6 +1806,14 @@ footer .logo-row{flex-wrap:wrap !important;row-gap:10px;}
       </div>
     </div>
     <div class="sponsor-tier reveal">
+      <div class="tier-label">AI Innovation Partner</div>
+      <div class="sponsor-row">
+        <div class="s-logo s-logo-wide">
+          <a href="https://www.accoladetechsolutions.com/" target="_blank" rel="noopener" title="Accolade Tech Solutions - AI Innovation Partner"><img src="accolade_logo.png" alt="Accolade Tech Solutions - AI Innovation Partner" style="max-height: 52px; max-width: 220px; width: auto; object-fit: contain;"></a>
+        </div>
+      </div>
+    </div>
+    <div class="sponsor-tier reveal">
       <div class="tier-label">AI Platform Partner</div>
       <div class="sponsor-row">
         <div class="s-logo s-logo-wide">
@@ -1862,7 +1910,11 @@ footer .logo-row{flex-wrap:wrap !important;row-gap:10px;}
           <div class="logo-sep"></div>
           <div class="logo-chip logo-chip-nitte"><a href="https://nitte.edu.in/ngsmips/" target="_blank" rel="noopener" title="NGSM Institute of Pharmaceutical Sciences, Nitte (Deemed to be University) - Innovation Partner"><img src="nitte_pharma.jpeg" alt="Nitte Pharma Innovation Centre - Innovation Partner" style="height:32px; width:auto; max-width:200px; object-fit:contain;"></a></div>
           <div class="logo-sep"></div>
+          <div class="logo-chip logo-chip-accolade"><a href="https://www.accoladetechsolutions.com/" target="_blank" rel="noopener" title="Accolade Tech Solutions - AI Innovation Partner"><img src="accolade_logo.png" alt="Accolade Tech Solutions - AI Innovation Partner" style="height:28px; width:auto; max-width:120px; object-fit:contain;"></a></div>
+          <div class="logo-sep"></div>
           <div class="logo-chip logo-chip-foxwel"><a href="https://www.foxwel.ai/" target="_blank" rel="noopener" title="Foxwel AI - AI Platform Partner"><img src="foxwel_logo.png" alt="Foxwel AI - AI Platform Partner" style="height:32px; width:auto; max-width:130px; object-fit:contain;"></a></div>
+          <div class="logo-sep"></div>
+          <div class="logo-chip logo-chip-sasyaani"><a href="https://sasyaani.com/" target="_blank" rel="noopener" title="Sasyaani - AgriTech Domain Partner"><img src="sasyaani_logo.png" alt="Sasyaani - AgriTech Domain Partner" style="height:36px; width:auto; max-width:90px; object-fit:contain;"></a></div>
           <div class="logo-sep"></div>
           <div class="logo-chip logo-chip-b4k"><a href="#"><img src="b4k_white_logo.png" alt="Build 4 Karnataka" style="height: 48px; width: auto; object-fit: contain; background:var(--accent); padding:6px; border-radius:8px;"></a></div>
         </div>
